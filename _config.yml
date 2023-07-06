@@ -25,6 +25,7 @@ email: zwrq0star@gmail.com
 description: >-
   I am a stuff-level senior research scientist at [NVIDIA](https://www.nvidia.com/en-us/research/), the [LPR](https://research.nvidia.com/labs/lpr/) team led by [Jan Kautz](https://jankautz.com/), where I work on generalizable representation learning for images, videos and 3D. Previously, I was a Ph. D student at the [VLLAB](http://vllab.ucmerced.edu/) advised by [Ming-Hsuan Yang](http://faculty.ucmerced.edu/mhyang/).
 
+
   I was the recipient of the Baidu Graduate Fellowship in 2013, the NVIDIA Pioneering Research Award in 2017, Rising Star EECS in 2019, and nominated for VentureBeat Women in AI Award in 2020.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sifeiliu.net" # the base hostname & protocol for your site, e.g. http://example.com

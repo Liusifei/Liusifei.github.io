@@ -20,8 +20,8 @@
   project_page: "https://judyye.github.io/affordiffusion-www"
   github: "https://github.com/NVlabs/affordance_diffusion"
   arxiv: "2303.12538"
-  image: "affordiff.gif"
-  image_mouseover: "affordiff.gif"
+  image: "afford_before.png"
+  image_mouseover: "afford_after.gif"
   authors:
     - yufeiy
     - xuetingl

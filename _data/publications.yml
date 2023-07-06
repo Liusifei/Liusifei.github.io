@@ -10,8 +10,8 @@
   authors:
     - anchiehc
     - xuetingl 
-    - sifeil*
-    - xiaolongw*
+    - sifeil
+    - xiaolongw
 
 - id: AfforDiff
   title: "Affordance diffusion: Synthesizing hand-object interactions"

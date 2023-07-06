@@ -21,7 +21,7 @@
   github: "https://github.com/NVlabs/affordance_diffusion"
   arxiv: "2303.12538"
   image: "afford_before.png"
-  image_mouseover: "afford_after.gif"
+  image_mouseover: "afford_after.mp4"
   authors:
     - yufeiy
     - xuetingl

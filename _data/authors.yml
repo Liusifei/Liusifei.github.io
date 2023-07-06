@@ -1,0 +1,95 @@
+sifeil:
+  first_name: Sifei
+  last_name: Liu
+  website: https://sifeil.net
+  is_me: true
+xuetingl:
+  first_name: Xueting
+  last_name: Li
+  website: https://sunshineatnoon.github.io/
+xiaolongw:
+  first_name: Xiaolong 
+  last_name: Wang
+  website: https://xiaolonw.github.io/
+anchiehc:
+  first_name: An-Chieh
+  last_name: Cheng
+  website: https://www.anjiecheng.me/
+yufeiy:
+  first_name: Yufei (Judy)
+  last_name: Ye
+  website: https://judyye.github.io/
+a1:
+  first_name: Abhinav
+  last_name: Gupta
+  website: http://www.cs.cmu.edu/~abhinavg/
+shalinidm:
+  first_name: Shalini
+  last_name: De Mello
+  website: https://nvlabs.github.io/lpr/author/shalini-de-mello/
+stanb:
+  first_name: Stan
+  last_name: Birchfield
+  website: https://cecas.clemson.edu/~stb/
+jiamings:
+  first_name: Jiaming
+  last_name: Song
+  website: https://tsong.me/
+shubt:
+  first_name: Shubham
+  last_name: Tulsiani
+  website: http://shubhtuls.github.io/
+jiaruix:
+  first_name: Jiarui
+  last_name: Xu
+  website: https://jerryxu.net/
+arashv:
+  first_name: Arash
+  last_name: Vahdat
+  website: http://latentspace.cc/
+wonminb:
+  first_name: Wonmin
+  last_name: Byeon
+  website: https://wonmin-byeon.github.io/
+jitengm:
+  first_name: Jiteng
+  last_name: Mu
+  website: https://jitengmu.github.io/
+zhidingy:
+  first_name: Zhiding
+  last_name: Yu
+  website: https://chrisding.github.io/
+NV:
+  first_name: Nuno
+  last_name: Vasconcelos
+  website: http://www.svcl.ucsd.edu/~nuno
+jank:
+  first_name: Jan
+  last_name: Kautz
+  website: https://jankautz.com/
+tomb:
+  first_name: Thomas
+  middle_name: B
+  last_name: Breuel
+  website: http://www.9x9.com/
+mins:
+  first_name: Min
+  last_name: Sun
+  website: https://aliensunmin.github.io/
+minghsuany:
+  first_name: Ming-Hsuan
+  last_name: Yang
+  website: http://faculty.ucmerced.edu/mhyang/
+yinboc:
+  first_tname: Yinbo
+  last_name: Chen
+  website: https://yinboc.github.io/
+zihangl:
+  first_name: Zihang
+  last_name: Lai
+  website: https://scholar.google.com/citations?user=31eXgMYAAAAJ&hl=en
+ayosha:
+  first_name: Alexei
+  middle_name: A.
+  last_name: Efros
+  website: http://people.eecs.berkeley.edu/~efros/

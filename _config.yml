@@ -31,6 +31,7 @@ url: "https://sifeiliu.net" # the base hostname & protocol for your site, e.g. h
 twitter_username: SifeiL
 github_username: Liusifei
 google_scholar: j4pcHV4AAAAJ
+nv_site: https://research.nvidia.com/person/sifei-liu
 
 # Build settings
 theme: minima

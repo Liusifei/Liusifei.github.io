@@ -28,7 +28,7 @@ description: >-
   I was the recipient of the Baidu Graduate Fellowship in 2013, the NVIDIA Pioneering Research Award in 2017, Rising Star EECS in 2019, and nominated for VentureBeat Women in AI Award in 2020.
 baseurl: "https://research.nvidia.com/person/sifei-liu" # the subpath of your site, e.g. /blog
 url: "https://sifeiliu.net" # the base hostname & protocol for your site, e.g. http://example.com
-nvidia-site: "https://research.nvidia.com/person/sifei-liu"
+twitter_username: SifeiL
 github_username: Liusifei
 google_scholar: j4pcHV4AAAAJ
 

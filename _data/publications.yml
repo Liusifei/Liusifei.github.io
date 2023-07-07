@@ -75,8 +75,8 @@
   project_page: "https://jerryxu.net/GroupViT/"
   github: "https://github.com/NVlabs/GroupViT"
   arxiv: "2202.11094"
-  image: ""
-  image_mouseover: ""
+  image: "groupvit.jpg"
+  image_mouseover: "groupvit.mp4"
   authors:
     - jiaruix
     - shalinidm

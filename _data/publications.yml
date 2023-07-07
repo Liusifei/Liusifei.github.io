@@ -94,8 +94,7 @@
   project_page: "https://github.com/AnjieCheng/CanonicalVAE"
   github: "https://github.com/AnjieCheng/CanonicalVAE"
   arxiv: "2204.01955v1"
-  image: ""
-  image_mouseover: ""
+  image: "cheng2022autoregressive.png"
   authors:
     - anchiehc
     - xuetingl
@@ -110,8 +109,8 @@
   project_page: "https://yinboc.github.io/liif/"
   github: "https://github.com/yinboc/liif"
   arxiv: "2012.09161v2"
-  image: ""
-  image_mouseover: ""
+  image: "liif.jpg"
+  image_mouseover: "liif.mp4"
   authors:
     - yinboc
     - sifeil
@@ -124,8 +123,8 @@
   project_page: "https://zlai0.github.io/VideoAutoencoder/"
   github: "https://github.com/zlai0/VideoAutoencoder/"
   arxiv: "2110.02951"
-  image: ""
-  image_mouseover: ""
+  image: "vae.jpg"
+  image_mouseover: "vae.mp4"
   authors:
     - zihangl
     - sifeil
@@ -139,8 +138,8 @@
   project_page: "https://anjiecheng.github.io/cpae/"
   github: "https://github.com/AnjieCheng/CanonicalPAE"
   arxiv: "2107.04867"
-  image: ""
-  image_mouseover: ""
+  image: "pointae.jpg"
+  image_mouseover: "pointae.mp4"
   authors:
     - anchiehc
     - xuetingl
@@ -155,8 +154,7 @@
   project_page: "https://sites.google.com/view/uvc2019"
   github: "https://github.com/Liusifei/UVC"
   arxiv: "1909.11895"
-  image: ""
-  image_mouseover: ""
+  image: "uvc.gif"
   authors:
     - xuetingl
     - sifeil

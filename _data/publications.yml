@@ -56,8 +56,8 @@
   project_page: "https://jitengmu.github.io/CoordGAN/"
   github: "https://github.com/NVlabs/CoordGAN"
   arxiv: "2203.16521"
-  image: ""
-  image_mouseover: ""
+  image: "coordgan_before.jpg"
+  image_mouseover: "coordgan_after.mp4"
   authors:
     - jitengm
     - shalinidm

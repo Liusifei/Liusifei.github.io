@@ -39,8 +39,8 @@
   project_page: "https://jerryxu.net/ODISE/"
   github: "https://github.com/NVlabs/ODISE"
   arxiv: "2303.04803"
-  image: "odise_before.jpg"
-  image_mouseover: "odise_after.jpg"
+  image: "odise_before.png"
+  image_mouseover: "odise_after.mp4"
   authors:
     - jiaruix
     - sifeil

@@ -309,3 +309,69 @@
     - deqings
     - larryd
     - jank
+
+- id: 17
+  title: "Regularizing meta-learning via gradient dropout"
+  venue: "Proceedings of the Asian Conference on Computer Vision (ACCV), 2020"
+  project_page: "https://openaccess.thecvf.com/content/ACCV2020/papers/Tseng_Regularizing_Meta-Learning_via_Gradient_Dropout_ACCV_2020_paper.pdf"
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - hyt
+    - yiwenc
+    - yihsuant
+    - sifeil
+    - yyl
+    - minghsuany
+
+- id: 18
+  title: "Self-supervised viewpoint learning from image collections"
+  venue: "Conference on Computer Vision and Pattern Recognition (CVPR), 2020"
+  project_page: "https://openaccess.thecvf.com/content_CVPR_2020/papers/Mustikovela_Self-Supervised_Viewpoint_Learning_From_Image_Collections_CVPR_2020_paper.pdf"
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - skm
+    - varunj
+    - shalinidm
+    - sifeil
+    - umari
+    - carstenr
+    - jank
+
+- id: 19
+  title: "Online Adaptation for Consistent Mesh Reconstruction in the Wild"
+  venue: "Neural Information Processing Systems (NeurIPS), 2020"
+  project_page: "https://arxiv.org/pdf/2003.06473.pdf"
+  github: ""
+  arxiv: "2003.06473"
+  image: ""
+  image_mouseover: ""
+  authors:
+    - xuetingl
+    - sifeil
+    - shalinidm
+    - kihwank
+    - xiaolongw
+    - minghsuany
+    - jank
+
+
+- id: 21
+  title: "Learning Propagation for Arbitrarily-structured Data"
+  venue: "International Conference on Computer Vision (ICCV), 2019"
+  project_page: "https://arxiv.org/pdf/1909.11237.pdf"
+  github: ""
+  arxiv: "1909.11237"
+  image: ""
+  image_mouseover: ""
+  authors:
+    - sifeil
+    - xuetingl
+    - varunj
+    - shalinidm
+    - jank

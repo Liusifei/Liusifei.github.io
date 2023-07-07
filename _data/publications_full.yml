@@ -280,7 +280,7 @@
 - id: 15
   title: "Self-supervised single-view 3D reconstruction via semantic consistency"
   venue: "ECCV, 2021"
-  project_page: ""
+  project_page: "https://github.com/NVlabs/UMR"
   github: ""
   arxiv: "2003.06473"
   image: ""
@@ -296,7 +296,7 @@
 
 - id: 16
   title: "Hierarchical contrastive motion learning for video action recognition"
-  venue: "The British Machine Vision Conference (BMVC), 2021"
+  venue: "BMVC, 2021"
   project_page: "https://arxiv.org/pdf/2007.10321"
   github: ""
   arxiv: "2007.10321"
@@ -312,7 +312,7 @@
 
 - id: 17
   title: "Regularizing meta-learning via gradient dropout"
-  venue: "Proceedings of the Asian Conference on Computer Vision (ACCV), 2020"
+  venue: "ACCV, 2020"
   project_page: "https://openaccess.thecvf.com/content/ACCV2020/papers/Tseng_Regularizing_Meta-Learning_via_Gradient_Dropout_ACCV_2020_paper.pdf"
   github: ""
   arxiv: ""
@@ -328,7 +328,7 @@
 
 - id: 18
   title: "Self-supervised viewpoint learning from image collections"
-  venue: "Conference on Computer Vision and Pattern Recognition (CVPR), 2020"
+  venue: "CVPR, 2020"
   project_page: "https://openaccess.thecvf.com/content_CVPR_2020/papers/Mustikovela_Self-Supervised_Viewpoint_Learning_From_Image_Collections_CVPR_2020_paper.pdf"
   github: ""
   arxiv: ""
@@ -345,7 +345,7 @@
 
 - id: 19
   title: "Online Adaptation for Consistent Mesh Reconstruction in the Wild"
-  venue: "Neural Information Processing Systems (NeurIPS), 2020"
+  venue: "NeurIPS, 2020"
   project_page: "https://arxiv.org/pdf/2003.06473.pdf"
   github: ""
   arxiv: "2003.06473"
@@ -363,7 +363,7 @@
 
 - id: 21
   title: "Learning Propagation for Arbitrarily-structured Data"
-  venue: "International Conference on Computer Vision (ICCV), 2019"
+  venue: "ICCV, 2019"
   project_page: "https://arxiv.org/pdf/1909.11237.pdf"
   github: ""
   arxiv: "1909.11237"
@@ -375,3 +375,295 @@
     - varunj
     - shalinidm
     - jank
+
+- id: 23
+  title: "Learning Linear Transformations for Fast Image and Video Style Transfer"
+  venue: "CVPR, 2019"
+  project_page: "https://sites.google.com/view/linear-style-transfer-cvpr19/"
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - xuetingl
+    - sifeil
+    - jank
+    - minghsuany
+
+- id: 24
+  title: "Few-Shot Viewpoint Estimation"
+  venue: "BMVC, 2019"
+  project_page: "https://arxiv.org/pdf/1905.04957.pdf"
+  github: ""
+  arxiv: "1905.04957"
+  image: ""
+  image_mouseover: ""
+  authors:
+    - hyt
+    - shalinidm
+    - jonathan-tremblay
+    - sifeil
+    - stanb
+    - minghsuany
+    - jank
+
+- id: 25
+  title: "Putting Humans in a Scene: Learning Affordance in 3D Indoor Environments"
+  venue: "CVPR, 2019"
+  project_page: ""
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - xuetingl
+    - sifeil
+    - kihwank
+    - xiaolongw
+    - minghsuany
+    - jank
+
+- id: 26
+  title: "SCOPS: Self-Supervised Co-Part Segmentation"
+  venue: "CVPR, 2019"
+  project_page: ""
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - weich
+    - varunj
+    - sifeil
+    - pavlom
+    - minghsuany
+    - jank
+
+- id: 27
+  title: "Switchable temporal propagation network"
+  venue: "ECCV, 2018"
+  project_page: "http://openaccess.thecvf.com/content_ECCV_2018/papers/Sifei_Liu_Switchable_Temporal_Propagation_ECCV_2018_paper.pdf"
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - sifeil
+    - guangyz
+    - shalinidm
+    - jinweig
+    - varunj
+    - minghsuany
+    - jank
+
+- id: 28
+  title: "Rendering Portraitures from Monocular Camera and Beyond"
+  venue: "ECCV, 2018"
+  project_page: "http://openaccess.thecvf.com/content_ECCV_2018/papers/Xiangyu_Xu_Rendering_Portraitures_from_ECCV_2018_paper.pdf"
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - xiangyux
+    - deqings
+    - sifeil
+    - wenqir
+    - yujinz
+    - minghsuany
+    - jians
+
+- id: 29
+  title: "Context-Aware Synthesis and Placement of Object Instances"
+  venue: "NeurIPS, 2018"
+  project_page: "https://papers.nips.cc/paper/8240-context-aware-synthesis-and-placement-of-object-instances.pdf"
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - donghoonl
+    - sifeil
+    - jinweig
+    - mingyul
+    - minghsuany
+    - jank
+
+- id: 30
+  title: "Learning Video-Story Composition via Recurrent Neural Network"
+  venue: "WACV, 2018"
+  project_page: "https://arxiv.org/pdf/1708.02191.pdf"
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - guangyz
+    - yihsuant
+    - sifeil
+    - zhixuns
+    - minghsuany
+
+- id: 31
+  title: "Learning Dual Convolutional Neural Networks for Low-Level Vision"
+  venue: "CVPR, 2018"
+  project_page: "http://openaccess.thecvf.com/content_cvpr_2018/papers/Pan_Learning_Dual_Convolutional_CVPR_2018_paper.pdf"
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - jinshanp
+    - sifeil
+    - deqings
+    - jiaweiz
+    - yanl
+    - jimmyr
+    - zechaol
+    - jinhuit
+    - huchuanl
+    - yuwingt
+    - minghsuany
+
+- id: 32
+  title: "Learning Affinity via Spatial Propagation Networks"
+  venue: "NeurIPS, 2017"
+  project_page: "https://papers.nips.cc/paper/6750-learning-affinity-via-spatial-propagation-networks.pdf"
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - sifeil
+    - shalinidm
+    - jinweig
+    - guangyz
+    - minghsuany
+    - jank
+
+- id: 33
+  title: "Face Parsing via Recurrent Propagation"
+  venue: "BMVC, 2017"
+  project_page: "https://arxiv.org/pdf/1708.01936.pdf"
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - sifeil
+    - dongy
+    - zhenl
+    - stanzl
+
+- id: 34
+  title: "Unsupervised Domain Adaption for Face Recognition in Unlabeled Videos"
+  venue: "International Conference on Computer Vision (ICCV), 2017"
+  project_page: "https://arxiv.org/abs/1704.05838.pdf"
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - kihyuksml
+    - sifeil
+    - guangyz
+    - xiangy
+    - minghsuany
+    - mmc
+
+- id: 35
+  title: "Learning to Segment Instances in Videos with Spatial Propagation Network"
+  venue: "Computer Vision and Pattern Recognition (CVPR workshop), 2017"
+  project_page: "https://openaccess.thecvf.com/content_CVPR_2017_workshops/w12/papers/Cheng_Learning_to_Segment_CVPR_2017_paper.pdf"
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - jingchunc
+    - sifeil
+    - shalinidm
+    - jinweig
+    - jank
+    - shengjinw
+    - minghsuany
+
+- id: 36
+  title: "Generative Face Completion"
+  venue: "CVPR, 2017"
+  project_page: "https://arxiv.org/abs/1704.05838.pdf"
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - yijunli
+    - sifeil
+    - jimy
+    - minghsuany
+
+- id: 37
+  title: "Learning Recursive Filters for Low-Level Vision via a Hybrid Neural Network"
+  venue: "ECCV, 2016"
+  project_page: "http://faculty.ucmerced.edu/mhyang/papers/eccv16_rnn_filter.pdf"
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - sifeil
+    - jinshanp
+    - minghsuany
+
+- id: 38
+  title: "Deep Cascaded Bi-Network for Face Hallucination"
+  venue: "ECCV, 2016"
+  project_page: "http://personal.ie.cuhk.edu.hk/~ccloy/files/eccv_2016_hallucination.pdf"
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - shizhanz
+    - sifeil
+    - ccloy
+
+- id: 40
+  title: "Multi-Objective Convolutional Learning for Face Labeling"
+  venue: "CVPR, 2015"
+  project_page: "http://faculty.ucmerced.edu/mhyang/papers/cvpr15_face_labeling.pdf"
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - sifeil
+    - jimy
+    - changh
+    - minghsuany
+
+- id: 41
+  title: "Compressed Face Hallucination"
+  venue: "ICIP, 2014"
+  project_page: "http://faculty.ucmerced.edu/mhyang/papers/icip14_cfh.pdf"
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - sifeil
+    - minghsuany
+
+- id: 42
+  title: "Structured Face Hallucination"
+  venue: "CVPR, 2013"
+  project_page: "https://eng.ucmerced.edu/people/cyang35/CVPR13/cvpr13_hallucination.pdf"
+  github: ""
+  arxiv: ""
+  image: ""
+  image_mouseover: ""
+  authors:
+    - cyy
+    - sifeil
+    - minghsuany
+

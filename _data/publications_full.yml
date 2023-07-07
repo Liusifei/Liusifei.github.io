@@ -279,7 +279,7 @@
 
 - id: 15
   title: "Self-supervised single-view 3D reconstruction via semantic consistency"
-  venue: "European Conference on Computer Vision (ECCV), 2021"
+  venue: "ECCV, 2021"
   project_page: ""
   github: ""
   arxiv: "2003.06473"
@@ -292,4 +292,20 @@
     - shalinidm
     - varunj
     - minghsuany
+    - jank
+
+- id: 16
+  title: "Hierarchical contrastive motion learning for video action recognition"
+  venue: "The British Machine Vision Conference (BMVC), 2021"
+  project_page: "https://arxiv.org/pdf/2007.10321"
+  github: ""
+  arxiv: "2007.10321"
+  image: ""
+  image_mouseover: ""
+  authors:
+    - xitongy
+    - xiaodongy
+    - sifeil
+    - deqings
+    - larryd
     - jank

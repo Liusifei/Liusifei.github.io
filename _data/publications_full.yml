@@ -557,7 +557,7 @@
 
 - id: 34
   title: "Unsupervised Domain Adaption for Face Recognition in Unlabeled Videos"
-  venue: "International Conference on Computer Vision (ICCV), 2017"
+  venue: "ICCV, 2017"
   project_page: "https://arxiv.org/abs/1704.05838.pdf"
   github: ""
   arxiv: ""
@@ -573,7 +573,7 @@
 
 - id: 35
   title: "Learning to Segment Instances in Videos with Spatial Propagation Network"
-  venue: "Computer Vision and Pattern Recognition (CVPR workshop), 2017"
+  venue: "CVPR workshop, 2017"
   project_page: "https://openaccess.thecvf.com/content_CVPR_2017_workshops/w12/papers/Cheng_Learning_to_Segment_CVPR_2017_paper.pdf"
   github: ""
   arxiv: ""

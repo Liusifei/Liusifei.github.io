@@ -75,7 +75,7 @@ layout: null
       </div>
 
       <div class="content">
-        <h2>Education</h2>
+        <h3>Education</h3>
         {% for school in site.data.education %}
         <div class="columns">
           <div class="column is-four-fifths">
@@ -88,7 +88,7 @@ layout: null
         </div>
         {% endfor %}
 
-        <h2>Employment</h2>
+        <h3>Employment</h3>
 
         {% for job in site.data.employment %}
         <div class="columns">
@@ -104,7 +104,17 @@ layout: null
         </div>
         {% endfor %}
 
-        <h2>(Co)-Mentees at NVIDIA Research</h2>
+        <h3 id="professional-services">Workshop and tutorial organization</h3>
+        <ul>
+          <li><a href="https://htcv-iccv2021.github.io/">Human-centric Trustworthy Computer Vision From Research to Applications, ICCV 2021</a> </li>
+          <li><a href="https://sense-human.github.io/index_2020.html">Sensing, Understanding and Synthesizing Humans</a></li>
+          <li><a href="https://nvlabs.github.io/eccv2020-limited-labels-data-tutorial/">New Frontiers for Learning with Limited Labels or Data</a> Co-orgainizor and Speaker</li>
+          <li><a href="https://xiaolonw.github.io/graphnnv3/">Learning Representations via Graph-structured Networks Tutorial</a> Co-orgainizor and Speaker</li>
+        </ul>
+
+        <hr />
+
+        <h3>(Co)-Mentees at NVIDIA Research</h3>
         <ul>
           <li><a href="https://sunshineatnoon.github.io/">Xueting Li</a>, 2018-2020,  Research Scientist at NVIDIA</li>
           <li><a href="http://rllab.snu.ac.kr/people/donghoon-lee">Donghong Lee</a>, 2018, Apple Inc.</li>
@@ -123,7 +133,7 @@ layout: null
         
         <hr />
 
-        <h2>Recent Publications</h2>
+        <h3>Recent Publications</h3>
 
         {% for publication in site.data.publications_full %}
         <div class="columns">

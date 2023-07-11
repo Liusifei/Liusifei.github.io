@@ -1,6 +1,6 @@
 - id: TUVF
   title: "TUVF: Learning Generalizable Texture UV Radiance Fields"
-  venue: "arXiv 2023"
+  venue: "arXiv, 2023"
   description: "The paper introduces TUVF, a method for learning generalizable texture UV radiance fields."
   project_page: "https://www.anjiecheng.me/TUVF"
   github: "https://github.com/AnjieCheng/TUVF"
@@ -15,7 +15,7 @@
 
 - id: AfforDiff
   title: "Affordance diffusion: Synthesizing hand-object interactions"
-  venue: CVPR 2023
+  venue: CVPR, 2023
   description: "The paper proposes a method for interaction synthesis that addresses issues using diffusion models. They build upon the classic idea of disentangling where to interact (layout) from how to interact (content)."
   project_page: "https://judyye.github.io/affordiffusion-www"
   github: "https://github.com/NVlabs/affordance_diffusion"
@@ -101,6 +101,22 @@
     - jank
     - xiaolongw
 
+- id: affordfield
+  title: "Learning continuous environment fields via implicit functions"
+  venue: ICLR, 2022
+  description: ""
+  project_page: ""
+  github: ""
+  arxiv: "2111.13997"
+  image: ""
+  image_mouseover: ""
+  authors:
+    - xuetingl
+    - shalinidm
+    - xiaolongw
+    - minghsuany
+    - jank
+    - sifeil
 
 - id: AutoPoint
   title: "Autoregressive 3D Shape Generation via Canonical Mapping"

@@ -88,9 +88,9 @@ layout: null
         </div>
         {% endfor %}
 
-        <h3>Employment</h3>
-
         <hr />
+
+        <h3>Employment</h3>
 
         {% for job in site.data.employment %}
         <div class="columns">
@@ -108,7 +108,20 @@ layout: null
 
         <hr />
 
+
         <h3 id="professional-services">Workshop and tutorial organization</h3>
+        
+        {% for workshop in site.data.workshop %}
+        <div class="columns">
+          <div class="column is-four-fifths">
+            <b><a href="{{ workshop.url }}">{{ workshop.title }}</a></b><br />
+            {{ workshop.venue }}
+          </div>
+        </div>
+        {% endfor %}
+
+
+        <!-- <h3 id="professional-services">Workshop and tutorial organization</h3>
         <ul>
           <li><a href="https://4dhoi.github.io/">4D Hand Object Interaction:
             Geometric Understanding and Applications in Dexterous Manipulation</a>, CVPR 2023</li>
@@ -116,7 +129,7 @@ layout: null
           <li><a href="https://sense-human.github.io/index_2020.html">Sensing, Understanding and Synthesizing Humans</a>, ECCV 2020</li>
           <li><a href="https://nvlabs.github.io/eccv2020-limited-labels-data-tutorial/">New Frontiers for Learning with Limited Labels or Data</a>, ECCV 2020. (Co-orgainizor and Speaker)</li>
           <li><a href="https://xiaolonw.github.io/graphnnv3/">Learning Representations via Graph-structured Networks Tutorial</a>, CVPR 2019 and 2020. (Co-orgainizor and Speaker)</li>
-        </ul>
+        </ul> -->
 
         <hr />
 

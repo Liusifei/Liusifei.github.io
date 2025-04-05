@@ -1,3 +1,133 @@
+- id: GSPN
+  title: "Parallel Sequence Modeling via Generalized Spatial Propagation Network"
+  venue: "CVPR 2025"
+  description: "GSPN is a fast vision attention module that accelerates generic vision foundation models for high-resolution input images."
+  project_page: "https://whj363636.github.io/GSPN/"
+  github: "https://github.com/whj363636/GSPN"
+  arxiv: "2503.17191"
+  image: "gspn.png"
+  # image_mouseover: "gspn.mp4"
+  authors:
+    - hongjunw
+    - wonminb
+    - jiaruix
+    - jinweig
+    - charlsc
+    - xiaolongw
+    - kaih
+    - jank
+    - sifeil
+
+- id: NaVILA
+  title: "NaVILA: Legged Robot Vision-Language-Action Model for Navigation"
+  venue: "arxiv 2025"
+  description: "NaVILA is a two-level framework that combines VLAs with locomotion skills for navigation. It generates high-level language-based commands, while a real-time locomotion policy ensures obstacle avoidance."
+  project_page: "https://navila-bot.github.io/"
+  github: "https://github.com/yang-zj1026/legged-loco"
+  arxiv: "2412.04453"
+  image: "navila.gif"
+  authors:
+    - anchiehc
+    - yandongj
+    - zhaojiny
+    - zaitiang
+    - xueyanz
+    - jank
+    - erdemb
+    - dannyy
+    - sifeil
+    - xiaolongw
+
+
+- id: NVILA
+  title: "NVILA: Efficient Frontier Visual Language Models"
+  venue: "CVPR 2025"
+  description: "Efficient frontier VLM models with efficient training and inference."
+  demo: "https://vila.mit.edu/"
+  github: "https://github.com/NVlabs/VILA"
+  arxiv: "2412.04468"
+  image: "nvila.png"
+  authors:
+    - zhijianl
+    - ligengz
+    - baifengs
+    - zhuoyangz
+    - yumingl
+    - shangy
+    - haochengx
+    - shiyicao
+    - yuxiang
+    - dachengl
+    - xiuyul
+    - yunhaof
+    - yukangc
+    - chengyuh
+    - deanh
+    - anchiehc
+    - vishweshn
+    - jinyih
+    - sifeil
+    - ranjayk
+    - daguangx
+    - xiaolongw
+    - pavlom
+    - jank
+    - hongxuy
+    - songh
+    - yaolu
+
+
+- id: nopose
+  title: "No Pose, No Problem: Surprisingly Simple 3D Gaussian Splats from Sparse Unposed Images"
+  venue: "ICLR 2025"
+  description: "No Pose, No Problem: Surprisingly Simple 3D Gaussian Splats from Sparse Unposed Images"
+  project_page: "https://noposplat.github.io/"
+  github: "https://github.com/cvg/NoPoSplat"
+  arxiv: "2410.24207"
+  image: "noposplat.mp4"
+  authors:
+    - botaoy
+    - sifeil
+    - haofeix
+    - xuetingl
+    - marcp
+    - minghsuany
+    - songyoup
+
+- id: SRPGT
+  title: "SpatialRGPT: Grounded Spatial Reasoning in Vision Language Models"
+  venue: "NeurIPS 2024"
+  description: "SpatialRGPT is a grounded spatial reasoning model that can reason about spatial relationships in images."
+  project_page: "https://spatialrgpt.github.io/"
+  github: "https://github.com/cvg/SpatialRGPT"
+  arxiv: "2410.24207"
+  image: "srgpt.mp4"
+  authors:
+    - anchiehc
+    - dannyy
+    - yangf
+    - qiushang
+    - ruihan
+    - jank
+    - xiaolongw
+    - sifeil
+
+- id: CFGS
+  title: "COLMAP-Free 3D Gaussian Splatting"
+  venue: "CVPR 2025"
+  description: "3D Gaussian Splatting without COLMAP computation."
+  project_page: "https://oasisyang.github.io/colmap-free-3dgs/"
+  github: "https://github.com/NVlabs/CF-3DGS"
+  arxiv: "2312.07504"
+  image: "cf3dgs.png"
+  authors:
+    - yangf
+    - sifeil
+    - ameyk
+    - jank
+    - ayosha
+    - xiaolongw
+
 - id: TUVF
   title: "TUVF: Learning Generalizable Texture UV Radiance Fields"
   venue: "arXiv 2023"
@@ -13,24 +143,6 @@
     - sifeil
     - xiaolongw
 
-- id: AfforDiff
-  title: "Affordance diffusion: Synthesizing hand-object interactions"
-  venue: CVPR 2023
-  description: "The paper proposes a method for interaction synthesis that addresses issues using diffusion models. They build upon the classic idea of disentangling where to interact (layout) from how to interact (content)."
-  project_page: "https://judyye.github.io/affordiffusion-www"
-  github: "https://github.com/NVlabs/affordance_diffusion"
-  arxiv: "2303.12538"
-  image: "afford_before.png"
-  image_mouseover: "afford_after.mp4"
-  authors:
-    - yufeiy
-    - xuetingl
-    - a1
-    - shalinidm
-    - stanb
-    - jiamings
-    - shubt
-    - sifeil
 
 - id: ODISE
   title: "Open-vocabulary panoptic segmentation with text-to-image diffusion models"
@@ -49,58 +161,7 @@
     - xiaolongw
     - shalinidm
 
-- id: CoordGAN
-  title: "CoordGAN: Self-Supervised Dense Correspondences Emerge from GANs"
-  venue: CVPR 2022
-  description: "This work introduces Coordinate GAN (CoordGAN), a structure-texture disentangled GAN that learns a dense correspondence map for each generated image."
-  project_page: "https://jitengmu.github.io/CoordGAN/"
-  github: "https://github.com/NVlabs/CoordGAN"
-  arxiv: "2203.16521"
-  image: "coordgan_before.jpg"
-  image_mouseover: "coordgan_after.mp4"
-  authors:
-    - jitengm
-    - shalinidm
-    - zhidingy
-    - NV
-    - xiaolongw
-    - jank
-    - sifeil
 
-
-- id: GroupViT
-  title: "GroupViT: Semantic Segmentation Emerges from Text Supervision"
-  venue: CVPR, 2022
-  description: "This paper proposes a hierarchical Grouping Vision Transformer (GroupViT), which learns to group image regions into progressively larger arbitrary-shaped segments."
-  project_page: "https://jerryxu.net/GroupViT/"
-  github: "https://github.com/NVlabs/GroupViT"
-  arxiv: "2202.11094"
-  image: "groupvit.jpg"
-  image_mouseover: "groupvit.mp4"
-  authors:
-    - jiaruix
-    - shalinidm
-    - sifeil
-    - wonminb
-    - tomb
-    - jank
-    - xiaolongw
-
-
-- id: AutoPoint
-  title: "Autoregressive 3D Shape Generation via Canonical Mapping"
-  venue: "ECCV 2022"
-  description: "The paper demonstrates a solution for 3D point cloud generation using transformers. The key idea is to decompose a point cloud into a sequence of semantically meaningful shape compositions, which are further encoded by an autoregressive model for point cloud generation."
-  project_page: "https://github.com/AnjieCheng/CanonicalVAE"
-  github: "https://github.com/AnjieCheng/CanonicalVAE"
-  arxiv: "2204.01955v1"
-  image: "cheng2022autoregressive.png"
-  authors:
-    - anchiehc
-    - xuetingl
-    - sifeil
-    - mins
-    - minghsuany
 
 - id: LIIF
   title: "Learning Continuous Image Representation with Local Implicit Image Function"
@@ -116,20 +177,6 @@
     - sifeil
     - xiaolongw
 
-- id: VAutoencoder
-  title: "Video Autoencoder: self-supervised disentanglement of static 3D structure and motion"
-  venue: ICCV, 2021
-  description: "This paper presents a video autoencoder for learning disentangled representations of 3D structure and camera pose from videos in a self-supervised manner."
-  project_page: "https://zlai0.github.io/VideoAutoencoder/"
-  github: "https://github.com/zlai0/VideoAutoencoder/"
-  arxiv: "2110.02951"
-  image: "vae.jpg"
-  image_mouseover: "vae.mp4"
-  authors:
-    - zihangl
-    - sifeil
-    - ayosha
-    - xiaolongw
 
 - id: PointAE
   title: "Learning 3D Dense Correspondence via Canonical Point Autoencoder"
@@ -146,6 +193,7 @@
     - mins
     - minghsuany
     - sifeil
+
 
 - id: UVC
   title: "Joint-task self-supervised learning for temporal correspondence"

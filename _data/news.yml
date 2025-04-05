@@ -1,5 +1,5 @@
 - date: Feb 2025
-  description: "We release the [GSPN](https://whj363636.github.io/GSPN/), a fast vision attention module that accelerates Stable Diffusion inference 84x. Stay tuned for code release!"
+  description: "We release the [GSPN](https://whj363636.github.io/GSPN/), a fast vision attention module that accelerates Stable Diffusion inference 84x. Stay tuned for more details!"
 
 - date: Feb 2025
   description: "5 papers was accepted to CVPR 2025! Stay tuned for more updates!"
@@ -11,4 +11,4 @@
   description: "We presented [CosAE](https://sifeiliu.net/CosAE-page/) at NeurIPS 2024! Stay tuned for code release."
 
 - date: Oct 2024
-  description: "We released the [SpatialRGPT](https://www.anjiecheng.me/SpatialRGPT) code, datasets, and models! Welcome to try demos at https://github.com/AnjieCheng/SpatialRGPT"
+  description: "We released the [SpatialRGPT](https://www.anjiecheng.me/SpatialRGPT) code, datasets, and models! Welcome to try [demos](https://github.com/AnjieCheng/SpatialRGPT)!"

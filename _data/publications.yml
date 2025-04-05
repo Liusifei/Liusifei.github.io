@@ -99,7 +99,7 @@
   venue: "NeurIPS 2024"
   description: "SpatialRGPT is a grounded spatial reasoning model that can reason about spatial relationships in images."
   project_page: "https://spatialrgpt.github.io/"
-  github: "https://github.com/cvg/SpatialRGPT"
+  github: "https://github.com/AnjieCheng/SpatialRGPT"
   arxiv: "2410.24207"
   image: "srgpt.mp4"
   authors:

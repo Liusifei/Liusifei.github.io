@@ -44,30 +44,15 @@ layout: null
   <section class="hero hero-landing">
     <div class="hero-body container is-max-desktop">
       <div class="columns is-vcentered is-variable is-6">
-        <div class="column is-4">
-          <div class="profile-panel">
-            <div class="portrait-card">
-              <div class="portrait">
-                <img alt="Portrait of {{ site.name }}" src="{{ '/images/profile.png' | relative_url }}" />
-              </div>
-            </div>
-            <div class="spotlight-card">
-              <p class="spotlight-label">Current Focus</p>
-              <h2>Embodied VLMs and efficient transformer design</h2>
-              <p>
-                Building models that connect multimodal reasoning, grounded action, and scalable perception for open-world agents.
-              </p>
-              <div class="focus-tags">
-                <span>Embodied VLMs</span>
-                <span>Efficient transformers</span>
-                <span>3D perception</span>
-              </div>
+        <div class="column is-3-desktop is-4-tablet">
+          <div class="portrait-card hero-portrait-card">
+            <div class="portrait">
+              <img alt="Portrait of {{ site.name }}" src="{{ '/images/profile.png' | relative_url }}" />
             </div>
           </div>
         </div>
 
-        <div class="column is-8">
-          <div class="eyebrow">Principal Research Scientist and Tech Lead at NVIDIA Research</div>
+        <div class="column is-9-desktop is-8-tablet">
           <h1 class="title landing-title">{{ site.name }}</h1>
           <div class="content hero-copy">
             {{ site.description | markdownify }}
@@ -102,6 +87,15 @@ layout: null
               <span class="icon"><i class="fab fa-twitter"></i></span>
               <span>Twitter</span>
             </a>
+          </div>
+          <div class="spotlight-card spotlight-inline">
+            <p class="spotlight-label">Current Focus</p>
+            <h2>Embodied VLMs, efficient transformers, and 3D perception</h2>
+            <div class="focus-tags">
+              <span>Embodied VLMs</span>
+              <span>Efficient transformers</span>
+              <span>3D perception</span>
+            </div>
           </div>
         </div>
       </div>

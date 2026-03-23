@@ -4,7 +4,7 @@
   description: "SR-3D unifies single-view 2D and multi-view 3D representations for flexible region prompting and grounded spatial reasoning."
   project_page: "https://www.anjiecheng.me/sr3d"
   arxiv: "2509.13317"
-  image: "sr3d.svg"
+  image: "sr3d.png"
   authors:
     - anchiehc
     - yangf
@@ -27,7 +27,7 @@
   project_page: "https://describe-anything.github.io/"
   github: "https://github.com/NVlabs/describe-anything"
   arxiv: "2504.16072"
-  image: "dam.svg"
+  image: "dam.jpg"
   authors:
     - longl
     - yifand
@@ -46,7 +46,7 @@
   venue: "ICCV 2025"
   description: "TEVA improves high-resolution image understanding by dynamically selecting detail-rich regions while keeping token usage efficient."
   project_page: "https://openaccess.thecvf.com/content/ICCV2025/html/Jiang_Token-Efficient_VLM_High-Resolution_Image_Understanding_via_Dynamic_Region_Proposal_ICCV_2025_paper.html"
-  image: "teva.svg"
+  image: "teva.png"
   authors:
     - yitongj
     - jinweig
@@ -218,53 +218,3 @@
     - wonminb
     - xiaolongw
     - shalinidm
-
-
-
-- id: LIIF
-  title: "Learning Continuous Image Representation with Local Implicit Image Function"
-  venue: "CVPR, 2021"
-  description: "The paper presents a method for learning continuous image representation with local implicit image function."
-  project_page: "https://yinboc.github.io/liif/"
-  github: "https://github.com/yinboc/liif"
-  arxiv: "2012.09161v2"
-  image: "liif.jpg"
-  image_mouseover: "liif.mp4"
-  authors:
-    - yinboc
-    - sifeil
-    - xiaolongw
-
-
-- id: PointAE
-  title: "Learning 3D Dense Correspondence via Canonical Point Autoencoder"
-  venue: "NeurIPS 2021, virtual"
-  description: "The paper presents a method for learning 3D dense correspondence using a canonical point autoencoder."
-  project_page: "https://anjiecheng.github.io/cpae/"
-  github: "https://github.com/AnjieCheng/CanonicalPAE"
-  arxiv: "2107.04867"
-  image: "pointae.jpg"
-  image_mouseover: "pointae.mp4"
-  authors:
-    - anchiehc
-    - xuetingl
-    - mins
-    - minghsuany
-    - sifeil
-
-
-- id: UVC
-  title: "Joint-task self-supervised learning for temporal correspondence"
-  venue: "NeurIPS 2019"
-  description: "This paper proposes to learn reliable dense correspondence from videos in a self-supervised manner."
-  project_page: "https://sites.google.com/view/uvc2019"
-  github: "https://github.com/Liusifei/UVC"
-  arxiv: "1909.11895"
-  image: "uvc.gif"
-  authors:
-    - xuetingl
-    - sifeil
-    - shalinidm
-    - xiaolongw
-    - jank
-    - minghsuany

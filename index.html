@@ -41,18 +41,19 @@ layout: null
 </head>
 
 <body class="site-shell">
-  {% assign publication_count = site.data.publications_full | size %}
-  {% assign news_count = site.data.news | size %}
-
   <section class="hero hero-landing">
     <div class="hero-body container is-max-desktop">
       <div class="columns is-vcentered is-variable is-6">
-        <div class="column is-7">
-          <div class="eyebrow">Principal Research Scientist and Tech Lead at NVIDIA Research</div>
+        <div class="column is-4">
+          <div class="portrait-card">
+            <div class="portrait">
+              <img alt="Portrait of {{ site.name }}" src="{{ '/images/profile.png' | relative_url }}" />
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-8">
           <h1 class="title landing-title">{{ site.name }}</h1>
-          <p class="landing-subtitle">
-            Building embodied VLMs, efficient transformers, and spatial intelligence across images, video, and 3D.
-          </p>
           <div class="content hero-copy">
             {{ site.description | markdownify }}
           </div>
@@ -87,83 +88,6 @@ layout: null
               <span>Twitter</span>
             </a>
           </div>
-          <div class="hero-stats">
-            <div class="stat-card">
-              <span class="stat-value">{{ publication_count }}+</span>
-              <span class="stat-label">Publications</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-value">{{ news_count }}</span>
-              <span class="stat-label">Recent updates</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-value">3</span>
-              <span class="stat-label">Core areas</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="column is-5">
-          <div class="profile-panel">
-            <div class="portrait-card">
-              <div class="portrait">
-                <img alt="Portrait of {{ site.name }}" src="{{ '/images/profile.png' | relative_url }}" />
-              </div>
-            </div>
-            <div class="spotlight-card">
-              <p class="spotlight-label">Current Focus</p>
-              <h2>Embodied VLMs and efficient transformer design</h2>
-              <p>
-                Building models that connect multimodal reasoning, grounded action, and scalable perception for open-world agents.
-              </p>
-              <div class="focus-tags">
-                <span>Embodied VLMs</span>
-                <span>Efficient transformers</span>
-                <span>3D perception</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-surface">
-    <div class="container is-max-desktop">
-      <div class="section-heading">
-        <p class="section-kicker">Research Themes</p>
-        <h2 class="title is-3">What I work on</h2>
-        <p>
-          I work on making multimodal systems more grounded, more efficient, and more capable in open-world environments.
-        </p>
-      </div>
-      <div class="columns is-variable is-5">
-        <div class="column">
-          <article class="focus-card">
-            <p class="focus-card-kicker">Embodied VLM</p>
-            <h3>Perception for agents and robotics</h3>
-            <p>
-              Building multimodal systems that can perceive, reason, and act in 3D environments for navigation and embodied decision making.
-            </p>
-          </article>
-        </div>
-        <div class="column">
-          <article class="focus-card">
-            <p class="focus-card-kicker">Efficient Models</p>
-            <h3>Transformer efficiency at high resolution</h3>
-            <p>
-              Designing token-efficient architectures and attention mechanisms that preserve detail without paying the full compute cost.
-            </p>
-          </article>
-        </div>
-        <div class="column">
-          <article class="focus-card">
-            <p class="focus-card-kicker">Spatial Intelligence</p>
-            <h3>Grounded multimodal understanding</h3>
-            <p>
-              Connecting images, language, and geometry so models can reason about structure, localization, and relationships across views.
-            </p>
-          </article>
         </div>
       </div>
     </div>
@@ -172,7 +96,6 @@ layout: null
   <section class="section">
     <div class="container is-max-desktop">
       <div class="section-heading">
-        <p class="section-kicker">Latest</p>
         <h2 class="title is-3">News</h2>
       </div>
       <div class="news-card">
@@ -186,12 +109,8 @@ layout: null
         </ul>
       </div>
 
-      <div class="section-heading section-heading-spaced">
-        <p class="section-kicker">Selected Work</p>
-        <h3 class="title is-3">Recent Research</h3>
-        <p>
-          Full publications can be found on <a href="https://scholar.google.com/citations?user={{ site.google_scholar }}">Google Scholar</a> and in the <a href="cv.html">CV</a>.
-        </p>
+      <div class="section-heading publications-heading">
+        <h2 class="title is-3">Selected Publications</h2>
       </div>
 
       {% for publication in site.data.publications %}

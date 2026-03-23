@@ -1,3 +1,64 @@
+- id: SR3D
+  title: "3D Aware Region Prompted Vision Language Model"
+  venue: "ICLR, 2026"
+  description: "SR-3D connects 2D and 3D representation spaces for flexible region prompting and grounded spatial reasoning."
+  project_page: "https://www.anjiecheng.me/sr3d"
+  github: ""
+  arxiv: "2509.13317"
+  image: "sr3d.svg"
+  authors:
+    - anchiehc
+    - yangf
+    - yukangc
+    - zhijianl
+    - xiaolongli
+    - subhashreer
+    - songh
+    - yaolu
+    - jank
+    - pavlom
+    - dannyy
+    - xiaolongw
+    - sifeil
+
+- id: DAM
+  title: "Describe Anything: Detailed Localized Image and Video Captioning"
+  venue: "ICCV, 2025"
+  description: "DAM generates detailed localized image and video captions for user-specified regions while preserving local detail and global context."
+  project_page: "https://describe-anything.github.io/"
+  github: "https://github.com/NVlabs/describe-anything"
+  arxiv: "2504.16072"
+  image: "dam.svg"
+  authors:
+    - longl
+    - yifand
+    - yunhaog
+    - sifeil
+    - hanzim
+    - boyil
+    - marcop
+    - mingyul
+    - trevord
+    - adamy
+    - yinc
+
+- id: TEVA
+  title: "Token-Efficient VLM: High-Resolution Image Understanding via Dynamic Region Proposal"
+  venue: "ICCV, 2025"
+  description: "TEVA uses dynamic region proposal and adaptive patch sampling to handle high-resolution image understanding efficiently."
+  project_page: "https://openaccess.thecvf.com/content/ICCV2025/html/Jiang_Token-Efficient_VLM_High-Resolution_Image_Understanding_via_Dynamic_Region_Proposal_ICCV_2025_paper.html"
+  github: ""
+  arxiv: ""
+  image: "teva.svg"
+  authors:
+    - yitongj
+    - jinweig
+    - tianfanx
+    - kachunc
+    - pavlom
+    - dannyy
+    - sifeil
+
 - id: TUVF
   title: "TUVF: Learning Generalizable Texture UV Radiance Fields"
   venue: "arXiv, 2023"
@@ -682,4 +743,3 @@
     - cyy
     - sifeil
     - minghsuany
-

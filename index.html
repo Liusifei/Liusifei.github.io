@@ -5,11 +5,17 @@ layout: null
 <html lang="en-US">
 
 <head>
+  {% assign page_description = site.description | markdownify | strip_html | strip_newlines %}
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-
   <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta name="description" content="{{ page_description }}">
+  <meta property="og:title" content="{{ site.name }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:image" content="{{ '/images/profile.png' | absolute_url }}">
   <title>{{ site.name }}</title>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  {% if site.google_analytics %}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -19,9 +25,9 @@ layout: null
     }
 
     gtag('js', new Date());
-
     gtag('config', '{{ site.google_analytics }}');
   </script>
+  {% endif %}
 
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="{{ '/css/fontawesome.all.min.css' | relative_url }}" rel="stylesheet">
@@ -34,118 +40,206 @@ layout: null
   <script src="{{ '/js/index.js' | relative_url }}"></script>
 </head>
 
-<body>
+<body class="site-shell">
+  {% assign publication_count = site.data.publications_full | size %}
+  {% assign news_count = site.data.news | size %}
 
-  <section class="hero">
+  <section class="hero hero-landing">
     <div class="hero-body container is-max-desktop">
-      <div class="columns is-vcentered">
+      <div class="columns is-vcentered is-variable is-6">
+        <div class="column is-7">
+          <div class="eyebrow">Principal Research Scientist and Tech Lead at NVIDIA Research</div>
+          <h1 class="title landing-title">{{ site.name }}</h1>
+          <p class="landing-subtitle">
+            Building embodied VLMs, efficient transformers, and spatial intelligence across images, video, and 3D.
+          </p>
+          <div class="content hero-copy">
+            {{ site.description | markdownify }}
+          </div>
+          <div class="buttons hero-buttons">
+            <a class="external-link button is-dark" href="cv.html">
+              <span class="icon"><i class="fas fa-file"></i></span>
+              <span>CV</span>
+            </a>
 
-        <div class="column is-4">
-          <div class="portrait">
-            <img src="{{ '/images/profile.png' | relative_url }}" />
+            <a class="external-link button is-light"
+              href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
+              <span class="icon"><i class="ai ai-google-scholar"></i></span>
+              <span>Scholar</span>
+            </a>
+
+            <a class="external-link button is-light" href="https://github.com/{{ site.github_username }}">
+              <span class="icon"><i class="fab fa-github"></i></span>
+              <span>GitHub</span>
+            </a>
+
+            <a class="external-link button is-light" href="{{ site.nv_site }}">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-nvidia" viewBox="0 0 16 16">
+                  <path d="M1.635 7.146S3.08 5.012 5.97 4.791v-.774C2.77 4.273 0 6.983 0 6.983s1.57 4.536 5.97 4.952v-.824c-3.23-.406-4.335-3.965-4.335-3.965ZM5.97 9.475v.753c-2.44-.435-3.118-2.972-3.118-2.972S4.023 5.958 5.97 5.747v.828h-.004c-1.021-.123-1.82.83-1.82.83s.448 1.607 1.824 2.07ZM6 2l-.03 2.017A6.64 6.64 0 0 1 6.252 4c3.637-.123 6.007 2.983 6.007 2.983s-2.722 3.31-5.557 3.31c-.26 0-.504-.024-.732-.065v.883c.195.025.398.04.61.04 2.638 0 4.546-1.348 6.394-2.943.307.246 1.561.842 1.819 1.104-1.757 1.47-5.852 2.657-8.173 2.657a6.84 6.84 0 0 1-.65-.034V14H16l.03-12H6Zm-.03 3.747v-.956a6.4 6.4 0 0 1 .282-.015c2.616-.082 4.332 2.248 4.332 2.248S8.73 9.598 6.743 9.598c-.286 0-.542-.046-.773-.123v-2.9c1.018.123 1.223.572 1.835 1.593L9.167 7.02s-.994-1.304-2.67-1.304a4.9 4.9 0 0 0-.527.031Z"/>
+                </svg>
+              </span>
+              <span>NVIDIA</span>
+            </a>
+
+            <a class="external-link button is-light" href="https://twitter.com/{{ site.twitter_username }}">
+              <span class="icon"><i class="fab fa-twitter"></i></span>
+              <span>Twitter</span>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-card">
+              <span class="stat-value">{{ publication_count }}+</span>
+              <span class="stat-label">Publications</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value">{{ news_count }}</span>
+              <span class="stat-label">Recent updates</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value">3</span>
+              <span class="stat-label">Core areas</span>
+            </div>
           </div>
         </div>
 
-        <div class="column">
-          <h1 class="title">
-            <b>Hello, I'm {{ site.name }}</b>
-          </h1>
-          <div class="content has-text-justified">
-            {{ site.description | markdownify }}
-            <div class="buttons">
-              <a class="external-link button is-light" href="cv.html">
-                <span class="icon"><i class="fas fa-file"></i></span>
-                <span>CV</span>
-              </a>
-
-              <a class="external-link button is-light"
-                href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
-                <span class="icon"><i class="ai ai-google-scholar"></i></span>
-                <span>Scholar</span>
-              </a>
-
-              <a class="external-link button is-light" href="https://github.com/{{ site.github_username }}">
-                <span class="icon"><i class="fab fa-github"></i></span>
-                <span>Github</span>
-              </a>
-
-              <a class="external-link button is-light" href="{{ site.nv_site }}">
-                <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-nvidia" viewBox="0 0 16 16">
-                  <path d="M1.635 7.146S3.08 5.012 5.97 4.791v-.774C2.77 4.273 0 6.983 0 6.983s1.57 4.536 5.97 4.952v-.824c-3.23-.406-4.335-3.965-4.335-3.965ZM5.97 9.475v.753c-2.44-.435-3.118-2.972-3.118-2.972S4.023 5.958 5.97 5.747v.828h-.004c-1.021-.123-1.82.83-1.82.83s.448 1.607 1.824 2.07ZM6 2l-.03 2.017A6.64 6.64 0 0 1 6.252 4c3.637-.123 6.007 2.983 6.007 2.983s-2.722 3.31-5.557 3.31c-.26 0-.504-.024-.732-.065v.883c.195.025.398.04.61.04 2.638 0 4.546-1.348 6.394-2.943.307.246 1.561.842 1.819 1.104-1.757 1.47-5.852 2.657-8.173 2.657a6.84 6.84 0 0 1-.65-.034V14H16l.03-12H6Zm-.03 3.747v-.956a6.4 6.4 0 0 1 .282-.015c2.616-.082 4.332 2.248 4.332 2.248S8.73 9.598 6.743 9.598c-.286 0-.542-.046-.773-.123v-2.9c1.018.123 1.223.572 1.835 1.593L9.167 7.02s-.994-1.304-2.67-1.304a4.9 4.9 0 0 0-.527.031Z"/>
-                </svg></span>
-                <span> Nvidia</span>
-              </a>
-
-              <a class="external-link button is-light" href="https://twitter.com/{{ site.twitter_username }}">
-                <span class="icon"><i class="fab fa-twitter"></i></span>
-                <span>Twitter</span>
-              </a>
+        <div class="column is-5">
+          <div class="profile-panel">
+            <div class="portrait-card">
+              <div class="portrait">
+                <img alt="Portrait of {{ site.name }}" src="{{ '/images/profile.png' | relative_url }}" />
+              </div>
             </div>
-
+            <div class="spotlight-card">
+              <p class="spotlight-label">Current Focus</p>
+              <h2>Embodied VLMs and efficient transformer design</h2>
+              <p>
+                Building models that connect multimodal reasoning, grounded action, and scalable perception for open-world agents.
+              </p>
+              <div class="focus-tags">
+                <span>Embodied VLMs</span>
+                <span>Efficient transformers</span>
+                <span>3D perception</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- News. -->
-  <div class="hr">
-    <div class="container">
-      <hr>
+  <section class="section section-surface">
+    <div class="container is-max-desktop">
+      <div class="section-heading">
+        <p class="section-kicker">Research Themes</p>
+        <h2 class="title is-3">What I work on</h2>
+        <p>
+          I work on making multimodal systems more grounded, more efficient, and more capable in open-world environments.
+        </p>
+      </div>
+      <div class="columns is-variable is-5">
+        <div class="column">
+          <article class="focus-card">
+            <p class="focus-card-kicker">Embodied VLM</p>
+            <h3>Perception for agents and robotics</h3>
+            <p>
+              Building multimodal systems that can perceive, reason, and act in 3D environments for navigation and embodied decision making.
+            </p>
+          </article>
+        </div>
+        <div class="column">
+          <article class="focus-card">
+            <p class="focus-card-kicker">Efficient Models</p>
+            <h3>Transformer efficiency at high resolution</h3>
+            <p>
+              Designing token-efficient architectures and attention mechanisms that preserve detail without paying the full compute cost.
+            </p>
+          </article>
+        </div>
+        <div class="column">
+          <article class="focus-card">
+            <p class="focus-card-kicker">Spatial Intelligence</p>
+            <h3>Grounded multimodal understanding</h3>
+            <p>
+              Connecting images, language, and geometry so models can reason about structure, localization, and relationships across views.
+            </p>
+          </article>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
   <section class="section">
     <div class="container is-max-desktop">
-
-      <h2 class="title is-3">News</h2>
-      <div class="content">
-        <ul>
+      <div class="section-heading">
+        <p class="section-kicker">Latest</p>
+        <h2 class="title is-3">News</h2>
+      </div>
+      <div class="news-card">
+        <ul class="news-list">
           {% for news in site.data.news %}
           <li>
-            <b>{{ news.date }}</b>: {{ news.description | markdownify | remove: '<p>' | remove: '</p>' }}
+            <span class="news-date">{{ news.date }}</span>
+            <div class="news-copy">{{ news.description | markdownify | remove: '<p>' | remove: '</p>' }}</div>
           </li>
           {% endfor %}
         </ul>
       </div>
 
-      <h3 class="title is-3">Recent Research </h3>
-
-      <div class="content">
+      <div class="section-heading section-heading-spaced">
+        <p class="section-kicker">Selected Work</p>
+        <h3 class="title is-3">Recent Research</h3>
         <p>
-          <strong>Full publications can be found at <a href="https://scholar.google.com/citations?user=j4pcHV4AAAAJ">Google Scholar</a> and <a href="cv.html">CV</a></strong>
-        </p> 
+          Full publications can be found on <a href="https://scholar.google.com/citations?user={{ site.google_scholar }}">Google Scholar</a> and in the <a href="cv.html">CV</a>.
+        </p>
       </div>
 
-
       {% for publication in site.data.publications %}
-      <div class="publication-block columns">
+      {% assign project_url = publication.project_page | default: publication.demo %}
+      {% assign code_url = publication.github %}
+      {% assign github_url = '' %}
+      {% if code_url and code_url contains '://' %}
+      {% assign github_url = code_url %}
+      {% elsif code_url %}
+      {% assign github_url = 'https://github.com/' | append: code_url %}
+      {% endif %}
+      <div class="publication-block columns is-variable is-5">
 
         <div class="column is-3">
           <div class="publication-image {% if publication.image_mouseover %}publication-mousecell{% endif %}">
             {% if publication.image_mouseover contains "mp4" %}
-            <video autoplay preload playsinline class="" height="100%" loop muted width="100%">
-              <source src="./images/{{ publication.image_mouseover }}" type="video/mp4">
+            <video autoplay preload playsinline height="100%" loop muted width="100%">
+              <source src="{{ '/images/' | append: publication.image_mouseover | relative_url }}" type="video/mp4">
               Your browser does not support the video tag.
             </video>
             {% endif %}
             
             {% if publication.image contains "mp4" %}
-            <!-- Render MP4 main image as video -->
-            <video autoplay preload playsinline class="" height="100%" loop muted width="100%">
-              <source src="./images/{{ publication.image }}" type="video/mp4">
+            <video autoplay preload playsinline height="100%" loop muted width="100%">
+              <source src="{{ '/images/' | append: publication.image | relative_url }}" type="video/mp4">
               Your browser does not support the video tag.
             </video>
             {% else %}
-            <!-- Render regular image -->
-            <img alt="{{ publication.title }}" src="./images/{{ publication.image }}" />
+            <img alt="{{ publication.title }}" loading="lazy" src="{{ '/images/' | append: publication.image | relative_url }}" />
             {% endif %}
           </div>
         </div>
 
         <div class="column">
           <div class="content">
-            <h3 class="publication-title"><a href="{{ publication.project_page }}">{{ publication.title }}</a></h3>
+            <div class="publication-meta">
+              <span class="publication-pill">{{ publication.venue }}</span>
+              {% for award in publication.awards %}
+              <span class="publication-pill publication-pill-award">{{ award }}</span>
+              {% endfor %}
+            </div>
+            <h3 class="publication-title">
+              {% if project_url %}
+              <a href="{{ project_url }}">{{ publication.title }}</a>
+              {% else %}
+              {{ publication.title }}
+              {% endif %}
+            </h3>
             <div class="publication-authors">
               {% for author_id in publication.authors %}
               {% assign author = site.data.authors[author_id] %}
@@ -153,26 +247,25 @@ layout: null
                 {% if author.is_me %}
                 {{ author.first_name }} {{author.middle_name}} {{ author.last_name }}{% if forloop.last == false %},{%
                 endif %}
-                {% else %}
+                {% elsif author.website %}
                 <a href="{{ author.website }}">{{ author.first_name }} {{ author.middle_name }} {{ author.last_name
                   }}</a>{% if forloop.last == false %},{% endif %}
+                {% else %}
+                {{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}{% if forloop.last == false %},{%
+                endif %}
                 {% endif %}
               </span>
               {% endfor %}
             </div>
-            <div class="publication-venue">
-              <span>{{ publication.venue }}</span>
-              {% for award in publication.awards %}
-                <span class="publication-venue-emph">{{ award }}<span>
-              {% endfor %}
-            </div>
             <p class="publication-description">{{ publication.description }}</p>
-            <!-- Publication Links. -->
-            <div class="publication-links buttons field has-addons">
-              <a class="external-link button is-small is-ghost" href="{{ publication.project_page }}">
+            <div class="publication-links buttons">
+              {% if project_url %}
+              <a class="external-link button is-small is-ghost" href="{{ project_url }}">
                 <span class="icon"><i class="fas fa-globe-asia"></i></span>
                 <span>Project Page</span>
               </a>
+              {% endif %}
+              {% if publication.arxiv %}
               <a class="external-link button is-small is-ghost" href="https://arxiv.org/pdf/{{ publication.arxiv }}.pdf">
                 <span class="icon"><i class="fas fa-file-pdf"></i></span>
                 <span>PDF</span>
@@ -181,14 +274,14 @@ layout: null
                 <span class="icon"><i class="ai ai-arxiv"></i></span>
                 <span>arXiv</span>
               </a>
-              {% if publication.github %}
-              <a class="external-link button is-small is-ghost" href="https://github.com/{{ publication.github }}">
+              {% endif %}
+              {% if github_url %}
+              <a class="external-link button is-small is-ghost" href="{{ github_url }}">
                 <span class="icon"><i class="fa fab fa-github"></i></span>
                 <span>Code</span>
               </a>
               {% endif %}
             </div>
-            <!--/ Publication Links. -->
           </div>
         </div>
       </div>
@@ -214,7 +307,7 @@ layout: null
         <div class="column is-8">
           <div class="content">
             <p>
-              This template is borrowed from <a href="https://github.com/keunhong/keunhong.github.io">HERE</a>.
+              Built with Jekyll and adapted from the excellent academic homepage template by <a href="https://github.com/keunhong/keunhong.github.io">Keunhong Park</a>.
             </p>
           </div>
         </div>

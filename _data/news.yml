@@ -1,3 +1,12 @@
+- date: Jan 2026
+  description: "We released [SR-3D](https://www.anjiecheng.me/sr3d), a 3D-aware region-prompted VLM for grounded spatial reasoning across views and scenes."
+
+- date: Oct 2025
+  description: "Our ICCV 2025 paper [Describe Anything](https://describe-anything.github.io/) introduces DAM for detailed localized image and video captioning."
+
+- date: Oct 2025
+  description: "Our ICCV 2025 paper [Token-Efficient VLM](https://openaccess.thecvf.com/content/ICCV2025/html/Jiang_Token-Efficient_VLM_High-Resolution_Image_Understanding_via_Dynamic_Region_Proposal_ICCV_2025_paper.html) presents an efficient VLM for high-resolution visual understanding."
+
 - date: Mar 2025
   description: "SpatialRGPT was demoed at [GTC 2025](https://www.youtube.com/watch?v=_waPvOwL9Z8) as a part of [Agentic AI for Physical Operations](https://www.nvidia.com/en-us/on-demand/session/gtc25-S72758/)!"
 

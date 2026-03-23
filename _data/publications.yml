@@ -1,3 +1,61 @@
+- id: SR3D
+  title: "3D Aware Region Prompted Vision Language Model"
+  venue: "ICLR 2026"
+  description: "SR-3D unifies single-view 2D and multi-view 3D representations for flexible region prompting and grounded spatial reasoning."
+  project_page: "https://www.anjiecheng.me/sr3d"
+  arxiv: "2509.13317"
+  image: "sr3d.svg"
+  authors:
+    - anchiehc
+    - yangf
+    - yukangc
+    - zhijianl
+    - xiaolongli
+    - subhashreer
+    - songh
+    - yaolu
+    - jank
+    - pavlom
+    - dannyy
+    - xiaolongw
+    - sifeil
+
+- id: DAM
+  title: "Describe Anything: Detailed Localized Image and Video Captioning"
+  venue: "ICCV 2025"
+  description: "DAM generates detailed localized captions for user-specified regions in images and videos, preserving both local detail and global context."
+  project_page: "https://describe-anything.github.io/"
+  github: "https://github.com/NVlabs/describe-anything"
+  arxiv: "2504.16072"
+  image: "dam.svg"
+  authors:
+    - longl
+    - yifand
+    - yunhaog
+    - sifeil
+    - hanzim
+    - boyil
+    - marcop
+    - mingyul
+    - trevord
+    - adamy
+    - yinc
+
+- id: TEVA
+  title: "Token-Efficient VLM: High-Resolution Image Understanding via Dynamic Region Proposal"
+  venue: "ICCV 2025"
+  description: "TEVA improves high-resolution image understanding by dynamically selecting detail-rich regions while keeping token usage efficient."
+  project_page: "https://openaccess.thecvf.com/content/ICCV2025/html/Jiang_Token-Efficient_VLM_High-Resolution_Image_Understanding_via_Dynamic_Region_Proposal_ICCV_2025_paper.html"
+  image: "teva.svg"
+  authors:
+    - yitongj
+    - jinweig
+    - tianfanx
+    - kachunc
+    - pavlom
+    - dannyy
+    - sifeil
+
 - id: GSPN
   title: "Parallel Sequence Modeling via Generalized Spatial Propagation Network"
   venue: "CVPR 2025"
@@ -100,7 +158,7 @@
   description: "SpatialRGPT is a grounded spatial reasoning model that can reason about spatial relationships in images."
   project_page: "https://spatialrgpt.github.io/"
   github: "https://github.com/AnjieCheng/SpatialRGPT"
-  arxiv: "2410.24207"
+  arxiv: "2409.13640"
   image: "srgpt.mp4"
   authors:
     - anchiehc

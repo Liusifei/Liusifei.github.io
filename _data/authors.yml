@@ -484,3 +484,47 @@ ruihan:
 ameyk:
   first_name: Amey
   last_name: Kulkarni
+longl:
+  first_name: Long
+  last_name: Lian
+yifand:
+  first_name: Yifan
+  last_name: Ding
+yunhaog:
+  first_name: Yunhao
+  last_name: Ge
+hanzim:
+  first_name: Hanzi
+  last_name: Mao
+boyil:
+  first_name: Boyi
+  last_name: Li
+marcop:
+  first_name: Marco
+  last_name: Pavone
+  website: https://stanfordasl.github.io/
+trevord:
+  first_name: Trevor
+  last_name: Darrell
+  website: https://people.eecs.berkeley.edu/~trevor/
+adamy:
+  first_name: Adam
+  last_name: Yala
+yinc:
+  first_name: Yin
+  last_name: Cui
+yitongj:
+  first_name: Yitong
+  last_name: Jiang
+tianfanx:
+  first_name: Tianfan
+  last_name: Xue
+kachunc:
+  first_name: Ka Chun
+  last_name: Cheung
+xiaolongli:
+  first_name: Xiaolong
+  last_name: Li
+subhashreer:
+  first_name: Subhashree
+  last_name: Radhakrishnan

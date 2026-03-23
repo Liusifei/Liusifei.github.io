@@ -165,9 +165,11 @@ layout: null
                 {% if author.is_me %}
                 {{ author.first_name | slice: 0 }}. {{ author.last_name }}{% if forloop.last == false %},{%
                 endif %}
-                {% else %}
+                {% elsif author.website %}
                 <a href="{{ author.website }}">{{ author.first_name | slice: 0 }}. {{ author.last_name }}</a>{% if
                 forloop.last == false %},{% endif %}
+                {% else %}
+                {{ author.first_name | slice: 0 }}. {{ author.last_name }}{% if forloop.last == false %},{% endif %}
                 {% endif %}
               </span>
               {% endfor %}

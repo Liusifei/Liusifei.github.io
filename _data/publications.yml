@@ -4,7 +4,7 @@
   description: "SR-3D unifies single-view 2D and multi-view 3D representations for flexible region prompting and grounded spatial reasoning."
   project_page: "https://www.anjiecheng.me/sr3d"
   arxiv: "2509.13317"
-  image: "sr3d.png"
+  image: "sr3d.mp4"
   authors:
     - anchiehc
     - yangf
@@ -27,7 +27,7 @@
   project_page: "https://describe-anything.github.io/"
   github: "https://github.com/NVlabs/describe-anything"
   arxiv: "2504.16072"
-  image: "dam.jpg"
+  image: "dam_compare.png"
   authors:
     - longl
     - yifand
@@ -46,7 +46,7 @@
   venue: "ICCV 2025"
   description: "TEVA improves high-resolution image understanding by dynamically selecting detail-rich regions while keeping token usage efficient."
   project_page: "https://openaccess.thecvf.com/content/ICCV2025/html/Jiang_Token-Efficient_VLM_High-Resolution_Image_Understanding_via_Dynamic_Region_Proposal_ICCV_2025_paper.html"
-  image: "teva.png"
+  image: "teva_crop.png"
   authors:
     - yitongj
     - jinweig

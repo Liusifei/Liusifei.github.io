@@ -59,6 +59,269 @@
     - dannyy
     - sifeil
 
+- id: GSPN
+  title: "Parallel Sequence Modeling via Generalized Spatial Propagation Network"
+  venue: "CVPR, 2025"
+  description: "GSPN is a spatially coherent attention mechanism for vision models that improves high-resolution efficiency and fidelity."
+  project_page: "https://whj363636.github.io/GSPN/"
+  github: "https://github.com/whj363636/GSPN"
+  arxiv: "2503.17191"
+  image: "gspn.png"
+  authors:
+    - hongjunw
+    - wonminb
+    - jiaruix
+    - jinweig
+    - kachunc
+    - xiaolongw
+    - kaih
+    - jank
+    - sifeil
+
+- id: OmniRGPT
+  title: "Omni-RGPT: Unifying Image and Video Region-level Understanding via Token Marks"
+  venue: "CVPR, 2025"
+  description: "Omni-RGPT unifies region-level understanding for images and videos with token marks and region-aware video instruction tuning."
+  project_page: "https://research.nvidia.com/labs/twn/publication/cvpr_2025_omnirgpt/"
+  github: ""
+  arxiv: "2501.08326"
+  image: ""
+  authors:
+    - miranh
+    - minhungc
+    - deanh
+    - sifeil
+    - subhashreer
+    - seonjk
+    - frankw
+    - ryoh
+
+- id: BlobGENVid
+  title: "BlobGEN-Vid: Compositional Text-to-Video Generation with Blob Video Representations"
+  venue: "CVPR, 2025"
+  description: "BlobGEN-Vid introduces blob video representations for controllable compositional text-to-video generation."
+  project_page: "https://research.nvidia.com/labs/lpr/publication/blobgenvid2025/"
+  github: ""
+  arxiv: "2501.07647"
+  image: ""
+  authors:
+    - weixif
+    - chaol
+    - sifeil
+    - williamyw
+    - arashv
+    - weilin
+
+- id: PS3
+  title: "Scaling Vision Pre-Training to 4K Resolution"
+  venue: "CVPR, 2025"
+  description: "PS3 scales CLIP-style vision pre-training to 4K resolution with near-constant cost for stronger high-resolution perception."
+  project_page: "https://research.nvidia.com/labs/lpr/publication/scaling4k2025/"
+  github: ""
+  arxiv: "2503.19903"
+  image: ""
+  authors:
+    - baifengs
+    - boyil
+    - hanc
+    - yaolu
+    - sifeil
+    - marcop
+    - jank
+    - songh
+    - trevord
+    - pavlom
+    - hongxuy
+
+- id: NaVILA
+  title: "NaVILA: Legged Robot Vision-Language-Action Model for Navigation"
+  venue: "arXiv, 2025"
+  description: "NaVILA combines vision-language-action modeling with locomotion policies for embodied navigation."
+  project_page: "https://navila-bot.github.io/"
+  github: "https://github.com/yang-zj1026/legged-loco"
+  arxiv: "2412.04453"
+  image: "navila.gif"
+  authors:
+    - anchiehc
+    - yandongj
+    - zhaojiny
+    - zaitiang
+    - xueyanz
+    - jank
+    - erdemb
+    - dannyy
+    - sifeil
+    - xiaolongw
+
+- id: NVILA
+  title: "NVILA: Efficient Frontier Visual Language Models"
+  venue: "CVPR, 2025"
+  description: "NVILA is an efficient frontier family of visual language models with strong training and inference efficiency."
+  project_page: "https://vila.mit.edu/"
+  github: "https://github.com/NVlabs/VILA"
+  arxiv: "2412.04468"
+  image: "nvila.png"
+  authors:
+    - zhijianl
+    - ligengz
+    - baifengs
+    - zhuoyangz
+    - yumingl
+    - shangy
+    - haochengx
+    - shiyicao
+    - yuxiang
+    - dachengl
+    - xiuyul
+    - yunhaof
+    - yukangc
+    - chengyuh
+    - deanh
+    - anchiehc
+    - vishweshn
+    - jinyih
+    - sifeil
+    - ranjayk
+    - daguangx
+    - xiaolongw
+    - pavlom
+    - jank
+    - hongxuy
+    - songh
+    - yaolu
+
+- id: NoPoSplat
+  title: "No Pose, No Problem: Surprisingly Simple 3D Gaussian Splats from Sparse Unposed Images"
+  venue: "ICLR, 2025"
+  description: "NoPoSplat reconstructs 3D Gaussian splats from sparse unposed images with a simple pose-free pipeline."
+  project_page: "https://noposplat.github.io/"
+  github: "https://github.com/cvg/NoPoSplat"
+  arxiv: "2410.24207"
+  image: "noposplat.mp4"
+  authors:
+    - botaoy
+    - sifeil
+    - haofeix
+    - xuetingl
+    - marcp
+    - minghsuany
+    - songyoup
+
+- id: CF3DGS
+  title: "COLMAP-Free 3D Gaussian Splatting"
+  venue: "CVPR, 2024"
+  description: "COLMAP-Free 3D Gaussian Splatting enables view synthesis without SfM preprocessing by progressively growing 3D Gaussians from video."
+  project_page: "https://oasisyang.github.io/colmap-free-3dgs/"
+  github: "https://github.com/NVlabs/CF-3DGS"
+  arxiv: "2312.07504"
+  image: "cf3dgs.png"
+  authors:
+    - yangf
+    - sifeil
+    - ameyk
+    - jank
+    - ayosha
+    - xiaolongw
+
+- id: CosAE
+  title: "CosAE: Learnable Fourier Series for Image Restoration"
+  venue: "NeurIPS, 2024"
+  description: "CosAE is a cosine autoencoder for image restoration that uses Fourier coefficients for compact yet detail-preserving representations."
+  project_page: "https://sifeiliu.net/CosAE-page/"
+  github: ""
+  arxiv: ""
+  image: ""
+  authors:
+    - sifeil
+    - shalinidm
+    - jank
+
+- id: SpatialRGPT
+  title: "SpatialRGPT: Grounded Spatial Reasoning in Vision Language Models"
+  venue: "NeurIPS, 2024"
+  description: "SpatialRGPT improves grounded spatial reasoning in VLMs through regional representation learning and depth-aware modeling."
+  project_page: "https://www.anjiecheng.me/SpatialRGPT"
+  github: "https://github.com/AnjieCheng/SpatialRGPT"
+  arxiv: "2406.01584"
+  image: "srgpt.mp4"
+  authors:
+    - anchiehc
+    - dannyy
+    - yangf
+    - qiushang
+    - ruihan
+    - jank
+    - xiaolongw
+    - sifeil
+
+- id: RegionGPT
+  title: "RegionGPT: Towards Region Understanding Vision Language Model"
+  venue: "CVPR, 2024"
+  description: "RegionGPT enhances region-level captioning and understanding by improving spatial awareness in vision-language models."
+  project_page: "https://guoqiushan.github.io/regiongpt.github.io/"
+  github: ""
+  arxiv: "2403.02330"
+  image: ""
+  authors:
+    - qiushang
+    - shalinidm
+    - hongxuy
+    - wonminb
+    - kachunc
+    - yizhouy
+    - pingl
+    - sifeil
+
+- id: Dream4D
+  title: "Dream-in-4D: A Unified Approach for Text- and Image-guided 4D Scene Generation"
+  venue: "CVPR, 2024"
+  description: "Dream-in-4D provides a unified framework for text-guided, image-guided, and personalized 4D scene generation."
+  project_page: "https://research.nvidia.com/labs/lpr/publication/zheng2024dream4d/"
+  github: ""
+  arxiv: ""
+  image: ""
+  authors:
+    - yufengz
+    - xuetingl
+    - kokin
+    - sifeil
+    - karstenk
+    - otmarh
+    - shalinidm
+
+- id: NFP
+  title: "3D Reconstruction with Generalizable Neural Fields using Scene Priors"
+  venue: "ICLR, 2024"
+  description: "NFP learns scene priors for fast, flexible 3D reconstruction and single-image novel-view synthesis."
+  project_page: "https://oasisyang.github.io/neural-prior"
+  github: ""
+  arxiv: ""
+  image: ""
+  authors:
+    - yangf
+    - shalinidm
+    - xuetingl
+    - ameyk
+    - jank
+    - xiaolongw
+    - sifeil
+
+- id: HOIDiffusion
+  title: "HOIDiffusion: Generating Realistic 3D Hand-Object Interaction Data"
+  venue: "CVPR, 2024"
+  description: "HOIDiffusion generates realistic 3D hand-object interaction data for perception tasks such as 6D pose estimation."
+  project_page: "https://mq-zhang1.github.io/HOIDiffusion/"
+  github: ""
+  arxiv: ""
+  image: ""
+  authors:
+    - mengqiz
+    - yangf
+    - zhengd
+    - sifeil
+    - zhuowent
+    - xiaolongw
+
 - id: TUVF
   title: "TUVF: Learning Generalizable Texture UV Radiance Fields"
   venue: "arXiv, 2023"

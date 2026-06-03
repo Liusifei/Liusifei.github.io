@@ -31,6 +31,7 @@ layout: null
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script defer src="./js/fontawesome.all.min.js"></script>
+  <script defer src="./js/email.js"></script>
 </head>
 
 <body>
@@ -63,6 +64,12 @@ layout: null
             <a href="https://twitter.com/{{ site.twitter_username }}">
               <i class="fab fa-twitter"></i>
               {{ site.twitter_username }}
+            </a>
+          </p>
+          <p>
+            <a class="js-email" href="#" data-user="{{ site.email_user }}" data-domain="{{ site.email_domain }}">
+              <i class="fas fa-envelope"></i>
+              <span class="js-email-text"></span>
             </a>
           </p>
         </div>

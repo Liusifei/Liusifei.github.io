@@ -37,6 +37,7 @@ layout: null
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script defer src="{{ '/js/fontawesome.all.min.js' | relative_url }}"></script>
+  <script defer src="{{ '/js/email.js' | relative_url }}"></script>
   <script src="{{ '/js/index.js' | relative_url }}"></script>
 </head>
 
@@ -269,6 +270,9 @@ layout: null
         </a>
         <a class="external-link" href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
           <i class="ai ai-google-scholar"></i>
+        </a>
+        <a class="external-link js-email" href="#" data-user="{{ site.email_user }}" data-domain="{{ site.email_domain }}">
+          <i class="fas fa-envelope"></i>
         </a>
       </div>
       <div class="columns is-centered has-text-centered">

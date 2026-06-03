@@ -30,6 +30,9 @@ description: >-
   Before joining NVIDIA, I earned my Ph.D. at the [VLLAB](http://vllab.ucmerced.edu/) at UC Merced, advised by [Ming-Hsuan Yang](http://faculty.ucmerced.edu/mhyang/). I have been fortunate to receive the Baidu Graduate Fellowship, the NVIDIA Pioneering Research Award, and the Rising Star EECS recognition.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sifeiliu.net" # the base hostname & protocol for your site, e.g. http://example.com
+# Contact email split into parts; assembled client-side via js/email.js
+email_user: sifeil
+email_domain: nvidia.com
 twitter_username: Sifei30488L
 github_username: Liusifei
 google_scholar: j4pcHV4AAAAJ

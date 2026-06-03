@@ -38,7 +38,6 @@ layout: null
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script defer src="{{ '/js/fontawesome.all.min.js' | relative_url }}"></script>
   <script src="{{ '/js/index.js' | relative_url }}"></script>
-  <script defer src="{{ '/js/email.js' | relative_url }}"></script>
 </head>
 
 <body class="site-shell">
@@ -265,9 +264,6 @@ layout: null
   <footer class="footer">
     <div class="container">
       <div class="content footer-links has-text-centered">
-        <a class="js-email" href="#" data-user="{{ site.email_user }}" data-domain="{{ site.email_domain }}">
-          <i class="fas fa-envelope"></i>
-        </a>
         <a class="external-link" href="https://github.com/{{ site.github_username }}">
           <i class="fab fa-github"></i>
         </a>

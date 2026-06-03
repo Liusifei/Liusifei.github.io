@@ -21,10 +21,6 @@
 title: Sifei Liu
 name: Sifei Liu
 position: Principal Research Scientist / Tech Lead
-# Email is split into parts so the rendered HTML never contains the full
-# address or a mailto: link. It is reassembled client-side (see js/email.js).
-email_user: zwrq0star
-email_domain: gmail.com
 description: >-
   I am a Principal Research Scientist and Tech Lead at [NVIDIA Research](https://www.nvidia.com/en-us/research/), where I work with the [LPR](https://research.nvidia.com/labs/lpr/) team led by [Jan Kautz](https://jankautz.com/). My current research focuses on embodied foundational models, efficient transformer architectures, and spatial reasoning.
 

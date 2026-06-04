@@ -158,7 +158,7 @@
   venue: "ICCV 2025"
   description: "TEVA improves high-resolution image understanding by dynamically selecting detail-rich regions while keeping token usage efficient."
   project_page: "https://openaccess.thecvf.com/content/ICCV2025/html/Jiang_Token-Efficient_VLM_High-Resolution_Image_Understanding_via_Dynamic_Region_Proposal_ICCV_2025_paper.html"
-  image: "teva_cover.jpg"
+  image: "teva.png"
   authors:
     - yitongj
     - jinweig

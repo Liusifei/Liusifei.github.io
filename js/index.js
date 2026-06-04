@@ -15,12 +15,12 @@ $(document).ready(function() {
             var list = container.querySelector('.authors-list');
             var toggle = container.querySelector('.authors-toggle');
             if (!list || !toggle) return;
+            // Don't re-measure an expanded list: it's intentionally unclamped.
+            if (container.classList.contains('is-expanded')) return;
+            // Measure overflow against the clamped (2-line) height. Web fonts
+            // load asynchronously, so this must be re-run after fonts are ready.
             var overflowing = list.scrollHeight - list.clientHeight > 2;
-            if (overflowing && !container.classList.contains('is-expanded')) {
-                toggle.hidden = false;
-            } else if (!container.classList.contains('is-expanded')) {
-                toggle.hidden = true;
-            }
+            toggle.hidden = !overflowing;
         });
     }
 
@@ -31,6 +31,15 @@ $(document).ready(function() {
     });
 
     setupAuthorToggles();
+
+    // Overflow depends on the final web font metrics, which arrive after
+    // $(document).ready. Re-run once everything (fonts/images) has loaded and
+    // again when the font set reports ready, so toggles appear reliably.
+    $(window).on('load', setupAuthorToggles);
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(setupAuthorToggles);
+    }
+
     var resizeTimer;
     $(window).on('resize', function() {
         clearTimeout(resizeTimer);

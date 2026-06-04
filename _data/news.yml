@@ -1,5 +1,20 @@
+- date: Jun 2026
+  description: "We released [Cosmos 3](https://research.nvidia.com/labs/cosmos-lab/cosmos3/), NVIDIA's omnimodal world foundation model powering the next generation of Physical AI — I am a core contributor driving its spatial and embodied capabilities."
+
+- date: Jun 2026
+  description: "Our CVPR 2026 paper [GR3D](https://www.anjiecheng.me/gr3d/) unifies 2D and monocular 3D grounding for grounded spatial chain-of-thought reasoning."
+
+- date: Apr 2026
+  description: "We released [LoHo-Manip](https://www.liuisabella.com/LoHoManip/), a trace-conditioned VLA planning framework for long-horizon robotic manipulation."
+
+- date: Feb 2026
+  description: "We released [Compact GSPN](https://jiangyitong.github.io/cgspn.github.io/), scaling spatial propagation networks to vision foundation models with nearly 10x lower propagation latency."
+
 - date: Jan 2026
   description: "We released [SR-3D](https://www.anjiecheng.me/sr3d), a 3D-aware region-prompted VLM for grounded spatial reasoning across views and scenes."
+
+- date: Oct 2025
+  description: "We released [OmniVinci](https://nvlabs.github.io/OmniVinci/), an omni-modal LLM for joint understanding of vision, audio, and text."
 
 - date: Oct 2025
   description: "Our ICCV 2025 paper [Describe Anything](https://describe-anything.github.io/) introduces DAM for detailed localized image and video captioning."

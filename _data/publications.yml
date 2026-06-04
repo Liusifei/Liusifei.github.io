@@ -1,3 +1,115 @@
+- id: cosmos3
+  title: "Cosmos 3: Omnimodal World Models for Physical AI"
+  venue: "Technical Report 2026"
+  description: "Cosmos 3 is an omnimodal world foundation model that unifies understanding, generation, simulation, and action across text, image, video, audio, and robot actions for Physical AI. It is a large NVIDIA team effort, with Sifei Liu as a core contributor on spatial and embodied capabilities."
+  project_page: "https://research.nvidia.com/labs/cosmos-lab/cosmos3/"
+  image: "cosmos3.mp4"
+  authors:
+    - sifeil
+
+- id: LoHoManip
+  title: "Long-Horizon Manipulation via Trace-Conditioned VLA Planning"
+  venue: "arXiv 2026"
+  description: "LoHo-Manip is a modular framework that scales short-horizon vision-language-action policies to long-horizon manipulation, using a task-management VLM that predicts subtask sequences and 2D visual traces to guide the executor with implicit progress tracking, replanning, and recovery."
+  project_page: "https://www.liuisabella.com/LoHoManip/"
+  arxiv: "2604.21924"
+  image: "lohomanip.png"
+  authors:
+    - isabellal
+    - anchiehc
+    - ruiy
+    - gengc
+    - rizhaoq
+    - xueyanz
+    - shay
+    - dannyy
+    - xiaolongw
+    - sifeil
+
+- id: gr3d
+  title: "Grounded 3D-Aware Spatial Vision-Language Modeling"
+  venue: "CVPR 2026"
+  description: "GR3D is a spatial vision-language model that unifies explicit 2D, implicit 2D, and monocular 3D grounding in a single framework, decomposing spatial understanding into grounded 2D perception followed by 3D inference."
+  project_page: "https://www.anjiecheng.me/gr3d/"
+  arxiv: "2605.30307"
+  image: "gr3d.png"
+  authors:
+    - anchiehc
+    - yangf
+    - yataij
+    - ligengz
+    - guanqiz
+    - zhuoyangz
+    - zhaojiny
+    - songh
+    - yaolu
+    - pavlom
+    - vidyam
+    - jank
+    - xiaolongw
+    - dannyy
+    - sifeil
+
+- id: OmniVinci
+  title: "OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM"
+  venue: "arXiv 2025"
+  description: "OmniVinci is an omni-modal LLM with new architecture (OmniAlignNet, Temporal Embedding Grouping, and Constrained Rotary Time Embedding) and a 24M-conversation data pipeline, achieving state-of-the-art joint understanding of images, video, audio, and text with far fewer training tokens."
+  project_page: "https://nvlabs.github.io/OmniVinci/"
+  github: "https://github.com/NVlabs/OmniVinci"
+  image: "omnivinci.png"
+  authors:
+    - hanrongy
+    - chaohany
+    - arushig
+    - weih
+    - ligengz
+    - yuanhangs
+    - seanl
+    - anchiehc
+    - zhenw
+    - jinchuant
+    - yumingl
+    - dongyang
+    - zhijianl
+    - yukangc
+    - ambrishd
+    - ehsanj
+    - sreyang
+    - daguangx
+    - ehsanha
+    - danialmt
+    - vidyam
+    - sifeil
+    - yaolu
+    - oluwatobio
+    - frankw
+    - rafaelv
+    - bryanc
+    - andrewt
+    - songh
+    - jank
+    - dannyy
+    - pavlom
+
+- id: cgspn
+  title: "Compact GSPN: Scaling Spatial Propagation to Vision Foundation Models"
+  venue: "arXiv 2026"
+  description: "Compact GSPN (C-GSPN) is a ViT block with compressed spatial propagation and fused CUDA kernels that cuts propagation latency by nearly 10x, using a two-stage distillation scheme to scale subquadratic spatial propagation networks to vision foundation models."
+  project_page: "https://jiangyitong.github.io/cgspn.github.io/"
+  image: "cgspn.png"
+  authors:
+    - yitongj
+    - collinm
+    - hongjunw
+    - hanrongy
+    - qid
+    - tianfanx
+    - jinweig
+    - jank
+    - dannyy
+    - pavlom
+    - sifeil
+
 - id: SR3D
   title: "3D Aware Region Prompted Vision Language Model"
   venue: "ICLR 2026"
@@ -185,22 +297,6 @@
     - jank
     - ayosha
     - xiaolongw
-
-- id: TUVF
-  title: "TUVF: Learning Generalizable Texture UV Radiance Fields"
-  venue: "arXiv 2023"
-  description: "The paper introduces TUVF, a method for learning generalizable texture UV radiance fields."
-  project_page: "https://www.anjiecheng.me/TUVF"
-  github: "https://github.com/AnjieCheng/TUVF"
-  arxiv: "2305.03040"
-  image: "cheng2023tuvf.jpg"
-  image_mouseover: "cheng2023tuvf.mp4"
-  authors:
-    - anchiehc
-    - xuetingl 
-    - sifeil
-    - xiaolongw
-
 
 - id: ODISE
   title: "Open-vocabulary panoptic segmentation with text-to-image diffusion models"

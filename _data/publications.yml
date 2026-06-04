@@ -56,7 +56,7 @@
   description: "OmniVinci is an omni-modal LLM with new architecture (OmniAlignNet, Temporal Embedding Grouping, and Constrained Rotary Time Embedding) and a 24M-conversation data pipeline, achieving state-of-the-art joint understanding of images, video, audio, and text with far fewer training tokens."
   project_page: "https://nvlabs.github.io/OmniVinci/"
   github: "https://github.com/NVlabs/OmniVinci"
-  image: "omnivinci.png"
+  image: "omnivinci.mp4"
   authors:
     - hanrongy
     - chaohany

@@ -177,7 +177,7 @@ layout: null
       {% endif %}
       <div class="publication-block columns is-variable is-5">
 
-        <div class="column is-3">
+        <div class="column is-4">
           <div class="publication-image {% if publication.image_mouseover %}publication-mousecell{% endif %}">
             {% if publication.image_mouseover contains "mp4" %}
             <video autoplay preload playsinline height="100%" loop muted width="100%">
@@ -213,6 +213,7 @@ layout: null
               {% endif %}
             </h3>
             <div class="publication-authors">
+              <span class="authors-list">
               {% for author_id in publication.authors %}
               {% assign author = site.data.authors[author_id] %}
               <span class="author-block {% if author.is_me %}author-me{% endif %}">
@@ -228,6 +229,8 @@ layout: null
                 {% endif %}
               </span>
               {% endfor %}
+              </span>
+              <button type="button" class="authors-toggle" hidden>Show all authors</button>
             </div>
             <p class="publication-description">{{ publication.description }}</p>
             <div class="publication-links buttons">
@@ -235,6 +238,12 @@ layout: null
               <a class="external-link button is-small is-ghost" href="{{ project_url }}">
                 <span class="icon"><i class="fas fa-globe-asia"></i></span>
                 <span>Project Page</span>
+              </a>
+              {% endif %}
+              {% if publication.pdf %}
+              <a class="external-link button is-small is-ghost" href="{{ publication.pdf }}">
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>{{ publication.pdf_label | default: "Tech Report" }}</span>
               </a>
               {% endif %}
               {% if publication.arxiv %}

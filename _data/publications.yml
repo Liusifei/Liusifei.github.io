@@ -1,11 +1,11 @@
 - id: cosmos3
   title: "Cosmos 3: Omnimodal World Models for Physical AI"
-  venue: "Technical Report 2026"
-  description: "Cosmos 3 is an omnimodal world foundation model that unifies understanding, generation, simulation, and action across text, image, video, audio, and robot actions for Physical AI. It is a large NVIDIA team effort, with Sifei Liu as a core contributor on spatial and embodied capabilities."
+  venue: "NVIDIA Technical Report 2026"
+  description: "Cosmos 3 is NVIDIA's omnimodal world foundation model that unifies understanding, generation, simulation, and action across text, image, video, audio, and robot actions for Physical AI. I serve as a core contributor on its spatial and embodied capabilities."
   project_page: "https://research.nvidia.com/labs/cosmos-lab/cosmos3/"
+  pdf: "https://research.nvidia.com/labs/cosmos-lab/cosmos3/technical-report.pdf"
+  pdf_label: "Tech Report"
   image: "cosmos3.mp4"
-  authors:
-    - sifeil
 
 - id: LoHoManip
   title: "Long-Horizon Manipulation via Trace-Conditioned VLA Planning"
@@ -13,7 +13,7 @@
   description: "LoHo-Manip is a modular framework that scales short-horizon vision-language-action policies to long-horizon manipulation, using a task-management VLM that predicts subtask sequences and 2D visual traces to guide the executor with implicit progress tracking, replanning, and recovery."
   project_page: "https://www.liuisabella.com/LoHoManip/"
   arxiv: "2604.21924"
-  image: "lohomanip.png"
+  image: "lohomanip.mp4"
   authors:
     - isabellal
     - anchiehc
@@ -32,7 +32,7 @@
   description: "GR3D is a spatial vision-language model that unifies explicit 2D, implicit 2D, and monocular 3D grounding in a single framework, decomposing spatial understanding into grounded 2D perception followed by 3D inference."
   project_page: "https://www.anjiecheng.me/gr3d/"
   arxiv: "2605.30307"
-  image: "gr3d.png"
+  image: "gr3d.gif"
   authors:
     - anchiehc
     - yangf

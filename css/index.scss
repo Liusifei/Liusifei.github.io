@@ -260,6 +260,41 @@ body.site-shell {
     .publication-authors {
         color: #425750;
 
+        .authors-list {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            overflow: hidden;
+        }
+
+        &.is-expanded .authors-list {
+            display: block;
+            -webkit-line-clamp: unset;
+            line-clamp: unset;
+            overflow: visible;
+        }
+
+        .authors-toggle {
+            display: inline-block;
+            margin-top: 0.15rem;
+            padding: 0;
+            border: none;
+            background: none;
+            color: #1f6f5c;
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .authors-toggle[hidden] {
+            display: none;
+        }
+
+        .authors-toggle:hover {
+            text-decoration: underline;
+        }
+
         .author-me {
             color: #102f29;
             font-weight: 600;

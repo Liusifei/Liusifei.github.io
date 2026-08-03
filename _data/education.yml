@@ -1,9 +1,15 @@
 - name: University of California, Merced
+  degree: Ph.D. in Electrical Engineering and Computer Science
   description: >-
-    Ph.D. in EECS, advised by <a href="http://faculty.ucmerced.edu/mhyang/">Ming-Hsuan Yang</a>.
-  dates: Fall 2012 - Fall 2017
+    Advised by <a href="http://faculty.ucmerced.edu/mhyang/">Ming-Hsuan Yang</a>.
+  dates: "2017"
 
 - name: University of Science and Technology of China
+  degree: M.S. in Electronic Engineering and Information Sciences
   description: >-
-    M.S. in Electronic Engineering and Information Sciences, advised by <a href="http://www.nlpr.ia.ac.cn/users/szli/">Stan Z. Li</a>.
-  dates: Fall 2008 - Spring 2011
+    Advised by <a href="http://www.nlpr.ia.ac.cn/users/szli/">Stan Z. Li</a> and Bin Li.
+  dates: "2011"
+
+- name: North China Electric Power University
+  degree: Bachelor's in Control Science
+  description: ""

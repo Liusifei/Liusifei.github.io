@@ -332,6 +332,14 @@ body.site-shell {
         }
     }
 
+    .publication-image-contain {
+        background: #fff;
+
+        img {
+            object-fit: contain;
+        }
+    }
+
     .publication-mousecell {
         position: relative;
         font-size: 0;

@@ -3,190 +3,236 @@ layout: null
 ---
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-
+  <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <title>{{ site.title }}</title>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', '{{ site.google_analytics }}');
-  </script>
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <meta name="description" content="Curriculum vitae and complete publication list for {{ site.name }}.">
+  <title>{{ site.name }} | Curriculum Vitae</title>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="./css/fontawesome.all.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
-  <link href="./css/bulma.min.css" rel="stylesheet">
   <link href="./css/cv.css" rel="stylesheet">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script defer src="./js/fontawesome.all.min.js"></script>
   <script defer src="./js/email.js"></script>
 </head>
 
-<body>
-
-  <section>
-    <div class="container is-max-desktop">
-      <div class="columns is-vcentered">
-        <div class="column">
-          <h1 class="title is-2">{{ site.name }}</h1>
-          <h1 class="subtitle is-5">{{ site.position }}</h1>
-        </div>
-        <div class="column is-narrow portrait-column">
-          <img class="portrait-image" src="./images/profile.jpeg" alt="A portrait of Sifei Liu" />
-        </div>
-        <div class="column has-text-right">
-          <p>
-            <a href="{{ site.url }}">
-              <i class="fas fa-home"></i>
-              {% assign url_parts = site.url | split: "//" %}
-              {{ url_parts[1] }}
-            </a>
-          </p>
-          <p>
-            <a href="https://github.com/{{ site.github_username }}">
-              <i class="fab fa-github"></i>
-              {{ site.github_username }}
-            </a>
-          </p>
-          <p>
-            <a href="https://twitter.com/{{ site.twitter_username }}">
-              <i class="fab fa-twitter"></i>
-              {{ site.twitter_username }}
-            </a>
-          </p>
-          <p>
-            <a class="js-email" href="#" data-user="{{ site.email_user }}" data-domain="{{ site.email_domain }}">
-              <i class="fas fa-envelope"></i>
-              <span class="js-email-text"></span>
-            </a>
-          </p>
-        </div>
+<body class="cv-site">
+  <header class="cv-hero">
+    <div class="cv-container cv-hero-grid">
+      <img class="cv-portrait" src="./images/profile.jpeg" alt="Portrait of {{ site.name }}">
+      <div class="cv-intro">
+        <p class="cv-kicker">Curriculum Vitae</p>
+        <h1>{{ site.name }}</h1>
+        <p class="cv-role">{{ site.position }} · NVIDIA Research</p>
+        <div class="cv-summary">{{ site.description | markdownify }}</div>
       </div>
-
-      <div class="content">
-        <h3>Education</h3>
-        {% for school in site.data.education %}
-        <div class="columns">
-          <div class="column is-four-fifths">
-            <b>{{ school.name }}</b><br />
-            {{ school.description }}
-          </div>
-          <div class="column is-one-fifths has-text-right">
-            {{ school.dates }}
-          </div>
-        </div>
-        {% endfor %}
-
-        <hr />
-
-        <h3>Employment</h3>
-
-        {% for job in site.data.employment %}
-        <div class="columns">
-          <div class="column is-four-fifths">
-            <b>{{ job.company }}</b><br />
-            {{ job.description }}
-          </div>
-          <div class="column is-one-fifths has-text-right">
-            {{ job.dates }}
-            <br />
-            {{ job.location }}
-          </div>
-        </div>
-        {% endfor %}
-
-        <hr />
-
-
-        <h3 id="professional-services">Workshop and tutorial organization</h3>
-        
-        {% for workshop in site.data.workshop %}
-        <div class="columns">
-          <div class="column is-four-fifths">
-            <b><a href="{{ workshop.url }}">{{ workshop.title }}</a></b><br />
-            {{ workshop.venue }}
-          </div>
-        </div>
-        {% endfor %}
-
-
-        <!-- <h3 id="professional-services">Workshop and tutorial organization</h3>
-        <ul>
-          <li><a href="https://4dhoi.github.io/">4D Hand Object Interaction:
-            Geometric Understanding and Applications in Dexterous Manipulation</a>, CVPR 2023</li>
-          <li><a href="https://htcv-iccv2021.github.io/">Human-centric Trustworthy Computer Vision From Research to Applications</a>, ICCV 2021</li>
-          <li><a href="https://sense-human.github.io/index_2020.html">Sensing, Understanding and Synthesizing Humans</a>, ECCV 2020</li>
-          <li><a href="https://nvlabs.github.io/eccv2020-limited-labels-data-tutorial/">New Frontiers for Learning with Limited Labels or Data</a>, ECCV 2020. (Co-orgainizor and Speaker)</li>
-          <li><a href="https://xiaolonw.github.io/graphnnv3/">Learning Representations via Graph-structured Networks Tutorial</a>, CVPR 2019 and 2020. (Co-orgainizor and Speaker)</li>
-        </ul> -->
-
-        <hr />
-
-        <h3>(Co)-Mentees at NVIDIA Research</h3>
-        <ul>
-          <li><a href="https://sunshineatnoon.github.io/">Xueting Li</a>, 2018-2020, Senior Research Scientist at NVIDIA</li>
-          <li><a href="http://rllab.snu.ac.kr/people/donghoon-lee">Donghong Lee</a>, 2018, Apple Inc.</li>
-          <li><a href="https://hfslyc.github.io/">Wei-Chih Hung</a>, 2019, Staff Research Scientist at Waymo</li>
-          <li><a href="https://hytseng0509.github.io/">Hung-Yu Tseng</a>, 2019, Research Scientist at Meta</li>
-          <li><a href="https://chenwydj.github.io/">Wuyang Chen</a>, 2020, Assistant Professor at Simon Fraser University</li>
-          <li><a href="https://www.wenlingshang.com/">Wenling (Wendy) Shang</a>, 2019, Research Engineer</li>
-          <li><a href="https://sivakm.github.io/">Siva Karthik Mustikovela</a>, 2019 and 2021, Senior Research Scientist at Cruise</li>
-          <li><a href="https://scholar.google.com/citations?hl=en&user=k0qC-7AAAAAJ&view_op=list_works&sortby=pubdate">Xitong Yang</a>, 2019, Research Scientist at Meta</li>
-          <li><a href="https://oasisyang.github.io/">Yang Fu</a>, 2019 and 2021, Research Scientist at NVIDIA Research</li>
-          <li><a href="https://jitengmu.github.io/">Jiteng Mu</a>, 2022, Researcher at Adobe</li>
-          <li><a href="https://jiashunwang.github.io/">Jiashun Wang</a>, 2022, PhD student at Carnegie Mellon University</li>
-          <li><a href="https://guoqiushan.github.io/">Qiushan Guo</a>, 2021-2022, Researcher at ByteDance</li>
-          <li><a href="https://jerryxu.net/">Jiarui Xu</a>, 2021-2022, Researcher at OpenAI</li>
-          <li><a href="https://judyye.github.io/">Yufei (Judy) Ye</a>, 2022, Postdoctoral Scholar at Stanford</li>
-        </ul>
-        
-        <hr />
-
-        <h3>Recent Publications</h3>
-
-        {% for publication in site.data.publications_full %}
-        <div class="columns">
-          <div class="column is-four-fifths">
-            <a href="{{ publication.project_page }}"><b>{{ publication.title }}</b></a>
-            <div class="publication-authors">
-              {% for author_id in publication.authors %}
-              {% assign author = site.data.authors[author_id] %}
-              <span class="author-block {% if author.is_me %}author-me{% endif %}">
-                {% if author.is_me %}
-                {{ author.first_name | slice: 0 }}. {{ author.last_name }}{% if forloop.last == false %},{%
-                endif %}
-                {% elsif author.website %}
-                <a href="{{ author.website }}">{{ author.first_name | slice: 0 }}. {{ author.last_name }}</a>{% if
-                forloop.last == false %},{% endif %}
-                {% else %}
-                {{ author.first_name | slice: 0 }}. {{ author.last_name }}{% if forloop.last == false %},{% endif %}
-                {% endif %}
-              </span>
-              {% endfor %}
-            </div>
-            {{ publication.description }}
-          </div>
-          <div class="column is-one-fifths has-text-right">
-            {{ publication.venue }}
-          </div>
-        </div>
-        {% endfor %}
-      </div>
+      <nav class="cv-actions" aria-label="CV links">
+        <a href="{{ '/' | relative_url }}"><i class="fas fa-home"></i> Home</a>
+        <a href="{{ '/resume.html' | relative_url }}"><i class="fas fa-file-alt"></i> Research Resume</a>
+        <a href="{{ '/Sifei_Liu_Resume.pdf' | relative_url }}"><i class="fas fa-file-pdf"></i> PDF</a>
+        <a href="https://scholar.google.com/citations?user={{ site.google_scholar }}"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+        <a class="js-email" href="#" data-user="{{ site.email_user }}" data-domain="{{ site.email_domain }}">
+          <i class="fas fa-envelope"></i> <span class="js-email-text"></span>
+        </a>
+      </nav>
     </div>
-  </section>
+  </header>
 
+  <main class="cv-container">
+    <section class="cv-section" id="experience">
+      <div class="section-label">
+        <p>Career</p>
+        <h2>Professional Experience</h2>
+      </div>
+      <div class="section-body">
+        {% for job in site.data.employment %}
+        <article class="timeline-entry">
+          <div class="timeline-heading">
+            <div>
+              <h3>{{ job.company }}</h3>
+              <p class="entry-subtitle">{{ job.role }}{% if job.description %} · {{ job.description }}{% endif %}</p>
+            </div>
+            <p class="entry-date">{{ job.dates }}<br><span>{{ job.location }}</span></p>
+          </div>
+          {% if job.highlights %}
+          <ul class="entry-highlights">
+            {% for highlight in job.highlights %}
+            <li>{{ highlight }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="cv-section" id="education">
+      <div class="section-label">
+        <p>Training</p>
+        <h2>Education</h2>
+      </div>
+      <div class="section-body">
+        {% for school in site.data.education %}
+        <article class="timeline-entry compact-entry">
+          <div class="timeline-heading">
+            <div>
+              <h3>{{ school.name }}</h3>
+              <p class="entry-subtitle">{{ school.degree }}</p>
+              {% if school.description != "" %}<p class="entry-note">{{ school.description }}</p>{% endif %}
+            </div>
+            {% if school.dates %}<p class="entry-date">{{ school.dates }}</p>{% endif %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="cv-section" id="honors">
+      <div class="section-label">
+        <p>Recognition</p>
+        <h2>Honors &amp; Awards</h2>
+      </div>
+      <div class="section-body honors-grid">
+        {% for award in site.data.awards %}
+        <article class="honor-card">
+          <span>{{ award.year }}</span>
+          <h3>{{ award.title }}</h3>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="cv-section" id="workshops">
+      <div class="section-label">
+        <p>Community</p>
+        <h2>Selected Workshop &amp; Tutorial Organization</h2>
+      </div>
+      <div class="section-body workshop-grid">
+        {% for workshop in site.data.workshop %}
+        <article class="workshop-card">
+          <h3><a href="{{ workshop.url }}">{{ workshop.title }}</a></h3>
+          <p>{{ workshop.venue }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="cv-section" id="mentorship">
+      <div class="section-label">
+        <p>Advising</p>
+        <h2>Selected Research Mentorship</h2>
+      </div>
+      <div class="section-body mentorship-list">
+        <p>
+          <a href="https://sunshineatnoon.github.io/">Xueting Li</a>,
+          <a href="https://hfslyc.github.io/">Wei-Chih Hung</a>,
+          <a href="https://hytseng0509.github.io/">Hung-Yu Tseng</a>,
+          <a href="https://chenwydj.github.io/">Wuyang Chen</a>,
+          <a href="https://sivakm.github.io/">Siva Karthik Mustikovela</a>,
+          <a href="https://oasisyang.github.io/">Yang Fu</a>,
+          <a href="https://jitengmu.github.io/">Jiteng Mu</a>,
+          <a href="https://jiashunwang.github.io/">Jiashun Wang</a>,
+          <a href="https://guoqiushan.github.io/">Qiushan Guo</a>,
+          <a href="https://jerryxu.net/">Jiarui Xu</a>, and
+          <a href="https://judyye.github.io/">Yufei (Judy) Ye</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="publications-section" id="publications">
+      <div class="publications-header">
+        <div>
+          <p class="cv-kicker">Research Record</p>
+          <h2>Publications</h2>
+        </div>
+        <p>Complete list, grouped by publication year. Sifei Liu is shown in bold.</p>
+      </div>
+
+      {% assign publication_years = "2026,2025,2024,2023,2022,2021,2020,2019,2018,2017,2016,2015,2014,2013" | split: "," %}
+      {% for year in publication_years %}
+        {% assign year_count = 0 %}
+        {% for publication in site.data.publications_full %}
+          {% if publication.year %}
+            {% assign publication_year = publication.year | append: "" %}
+          {% else %}
+            {% assign publication_year = publication.venue | slice: -4, 4 %}
+          {% endif %}
+          {% if publication_year == year %}
+            {% assign year_count = year_count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+
+        {% if year_count > 0 %}
+        <section class="publication-year">
+          <div class="year-marker">
+            <h3>{{ year }}</h3>
+            <span>{{ year_count }} paper{% if year_count != 1 %}s{% endif %}</span>
+          </div>
+          <div class="year-publications">
+            {% for publication in site.data.publications_full %}
+              {% if publication.year %}
+                {% assign publication_year = publication.year | append: "" %}
+              {% else %}
+                {% assign publication_year = publication.venue | slice: -4, 4 %}
+              {% endif %}
+              {% if publication_year == year %}
+              {% assign project_url = publication.project_page | default: publication.demo %}
+              <article class="publication-entry">
+                <div class="publication-main">
+                  <h4>
+                    {% if project_url and project_url != empty %}<a href="{{ project_url }}">{{ publication.title }}</a>{% else %}{{ publication.title }}{% endif %}
+                  </h4>
+                  <div class="publication-authors">
+                    {% if publication.authors_text %}
+                      {{ publication.authors_text | replace: "Sifei Liu", "<strong>Sifei Liu</strong>" }}
+                    {% else %}
+                      {% for author_id in publication.authors %}
+                        {% assign author = site.data.authors[author_id] %}
+                        {% capture author_name %}{{ author.first_name }}{% if author.middle_name %} {{ author.middle_name }}{% endif %} {{ author.last_name }}{% endcapture %}
+                        {% if author.is_me %}<strong>{{ author_name | strip }}</strong>{% elsif author.website %}<a href="{{ author.website }}">{{ author_name | strip }}</a>{% else %}{{ author_name | strip }}{% endif %}{% unless forloop.last %}, {% endunless %}
+                      {% endfor %}
+                    {% endif %}
+                  </div>
+                  {% if publication.description %}<p class="publication-description">{{ publication.description }}</p>{% endif %}
+                </div>
+                <div class="publication-side">
+                  <p>{{ publication.venue }}</p>
+                  <div class="paper-links">
+                    {% if project_url and project_url != empty %}<a href="{{ project_url }}">Project</a>{% endif %}
+                    {% if publication.arxiv and publication.arxiv != empty %}
+                      {% if publication.arxiv contains "://" %}
+                      <a href="{{ publication.arxiv }}">Paper</a>
+                      {% else %}
+                      <a href="https://arxiv.org/abs/{{ publication.arxiv }}">arXiv</a>
+                      {% endif %}
+                    {% endif %}
+                    {% if publication.github and publication.github != empty %}
+                      {% if publication.github contains "://" %}
+                      <a href="{{ publication.github }}">Code</a>
+                      {% else %}
+                      <a href="https://github.com/{{ publication.github }}">Code</a>
+                      {% endif %}
+                    {% endif %}
+                  </div>
+                </div>
+              </article>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </section>
+        {% endif %}
+      {% endfor %}
+    </section>
+  </main>
+
+  <footer class="cv-footer">
+    <div class="cv-container">
+      <p>Last updated August 2026.</p>
+      <nav>
+        <a href="{{ '/' | relative_url }}">Homepage</a>
+        <a href="{{ '/resume.html' | relative_url }}">Research Resume</a>
+        <a href="{{ '/Sifei_Liu_Resume.pdf' | relative_url }}">Download PDF</a>
+      </nav>
+    </div>
+  </footer>
 </body>
-
 </html>

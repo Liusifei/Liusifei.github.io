@@ -60,9 +60,14 @@ layout: null
               {{ site.description | markdownify }}
             </div>
             <div class="buttons hero-buttons">
-              <a class="external-link button is-dark" href="cv.html">
+              <a class="external-link button is-dark" href="{{ '/cv.html' | relative_url }}">
                 <span class="icon"><i class="fas fa-file"></i></span>
-                <span>CV</span>
+                <span>Full CV</span>
+              </a>
+
+              <a class="external-link button is-light" href="{{ '/Sifei_Liu_Resume.pdf' | relative_url }}">
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>Research Resume</span>
               </a>
 
               <a class="external-link button is-light"
@@ -172,13 +177,13 @@ layout: null
       {% assign github_url = '' %}
       {% if code_url and code_url contains '://' %}
       {% assign github_url = code_url %}
-      {% elsif code_url %}
+      {% elsif code_url and code_url != empty %}
       {% assign github_url = 'https://github.com/' | append: code_url %}
       {% endif %}
       <div class="publication-block columns is-variable is-5">
 
         <div class="column is-4">
-          <div class="publication-image {% if publication.image_mouseover %}publication-mousecell{% endif %}">
+          <div class="publication-image {% if publication.image_mouseover %}publication-mousecell{% endif %}{% if publication.id == 'vesta' %} publication-image-contain{% endif %}">
             {% if publication.image_mouseover contains "mp4" %}
             <video autoplay preload playsinline height="100%" loop muted width="100%">
               <source src="{{ '/images/' | append: publication.image_mouseover | relative_url }}" type="video/mp4">
@@ -206,13 +211,16 @@ layout: null
               {% endfor %}
             </div>
             <h3 class="publication-title">
-              {% if project_url %}
+              {% if project_url and project_url != empty %}
               <a href="{{ project_url }}">{{ publication.title }}</a>
               {% else %}
               {{ publication.title }}
               {% endif %}
             </h3>
             <div class="publication-authors">
+              {% if publication.authors_text %}
+              <span class="authors-list">{{ publication.authors_text | replace: "Sifei Liu", "<strong>Sifei Liu</strong>" }}</span>
+              {% else %}
               <span class="authors-list">
               {% for author_id in publication.authors %}
               {% assign author = site.data.authors[author_id] %}
@@ -230,23 +238,24 @@ layout: null
               </span>
               {% endfor %}
               </span>
+              {% endif %}
               <button type="button" class="authors-toggle" hidden>Show all authors</button>
             </div>
             <p class="publication-description">{{ publication.description }}</p>
             <div class="publication-links buttons">
-              {% if project_url %}
+              {% if project_url and project_url != empty %}
               <a class="external-link button is-small is-ghost" href="{{ project_url }}">
                 <span class="icon"><i class="fas fa-globe-asia"></i></span>
                 <span>Project Page</span>
               </a>
               {% endif %}
-              {% if publication.pdf %}
+              {% if publication.pdf and publication.pdf != empty %}
               <a class="external-link button is-small is-ghost" href="{{ publication.pdf }}">
                 <span class="icon"><i class="fas fa-file-pdf"></i></span>
                 <span>{{ publication.pdf_label | default: "Tech Report" }}</span>
               </a>
               {% endif %}
-              {% if publication.arxiv %}
+              {% if publication.arxiv and publication.arxiv != empty %}
               <a class="external-link button is-small is-ghost" href="https://arxiv.org/pdf/{{ publication.arxiv }}.pdf">
                 <span class="icon"><i class="fas fa-file-pdf"></i></span>
                 <span>PDF</span>
@@ -256,7 +265,7 @@ layout: null
                 <span>arXiv</span>
               </a>
               {% endif %}
-              {% if github_url %}
+              {% if github_url and github_url != empty %}
               <a class="external-link button is-small is-ghost" href="{{ github_url }}">
                 <span class="icon"><i class="fa fab fa-github"></i></span>
                 <span>Code</span>
@@ -274,6 +283,9 @@ layout: null
   <footer class="footer">
     <div class="container">
       <div class="content footer-links has-text-centered">
+        <a class="external-link footer-text-link" href="{{ '/cv.html' | relative_url }}">Full CV</a>
+        <a class="external-link footer-text-link" href="{{ '/resume.html' | relative_url }}">Resume</a>
+        <a class="external-link footer-text-link" href="{{ '/Sifei_Liu_Resume.pdf' | relative_url }}">PDF</a>
         <a class="external-link" href="https://github.com/{{ site.github_username }}">
           <i class="fab fa-github"></i>
         </a>

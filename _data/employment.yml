@@ -1,23 +1,32 @@
-- company: NVIDIA
-  description: Researcher
-  dates: "Nov 2017 - Current"
-  location: Santa Clara, CA
-
-- company: NVIDIA
+- company: NVIDIA Research
+  role: Principal Research Scientist
   description: >-
-    Research Intern with <a href="https://research.nvidia.com/labs/lpr/">NVIDIA Research</a>.
+    Learning and Perception Research
+  dates: "Nov 2017 – Present"
+  location: Santa Clara, CA
+  highlights:
+    - "Leading Spatial Reasoning in NVIDIA Cosmos 3."
+    - "Tech Lead of the Embodied Reasoning Project (Ember), advancing Robot System 2 models."
+    - "Ember released Vesta, a state-of-the-art generalist embodied reasoning VLM spanning localization, navigation, memory, reasoning, tool use, and long-horizon planning."
+    - "Develop efficient multimodal architectures, including GSPN-family spatial propagation and token-efficient high-resolution vision-language models."
+
+- company: NVIDIA Research
+  role: Research Intern
+  description: >-
+    Learning and Perception Research
   dates: "March 2017 - Aug 2017"
   location: Santa Clara, CA
 
-- company: Chinese University of HongKong
+- company: The Chinese University of Hong Kong
+  role: Visiting Scholar
   description: >-
-    Visiting Scholar at the <a href="https://mmlab.ie.cuhk.edu.hk/">MMLAB</a>.
+    Multimedia Laboratory (MMLab)
   dates: "Jul 2016 - Dec 2016"
   location: Hong Kong
 
-- company: Baidu Inc.
-  description: >- 
-    Applied Scientist Intern on IDL.
-    Worked on face parsing and beautification apps.
+- company: Baidu
+  role: Applied Scientist Intern
+  description: >-
+    Institute of Deep Learning; face parsing and computational photography.
   dates: "May 2013 - Jan 2016"
   location: Beijing, China

@@ -1,0 +1,418 @@
+---
+---
+
+:root {
+  --ink: #17202a;
+  --muted: #52606d;
+  --navy: #17365d;
+  --blue: #2b5f91;
+  --line: #cdd7e1;
+  --soft: #edf3f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #e8edf1;
+}
+
+body {
+  color: var(--ink);
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 9.35pt;
+  line-height: 1.32;
+  margin: 0;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.screen-toolbar {
+  display: flex;
+  gap: 0.55rem;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.screen-toolbar a {
+  background: #fff;
+  border: 1px solid #c5d0da;
+  border-radius: 999px;
+  color: var(--navy);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.45rem 0.85rem;
+}
+
+.screen-toolbar .download-link {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+
+.resume {
+  background: #fff;
+  box-shadow: 0 16px 60px rgba(28, 45, 62, 0.16);
+  margin: 0 auto 2rem;
+  min-height: 11in;
+  padding: 0.48in 0.54in;
+  width: 8.5in;
+}
+
+.resume-header {
+  align-items: flex-end;
+  border-bottom: 2.5px solid var(--navy);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.14in;
+}
+
+.document-label {
+  color: var(--blue);
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin: 0 0 0.04in;
+  text-transform: uppercase;
+}
+
+.resume-header h1 {
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25pt;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  margin: 0;
+}
+
+.headline {
+  color: #33475b;
+  font-size: 9.3pt;
+  font-weight: 700;
+  margin: 0.07in 0 0;
+}
+
+.contact {
+  align-items: flex-end;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  font-size: 7.6pt;
+  gap: 0.025in;
+  text-align: right;
+}
+
+.contact a {
+  color: var(--navy);
+}
+
+.resume-section {
+  margin-top: 0.145in;
+}
+
+.resume-section > h2 {
+  border-bottom: 1px solid var(--line);
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12.3pt;
+  line-height: 1.1;
+  margin: 0 0 0.075in;
+  padding-bottom: 0.025in;
+}
+
+.summary-section {
+  background: var(--soft);
+  border-left: 3px solid var(--blue);
+  padding: 0.095in 0.12in 0.09in;
+}
+
+.summary-section > h2 {
+  border: 0;
+  font-size: 10.8pt;
+  margin-bottom: 0.035in;
+  padding: 0;
+}
+
+.summary {
+  color: #283b4c;
+  font-size: 8.65pt;
+  line-height: 1.34;
+  margin: 0;
+}
+
+.resume-entry {
+  break-inside: avoid;
+  margin-bottom: 0.075in;
+}
+
+.resume-entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-heading {
+  align-items: baseline;
+  display: flex;
+  gap: 0.15in;
+  justify-content: space-between;
+}
+
+.entry-heading h3,
+.mini-entry h3,
+.award-entry h3 {
+  font-size: 9.1pt;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.entry-heading p,
+.mini-entry p {
+  color: var(--muted);
+  font-size: 7.8pt;
+  margin: 0.01in 0 0;
+}
+
+.entry-meta {
+  color: #354a60;
+  flex: 0 0 1.45in;
+  font-size: 7.4pt;
+  font-weight: 700;
+  text-align: right;
+}
+
+.compact-list {
+  color: #304252;
+  font-size: 7.8pt;
+  margin: 0.035in 0 0;
+  padding-left: 0.18in;
+}
+
+.compact-list li {
+  margin-bottom: 0.015in;
+}
+
+.mini-entry {
+  align-items: start;
+  break-inside: avoid;
+  display: grid;
+  gap: 0.1in;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin-bottom: 0.055in;
+}
+
+.mini-entry > span,
+.award-entry > span {
+  color: var(--muted);
+  font-size: 7.1pt;
+  white-space: nowrap;
+}
+
+.mini-entry .detail {
+  font-size: 7.2pt;
+}
+
+.award-entry {
+  align-items: baseline;
+  break-inside: avoid;
+  display: flex;
+  gap: 0.08in;
+  justify-content: space-between;
+  margin-bottom: 0.06in;
+}
+
+.award-list {
+  max-width: 5.1in;
+}
+
+.award-entry h3 {
+  font-size: 8.1pt;
+}
+
+.workshop-list {
+  max-width: 7.1in;
+}
+
+.workshop-list p {
+  break-inside: avoid;
+  color: #394b5b;
+  font-size: 7.45pt;
+  margin: 0 0 0.04in;
+}
+
+.publication-section {
+  margin-top: 0.17in;
+}
+
+.section-note {
+  color: var(--muted);
+  font-size: 7.25pt;
+  margin: -0.035in 0 0.08in;
+}
+
+.resume-publication-year {
+  margin-top: 0.1in;
+}
+
+.resume-publication-year > h3 {
+  background: var(--navy);
+  color: #fff;
+  font-size: 8.2pt;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  margin: 0 0 0.055in;
+  padding: 0.045in 0.08in;
+}
+
+.publication-list {
+  margin: 0;
+  padding-left: 0.24in;
+}
+
+.publication-item {
+  break-inside: avoid;
+  margin: 0 0 0.058in;
+  padding-left: 0.025in;
+}
+
+.publication-item::marker {
+  color: var(--blue);
+  font-size: 7.1pt;
+  font-weight: 700;
+}
+
+.publication-item p {
+  margin: 0;
+}
+
+.paper-title {
+  color: var(--ink);
+  font-size: 8.1pt;
+  font-weight: 700;
+  line-height: 1.24;
+}
+
+.paper-title a {
+  color: inherit;
+}
+
+.paper-authors {
+  color: #4b5864;
+  font-size: 6.8pt;
+  line-height: 1.22;
+  margin-top: 0.008in !important;
+}
+
+.paper-authors strong {
+  color: #162f4b;
+}
+
+.paper-venue {
+  color: var(--blue);
+  font-size: 6.75pt;
+  font-style: italic;
+  line-height: 1.18;
+  margin-top: 0.008in !important;
+}
+
+.paper-venue a {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.older-publications-section {
+  margin-top: 0.16in;
+}
+
+.older-publication-list {
+  max-width: 7.1in;
+}
+
+.older-publication-list .publication-item {
+  margin-bottom: 0.07in;
+}
+
+.resume-footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  display: flex;
+  font-size: 6.8pt;
+  justify-content: space-between;
+  margin-top: 0.14in;
+  padding-top: 0.045in;
+}
+
+h1,
+h2,
+h3 {
+  break-after: avoid;
+}
+
+p {
+  orphans: 2;
+  widows: 2;
+}
+
+@media screen and (max-width: 850px) {
+  html {
+    background: #fff;
+  }
+
+  .resume {
+    box-shadow: none;
+    margin: 0;
+    min-height: auto;
+    padding: 1.2rem;
+    width: 100%;
+  }
+
+  .resume-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .contact {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+}
+
+@page {
+  size: Letter;
+  margin: 0.42in 0.48in;
+}
+
+@media print {
+  html,
+  body {
+    background: #fff;
+  }
+
+  body {
+    font-size: 9.35pt;
+  }
+
+  .screen-toolbar {
+    display: none;
+  }
+
+  .resume {
+    box-shadow: none;
+    margin: 0;
+    min-height: 0;
+    padding: 0;
+    width: auto;
+  }
+
+  .resume-footer {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: inherit;
+  }
+}

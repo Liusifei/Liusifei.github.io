@@ -1,0 +1,187 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta name="description" content="Research resume for {{ site.name }}.">
+  <title>{{ site.name }} | Research Resume</title>
+  <link href="./css/resume.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="screen-toolbar" aria-label="Resume links">
+    <a href="{{ '/' | relative_url }}">Homepage</a>
+    <a href="{{ '/cv.html' | relative_url }}">Full CV</a>
+    <a class="download-link" href="{{ '/Sifei_Liu_Resume.pdf' | relative_url }}">Download PDF</a>
+  </div>
+
+  <main class="resume">
+    <header class="resume-header">
+      <div>
+        <p class="document-label">Research Resume</p>
+        <h1>{{ site.name }}</h1>
+        <p class="headline">Principal Research Scientist · NVIDIA Research</p>
+      </div>
+      <div class="contact">
+        <a href="{{ site.url }}">sifeiliu.net</a>
+        <a href="mailto:{{ site.email_user }}@{{ site.email_domain }}">{{ site.email_user }}@{{ site.email_domain }}</a>
+        <a href="https://scholar.google.com/citations?user={{ site.google_scholar }}">Google Scholar</a>
+        <span>Santa Clara, California</span>
+      </div>
+    </header>
+
+    <section class="resume-section summary-section">
+      <h2>Summary</h2>
+      <p class="summary">
+        Leading Spatial Reasoning in NVIDIA Cosmos 3. Tech Lead of the Embodied Reasoning Project (Ember), advancing Robot System 2 models. Ember released Vesta, a state-of-the-art generalist embodied reasoning VLM spanning localization, navigation, memory, reasoning, tool use, and long-horizon planning. My research develops grounded multimodal systems and efficient vision architectures that connect language, perception, geometry, and action.
+      </p>
+    </section>
+
+    <section class="resume-section">
+      <h2>Professional Experience</h2>
+      {% for job in site.data.employment %}
+      <article class="resume-entry">
+        <div class="entry-heading">
+          <div>
+            <h3>{{ job.company }}</h3>
+            <p>{{ job.role }}{% if job.description %} · {{ job.description }}{% endif %}</p>
+          </div>
+          <div class="entry-meta">{{ job.dates }}<br>{{ job.location }}</div>
+        </div>
+        {% if job.highlights %}
+        <ul class="compact-list">
+          {% for highlight in job.highlights %}
+          <li>{{ highlight }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </section>
+
+    <section class="resume-section">
+      <h2>Education</h2>
+      {% for school in site.data.education %}
+      <article class="mini-entry">
+        <div>
+          <h3>{{ school.name }}</h3>
+          <p>{{ school.degree }}</p>
+          {% if school.description != "" %}<p class="detail">{{ school.description | strip_html }}</p>{% endif %}
+        </div>
+        {% if school.dates %}<span>{{ school.dates }}</span>{% endif %}
+      </article>
+      {% endfor %}
+    </section>
+
+    <section class="resume-section">
+      <h2>Honors &amp; Awards</h2>
+      <div class="award-list">
+        {% for award in site.data.awards %}
+        <article class="award-entry">
+          <h3>{{ award.title }}</h3>
+          <span>{{ award.year }}</span>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="resume-section publication-section">
+      <h2>Publications (2024–2026)</h2>
+      <p class="section-note">Complete 2024–2026 publication record. Sifei Liu is shown in bold.</p>
+
+      {% assign recent_years = "2026,2025,2024" | split: "," %}
+      {% assign publication_number = 0 %}
+      {% for year in recent_years %}
+      <div class="resume-publication-year">
+        <h3>{{ year }}</h3>
+        <ol class="publication-list">
+          {% for publication in site.data.publications_full %}
+            {% assign publication_year = publication.year | append: "" %}
+            {% if publication.recent and publication_year == year %}
+              {% assign publication_number = publication_number | plus: 1 %}
+              {% assign project_url = publication.project_page | default: publication.demo %}
+              <li value="{{ publication_number }}" class="publication-item">
+                <p class="paper-title">
+                  {% if project_url and project_url != empty %}<a href="{{ project_url }}">{{ publication.title }}</a>{% else %}{{ publication.title }}{% endif %}
+                </p>
+                <p class="paper-authors">
+                  {% if publication.authors_text %}
+                    {{ publication.authors_text | replace: "Sifei Liu", "<strong>Sifei Liu</strong>" }}
+                  {% else %}
+                    {% for author_id in publication.authors %}
+                      {% assign author = site.data.authors[author_id] %}
+                      {% capture author_name %}{{ author.first_name }}{% if author.middle_name %} {{ author.middle_name }}{% endif %} {{ author.last_name }}{% endcapture %}
+                      {% if author.is_me %}<strong>{{ author_name | strip }}</strong>{% else %}{{ author_name | strip }}{% endif %}{% unless forloop.last %}, {% endunless %}
+                    {% endfor %}
+                  {% endif %}
+                </p>
+                <p class="paper-venue">
+                  {{ publication.venue }}
+                  {% if publication.arxiv and publication.arxiv != empty %}
+                    {% if publication.arxiv contains "://" %}
+                    · <a href="{{ publication.arxiv }}">paper</a>
+                    {% else %}
+                    · <a href="https://arxiv.org/abs/{{ publication.arxiv }}">arXiv</a>
+                    {% endif %}
+                  {% endif %}
+                  {% if publication.github and publication.github != empty %}
+                    {% if publication.github contains "://" %}
+                    · <a href="{{ publication.github }}">code</a>
+                    {% else %}
+                    · <a href="https://github.com/{{ publication.github }}">code</a>
+                    {% endif %}
+                  {% endif %}
+                </p>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ol>
+      </div>
+      {% endfor %}
+    </section>
+
+    <section class="resume-section older-publications-section">
+      <h2>Selected Publications (2023 and Earlier)</h2>
+      {% assign selected_older_ids = "TUVF,AfforDiff,ODISE,CoordGAN,GroupViT,LIIF,UVC,VAutoencoder,PointAE,21,27,32" | split: "," %}
+      <ol class="publication-list older-publication-list">
+        {% for publication in site.data.publications_full %}
+          {% assign publication_id = publication.id | append: "" %}
+          {% if selected_older_ids contains publication_id %}
+          {% assign project_url = publication.project_page | default: publication.demo %}
+          <li class="publication-item">
+            <p class="paper-title">
+              {% if project_url and project_url != empty %}<a href="{{ project_url }}">{{ publication.title }}</a>{% else %}{{ publication.title }}{% endif %}
+            </p>
+            <p class="paper-authors">
+              {% for author_id in publication.authors %}
+                {% assign author = site.data.authors[author_id] %}
+                {% capture author_name %}{{ author.first_name }}{% if author.middle_name %} {{ author.middle_name }}{% endif %} {{ author.last_name }}{% endcapture %}
+                {% if author.is_me %}<strong>{{ author_name | strip }}</strong>{% else %}{{ author_name | strip }}{% endif %}{% unless forloop.last %}, {% endunless %}
+              {% endfor %}
+            </p>
+            <p class="paper-venue">{{ publication.venue }}</p>
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ol>
+    </section>
+
+    <section class="resume-section workshop-section">
+      <h2>Selected Workshop &amp; Tutorial Organization</h2>
+      <div class="workshop-list">
+        {% for workshop in site.data.workshop %}
+        <p><strong>{{ workshop.title }}</strong> · {{ workshop.venue }}</p>
+        {% endfor %}
+      </div>
+    </section>
+
+    <footer class="resume-footer">
+      <span>{{ site.name }} · Research Resume</span>
+      <span>Updated August 2026</span>
+    </footer>
+  </main>
+</body>
+</html>

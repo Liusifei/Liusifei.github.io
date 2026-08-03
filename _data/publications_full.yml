@@ -1,6 +1,284 @@
+- id: vesta
+  title: "Vesta: A Generalist Embodied Reasoning Model"
+  year: 2026
+  venue: "NVIDIA Technical Report, 2026"
+  recent: true
+  description: "Vesta is a powerful, state-of-the-art Robot System 2 embodied-reasoning VLM spanning localization, navigation, memory, reasoning, tool use, and long-horizon planning."
+  project_page: "https://research.nvidia.com/labs/gear/vesta/"
+  github: ""
+  arxiv: "2606.20905"
+  image: "vesta.png"
+  authors_text: "Johan Bjorck, Zhiqi Li, Yunze Man, Jing Wang, An-Chieh Cheng, Sifei Liu, Shihao Wang, Zhiding Yu, Abhishek Badki, Stan Birchfield, Valts Blukis, Yevgen Chebotar, Siyi Chen, Sicong Leng, Yu-Cheng Chou, Tianli Ding, Boyi Li, Zhengyi Luo, Hang Su, Jonathan Tremblay, Tingwu Wang, Bowen Wen, Jimmy Wu, Xianghui Xie, Hanrong Ye, Hongxu Yin, K. R. Zentner, Liangyan Gui, Yu-Xiong Wang, Yuke Zhu, Linxi Fan, Jan Kautz"
+
+- id: sr-real
+  title: "Reinforcing Dual-Path Reasoning in Spatial Vision Language Models"
+  year: 2026
+  venue: "arXiv, 2026"
+  recent: true
+  description: "SR-REAL jointly reinforces language-only deduction and detect-then-reason 3D grounding for stronger spatial reasoning."
+  project_page: "https://sr-real.github.io/"
+  github: "https://github.com/jiyt17/SR-REAL"
+  arxiv: "2606.17539"
+  image: ""
+  authors_text: "Yatai Ji, An-Chieh Cheng, Yang Fu, Yukang Chen, Han Zhang, Zhaojing Yang, Wei Huang, Ka Chun Cheung, Song Han, Vidya Nariyambut Murali, Pavlo Molchanov, Simon See, Jan Kautz, Hongxu Yin, Ping Luo, Sifei Liu"
+
+- id: spatialclaw
+  title: "SpatialClaw: Rethinking Action Interface for Agentic Spatial Reasoning"
+  year: 2026
+  venue: "arXiv, 2026"
+  recent: true
+  description: "SpatialClaw gives multimodal agents a stateful code interface for adaptive tool use across 3D and 4D spatial reasoning tasks."
+  project_page: "https://spatialclaw.github.io/"
+  github: "https://github.com/NVlabs/SpatialClaw"
+  arxiv: "2606.13673"
+  image: ""
+  authors_text: "Seokju Cho, Ryo Hachiuma, Abhishek Badki, Hang Su, Byung-Kwan Lee, Chan Hee Song, Sifei Liu, Subhashree Radhakrishnan, Seungryong Kim, Yu-Chiang Frank Wang, Min-Hung Chen"
+
+- id: 4dp-qa
+  title: "4DP-QA: Scalable QA for 4D Perception in Vision Language Models"
+  year: 2026
+  venue: "CVPR, 2026"
+  recent: true
+  description: "4DP-QA provides scalable training data and evaluation for disentangling object and camera motion in 4D scene understanding."
+  project_page: "https://openaccess.thecvf.com/content/CVPR2026/html/Cho_4DP-QA_Scalable_QA_for_4D_Perception_in_Vision_Language_Models_CVPR_2026_paper.html"
+  github: ""
+  arxiv: "2606.11568"
+  image: ""
+  authors_text: "Seokju Cho, Abhishek Badki, Hang Su, Jindong Jiang, Ziyao Zeng, Seungryong Kim, Sifei Liu, Orazio Gallo"
+
+- id: compact-gspn
+  title: "Scaling Parallel Sequence Models to Vision Foundation Models"
+  year: 2026
+  venue: "CVPR, 2026"
+  recent: true
+  description: "Compact GSPN scales linear-time 2D spatial propagation to foundation-scale vision encoders with fused kernels and cross-operator distillation."
+  project_page: "https://jiangyitong.github.io/cgspn.github.io/"
+  github: ""
+  arxiv: "2606.00746"
+  image: ""
+  authors_text: "Yitong Jiang, Collin McCarthy, Hongjun Wang, Hanrong Ye, Qi Dou, Tianfan Xue, Jinwei Gu, Jan Kautz, Hongxu Yin, Pavlo Molchanov, Sifei Liu"
+
+- id: gr3d
+  title: "Grounded 3D-Aware Spatial Vision-Language Modeling"
+  year: 2026
+  venue: "CVPR, 2026"
+  recent: true
+  description: "GR3D unifies explicit 2D, implicit 2D, and monocular 3D grounding for grounded spatial chain-of-thought reasoning."
+  project_page: "https://www.anjiecheng.me/gr3d/"
+  github: ""
+  arxiv: "2605.30307"
+  image: ""
+  authors_text: "An-Chieh Cheng, Yang Fu, Yatai Ji, Ligeng Zhu, Guanqi Zhan, Zhuoyang Zhang, Zhaojing Yang, Song Han, Yao Lu, Pavlo Molchanov, Vidya Nariyambut Murali, Jan Kautz, Xiaolong Wang, Hongxu Yin, Sifei Liu"
+
+- id: loho-manip
+  title: "Long-Horizon Manipulation via Trace-Conditioned VLA Planning"
+  year: 2026
+  venue: "arXiv, 2026"
+  recent: true
+  description: "LoHo-Manip uses progress-aware subtask plans and visual traces to extend VLA policies to long-horizon manipulation."
+  project_page: "https://www.liuisabella.com/LoHoManip/"
+  github: ""
+  arxiv: "2604.21924"
+  image: ""
+  authors_text: "Isabella Liu, An-Chieh Cheng, Rui Yan, Geng Chen, Ri-Zhao Qiu, Xueyan Zou, Sha Yi, Hongxu Yin, Xiaolong Wang, Sifei Liu"
+
+- id: 3d-layout-r1
+  title: "3D-Layout-R1: Structured Reasoning for Language-Instructed Spatial Editing"
+  year: 2026
+  venue: "arXiv, 2026"
+  recent: true
+  description: "3D-Layout-R1 performs language-conditioned layout editing through explicit scene-graph reasoning."
+  project_page: "https://arxiv.org/abs/2603.22279"
+  github: ""
+  arxiv: "2603.22279"
+  image: ""
+  authors_text: "Haoyu Zhen, Xiaolong Li, Yilin Zhao, Han Zhang, Sifei Liu, Kaichun Mo, Chuang Gan, Subhashree Radhakrishnan"
+
+- id: 4d-rgpt
+  title: "4D-RGPT: Toward Region-level 4D Understanding via Perceptual Distillation"
+  year: 2026
+  venue: "CVPR, 2026"
+  recent: true
+  description: "4D-RGPT distills 4D perception into a region-prompted multimodal model for depth-aware dynamic-scene reasoning."
+  project_page: "https://openaccess.thecvf.com/content/CVPR2026/html/Yang_4D-RGPT_Toward_Region-level_4D_Understanding_via_Perceptual_Distillation_CVPR_2026_paper.html"
+  github: "https://github.com/NVlabs/4D-RGPT"
+  arxiv: "2512.17012"
+  image: ""
+  authors_text: "Chiao-An Yang, Ryo Hachiuma, Sifei Liu, Subhashree Radhakrishnan, Raymond A. Yeh, Yu-Chiang Frank Wang, Min-Hung Chen"
+
+- id: omnivinci-full
+  title: "OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM"
+  year: 2026
+  venue: "ICLR, 2026"
+  recent: true
+  description: "OmniVinci advances joint image, video, audio, and text understanding through cross-modal alignment and large-scale omni-modal data."
+  project_page: "https://nvlabs.github.io/OmniVinci/"
+  github: "https://github.com/NVlabs/OmniVinci"
+  arxiv: "2510.15870"
+  image: ""
+  authors_text: "Hanrong Ye, Chao-Han Huck Yang, Arushi Goel, Wei Huang, Ligeng Zhu, Yuanhang Su, Sean Lin, An-Chieh Cheng, Zhen Wan, Jinchuan Tian, Yuming Lou, Dong Yang, Zhijian Liu, Yukang Chen, Ambrish Dantrey, Ehsan Jahangiri, Sreyan Ghosh, Daguang Xu, Ehsan Hosseini-Asl, Danial Mohseni Taheri, Vidya Nariyambut Murali, Sifei Liu, Yao Lu, Oluwatobi Olabiyi, Yu-Chiang Frank Wang, Rafael Valle, Bryan Catanzaro, Andrew Tao, Song Han, Jan Kautz, Hongxu Yin, Pavlo Molchanov"
+
+- id: qerl
+  title: "QeRL: Beyond Efficiency—Quantization-Enhanced Reinforcement Learning for LLMs"
+  year: 2026
+  venue: "ICLR, 2026"
+  recent: true
+  description: "QeRL uses low-precision quantization both to accelerate RL and to improve policy exploration."
+  project_page: "https://openreview.net/forum?id=GcYcUE3GvY"
+  github: ""
+  arxiv: "2510.11696"
+  image: ""
+  authors_text: "Wei Huang, Yi Ge, Shuai Yang, Yicheng Xiao, Huizi Mao, Yujun Lin, Hanrong Ye, Sifei Liu, Ka Chun Cheung, Hongxu Yin, Yao Lu, Xiaojuan Qi, Song Han, Yukang Chen"
+
+- id: real-deep-research
+  title: "Real Deep Research for AI, Robotics and Beyond"
+  year: 2025
+  venue: "arXiv, 2025"
+  recent: true
+  description: "Real Deep Research provides a generalizable pipeline for mapping research areas, identifying emerging trends, and uncovering cross-domain opportunities, with extensive analyses of AI and robotics."
+  project_page: "https://realdeepresearch.github.io/"
+  github: ""
+  arxiv: "2510.20809"
+  image: ""
+  authors_text: "Xueyan Zou, Jianglong Ye, Hao Zhang, Xiaoyu Xiang, Mingyu Ding, Zhaojing Yang, Yong Jae Lee, Zhuowen Tu, Sifei Liu, Xiaolong Wang"
+
+- id: egovla
+  title: "EgoVLA: Learning Vision-Language-Action Models from Egocentric Human Videos"
+  year: 2025
+  venue: "arXiv, 2025"
+  recent: true
+  description: "EgoVLA scales robot-policy learning with egocentric human video and action retargeting."
+  project_page: "https://rchalyang.github.io/EgoVLA/"
+  github: "https://github.com/RchalYang/EgoVLA_Release"
+  arxiv: "2507.12440"
+  image: ""
+  authors_text: "Ruihan Yang, Qinxi Yu, Yecheng Wu, Rui Yan, Borui Li, An-Chieh Cheng, Xueyan Zou, Yunhao Fang, Xuxin Cheng, Ri-Zhao Qiu, Hongxu Yin, Sifei Liu, Song Han, Yao Lu, Xiaolong Wang"
+
+- id: long-rl
+  title: "Scaling RL to Long Videos"
+  year: 2025
+  venue: "NeurIPS, 2025"
+  recent: true
+  description: "Long-RL combines large-scale reasoning data, reinforcement learning, and sequence-parallel infrastructure for hour-long video understanding."
+  project_page: "https://hanlab.mit.edu/projects/long-rl"
+  github: "https://github.com/NVlabs/Long-RL"
+  arxiv: "2507.07966"
+  image: ""
+  authors_text: "Yukang Chen, Wei Huang, Baifeng Shi, Qinghao Hu, Hanrong Ye, Ligeng Zhu, Zhijian Liu, Pavlo Molchanov, Jan Kautz, Xiaojuan Qi, Sifei Liu, Hongxu Yin, Yao Lu, Song Han"
+
+- id: sse
+  title: "SSE: Multimodal Semantic Data Selection and Enrichment for Industrial-scale Data Assimilation"
+  year: 2025
+  venue: "KDD, 2025"
+  recent: true
+  description: "SSE selects semantically diverse data and enriches it from large unlabeled pools while preserving a fixed training budget."
+  project_page: "https://doi.org/10.1145/3690624.3709417"
+  github: ""
+  arxiv: "2409.13860"
+  image: ""
+  authors_text: "Maying Shen, Nadine Chang, Sifei Liu, Jose M. Alvarez"
+
+- id: m3
+  title: "M3: 3D-Spatial MultiModal Memory"
+  year: 2025
+  venue: "ICLR, 2025"
+  recent: true
+  description: "M3 stores foundation-model features in a compact 3D Gaussian memory for grounded multimodal retrieval."
+  project_page: "https://m3-spatial-memory.github.io/"
+  github: ""
+  arxiv: "2503.16413"
+  image: ""
+  authors_text: "Xueyan Zou, Yuchen Song, Ri-Zhao Qiu, Xuanbin Peng, Jianglong Ye, Sifei Liu, Xiaolong Wang"
+
+- id: feedforward-layout
+  title: "Compositional Text-to-Image Generation with Feedforward Layout Generation"
+  year: 2024
+  venue: "ECCV Workshops, 2024"
+  recent: true
+  description: "BlobGen-Next trains a feedforward BlobLLM to generate detailed object layouts for compositional text-to-image generation."
+  project_page: "https://mlanthology.org/eccvw/2024/liu2024eccvw-compositional/"
+  github: ""
+  arxiv: ""
+  image: ""
+  authors_text: "Sifei Liu, Weili Nie, An-Chieh Cheng, Morteza Mardani, Chao Liu, Benjamin Eckart, Arash Vahdat"
+
+- id: groprompt
+  title: "GroPrompt: Efficient Grounded Prompting and Adaptation for Referring Video Object Segmentation"
+  year: 2024
+  venue: "CVPR Workshops, 2024"
+  recent: true
+  description: "GroPrompt uses grounded prompt generation and lightweight adaptation for weakly supervised referring video object segmentation."
+  project_page: "https://jack24658735.github.io/groprompt/"
+  github: ""
+  arxiv: "2406.12834"
+  image: ""
+  authors_text: "Ci-Siang Lin, I-Jieh Liu, Min-Hung Chen, Chien-Yi Wang, Sifei Liu, Yu-Chiang Frank Wang"
+
+- id: wildrgbd
+  title: "RGBD Objects in the Wild: Scaling Real-World 3D Object Learning from RGB-D Videos"
+  year: 2024
+  venue: "CVPR, 2024"
+  recent: true
+  description: "WildRGB-D provides 20,000 in-the-wild RGB-D videos of 8,500 objects across 44 categories for scalable real-world 3D object learning."
+  project_page: "https://wildrgbd.github.io/"
+  github: ""
+  arxiv: "2401.12592"
+  image: ""
+  authors_text: "Hongchi Xia, Yang Fu, Sifei Liu, Xiaolong Wang"
+
+- id: agg
+  title: "AGG: Amortized Generative 3D Gaussians for Single Image to 3D"
+  year: 2024
+  venue: "TMLR, 2024"
+  recent: true
+  description: "AGG directly predicts high-quality 3D Gaussians from a single image without per-instance optimization."
+  project_page: "https://ir1d.github.io/AGG/"
+  github: ""
+  arxiv: "2401.04099"
+  image: ""
+  authors_text: "Dejia Xu, Ye Yuan, Morteza Mardani, Sifei Liu, Jiaming Song, Zhangyang Wang, Arash Vahdat"
+
+- id: camco
+  title: "CamCo: Camera-Controllable 3D-Consistent Image-to-Video Generation"
+  year: 2024
+  venue: "arXiv, 2024"
+  recent: true
+  description: "CamCo introduces camera-pose conditioning and epipolar attention for controllable, 3D-consistent video generation."
+  project_page: "https://camco2024.github.io/"
+  github: ""
+  arxiv: "2406.02509"
+  image: ""
+  authors_text: "Dejia Xu, Weili Nie, Chao Liu, Sifei Liu, Jan Kautz, Zhangyang Wang, Arash Vahdat"
+
+- id: blobgen3d
+  title: "BlobGEN-3D: Compositional 3D-Consistent Freeview Image Generation with 3D Blobs"
+  year: 2024
+  venue: "ACM Transactions on Graphics (SIGGRAPH Asia), 2024"
+  recent: true
+  description: "BlobGEN-3D uses compositional 3D blob controls for coherent free-view image generation."
+  project_page: "https://research.nvidia.com/labs/lpr/publication/blob3dgen2024/"
+  github: ""
+  arxiv: ""
+  image: ""
+  authors_text: "Chao Liu, Weili Nie, Sifei Liu, Abhishek Badki, Hang Su, Morteza Mardani, Benjamin Eckart, Arash Vahdat"
+
+- id: blobgen
+  title: "Compositional Text-to-Image Generation with Dense Blob Representations"
+  year: 2024
+  venue: "ICML, 2024"
+  recent: true
+  description: "BlobGEN turns dense, modular blob representations into controllable compositional image generation."
+  project_page: "https://blobgen-2d.github.io/"
+  github: ""
+  arxiv: "2405.08246"
+  image: ""
+  authors_text: "Weili Nie, Sifei Liu, Morteza Mardani, Chao Liu, Benjamin Eckart, Arash Vahdat"
+
 - id: SR3D
   title: "3D Aware Region Prompted Vision Language Model"
+  year: 2026
   venue: "ICLR, 2026"
+  recent: true
   description: "SR-3D connects 2D and 3D representation spaces for flexible region prompting and grounded spatial reasoning."
   project_page: "https://www.anjiecheng.me/sr3d"
   github: ""
@@ -23,7 +301,9 @@
 
 - id: DAM
   title: "Describe Anything: Detailed Localized Image and Video Captioning"
+  year: 2025
   venue: "ICCV, 2025"
+  recent: true
   description: "DAM generates detailed localized image and video captions for user-specified regions while preserving local detail and global context."
   project_page: "https://describe-anything.github.io/"
   github: "https://github.com/NVlabs/describe-anything"
@@ -44,7 +324,9 @@
 
 - id: TEVA
   title: "Token-Efficient VLM: High-Resolution Image Understanding via Dynamic Region Proposal"
+  year: 2025
   venue: "ICCV, 2025"
+  recent: true
   description: "TEVA uses dynamic region proposal and adaptive patch sampling to handle high-resolution image understanding efficiently."
   project_page: "https://openaccess.thecvf.com/content/ICCV2025/html/Jiang_Token-Efficient_VLM_High-Resolution_Image_Understanding_via_Dynamic_Region_Proposal_ICCV_2025_paper.html"
   github: ""
@@ -61,11 +343,13 @@
 
 - id: GSPN
   title: "Parallel Sequence Modeling via Generalized Spatial Propagation Network"
+  year: 2025
   venue: "CVPR, 2025"
+  recent: true
   description: "GSPN is a spatially coherent attention mechanism for vision models that improves high-resolution efficiency and fidelity."
   project_page: "https://whj363636.github.io/GSPN/"
   github: "https://github.com/whj363636/GSPN"
-  arxiv: "2503.17191"
+  arxiv: "2501.12381"
   image: "gspn.png"
   authors:
     - hongjunw
@@ -80,7 +364,9 @@
 
 - id: OmniRGPT
   title: "Omni-RGPT: Unifying Image and Video Region-level Understanding via Token Marks"
+  year: 2025
   venue: "CVPR, 2025"
+  recent: true
   description: "Omni-RGPT unifies region-level understanding for images and videos with token marks and region-aware video instruction tuning."
   project_page: "https://research.nvidia.com/labs/twn/publication/cvpr_2025_omnirgpt/"
   github: ""
@@ -98,7 +384,9 @@
 
 - id: BlobGENVid
   title: "BlobGEN-Vid: Compositional Text-to-Video Generation with Blob Video Representations"
+  year: 2025
   venue: "CVPR, 2025"
+  recent: true
   description: "BlobGEN-Vid introduces blob video representations for controllable compositional text-to-video generation."
   project_page: "https://research.nvidia.com/labs/lpr/publication/blobgenvid2025/"
   github: ""
@@ -114,7 +402,9 @@
 
 - id: PS3
   title: "Scaling Vision Pre-Training to 4K Resolution"
+  year: 2025
   venue: "CVPR, 2025"
+  recent: true
   description: "PS3 scales CLIP-style vision pre-training to 4K resolution with near-constant cost for stronger high-resolution perception."
   project_page: "https://research.nvidia.com/labs/lpr/publication/scaling4k2025/"
   github: ""
@@ -135,7 +425,9 @@
 
 - id: NaVILA
   title: "NaVILA: Legged Robot Vision-Language-Action Model for Navigation"
-  venue: "arXiv, 2025"
+  year: 2025
+  venue: "RSS, 2025"
+  recent: true
   description: "NaVILA combines vision-language-action modeling with locomotion policies for embodied navigation."
   project_page: "https://navila-bot.github.io/"
   github: "https://github.com/yang-zj1026/legged-loco"
@@ -155,44 +447,21 @@
 
 - id: NVILA
   title: "NVILA: Efficient Frontier Visual Language Models"
+  year: 2025
   venue: "CVPR, 2025"
+  recent: true
   description: "NVILA is an efficient frontier family of visual language models with strong training and inference efficiency."
   project_page: "https://vila.mit.edu/"
   github: "https://github.com/NVlabs/VILA"
   arxiv: "2412.04468"
   image: "nvila.png"
-  authors:
-    - zhijianl
-    - ligengz
-    - baifengs
-    - zhuoyangz
-    - yumingl
-    - shangy
-    - haochengx
-    - shiyicao
-    - yuxiang
-    - dachengl
-    - xiuyul
-    - yunhaof
-    - yukangc
-    - chengyuh
-    - deanh
-    - anchiehc
-    - vishweshn
-    - jinyih
-    - sifeil
-    - ranjayk
-    - daguangx
-    - xiaolongw
-    - pavlom
-    - jank
-    - hongxuy
-    - songh
-    - yaolu
+  authors_text: "Zhijian Liu, Ligeng Zhu, Baifeng Shi, Zhuoyang Zhang, Yuming Lou, Shang Yang, Haocheng Xi, Shiyi Cao, Yuxian Gu, Dacheng Li, Xiuyu Li, Haotian Tang, Yunhao Fang, Yukang Chen, Cheng-Yu Hsieh, De-An Huang, An-Chieh Cheng, Jinyi Hu, Sifei Liu, Ranjay Krishna, Pavlo Molchanov, Jan Kautz, Hongxu Yin, Song Han, Yao Lu"
 
 - id: NoPoSplat
   title: "No Pose, No Problem: Surprisingly Simple 3D Gaussian Splats from Sparse Unposed Images"
+  year: 2025
   venue: "ICLR, 2025"
+  recent: true
   description: "NoPoSplat reconstructs 3D Gaussian splats from sparse unposed images with a simple pose-free pipeline."
   project_page: "https://noposplat.github.io/"
   github: "https://github.com/cvg/NoPoSplat"
@@ -209,7 +478,9 @@
 
 - id: CF3DGS
   title: "COLMAP-Free 3D Gaussian Splatting"
+  year: 2024
   venue: "CVPR, 2024"
+  recent: true
   description: "COLMAP-Free 3D Gaussian Splatting enables view synthesis without SfM preprocessing by progressively growing 3D Gaussians from video."
   project_page: "https://oasisyang.github.io/colmap-free-3dgs/"
   github: "https://github.com/NVlabs/CF-3DGS"
@@ -225,7 +496,9 @@
 
 - id: CosAE
   title: "CosAE: Learnable Fourier Series for Image Restoration"
+  year: 2024
   venue: "NeurIPS, 2024"
+  recent: true
   description: "CosAE is a cosine autoencoder for image restoration that uses Fourier coefficients for compact yet detail-preserving representations."
   project_page: "https://sifeiliu.net/CosAE-page/"
   github: ""
@@ -237,8 +510,10 @@
     - jank
 
 - id: SpatialRGPT
-  title: "SpatialRGPT: Grounded Spatial Reasoning in Vision Language Models"
+  title: "SpatialRGPT: Grounded Spatial Reasoning in Vision-Language Models"
+  year: 2024
   venue: "NeurIPS, 2024"
+  recent: true
   description: "SpatialRGPT improves grounded spatial reasoning in VLMs through regional representation learning and depth-aware modeling."
   project_page: "https://www.anjiecheng.me/SpatialRGPT"
   github: "https://github.com/AnjieCheng/SpatialRGPT"
@@ -256,7 +531,9 @@
 
 - id: RegionGPT
   title: "RegionGPT: Towards Region Understanding Vision Language Model"
+  year: 2024
   venue: "CVPR, 2024"
+  recent: true
   description: "RegionGPT enhances region-level captioning and understanding by improving spatial awareness in vision-language models."
   project_page: "https://guoqiushan.github.io/regiongpt.github.io/"
   github: ""
@@ -274,28 +551,31 @@
 
 - id: Dream4D
   title: "Dream-in-4D: A Unified Approach for Text- and Image-guided 4D Scene Generation"
+  year: 2024
   venue: "CVPR, 2024"
+  recent: true
   description: "Dream-in-4D provides a unified framework for text-guided, image-guided, and personalized 4D scene generation."
   project_page: "https://research.nvidia.com/labs/lpr/publication/zheng2024dream4d/"
   github: ""
-  arxiv: ""
+  arxiv: "2311.16854"
   image: ""
   authors:
     - yufengz
     - xuetingl
     - kokin
     - sifeil
-    - karstenk
     - otmarh
     - shalinidm
 
 - id: NFP
   title: "3D Reconstruction with Generalizable Neural Fields using Scene Priors"
+  year: 2024
   venue: "ICLR, 2024"
+  recent: true
   description: "NFP learns scene priors for fast, flexible 3D reconstruction and single-image novel-view synthesis."
   project_page: "https://oasisyang.github.io/neural-prior"
   github: ""
-  arxiv: ""
+  arxiv: "2309.15164"
   image: ""
   authors:
     - yangf
@@ -308,11 +588,13 @@
 
 - id: HOIDiffusion
   title: "HOIDiffusion: Generating Realistic 3D Hand-Object Interaction Data"
+  year: 2024
   venue: "CVPR, 2024"
+  recent: true
   description: "HOIDiffusion generates realistic 3D hand-object interaction data for perception tasks such as 6D pose estimation."
   project_page: "https://mq-zhang1.github.io/HOIDiffusion/"
   github: ""
-  arxiv: ""
+  arxiv: "2403.12011"
   image: ""
   authors:
     - mengqiz

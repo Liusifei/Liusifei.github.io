@@ -6,7 +6,7 @@
   location: Santa Clara, CA
   highlights:
     - "Leading Spatial Reasoning in NVIDIA Cosmos 3."
-    - "Tech Lead of the Embodied Reasoning Project (Ember), advancing Robot System 2 models including Vesta, a state-of-the-art generalist embodied reasoning VLM spanning localization, navigation, memory, reasoning, tool use, and long-horizon planning."
+    - "Tech Lead of the Embodied Reasoning Project (Ember), advancing Robot System 2 models."
     - "Develop efficient multimodal architectures, including GSPN-family spatial propagation and token-efficient high-resolution vision-language models."
 
 - company: NVIDIA Research

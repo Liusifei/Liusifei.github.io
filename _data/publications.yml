@@ -166,8 +166,9 @@
   project_page: "https://whj363636.github.io/GSPN/"
   github: "https://github.com/whj363636/GSPN"
   arxiv: "2501.12381"
-  image: "gspn.png"
-  # image_mouseover: "gspn.mp4"
+  image: "gspn-teaser.mp4"
+  poster: "gspn-teaser-poster.png"
+  video_controls: true
   authors:
     - hongjunw
     - wonminb

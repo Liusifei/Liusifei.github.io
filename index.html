@@ -182,8 +182,8 @@ layout: null
       {% endif %}
       <div class="publication-block columns is-variable is-5">
 
-        <div class="column is-4">
-          <div class="publication-image {% if publication.image_mouseover %}publication-mousecell{% endif %}{% if publication.id == 'vesta' %} publication-image-contain{% endif %}">
+        <div class="column {% if publication.id == 'asena' or publication.id == 'recova' %}is-5{% else %}is-4{% endif %}">
+          <div class="publication-image {% if publication.image_mouseover %}publication-mousecell{% endif %}{% if publication.id == 'vesta' %} publication-image-contain{% endif %}{% if publication.id == 'recova' %} publication-image-mahjong{% endif %}">
             {% if publication.image_mouseover contains "mp4" %}
             <video autoplay preload playsinline height="100%" loop muted width="100%">
               <source src="{{ '/images/' | append: publication.image_mouseover | relative_url }}" type="video/mp4">
@@ -192,7 +192,7 @@ layout: null
             {% endif %}
             
             {% if publication.image contains "mp4" %}
-            <video autoplay preload playsinline height="100%" loop muted width="100%">
+            <video autoplay preload="metadata" playsinline height="100%" loop muted width="100%" aria-label="{{ publication.title }} teaser"{% if publication.video_controls %} controls{% endif %}{% if publication.poster %} poster="{{ '/images/' | append: publication.poster | relative_url }}"{% endif %}>
               <source src="{{ '/images/' | append: publication.image | relative_url }}" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -265,6 +265,12 @@ layout: null
                 <span>arXiv</span>
               </a>
               {% endif %}
+              {% for pending_link in publication.pending_links %}
+              <button type="button" class="button is-small is-ghost publication-link-pending" disabled title="Coming soon">
+                <span class="icon"><i class="{% if pending_link == 'arXiv' %}ai ai-arxiv{% else %}fas fa-file-pdf{% endif %}"></i></span>
+                <span>{{ pending_link }}</span>
+              </button>
+              {% endfor %}
               {% if github_url and github_url != empty %}
               <a class="external-link button is-small is-ghost" href="{{ github_url }}">
                 <span class="icon"><i class="fa fab fa-github"></i></span>

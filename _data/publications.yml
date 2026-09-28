@@ -1,3 +1,25 @@
+- id: asena
+  title: "ASENA: Self-Evolving Agents for Embodied Navigation"
+  venue: "2026"
+  project_page: "https://asena-bot.github.io/"
+  pending_links: ["PDF", "arXiv"]
+  description: "ASENA brings coding agents into the physical world through a real robot harness for perception, navigation, whole-body control, and execution feedback. Agents write, test, and refine robot programs, turning experience into reusable skills."
+  image: "asena-teaser.mp4"
+  poster: "asena-teaser-poster.jpg"
+  video_controls: true
+  authors_text: "An-Chieh Cheng, Isabella Liu, Edmund Bu, Nils Johan Bjorck, Hongxu Yin, Zhengyi Luo, Jan Kautz, Linxi Fan, Yuke Zhu, Sifei Liu"
+
+- id: recova
+  title: "Recova: Agent-Guided Failure Recovery for Autonomous Robotic Manipulation"
+  venue: "2026"
+  project_page: "https://recova-bot.github.io/"
+  pending_links: ["PDF", "arXiv"]
+  description: "Recova uses an agent to build digital twins, discover recovery strategies in simulation, and recover from manipulation failures on real robots. Task and recovery policies improve from successful rollouts and human-assisted corrections, supporting longer autonomous operation with less human intervention."
+  image: "recova-teaser.mp4"
+  poster: "recova-teaser-poster.jpg"
+  video_controls: true
+  authors_text: "Isabella Liu, An-Chieh Cheng, Johan Bjorck, Zhiding Yu, Hongxu Yin, Jan Kautz, Linxi Fan, Yuke Zhu, Sifei Liu"
+
 - id: vesta
   title: "Vesta: A Generalist Embodied Reasoning Model"
   venue: "NVIDIA Technical Report, 2026"
@@ -58,47 +80,6 @@
     - xiaolongw
     - dannyy
     - sifeil
-
-- id: OmniVinci
-  title: "OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM"
-  venue: "ICLR 2026"
-  description: "OmniVinci is an omni-modal LLM with new architecture (OmniAlignNet, Temporal Embedding Grouping, and Constrained Rotary Time Embedding) and a 24M-conversation data pipeline, achieving state-of-the-art joint understanding of images, video, audio, and text with far fewer training tokens."
-  project_page: "https://nvlabs.github.io/OmniVinci/"
-  github: "https://github.com/NVlabs/OmniVinci"
-  image: "omnivinci.mp4"
-  authors:
-    - hanrongy
-    - chaohany
-    - arushig
-    - weih
-    - ligengz
-    - yuanhangs
-    - seanl
-    - anchiehc
-    - zhenw
-    - jinchuant
-    - yumingl
-    - dongyang
-    - zhijianl
-    - yukangc
-    - ambrishd
-    - ehsanj
-    - sreyang
-    - daguangx
-    - ehsanha
-    - danialmt
-    - vidyam
-    - sifeil
-    - yaolu
-    - oluwatobio
-    - frankw
-    - rafaelv
-    - bryanc
-    - andrewt
-    - songh
-    - jank
-    - dannyy
-    - pavlom
 
 - id: cgspn
   title: "Scaling Parallel Sequence Models to Vision Foundation Models"
@@ -256,23 +237,6 @@
     - songh
     - yaolu
 
-
-- id: nopose
-  title: "No Pose, No Problem: Surprisingly Simple 3D Gaussian Splats from Sparse Unposed Images"
-  venue: "ICLR 2025"
-  description: "No Pose, No Problem: Surprisingly Simple 3D Gaussian Splats from Sparse Unposed Images"
-  project_page: "https://noposplat.github.io/"
-  github: "https://github.com/cvg/NoPoSplat"
-  arxiv: "2410.24207"
-  image: "noposplat.mp4"
-  authors:
-    - botaoy
-    - sifeil
-    - haofeix
-    - xuetingl
-    - marcp
-    - minghsuany
-    - songyoup
 
 - id: SRPGT
   title: "SpatialRGPT: Grounded Spatial Reasoning in Vision-Language Models"

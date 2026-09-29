@@ -4,9 +4,27 @@
   project_page: "https://asena-bot.github.io/"
   pending_links: ["PDF", "arXiv"]
   description: "ASENA brings coding agents into the physical world through a real robot harness for perception, navigation, whole-body control, and execution feedback. Agents write, test, and refine robot programs, turning experience into reusable skills."
-  image: "asena-teaser.mp4"
-  poster: "asena-teaser-poster.jpg"
+  image: "asena-teaser-clean.mp4"
+  poster: "asena-teaser-clean-poster.jpg"
   video_controls: true
+  teaser_phases: [Program, Navigate, Act]
+  teaser_steps:
+    - at: 0
+      phase: 0
+      label: "Tools become physical actions"
+      kind: "Concept"
+    - at: 6
+      phase: 1
+      label: "Navigate from observations"
+      kind: "Real robot"
+    - at: 9.9
+      phase: 2
+      label: "Invoke a motion skill"
+      kind: "Real robot"
+    - at: 15.3
+      phase: 0
+      label: "Tools become physical actions"
+      kind: "Concept"
   authors_text: "An-Chieh Cheng, Isabella Liu, Edmund Bu, Nils Johan Bjorck, Hongxu Yin, Zhengyi Luo, Jan Kautz, Linxi Fan, Yuke Zhu, Sifei Liu"
 
 - id: recova
@@ -15,12 +33,48 @@
   project_page: "https://recova-bot.github.io/"
   pending_links: ["PDF", "arXiv"]
   description: "Recova uses an agent to build digital twins, discover recovery strategies in simulation, and recover from manipulation failures on real robots. Task and recovery policies improve from successful rollouts and human-assisted corrections, supporting longer autonomous operation with less human intervention."
-  image: "recova-teaser.mp4"
-  poster: "recova-teaser-poster.jpg"
+  image: "recova-teaser-clean.mp4"
+  poster: "recova-teaser-clean-poster.jpg"
   video_controls: true
+  teaser_phases: [Observe, Act, Check]
+  teaser_steps:
+    - at: 0
+      phase: 0
+      label: "Observe the table"
+      kind: "Real robot · sped up"
+    - at: 7.8
+      phase: 1
+      label: "Execute the next move"
+      kind: "Real robot · sped up"
+    - at: 13.4
+      phase: 2
+      label: "Read the new state"
+      kind: "Real robot · sped up"
   authors_text: "Isabella Liu, An-Chieh Cheng, Johan Bjorck, Zhiding Yu, Hongxu Yin, Jan Kautz, Linxi Fan, Yuke Zhu, Sifei Liu"
 
+- id: GSPN
+  title: "Parallel Sequence Modeling via Generalized Spatial Propagation Network"
+  venue: "CVPR 2025"
+  description: "GSPN is a fast vision attention module that accelerates generic vision foundation models for high-resolution input images."
+  project_page: "https://whj363636.github.io/GSPN/"
+  github: "https://github.com/whj363636/GSPN"
+  arxiv: "2501.12381"
+  image: "gspn-teaser.mp4"
+  poster: "gspn-teaser-poster.png"
+  video_controls: true
+  authors:
+    - hongjunw
+    - wonminb
+    - jiaruix
+    - jinweig
+    - kachunc
+    - xiaolongw
+    - kaih
+    - jank
+    - sifeil
+
 - id: vesta
+  homepage_hidden: true
   title: "Vesta: A Generalist Embodied Reasoning Model"
   venue: "NVIDIA Technical Report, 2026"
   description: "Vesta is a powerful, state-of-the-art Robot System 2 embodied-reasoning VLM that unifies localization, navigation, memory, reasoning, tool use, and long-horizon planning. Across capabilities, it outperforms the strongest single baseline by more than 20% on average and an oracle ensemble of per-category-best baselines by more than 10%, while improving real-robot success by 38.3% on memory-heavy tasks."
@@ -40,7 +94,7 @@
 
 - id: LoHoManip
   title: "Long-Horizon Manipulation via Trace-Conditioned VLA Planning"
-  venue: "arXiv 2026"
+  venue: "CoRL 2026"
   description: "LoHo-Manip is a modular framework that scales short-horizon vision-language-action policies to long-horizon manipulation, using a task-management VLM that predicts subtask sequences and 2D visual traces to guide the executor with implicit progress tracking, replanning, and recovery."
   project_page: "https://www.liuisabella.com/LoHoManip/"
   arxiv: "2604.21924"
@@ -157,27 +211,6 @@
     - kachunc
     - pavlom
     - dannyy
-    - sifeil
-
-- id: GSPN
-  title: "Parallel Sequence Modeling via Generalized Spatial Propagation Network"
-  venue: "CVPR 2025"
-  description: "GSPN is a fast vision attention module that accelerates generic vision foundation models for high-resolution input images."
-  project_page: "https://whj363636.github.io/GSPN/"
-  github: "https://github.com/whj363636/GSPN"
-  arxiv: "2501.12381"
-  image: "gspn-teaser.mp4"
-  poster: "gspn-teaser-poster.png"
-  video_controls: true
-  authors:
-    - hongjunw
-    - wonminb
-    - jiaruix
-    - jinweig
-    - kachunc
-    - xiaolongw
-    - kaih
-    - jank
     - sifeil
 
 - id: NaVILA

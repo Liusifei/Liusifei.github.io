@@ -1,5 +1,29 @@
 
 $(document).ready(function() {
+    document.querySelectorAll('.publication-image-agentic').forEach(function(card) {
+        var video = card.querySelector('video');
+        var steps = Array.from(card.querySelectorAll('.teaser-caption-step'));
+        var phases = Array.from(card.querySelectorAll('.teaser-phases span'));
+        if (!video || !steps.length) return;
+        function updateCaption() {
+            var active = steps[0];
+            steps.forEach(function(step) {
+                if (video.currentTime >= Number(step.dataset.start)) active = step;
+            });
+            steps.forEach(function(step) { step.hidden = step !== active; });
+            phases.forEach(function(phase, index) {
+                var selected = index === Number(active.dataset.phase);
+                phase.classList.toggle('is-active', selected);
+                if (selected) phase.setAttribute('aria-current', 'step');
+                else phase.removeAttribute('aria-current');
+            });
+        }
+        ['loadedmetadata', 'timeupdate', 'seeking', 'seeked'].forEach(function(event) {
+            video.addEventListener(event, updateCaption);
+        });
+        updateCaption();
+    });
+
     $('.publication-mousecell').mouseover(function() {
         $(this).find('video').css('display', 'inline-block');
         $(this).find('img').css('display', 'none');

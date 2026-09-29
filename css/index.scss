@@ -334,8 +334,66 @@ body.site-shell {
         }
     }
 
-    .publication-image-mahjong {
-        aspect-ratio: 4 / 3;
+    .publication-image-agentic {
+        aspect-ratio: auto;
+        border: 1px solid #e1e9e5;
+        background: #f6f9f7;
+
+        video {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            background: #081014;
+        }
+    }
+
+    .teaser-caption {
+        padding: 12px 14px 11px;
+        color: #173d32;
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
+    .teaser-caption-step {
+        min-height: 41px;
+    }
+
+    .teaser-caption-step[hidden] { display: none; }
+
+    .teaser-caption-label {
+        display: block;
+        font-weight: 600;
+    }
+
+    .teaser-caption-kind {
+        display: block;
+        margin-top: 2px;
+        color: #60746b;
+        font-size: 11px;
+    }
+
+    .teaser-phases {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        margin-top: 8px;
+        color: #677b71;
+        font-size: 11px;
+        line-height: 1.5;
+
+        span {
+            border-bottom: 2px solid transparent;
+            padding-bottom: 1px;
+        }
+
+        .is-active {
+            color: #13523c;
+            border-color: #328965;
+            font-weight: 600;
+        }
+
+        i { color: #83958b; font-style: normal; }
     }
 
     .publication-image-contain {

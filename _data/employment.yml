@@ -5,9 +5,10 @@
   dates: "Nov 2017 – Present"
   location: Santa Clara, CA
   highlights:
+    - "Develop efficient transformers, including GSPN-family spatial propagation and token-efficient high-resolution vision-language models."
     - "Leading Spatial Reasoning in NVIDIA Cosmos 3."
     - "Tech Lead of the Embodied Reasoning Project (Ember), advancing Robot System 2 models."
-    - "Develop efficient multimodal architectures, including GSPN-family spatial propagation and token-efficient high-resolution vision-language models."
+    - "Develop agentic robot systems for navigation and manipulation, including ASENA and Recova."
 
 - company: NVIDIA Research
   role: Research Intern

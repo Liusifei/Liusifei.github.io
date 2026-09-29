@@ -1,3 +1,21 @@
+- id: asena
+  title: "ASENA: Self-Evolving Agents for Embodied Navigation"
+  year: 2026
+  venue: "2026"
+  recent: true
+  description: "ASENA brings coding agents into the physical world through a real robot harness for perception, navigation, whole-body control, and execution feedback. Agents write, test, and refine robot programs, turning experience into reusable skills."
+  project_page: "https://asena-bot.github.io/"
+  authors_text: "An-Chieh Cheng, Isabella Liu, Edmund Bu, Nils Johan Bjorck, Hongxu Yin, Zhengyi Luo, Jan Kautz, Linxi Fan, Yuke Zhu, Sifei Liu"
+
+- id: recova
+  title: "Recova: Agent-Guided Failure Recovery for Autonomous Robotic Manipulation"
+  year: 2026
+  venue: "2026"
+  recent: true
+  description: "Recova uses an agent to build digital twins, discover recovery strategies in simulation, and recover from manipulation failures on real robots. Task and recovery policies improve from successful rollouts and human-assisted corrections, supporting longer autonomous operation with less human intervention."
+  project_page: "https://recova-bot.github.io/"
+  authors_text: "Isabella Liu, An-Chieh Cheng, Johan Bjorck, Zhiding Yu, Hongxu Yin, Jan Kautz, Linxi Fan, Yuke Zhu, Sifei Liu"
+
 - id: vesta
   title: "Vesta: A Generalist Embodied Reasoning Model"
   year: 2026
@@ -73,7 +91,7 @@
 - id: loho-manip
   title: "Long-Horizon Manipulation via Trace-Conditioned VLA Planning"
   year: 2026
-  venue: "arXiv, 2026"
+  venue: "CoRL, 2026"
   recent: true
   description: "LoHo-Manip uses progress-aware subtask plans and visual traces to extend VLA policies to long-horizon manipulation."
   project_page: "https://www.liuisabella.com/LoHoManip/"

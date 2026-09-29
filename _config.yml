@@ -22,9 +22,9 @@ title: Sifei Liu
 name: Sifei Liu
 position: Principal Research Scientist / Tech Lead
 description: >-
-  I am a Principal Research Scientist and Tech Lead at [NVIDIA Research](https://www.nvidia.com/en-us/research/), where I work with the [LPR](https://research.nvidia.com/labs/lpr/) team led by [Jan Kautz](https://jankautz.com/). My current research focuses on embodied foundational models, efficient transformer architectures, and spatial reasoning.
+  I am a Principal Research Scientist and Tech Lead at [NVIDIA Research](https://www.nvidia.com/en-us/research/), where I work with the [LPR](https://research.nvidia.com/labs/lpr/) team led by [Jan Kautz](https://jankautz.com/). My research spans **efficient transformers**, **spatial vision-language models**, and **robotics**.
 
-  I am deeply involved in VLM and VLA foundation model efforts across [Cosmos](https://www.nvidia.com/en-us/ai/cosmos/) and [Isaac GR00T](https://developer.nvidia.com/project-gr00t).
+  I develop efficient transformers with [GSPN](https://whj363636.github.io/GSPN/), grounded spatial VLMs such as [GR3D](https://www.anjiecheng.me/gr3d/), and agents that learn from robot execution, including [ASENA](https://asena-bot.github.io/) and [Recova](https://recova-bot.github.io/). I also contribute to VLM and VLA foundation model efforts across [Cosmos](https://www.nvidia.com/en-us/ai/cosmos/) and [Isaac GR00T](https://developer.nvidia.com/project-gr00t).
 
 
   Before joining NVIDIA, I earned my Ph.D. at the [VLLAB](http://vllab.ucmerced.edu/) at UC Merced, advised by [Ming-Hsuan Yang](http://faculty.ucmerced.edu/mhyang/). I have been fortunate to receive the Baidu Graduate Fellowship, the NVIDIA Pioneering Research Award, and the Rising Star EECS recognition.

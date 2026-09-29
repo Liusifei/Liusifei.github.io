@@ -356,7 +356,7 @@ body.site-shell {
     }
 
     .teaser-caption-step {
-        min-height: 41px;
+        min-height: 43px;
     }
 
     .teaser-caption-step[hidden] { display: none; }
@@ -366,11 +366,11 @@ body.site-shell {
         font-weight: 600;
     }
 
-    .teaser-caption-kind {
+    .teaser-caption-detail {
         display: block;
         margin-top: 2px;
         color: #60746b;
-        font-size: 11px;
+        font-size: 14px;
     }
 
     .teaser-phases {

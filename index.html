@@ -33,12 +33,12 @@ layout: null
   <link href="{{ '/css/fontawesome.all.min.css' | relative_url }}" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
   <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
-  <link href="{{ '/css/index.css' | relative_url }}?v=20260928-teasers" rel="stylesheet">
+  <link href="{{ '/css/index.css' | relative_url }}?v=20260929-react" rel="stylesheet">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script defer src="{{ '/js/fontawesome.all.min.js' | relative_url }}"></script>
   <script defer src="{{ '/js/email.js' | relative_url }}"></script>
-  <script src="{{ '/js/index.js' | relative_url }}?v=20260928-teasers"></script>
+  <script src="{{ '/js/index.js' | relative_url }}?v=20260929-react"></script>
 </head>
 
 <body class="site-shell">
@@ -205,7 +205,7 @@ layout: null
               {% for step in publication.teaser_steps %}
               <div class="teaser-caption-step" data-start="{{ step.at }}" data-phase="{{ step.phase }}"{% unless forloop.first %} hidden{% endunless %}>
                 <span class="teaser-caption-label">{{ step.label }}</span>
-                <span class="teaser-caption-kind">{{ step.kind }}</span>
+                {% if step.detail %}<span class="teaser-caption-detail">{{ step.detail }}</span>{% endif %}
               </div>
               {% endfor %}
               <div class="teaser-phases" aria-label="Agent workflow">

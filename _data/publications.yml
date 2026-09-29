@@ -7,24 +7,28 @@
   image: "asena-teaser-clean.mp4"
   poster: "asena-teaser-clean-poster.jpg"
   video_controls: true
-  teaser_phases: [Program, Navigate, Act]
+  teaser_phases: [Observe, Code, Act]
   teaser_steps:
     - at: 0
       phase: 0
-      label: "Tools become physical actions"
-      kind: "Concept"
-    - at: 6
+      label: "Read the scene and task"
+      detail: "Find the goal before moving."
+    - at: 2.5
       phase: 1
-      label: "Navigate from observations"
-      kind: "Real robot"
+      label: "Write the robot program"
+      detail: "Connect observations to movement tools."
+    - at: 6
+      phase: 2
+      label: "Navigate toward the goal"
+      detail: "Use feedback to guide the next move."
     - at: 9.9
       phase: 2
-      label: "Invoke a motion skill"
-      kind: "Real robot"
+      label: "Invoke a whole-body skill"
+      detail: "Run the selected waving motion."
     - at: 15.3
       phase: 0
-      label: "Tools become physical actions"
-      kind: "Concept"
+      label: "Read the next task"
+      detail: "Start again from the current scene."
   authors_text: "An-Chieh Cheng, Isabella Liu, Edmund Bu, Nils Johan Bjorck, Hongxu Yin, Zhengyi Luo, Jan Kautz, Linxi Fan, Yuke Zhu, Sifei Liu"
 
 - id: recova
@@ -36,20 +40,32 @@
   image: "recova-teaser-clean.mp4"
   poster: "recova-teaser-clean-poster.jpg"
   video_controls: true
-  teaser_phases: [Observe, Act, Check]
+  teaser_phases: [Observe, Reason, Act]
   teaser_steps:
     - at: 0
       phase: 0
-      label: "Observe the table"
-      kind: "Real robot · sped up"
-    - at: 7.8
+      label: "Watch the other players"
+      detail: "Track each discard while they play."
+    - at: 1
+      phase: 0
+      label: "Right player discards White Dragon"
+      detail: "Update the discard history."
+    - at: 4.7
+      phase: 0
+      label: "Another player discards West"
+      detail: "Compare the table with the hand."
+    - at: 6
       phase: 1
-      label: "Execute the next move"
-      kind: "Real robot · sped up"
-    - at: 13.4
+      label: "Keep 3–4–5 Characters and paired 2s"
+      detail: "Discard West."
+    - at: 7.8
       phase: 2
-      label: "Read the new state"
-      kind: "Real robot · sped up"
+      label: "Discard West"
+      detail: "Preserve the run and pair in the hand."
+    - at: 13.4
+      phase: 0
+      label: "West is on the table"
+      detail: "Update history; watch the next player."
   authors_text: "Isabella Liu, An-Chieh Cheng, Johan Bjorck, Zhiding Yu, Hongxu Yin, Jan Kautz, Linxi Fan, Yuke Zhu, Sifei Liu"
 
 - id: GSPN

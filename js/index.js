@@ -5,11 +5,15 @@ $(document).ready(function() {
         var steps = Array.from(card.querySelectorAll('.teaser-caption-step'));
         var phases = Array.from(card.querySelectorAll('.teaser-phases span'));
         if (!video || !steps.length) return;
-        function updateCaption() {
+        var previous = null;
+        function updateCaption(time) {
+            var seconds = typeof time === 'number' ? time : video.currentTime;
             var active = steps[0];
             steps.forEach(function(step) {
-                if (video.currentTime >= Number(step.dataset.start)) active = step;
+                if (seconds >= Number(step.dataset.start)) active = step;
             });
+            if (active === previous) return;
+            previous = active;
             steps.forEach(function(step) { step.hidden = step !== active; });
             phases.forEach(function(phase, index) {
                 var selected = index === Number(active.dataset.phase);
@@ -22,6 +26,12 @@ $(document).ready(function() {
             video.addEventListener(event, updateCaption);
         });
         updateCaption();
+        if (video.requestVideoFrameCallback) {
+            video.requestVideoFrameCallback(function onFrame(now, metadata) {
+                updateCaption(metadata.mediaTime);
+                video.requestVideoFrameCallback(onFrame);
+            });
+        }
     });
 
     $('.publication-mousecell').mouseover(function() {

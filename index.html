@@ -30,15 +30,13 @@ layout: null
   {% endif %}
 
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="{{ '/css/fontawesome.all.min.css' | relative_url }}" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
   <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
-  <link href="{{ '/css/index.css' | relative_url }}?v=20260929-react" rel="stylesheet">
+  <link href="{{ '/css/index.css' | relative_url }}?v=20260929-lazy-media" rel="stylesheet">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script defer src="{{ '/js/fontawesome.all.min.js' | relative_url }}"></script>
+  <script defer src="{{ '/js/icons.js' | relative_url }}?v=20260929-lazy-media"></script>
   <script defer src="{{ '/js/email.js' | relative_url }}"></script>
-  <script src="{{ '/js/index.js' | relative_url }}?v=20260929-react"></script>
+  <script defer src="{{ '/js/index.js' | relative_url }}?v=20260929-lazy-media"></script>
 </head>
 
 <body class="site-shell">
@@ -106,9 +104,6 @@ layout: null
       <div class="section-heading">
         <p class="section-kicker">Research Themes</p>
         <h2 class="title is-3">What I work on</h2>
-        <p>
-          I work on making multimodal systems more grounded, more efficient, and more capable in open-world environments.
-        </p>
       </div>
       <div class="columns is-variable is-5">
         <div class="column">
@@ -177,15 +172,15 @@ layout: null
         <div class="column {% if publication.id == 'asena' or publication.id == 'recova' %}is-5{% else %}is-4{% endif %}">
           <div class="publication-image {% if publication.image_mouseover %}publication-mousecell{% endif %}{% if publication.id == 'vesta' %} publication-image-contain{% endif %}{% if publication.teaser_steps %} publication-image-agentic{% endif %}">
             {% if publication.image_mouseover contains "mp4" %}
-            <video autoplay preload playsinline height="100%" loop muted width="100%">
-              <source src="{{ '/images/' | append: publication.image_mouseover | relative_url }}" type="video/mp4">
+            <video data-lazy-video data-hover-video preload="none" playsinline height="100%" loop muted width="100%" aria-label="{{ publication.title }} preview">
+              <source data-src="{{ '/images/' | append: publication.image_mouseover | relative_url }}" type="video/mp4">
               Your browser does not support the video tag.
             </video>
             {% endif %}
             
             {% if publication.image contains "mp4" %}
-            <video autoplay preload="metadata" playsinline height="100%" loop muted width="100%" aria-label="{{ publication.title }} teaser"{% if publication.video_controls %} controls{% endif %}{% if publication.poster %} poster="{{ '/images/' | append: publication.poster | relative_url }}"{% endif %}>
-              <source src="{{ '/images/' | append: publication.image | relative_url }}" type="video/mp4">
+            <video data-lazy-video preload="none" playsinline height="100%" loop muted width="100%" aria-label="{{ publication.title }} teaser"{% if publication.video_controls %} controls{% endif %}{% if publication.poster %} data-poster="{{ '/images/' | append: publication.poster | relative_url }}"{% endif %}>
+              <source data-src="{{ '/images/' | append: publication.image | relative_url }}" type="video/mp4">
               Your browser does not support the video tag.
             </video>
             {% else %}

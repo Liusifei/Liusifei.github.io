@@ -106,7 +106,8 @@
   project_page: "https://research.nvidia.com/labs/cosmos-lab/cosmos3/"
   pdf: "https://research.nvidia.com/labs/cosmos-lab/cosmos3/technical-report.pdf"
   pdf_label: "Tech Report"
-  image: "cosmos3.mp4"
+  image: "cosmos3-preview.mp4"
+  poster: "cosmos3-preview-poster.jpg"
 
 - id: LoHoManip
   title: "Long-Horizon Manipulation via Trace-Conditioned VLA Planning"
@@ -115,6 +116,7 @@
   project_page: "https://www.liuisabella.com/LoHoManip/"
   arxiv: "2604.21924"
   image: "lohomanip.mp4"
+  poster: "lohomanip-poster.jpg"
   authors:
     - isabellal
     - anchiehc
@@ -133,7 +135,8 @@
   description: "GR3D is a spatial vision-language model that unifies explicit 2D, implicit 2D, and monocular 3D grounding in a single framework, decomposing spatial understanding into grounded 2D perception followed by 3D inference."
   project_page: "https://www.anjiecheng.me/gr3d/"
   arxiv: "2605.30307"
-  image: "gr3d.gif"
+  image: "gr3d-preview.mp4"
+  poster: "gr3d-preview-poster.jpg"
   authors:
     - anchiehc
     - yangf
@@ -177,7 +180,8 @@
   description: "SR-3D unifies single-view 2D and multi-view 3D representations for flexible region prompting and grounded spatial reasoning."
   project_page: "https://www.anjiecheng.me/sr3d"
   arxiv: "2509.13317"
-  image: "sr3d.mp4"
+  image: "sr3d-preview.mp4"
+  poster: "sr3d-preview-poster.jpg"
   authors:
     - anchiehc
     - yangf
@@ -236,7 +240,8 @@
   project_page: "https://navila-bot.github.io/"
   github: "https://github.com/yang-zj1026/legged-loco"
   arxiv: "2412.04453"
-  image: "navila.gif"
+  image: "navila-preview.mp4"
+  poster: "navila-preview-poster.jpg"
   authors:
     - anchiehc
     - yandongj
@@ -295,7 +300,8 @@
   project_page: "https://www.anjiecheng.me/SpatialRGPT"
   github: "https://github.com/AnjieCheng/SpatialRGPT"
   arxiv: "2406.01584"
-  image: "srgpt.mp4"
+  image: "srgpt-preview.mp4"
+  poster: "srgpt-preview-poster.jpg"
   authors:
     - anchiehc
     - dannyy
@@ -330,6 +336,7 @@
   github: "https://github.com/NVlabs/ODISE"
   arxiv: "2303.04803"
   image: "odise_before.png"
+  poster: "odise_before.png"
   image_mouseover: "odise_after.mp4"
   authors:
     - jiaruix

@@ -161,7 +161,10 @@
   project_page: "https://spatialclaw.github.io/"
   github: "https://github.com/NVlabs/SpatialClaw"
   arxiv: "2606.13673"
-  image: "spatialclaw.svg"
+  image: "spatialclaw-teaser.webp"
+  image_alt: "SpatialClaw concept illustration: a Python panel accompanies a study transforming into a 3D point cloud, highlighting the spatial relationship between a chair and a monitor."
+  image_caption: "Concept illustration"
+  image_natural_ratio: true
   authors_text: "Seokju Cho, Ryo Hachiuma, Abhishek Badki, Hang Su, Byung-Kwan Lee, Chan Hee Song, Sifei Liu, Subhashree Radhakrishnan, Seungryong Kim, Yu-Chiang Frank Wang, Min-Hung Chen"
 
 - id: cgspn

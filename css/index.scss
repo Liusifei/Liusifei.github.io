@@ -333,6 +333,19 @@ body.site-shell {
         }
     }
 
+    .publication-image-natural {
+        aspect-ratio: auto;
+
+        img { height: auto; }
+    }
+
+    .publication-image-caption {
+        margin-top: 0.35rem;
+        color: #718079;
+        font-size: 0.68rem;
+        line-height: 1.4;
+    }
+
     .publication-image-agentic {
         aspect-ratio: auto;
         border: 1px solid #e1e9e5;

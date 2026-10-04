@@ -164,7 +164,7 @@ layout: null
       <div class="publication-block columns is-variable is-5">
 
         <div class="column {% if publication.id == 'asena' or publication.id == 'recova' %}is-5{% else %}is-4{% endif %}">
-          <div class="publication-image {% if publication.image_mouseover %}publication-mousecell{% endif %}{% if publication.id == 'vesta' %} publication-image-contain{% endif %}{% if publication.teaser_steps %} publication-image-agentic{% endif %}">
+          <div class="publication-image {% if publication.image_mouseover %}publication-mousecell{% endif %}{% if publication.id == 'vesta' %} publication-image-contain{% endif %}{% if publication.teaser_steps %} publication-image-agentic{% endif %}{% if publication.image_natural_ratio %} publication-image-natural{% endif %}">
             {% if publication.image_mouseover contains "mp4" %}
             <video data-lazy-video data-hover-video preload="none" playsinline height="100%" loop muted width="100%" aria-label="{{ publication.title }} preview">
               <source data-src="{{ '/images/' | append: publication.image_mouseover | relative_url }}" type="video/mp4">
@@ -178,7 +178,7 @@ layout: null
               Your browser does not support the video tag.
             </video>
             {% else %}
-            <img alt="{{ publication.title }}" loading="lazy" src="{{ '/images/' | append: publication.image | relative_url }}" />
+            <img alt="{{ publication.image_alt | default: publication.title | escape }}" loading="lazy" src="{{ '/images/' | append: publication.image | relative_url }}" />
             {% endif %}
             {% if publication.teaser_steps %}
             <div class="teaser-caption">
@@ -197,6 +197,7 @@ layout: null
             </div>
             {% endif %}
           </div>
+          {% if publication.image_caption %}<p class="publication-image-caption">{{ publication.image_caption }}</p>{% endif %}
         </div>
 
         <div class="column">

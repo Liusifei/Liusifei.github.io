@@ -2,7 +2,7 @@
   title: "ASENA: Self-Evolving Agents for Embodied Navigation"
   venue: "2026"
   project_page: "https://asena-bot.github.io/"
-  pending_links: ["PDF", "arXiv"]
+  arxiv: "2609.39207"
   description: "ASENA brings coding agents into the physical world through a real robot harness for perception, navigation, whole-body control, and execution feedback. Agents write, test, and refine robot programs, turning experience into reusable skills."
   image: "asena-teaser-clean.mp4"
   poster: "asena-teaser-clean-poster.jpg"
@@ -35,7 +35,7 @@
   title: "Recova: Agent-Guided Failure Recovery for Autonomous Robotic Manipulation"
   venue: "2026"
   project_page: "https://recova-bot.github.io/"
-  pending_links: ["PDF", "arXiv"]
+  arxiv: "2610.01178"
   description: "Recova uses an agent to build digital twins, discover recovery strategies in simulation, and recover from manipulation failures on real robots. Task and recovery policies improve from successful rollouts and human-assisted corrections, supporting longer autonomous operation with less human intervention."
   image: "recova-teaser-clean.mp4"
   poster: "recova-teaser-clean-poster.jpg"

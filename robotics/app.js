@@ -14,11 +14,12 @@ const architectures = {
 $$('[data-mode]').forEach(b=>b.addEventListener('click',()=>{
  const mode=b.dataset.mode,x=architectures[mode];
  $$('[data-mode]').forEach(t=>t.setAttribute('aria-pressed',String(t===b)));
- $('[data-worker-mode]').dataset.workerMode=mode;
+ const diagram=$('[data-worker-mode]');
+ diagram.dataset.workerMode=mode;
  const fields={'model-type':'type','model-label':'model','model-detail':'detail','dispatch-label':'dispatch','gather-label':'gather','updater-type':'updater','updater-label':'label','updater-detail':'update','update-equation':'equation','architecture-note':'note'};
  Object.entries(fields).forEach(([id,key])=>$('#'+id).textContent=x[key]);
- $$('.workspace-name').forEach(n=>n.textContent=x.workspace);
- $$('.worker-num').at(-1).textContent=mode==='rsi'?'…16':'…N';
+ diagram.querySelectorAll('.workspace-name').forEach(n=>n.textContent=x.workspace);
+ [...diagram.querySelectorAll('.worker-num')].at(-1).textContent=mode==='rsi'?'…16':'…N';
 }));
 const loopStages=[
  ['01 / Physical grounding','A twin tied to the real workstation.','Reconstruct the scene so task attempts and failure recovery can be explored before returning to hardware.','a reconstructed environment for task and recovery exploration.'],

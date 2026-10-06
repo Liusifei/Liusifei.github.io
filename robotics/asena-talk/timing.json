@@ -1,0 +1,101 @@
+{
+  "method": "Measured macOS Samantha synthesized narration plus scheduled visual pauses; not a recording of the presenter.",
+  "nominalSpeechRate": 135,
+  "voice": "Samantha (en_US)",
+  "words": 1087,
+  "spokenAudioSeconds": 480.251,
+  "pauseSeconds": 50,
+  "totalSeconds": 530.251,
+  "slides": [
+    {
+      "id": "asena",
+      "title": "ASENA",
+      "wordCount": 67,
+      "spokenAudioSeconds": 28.973,
+      "pauseSeconds": 4,
+      "durationSeconds": 32.973,
+      "startSeconds": 0.0,
+      "endSeconds": 32.973
+    },
+    {
+      "id": "composition",
+      "title": "The agent composes, the robot executes",
+      "wordCount": 146,
+      "spokenAudioSeconds": 60.397,
+      "pauseSeconds": 6,
+      "durationSeconds": 66.397,
+      "startSeconds": 32.973,
+      "endSeconds": 99.37
+    },
+    {
+      "id": "workspace",
+      "title": "Parallel workers evolve a shared workspace",
+      "wordCount": 163,
+      "spokenAudioSeconds": 70.496,
+      "pauseSeconds": 6,
+      "durationSeconds": 76.496,
+      "startSeconds": 99.37,
+      "endSeconds": 175.866
+    },
+    {
+      "id": "safety",
+      "title": "The sandbox limits what generated code can do",
+      "wordCount": 126,
+      "spokenAudioSeconds": 58.07,
+      "pauseSeconds": 4,
+      "durationSeconds": 62.07,
+      "startSeconds": 175.866,
+      "endSeconds": 237.936
+    },
+    {
+      "id": "training",
+      "title": "The interaction layer can support an agent-training loop",
+      "wordCount": 76,
+      "spokenAudioSeconds": 33.827,
+      "pauseSeconds": 4,
+      "durationSeconds": 37.827,
+      "startSeconds": 237.936,
+      "endSeconds": 275.763
+    },
+    {
+      "id": "policy",
+      "title": "ASENA-VLN provides reusable navigation",
+      "wordCount": 108,
+      "spokenAudioSeconds": 52.274,
+      "pauseSeconds": 4,
+      "durationSeconds": 56.274,
+      "startSeconds": 275.763,
+      "endSeconds": 332.038
+    },
+    {
+      "id": "efficiency",
+      "title": "The navigation tool reduces coding-agent interaction",
+      "wordCount": 126,
+      "spokenAudioSeconds": 54.433,
+      "pauseSeconds": 6,
+      "durationSeconds": 60.433,
+      "startSeconds": 332.038,
+      "endSeconds": 392.471
+    },
+    {
+      "id": "rsi",
+      "title": "Success grows as the workspace accumulates experience",
+      "wordCount": 144,
+      "spokenAudioSeconds": 62.037,
+      "pauseSeconds": 6,
+      "durationSeconds": 68.037,
+      "startSeconds": 392.471,
+      "endSeconds": 460.507
+    },
+    {
+      "id": "records",
+      "title": "Real runs leave records we can inspect and reuse",
+      "wordCount": 131,
+      "spokenAudioSeconds": 59.744,
+      "pauseSeconds": 10,
+      "durationSeconds": 69.744,
+      "startSeconds": 460.507,
+      "endSeconds": 530.251
+    }
+  ]
+}

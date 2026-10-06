@@ -2,9 +2,10 @@
 
 A self-contained copy of the long and short presentations, with shared local assets. No installation or build step is required.
 
-The public tutorial is served at `/robotics/recova-slides/`. On static hosting, review feedback stays in the current browser and can be shared with **Export feedback**; server sync is available only when running the included local server at the deck root.
+The current eight-slide public tutorial is served at `/robotics/recova-talk/`; `/robotics/recova-slides/` redirects there. The original 23-slide source is preserved at `/robotics/recova-slides/archive.html` for citations. On static hosting, review feedback stays in the current browser and can be shared with **Export feedback**; server sync is available only when running the included local server at the deck root.
 
-- `index.html`: long deck, with 19 main slides and 4 appendices.
+- `index.html`: redirect to the current eight-slide tutorial.
+- `archive.html`: archived source deck, with 19 main slides and 4 appendices.
 - `recova-short.html`: short overview, with 6 slides and embedded speaker notes.
 - `speaker-notes.md` and `narrative-script.md`: notes and rehearsal script for the long deck.
 - `SOURCES.md` and asset provenance files: research sources and media attribution.
@@ -20,7 +21,7 @@ python3 serve.py --port 8096
 
 Then open:
 
-- Long deck: http://localhost:8096/
+- Archived long deck: http://localhost:8096/archive.html
 - Short deck: http://localhost:8096/recova-short.html
 
 Port 8096 keeps this copy separate from the original deck on port 8095. The server binds to this computer only and supports video seeking. Keep it running while presenting; stop it with Ctrl+C.

@@ -1,0 +1,27 @@
+<section id="asena-system" class="asena-method-panel" aria-labelledby="asena-system-title">
+  <div class="amp-heading"><span>ASENA / SYSTEM DESIGN</span><h3 id="asena-system-title">The agent composes; the robot stack executes</h3></div>
+  <p class="amp-intro">ASENA connects a coding agent and persistent workspace to embodied tools. The agent can delegate navigation to a learned policy or construct motion proposals; execution authority stays with the platform.</p>
+  <figure class="amp-architecture" aria-label="Observations feed a coding agent with a persistent workspace. Learned navigation and programmed motion proposals converge at independent validation and operator approval. SONIC controls G1. Observations and execution outcomes return to the agent.">
+    <div class="amp-system-flow">
+      <div class="amp-observe amp-flow-node"><span class="amp-cap">Robot state</span><h4>Observations</h4><p>Camera · LiDAR<br>Pose · joints</p></div>
+      <span class="amp-link" aria-hidden="true">→</span>
+      <div class="amp-agent-group">
+        <div class="amp-workspace"><span class="amp-cap">Persistent workspace</span><b>Code · skills · experience</b></div>
+        <div class="amp-memory"><span aria-hidden="true">⇅</span> Inspect + revise</div>
+        <div class="amp-agent amp-flow-node"><span class="amp-cap">Decide + compose</span><h4>Coding agent</h4><p>Interpret the task<br>Choose the computation<br>Call and combine tools</p></div>
+      </div>
+      <span class="amp-link" aria-hidden="true">→</span>
+      <div class="amp-branches" aria-label="Alternative tools available to the agent">
+        <div class="amp-policy amp-flow-node"><span class="amp-cap">Delegate a goal · optional</span><h4><i aria-hidden="true">π</i> Learned VLN policy</h4><p>Goal + recent RGB<br><b>→ Navigation waypoints</b></p></div>
+        <div class="amp-or">and / or</div>
+        <div class="amp-program amp-flow-node"><span class="amp-cap">Construct a proposal</span><h4>Programmed motion</h4><p>Geometric waypoints<br>Upper-body joint targets</p></div>
+      </div>
+      <span class="amp-link" aria-hidden="true">→</span>
+      <div class="amp-execution amp-flow-node"><span class="amp-cap">Execution boundary</span><span class="amp-check" aria-hidden="true">✓</span><h4>Validate <br>+ approve</h4><p>Independent checks<br>Operator approval</p></div>
+      <span class="amp-link" aria-hidden="true">→</span>
+      <div class="amp-hardware"><div><h4>SONIC</h4><p>Whole-body control<br>Balance + locomotion</p></div><span class="amp-hardware-arrow" aria-hidden="true">↓</span><img src="recorder/assets/g1-body.png" alt="G1 robot geometry" width="84" height="144" loading="lazy"><b class="amp-g1-label">G1</b></div>
+    </div>
+    <div class="amp-feedback"><span aria-hidden="true">↶</span><span>New observations · execution outcomes · operator feedback <b>return to the agent</b></span></div>
+    <figcaption>Navigation-policy results came from simulation; G1 demonstrated supervised execution. Adapted from <a href="https://anjiecheng.me/talks/asena/#architecture" target="_blank" rel="noopener">Anjie Cheng’s slide 4</a>.</figcaption>
+  </figure>
+</section>

@@ -1,23 +1,115 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Robot Brain · Sifei Liu</title><link rel="stylesheet" href="style.css?v=0cb2b4756f"><meta name="description" content="How ASENA connects coding models to embodied environments, and how Recova turns robot failures into recovery skills and better training data."><link rel="canonical" href="https://sifeiliu.net/robotics/"><meta property="og:title" content="Robot Brain · Sifei Liu"><meta property="og:description" content="How ASENA connects coding models to embodied environments, and how Recova turns robot failures into recovery skills and better training data."><meta property="og:url" content="https://sifeiliu.net/robotics/"><meta property="og:type" content="website"></head><body data-view="all"><a class="skip-link" href="#main">Skip to content</a><header class="topbar"><a class="brand" href="/" aria-label="Sifei Liu homepage">SIFEI LIU <span>/ RESEARCH</span></a><nav aria-label="Chapters"><a href="#asena">ASENA</a><a href="#asena-workers">RSI → agent training</a><a href="#asena-experience">Learning from data</a><a href="#recova">Recova</a><a href="#recova-data">Data loop</a><a href="#demo">Interactive replay</a></nav><div class="tools"><button type="button" id="focus" title="Toggle full screen" aria-label="Toggle full screen">⛶</button></div><div class="progress" id="reading-progress"></div></header><main id="main"><section class="intro" id="start"><div class="eyebrow">Robot Brain · Programs, interaction, and learning</div><h1>Better interaction.<br>Better experience.<br><em>More capable robots.</em></h1><p class="intro-copy">Two systems that connect model reasoning to physical action—and turn the outcome into the next improvement.</p><div class="agenda"><a href="#asena"><span>01 / NAVIGATION</span><strong>ASENA</strong><small>Code as Policy → workspace RSI → agent &amp; policy learning</small><i>↗</i></a><a href="#recova"><span>02 / MANIPULATION</span><strong>Recova</strong><small>Real → sim → real → continuous data collection</small><i>↗</i></a><a href="#demo"><span>03 / INTERACTIVE DEMO</span><strong>See the loop</strong><small>A multi-turn program reacting to real observations</small><i>↗</i></a></div><div class="standalone">Explore each system: <a href="asena.html">ASENA ↗</a><a href="recova.html">Recova ↗</a></div></section>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Robot Brain · Sifei Liu</title><link rel="stylesheet" href="style.css?v=5bdff32903"><meta name="description" content="How ASENA connects coding models to embodied environments, and how Recova turns robot failures into recovery skills and better training data."><link rel="canonical" href="https://sifeiliu.net/robotics/"><meta property="og:title" content="Robot Brain · Sifei Liu"><meta property="og:description" content="How ASENA connects coding models to embodied environments, and how Recova turns robot failures into recovery skills and better training data."><meta property="og:url" content="https://sifeiliu.net/robotics/"><meta property="og:type" content="website"><link rel="stylesheet" href="method-panels/method-panels.css?v=59ddc371b5"><link rel="stylesheet" href="results-panels/results-panels.css?v=68afca3faf"></head><body data-view="all"><a class="skip-link" href="#main">Skip to content</a><header class="topbar"><a class="brand" href="/" aria-label="Sifei Liu homepage">SIFEI LIU <span>/ RESEARCH</span></a><nav aria-label="Chapters"><a href="#asena">ASENA</a><a href="#asena-workers">Workspace</a><a href="#asena-policy">Policy &amp; results</a><a href="#asena-experience">Recorded data</a><a href="#recova">Recova</a><a href="#recova-data">Data loop</a><a href="#demo">Interactive replay</a></nav><div class="tools"><button type="button" id="focus" title="Toggle full screen" aria-label="Toggle full screen">⛶</button></div><div class="progress" id="reading-progress"></div></header><main id="main"><section class="intro" id="start"><div class="eyebrow">Robot Brain · Programs, interaction, and learning</div><h1>Better interaction.<br>Better experience.<br><em>More capable robots.</em></h1><p class="intro-copy">Two systems that connect model reasoning to physical action—and turn the outcome into the next improvement.</p><div class="agenda"><a href="#asena"><span>01 / NAVIGATION</span><strong>ASENA</strong><small>Code as Policy → workspace RSI → recorded experience</small><i>↗</i></a><a href="#recova"><span>02 / MANIPULATION</span><strong>Recova</strong><small>Real → sim → real → continuous data collection</small><i>↗</i></a><a href="#demo"><span>03 / INTERACTIVE DEMO</span><strong>See the loop</strong><small>A multi-turn program reacting to real observations</small><i>↗</i></a></div><div class="standalone">Explore each system: <a href="asena.html">ASENA ↗</a><a href="recova.html">Recova ↗</a></div></section>
 <section id="asena" class="chapter asena" data-chapter="ASENA · interface">
   <div class="chapter-meta"><span class="project-tag">01 / ASENA</span><span>Code as Policy + RSI</span></div>
   <h2>ASENA: Self-Evolving Agents<br class="desktop"> for Embodied Navigation</h2>
-  <p class="lead">Give a coding model an embodied environment it can act in, inspect, and improve from.</p>
-  <div class="thesis"><span class="micro">The key idea</span><p>The model writes a program. The environment returns physical evidence. The next attempt starts with better code and reusable skills.</p></div>
-  <div class="section-heading"><h3>The interface is the bridge.</h3><span>Task → program → embodied interaction</span></div>
-  <div class="interface-diagram" aria-label="Coding model calls a workspace and execution interface; observations and execution evidence return from simulator or supervised robot">
-    <div class="model-card"><span class="micro">High-level policy</span><strong>Coding model</strong><p>Read observations<br>Write and repair programs</p><code>task + context + evidence</code></div>
-    <div class="two-way"><span>programs →</span><span>← feedback</span></div>
-    <div class="api-card"><div class="micro">ASENA interface</div><div class="api-row"><b>Workspace</b><span>code · notes · reusable skills</span></div><div class="api-row"><b>Observe</b><span>images · geometry · robot state</span></div><div class="api-row"><b>Act</b><span>learned navigation · geometric motion · gestures</span></div><div class="api-row"><b>Inspect</b><span>tool replies · errors · recorded artifacts</span></div></div>
-    <div class="two-way"><span>actions →</span><span>← evidence</span></div>
-    <div class="world-stack"><div><span class="micro">Simulation</span><b>Navigation &amp; EQA</b><small>Task outcomes and execution feedback</small></div><div><span class="micro">Physical extension</span><b>Unitree G1</b><small>Sensor access, motion checks and operator approval</small></div></div>
+  <p class="lead">ASENA connects a coding model to embodied tools, execution feedback and a persistent workspace.</p>
+<section id="asena-system" class="asena-method-panel" aria-labelledby="asena-system-title">
+  <div class="amp-heading"><span>ASENA / SYSTEM DESIGN</span><h3 id="asena-system-title">The agent composes; the robot stack executes</h3></div>
+  <p class="amp-intro">ASENA connects a coding agent and persistent workspace to embodied tools. The agent can delegate navigation to a learned policy or construct motion proposals; execution authority stays with the platform.</p>
+  <figure class="amp-architecture" aria-label="Observations feed a coding agent with a persistent workspace. Learned navigation and programmed motion proposals converge at independent validation and operator approval. SONIC controls G1. Observations and execution outcomes return to the agent.">
+    <div class="amp-system-flow">
+      <div class="amp-observe amp-flow-node"><span class="amp-cap">Robot state</span><h4>Observations</h4><p>Camera · LiDAR<br>Pose · joints</p></div>
+      <span class="amp-link" aria-hidden="true">→</span>
+      <div class="amp-agent-group">
+        <div class="amp-workspace"><span class="amp-cap">Persistent workspace</span><b>Code · skills · experience</b></div>
+        <div class="amp-memory"><span aria-hidden="true">⇅</span> Inspect + revise</div>
+        <div class="amp-agent amp-flow-node"><span class="amp-cap">Decide + compose</span><h4>Coding agent</h4><p>Interpret the task<br>Choose the computation<br>Call and combine tools</p></div>
+      </div>
+      <span class="amp-link" aria-hidden="true">→</span>
+      <div class="amp-branches" aria-label="Alternative tools available to the agent">
+        <div class="amp-policy amp-flow-node"><span class="amp-cap">Delegate a goal · optional</span><h4><i aria-hidden="true">π</i> Learned VLN policy</h4><p>Goal + recent RGB<br><b>→ Navigation waypoints</b></p></div>
+        <div class="amp-or">and / or</div>
+        <div class="amp-program amp-flow-node"><span class="amp-cap">Construct a proposal</span><h4>Programmed motion</h4><p>Geometric waypoints<br>Upper-body joint targets</p></div>
+      </div>
+      <span class="amp-link" aria-hidden="true">→</span>
+      <div class="amp-execution amp-flow-node"><span class="amp-cap">Execution boundary</span><span class="amp-check" aria-hidden="true">✓</span><h4>Validate <br>+ approve</h4><p>Independent checks<br>Operator approval</p></div>
+      <span class="amp-link" aria-hidden="true">→</span>
+      <div class="amp-hardware"><div><h4>SONIC</h4><p>Whole-body control<br>Balance + locomotion</p></div><span class="amp-hardware-arrow" aria-hidden="true">↓</span><img src="recorder/assets/g1-body.png" alt="G1 robot geometry" width="84" height="144" loading="lazy"><b class="amp-g1-label">G1</b></div>
+    </div>
+    <div class="amp-feedback"><span aria-hidden="true">↶</span><span>New observations · execution outcomes · operator feedback <b>return to the agent</b></span></div>
+    <figcaption>Navigation-policy results came from simulation; G1 demonstrated supervised execution. Adapted from <a href="https://anjiecheng.me/talks/asena/#architecture" target="_blank" rel="noopener">Anjie Cheng’s slide 4</a>.</figcaption>
+  </figure>
+</section>
+<section id="asena-safety" class="asena-method-panel" aria-labelledby="asena-safety-title">
+  <div class="amp-heading"><span>ASENA / EXECUTION AUTHORITY</span><h3 id="asena-safety-title">Safety is enforced outside the coding agent</h3></div>
+  <p class="amp-intro">The deployment bounds the agent and its subprocesses. Motion passes through checks outside the agent, operator approval, and a controller that maintains balance.</p>
+  <figure class="amp-safety" aria-label="The coding agent and all child processes operate within scoped resources. Raw control paths, operator credentials, and platform writes are blocked. Motion proposals pass through external validation and operator approval before SONIC executes on G1.">
+    <div class="amp-safety-grid">
+      <div class="amp-process">
+        <div class="amp-process-roof"><span aria-hidden="true">⌑</span><h4>Restricted process<br><small>+ every child process</small></h4></div>
+        <div class="amp-process-body">
+          <div class="amp-contained-agent"><span class="amp-cap">Within the boundary</span><strong>Coding agent</strong><span>+ scripts / subprocesses</span></div>
+          <div class="amp-resources"><span class="amp-cap">Scoped resources</span><ul><li>Python · NumPy · MuJoCo</li><li>Scratch files + reusable skills</li><li>Robot device API</li><li>Model API proxy</li></ul></div>
+        </div>
+        <div class="amp-foundations"><div><b>Unix identity</b><span>Protected files + credentials</span></div><div><b>Network allowlist</b><span>Device + model proxy only</span></div><div><b>Inherited seccomp</b><span>Blocks direct kernel/device paths</span></div></div>
+      </div>
+      <div class="amp-denied"><span class="amp-cap">No direct path</span><ul><li><span aria-hidden="true">⊘</span><b>Raw CAN /<br>packet sockets</b></li><li><span aria-hidden="true">⊘</span><b>Operator<br>credentials</b></li><li><span aria-hidden="true">⊘</span><b>Platform writes /<br>privilege escape</b></li></ul></div>
+      <div class="amp-checked-path"><span class="amp-cap">Checked execution path</span><ol><li><b>Motion proposal</b><span>Waypoints / joint trajectory</span></li><li><b>External validation</b><span>Bounds · joint limits<br>Robot self-collision checks</span></li><li class="amp-approval"><b>Operator approval</b><span>Approve or return a reason</span></li><li class="amp-safe-hardware"><b>SONIC → G1</b><span>Balance + locomotion<br>Independent stop</span></li></ol></div>
+    </div>
+    <div class="amp-safety-baseline"><b>Launch preflight verified the boundary.</b><span>Reflection disabled motion.</span></div>
+    <figcaption>MuJoCo gesture checks used the robot’s self model, not full environment physics. Supervision remained necessary. <a href="https://anjiecheng.me/talks/asena/#jail" target="_blank" rel="noopener">Slide 6</a>.</figcaption>
+  </figure>
+</section>
+</section>
+<section id="asena-workers" class="chapter asena" data-chapter="ASENA · workspace RSI">
+  <div class="chapter-meta"><span class="project-tag">ASENA / WORKSPACE RSI</span><span>Code and skills improve · model weights stay fixed</span></div>
+  <h3 class="section-title">Parallel workers improve a shared workspace.</h3>
+  <p class="section-intro">Sixteen simulation workers start from separate copies of a shared workspace, develop reusable skills and retain execution feedback. Between passes, their improvements are merged into the shared workspace for the next round. All model weights stay fixed.</p>
+  <div class="mode-switch" role="group" aria-label="Compare workspace evolution with an agent-training extension">
+    <button type="button" data-mode="rsi" aria-pressed="true">Implemented · Workspace RSI</button>
+    <button type="button" data-mode="rl" aria-pressed="false">Compare · Agent training</button>
   </div>
-  <p class="caption">The interface pattern carries across platforms; the available tools and feedback differ. ASENA-VLN is a learned navigation tool inside this system.</p>
-  <div class="insight-row"><span class="arrow-glyph">↻</span><p><strong>RSI updates the workspace.</strong> Execute → inspect → revise code and skills → reuse. The coding model, improver and navigation policy keep fixed weights during this loop.</p></div>
-  <details id="asena-delegation" class="supporting-detail delegation">
-    <summary><strong>What changes when the agent uses a navigation policy?</strong><span>Tool calls fall for both agents. Success rises for Sonnet and falls for Astra.</span></summary>
-    <div class="supporting-content">
-      <h3>Fewer tool calls for both agents; different effects on success.</h3>
+  <div class="worker-diagram" data-worker-mode="rsi">
+    <div class="worker-top"><span class="micro" id="model-type">Fixed coding agent</span><strong id="model-label">Coding model serves independent worker contexts</strong><span id="model-detail">Each worker has its own task context.</span></div>
+    <div class="branch-label" id="dispatch-label">Task allocation · private workspace per worker</div>
+    <div class="workers">
+      <div class="worker"><span class="worker-num">01</span><b>Worker</b><div class="workspace-name">Private code + skills</div><span class="vertical-arrow">↕</span><div class="env">Simulator + policy instance</div></div>
+      <div class="worker"><span class="worker-num">02</span><b>Worker</b><div class="workspace-name">Private code + skills</div><span class="vertical-arrow">↕</span><div class="env">Simulator + policy instance</div></div>
+      <div class="worker"><span class="worker-num">…16</span><b>Worker</b><div class="workspace-name">Private code + skills</div><span class="vertical-arrow">↕</span><div class="env">Simulator + policy instance</div></div>
+    </div>
+    <div class="branch-label bottom" id="gather-label">Gather traces, local edits and task outcomes between passes</div>
+    <div class="update-row"><div><span class="micro" id="updater-type">Fixed improver model</span><strong id="updater-label">Merge, test and prune code and skills</strong><p id="updater-detail">Distribute the updated notes and skills to the next pass.</p></div><span class="return-arrow">↶</span><code id="update-equation">Wₖ₊₁ = Improve(Wₖ, traces, feedback)</code></div>
+  </div>
+  <p id="architecture-note" class="caption">Implemented in simulation: workers execute independently, inspect peer work and exchange tips through a shared bulletin. Between passes, consolidation merges, tests and prunes code and notes. This diagram shows logical instances, not a one-GPU-per-worker allocation.</p>
+<p class="caption"><a href="https://arxiv.org/html/2609.39207v1#S4.SS4" target="_blank" rel="noopener">Workspace-evolution protocol · paper §4.4 ↗</a></p>
+</section>
+<section id="asena-policy" class="chapter asena" data-chapter="ASENA · policy and agent">
+  <div class="chapter-meta"><span class="project-tag">ASENA / POLICY &amp; AGENT</span><span>Evaluate the tool, then the combination</span></div>
+<section id="asena-policy-results" class="asena-results" aria-labelledby="policy-results-heading">
+  <div class="section-heading"><h3 id="policy-results-heading" class="results-heading">The navigation policy improves route geometry.</h3><span>Reported monocular · 4B models</span></div>
+  <p class="results-intro">ASENA-VLN is the optional navigation tool the coding agent can call. Evaluated alone, it reaches closer to the goal on both benchmarks. Success improves on R2R; RxR shows a tradeoff between trajectory fidelity and successful completion.</p>
+  <div class="results-grid">
+    <article class="results-card">
+      <h4>R2R</h4>
+      <table aria-label="Reported R2R monocular policy results">
+        <thead><tr><th scope="col">Metric</th><th scope="col">Qwen-RobotNav<br>4B</th><th scope="col">ASENA-VLN<br>4B</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Success ↑</th><td>66.9%</td><td><strong>68.7%</strong></td></tr>
+          <tr><th scope="row">Navigation error ↓</th><td>4.22 m</td><td><strong>3.52 m</strong></td></tr>
+          <tr><th scope="row">Path efficiency · <span class="metric-short">SPL ↑</span></th><td>60.5</td><td><strong>64.2</strong></td></tr>
+        </tbody>
+      </table>
+      <p class="results-change"><strong>+1.8 points in success</strong><span>−0.70 m navigation error</span></p>
+    </article>
+    <article class="results-card">
+      <h4>RxR</h4>
+      <table aria-label="Reported RxR monocular policy results">
+        <thead><tr><th scope="col">Metric</th><th scope="col">Qwen-RobotNav<br>4B</th><th scope="col">ASENA-VLN<br>4B</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Success ↑</th><td>71.3%</td><td>70.2%</td></tr>
+          <tr><th scope="row">Navigation error ↓</th><td>4.15 m</td><td><strong>3.90 m</strong></td></tr>
+          <tr><th scope="row">Path efficiency · <span class="metric-short">SPL ↑</span></th><td>61.5</td><td>59.7</td></tr>
+          <tr><th scope="row">Trajectory fidelity · <span class="metric-short">nDTW ↑</span></th><td>68.6</td><td><strong>73.1</strong></td></tr>
+        </tbody>
+      </table>
+      <p class="results-change"><strong class="results-mixed">−1.1 points in success</strong><span>+4.5 points in nDTW</span></p>
+    </article>
+  </div>
+  <p class="results-source">Reported policy-only results: <a href="https://arxiv.org/html/2609.39207v1" target="_blank" rel="noopener">ASENA, Table 1 ↗</a> and <a href="https://arxiv.org/html/2606.18112v3" target="_blank" rel="noopener">Qwen-RobotNav v3, Table 1 ↗</a>. Both use monocular observations; training recipes, data mixtures and evaluation filtering differ.</p>
+</section>
+<section id="asena-delegation" class="asena-results delegation" aria-labelledby="delegation-heading">
+  <div class="section-heading"><h3 id="delegation-heading" class="results-heading">What changes when the coding agent calls the policy?</h3><span>Agent + tool · fresh workspaces</span></div>
+  <p class="results-intro">Delegating navigation reduces tool calls for both coding agents. Success improves for Sonnet, while Astra trades some success for fewer interactions.</p>
   <div class="delegation-grid">
     <article class="delegation-card">
       <h4>Claude Sonnet 5</h4>
@@ -31,56 +123,88 @@
     </article>
   </div>
       <p class="caption">RxR Agentic Split, 100 tasks per configuration, before workspace evolution. Sonnet improves from 50% to 61% success; Astra drops from 93% to 86%. Tool calls are agent–tool interactions, not physical steps or elapsed time. <a href="https://arxiv.org/html/2609.39207v1#S4.SS3" target="_blank" rel="noopener">Paper §4.3 and Table 3 ↗</a></p>
-      <p><strong>Research question:</strong> how should an agent decide when to use the navigation policy and when to control the task directly?</p>
-    </div>
+</section>
+</section>
+<section id="asena-evolution" class="chapter asena" data-chapter="ASENA · workspace evolution results">
+  <div class="chapter-meta"><span class="project-tag">ASENA / WORKSPACE EVOLUTION</span><span>Programs and experience accumulate · weights stay fixed</span></div>
+<section id="asena-evolution-results" class="asena-results" aria-labelledby="evolution-results-heading">
+  <div class="section-heading"><h3 id="evolution-results-heading" class="results-heading">The workspace improved across repeated tasks.</h3><span>Recorded experiment · 10 passes</span></div>
+  <p class="results-intro">Workers retained code, notes and tested skills between passes. Navigation success increased while the coding model, improver and policy weights stayed fixed.</p>
+  <figure class="evolution-figure">
+    <div class="evolution-meta"><strong>Success rate (%)</strong><span>16 workers · 100 tasks per benchmark</span></div>
+    <svg class="evolution-chart" viewBox="0 0 600 300" role="img" aria-labelledby="evolution-chart-title evolution-chart-desc">
+<title id="evolution-chart-title">Navigation success over ten passes with fixed model weights</title>
+<desc id="evolution-chart-desc">On the same recurring tasks, R2R success changes from 72 to 98 percent with the policy and from 60 to 97 percent for the agent alone. RxR changes from 65 to 89 percent with the policy and from 48 to 80 percent for the agent alone. Solid lines denote agent plus policy; dashed lines denote agent only. The vertical axis spans 40 to 100 percent. Exact values follow in the data table.</desc>
+<line class="chart-grid" x1="48" y1="256" x2="570" y2="256"/><text x="37" y="262" text-anchor="end">40</text>
+<line class="chart-grid" x1="48" y1="180" x2="570" y2="180"/><text x="37" y="186" text-anchor="end">60</text>
+<line class="chart-grid" x1="48" y1="104" x2="570" y2="104"/><text x="37" y="110" text-anchor="end">80</text>
+<line class="chart-grid" x1="48" y1="28" x2="570" y2="28"/><text x="37" y="34" text-anchor="end">100</text>
+<text x="48" y="287" text-anchor="middle">1</text>
+<text x="164" y="287" text-anchor="middle">3</text>
+<text x="280" y="287" text-anchor="middle">5</text>
+<text x="396" y="287" text-anchor="middle">7</text>
+<text x="570" y="287" text-anchor="middle">10</text>
+<polyline class="chart-series r2r-series agent-line" points="48,180 106,142 164,111.6 222,69.8 280,54.6 338,50.8 396,54.6 454,47 512,43.2 570,39.4"/>
+<polyline class="chart-series rxr-series agent-line" points="48,225.6 106,191.4 164,176.2 222,149.6 280,142 338,126.8 396,115.4 454,107.8 512,104 570,104"/>
+<polyline class="chart-series r2r-series" points="48,134.4 106,107.8 164,81.2 222,62.2 280,66 338,54.6 396,47 454,35.6 512,35.6 570,35.6"/>
+<circle cx="48" cy="134.4" r="3.3" fill="#166f73"/>
+<circle cx="106" cy="107.8" r="3.3" fill="#166f73"/>
+<circle cx="164" cy="81.2" r="3.3" fill="#166f73"/>
+<circle cx="222" cy="62.2" r="3.3" fill="#166f73"/>
+<circle cx="280" cy="66" r="3.3" fill="#166f73"/>
+<circle cx="338" cy="54.6" r="3.3" fill="#166f73"/>
+<circle cx="396" cy="47" r="3.3" fill="#166f73"/>
+<circle cx="454" cy="35.6" r="3.3" fill="#166f73"/>
+<circle cx="512" cy="35.6" r="3.3" fill="#166f73"/>
+<circle cx="570" cy="35.6" r="3.3" fill="#166f73"/>
+<polyline class="chart-series rxr-series" points="48,161 106,142 164,149.6 222,142 280,142 338,111.6 396,104 454,92.6 512,81.2 570,69.8"/>
+<circle cx="48" cy="161" r="3.3" fill="#a96239"/>
+<circle cx="106" cy="142" r="3.3" fill="#a96239"/>
+<circle cx="164" cy="149.6" r="3.3" fill="#a96239"/>
+<circle cx="222" cy="142" r="3.3" fill="#a96239"/>
+<circle cx="280" cy="142" r="3.3" fill="#a96239"/>
+<circle cx="338" cy="111.6" r="3.3" fill="#a96239"/>
+<circle cx="396" cy="104" r="3.3" fill="#a96239"/>
+<circle cx="454" cy="92.6" r="3.3" fill="#a96239"/>
+<circle cx="512" cy="81.2" r="3.3" fill="#a96239"/>
+<circle cx="570" cy="69.8" r="3.3" fill="#a96239"/>
+</svg>
+    <div class="evolution-axis-label">Pass over recurring task set</div>
+    <ul class="evolution-legend" aria-label="Series and first-to-last pass success"><li style="--series:#166f73"><span class="series-key" aria-hidden="true"></span>R2R + policy<b>72 → 98<span>%</span></b></li>
+<li style="--series:#166f73"><span class="series-key agent-key" aria-hidden="true"></span>R2R agent only<b>60 → 97<span>%</span></b></li>
+<li style="--series:#a96239"><span class="series-key" aria-hidden="true"></span>RxR + policy<b>65 → 89<span>%</span></b></li>
+<li style="--series:#a96239"><span class="series-key agent-key" aria-hidden="true"></span>RxR agent only<b>48 → 80<span>%</span></b></li></ul>
+    <figcaption class="evolution-protocol"><strong>Protocol:</strong> 16 Claude Sonnet 5 workers at high effort; each pass repeats the same scenes, instructions and starting states. Traces are retained and replay is allowed, so these gains can include route and scene memory. The first pass belongs to this evolution campaign; it is separate from the fresh-workspace agent comparison above.</figcaption>
+  </figure>
+  <p class="results-source">Source: <a href="https://arxiv.org/html/2609.39207v1" target="_blank" rel="noopener">ASENA, Fig. 4 and §4.4 ↗</a>; recorded navigation series reproduced from An-Chieh Cheng’s slide 12. <a href="results-panels/navigation-evolution.csv" download>Download plotted values (CSV)</a>.</p>
+  <details class="evolution-values">
+    <summary>Inspect all ten passes</summary>
+    <table><caption>Success rate (%) · identical values to the plotted curves</caption><thead><tr><th scope="col">Pass</th><th scope="col">R2R<br>+ policy</th><th scope="col">R2R<br>agent only</th><th scope="col">RxR<br>+ policy</th><th scope="col">RxR<br>agent only</th></tr></thead><tbody><tr><th scope="row">1</th><td>72</td><td>60</td><td>65</td><td>48</td></tr>
+<tr><th scope="row">2</th><td>79</td><td>70</td><td>70</td><td>57</td></tr>
+<tr><th scope="row">3</th><td>86</td><td>78</td><td>68</td><td>61</td></tr>
+<tr><th scope="row">4</th><td>91</td><td>89</td><td>70</td><td>68</td></tr>
+<tr><th scope="row">5</th><td>90</td><td>93</td><td>70</td><td>70</td></tr>
+<tr><th scope="row">6</th><td>93</td><td>94</td><td>78</td><td>74</td></tr>
+<tr><th scope="row">7</th><td>95</td><td>93</td><td>80</td><td>77</td></tr>
+<tr><th scope="row">8</th><td>98</td><td>95</td><td>83</td><td>79</td></tr>
+<tr><th scope="row">9</th><td>98</td><td>96</td><td>86</td><td>80</td></tr>
+<tr><th scope="row">10</th><td>98</td><td>97</td><td>89</td><td>80</td></tr></tbody></table>
   </details>
 </section>
-<section id="asena-workers" class="chapter asena" data-chapter="ASENA · RSI & agent training">
-  <div class="chapter-meta"><span class="project-tag">ASENA / RSI → AGENT TRAINING</span><span>Implemented RSI · proposed model training</span></div>
-  <h3 class="section-title">From workspace RSI to agent training.</h3>
-  <p class="section-intro">ASENA currently improves shared code, notes and skills while model weights stay fixed. To train the coding agent itself, the same workers could collect experience for a learner that updates its weights.</p>
-  <div class="mode-switch" role="group" aria-label="Architecture mode"><button type="button" data-mode="rsi" aria-pressed="true">Workspace RSI · implemented</button><button type="button" data-mode="rl" aria-pressed="false">Agent training · proposed</button></div>
-  <div class="worker-diagram" data-worker-mode="rsi">
-    <div class="worker-top"><span class="micro" id="model-type">Fixed coding agent</span><strong id="model-label">Coding model serves independent worker contexts</strong><span id="model-detail">Each worker has its own task context.</span></div>
-    <div class="branch-label" id="dispatch-label">Task allocation · private workspace per worker</div>
-    <div class="workers">
-      <div class="worker"><span class="worker-num">01</span><b>Worker</b><div class="workspace-name">Private code + skills</div><span class="vertical-arrow">↕</span><div class="env">Task / environment interaction</div></div>
-      <div class="worker"><span class="worker-num">02</span><b>Worker</b><div class="workspace-name">Private code + skills</div><span class="vertical-arrow">↕</span><div class="env">Task / environment interaction</div></div>
-      <div class="worker"><span class="worker-num">…16</span><b>Worker</b><div class="workspace-name">Private code + skills</div><span class="vertical-arrow">↕</span><div class="env">Task / environment interaction</div></div>
-    </div>
-    <div class="branch-label bottom" id="gather-label">Gather traces, local edits and task outcomes between passes</div>
-    <div class="update-row"><div><span class="micro" id="updater-type">Fixed improver model</span><strong id="updater-label">Merge, test and prune code and skills</strong><p id="updater-detail">Distribute the updated notes and skills to the next pass.</p></div><span class="return-arrow">↶</span><code id="update-equation">Wₖ₊₁ = Improve(Wₖ, traces, feedback)</code></div>
-  </div>
-  <p id="architecture-note" class="caption">16 workers in the reported simulation campaigns. This shows the logical worker–environment relationship; the paper does not specify one GPU or one simulator process per worker.</p>
-  <div class="metric-strip" data-rsi-results><div><strong>72 → 98<span>%</span></strong><small>R2R success</small></div><div><strong>65 → 89<span>%</span></strong><small>RxR success</small></div><p>Workspace RSI results with ASENA-VLN: 10 passes over recurring 100-task sets, with simulator feedback and replay allowed. All model weights remain fixed.</p></div>
-  <div id="asena-training" class="training-extension">
-    <div class="section-heading"><h3>Train the coding agent behind the programs.</h3><span>Proposed extension</span></div>
-    <p class="training-intro">Successful programs and tool decisions can supervise the agent through <strong>SFT</strong>. For <strong>RL</strong>, workers also collect task outcomes and rewards; the learner updates the coding model and sends a new checkpoint back to the workers.</p>
-  <div class="bridge-grid">
-    <div><span class="step-number">1</span><h4>Use a trainable coding model</h4><p>Replace the API backend with a rollout sampler backed by a hosted VLM; distribute serving across GPUs or machines as needed.</p></div>
-    <div><span class="step-number">2</span><h4>Simplify the workspace</h4><p>Use an episode-scoped execution workspace. Cross-pass skill evolution can be removed; containers are one implementation option.</p></div>
-    <div><span class="step-number">3</span><h4>Update the agent’s weights</h4><p>Train on curated traces or outcome-based rewards, track model versions, and refresh the rollout samplers.</p></div>
-  </div>
-  </div>
-  <details class="technical"><summary>Agent-training interface and implementation details</summary><div><p>The paper establishes parallel embodied execution and workspace improvement, not a completed RL trainer. A hosted sampler must preserve the multimodal conversation, generated code, tool responses, action boundaries, termination and reward signals. Algorithms that need token log-probabilities must collect them consistently with the sampled policy version.</p><p>A multi-turn rollout normally collects experience through the external environment; policy optimization then happens in the learner. It does not backpropagate through arbitrary Python tools, simulator calls or a physical robot. Workspace persistence is a design choice, not a requirement of RL.</p><p>GPU placement, simulator allocation, reset behavior, throughput and policy synchronization still require implementation and validation. Private workspaces alone do not establish a security sandbox.</p></div></details>
 </section>
-<section id="asena-experience" class="chapter asena experience" data-chapter="ASENA · learning from recordings">
-  <div class="chapter-meta"><span class="project-tag">ASENA / EXPERIENCE → TRAINING DATA</span><span>Recorder implemented · weight training proposed</span></div>
-  <h3 class="section-title">One recording, two learning targets.</h3>
-  <p class="section-intro">The flight recorder preserves camera observations, measured motion and agent events. After alignment and curation, these records can teach the coding agent to choose better actions, or teach the navigation policy to execute them.</p>
-  <div class="learning-targets">
-    <article><span class="micro">Coding agent · SFT / RL</span><h4>Learn decisions and programs.</h4><p>Task + observations + programs + tool results + human feedback</p><div class="learning-target">→ planning, tool choice and recovery</div></article>
-    <article><span class="micro">Navigation policy · imitation learning</span><h4>Learn visual execution.</h4><p>Instruction + image history + measured robot motion</p><div class="learning-target">→ reliable motion from observations</div></article>
-  </div>
-  <details id="asena-recording-details" class="supporting-detail recorded-detail">
-    <summary><strong>Explore the recorded data and a candidate training pair</strong><span>360° camera · 29 joints + body pose · agent events · operator feedback</span></summary>
-    <div class="supporting-content">
+<section id="asena-experience" class="chapter asena experience" data-chapter="ASENA · recorded experience">
+  <div class="chapter-meta"><span class="project-tag">ASENA / RECORDED EXPERIENCE</span><span>Real G1 recordings</span></div>
+  <h3 class="section-title">Replay what the robot saw and did.</h3>
+  <p class="section-intro">ASENA records camera observations, measured robot motion and agent events in MCAP. The replay aligns the camera, joint states and body pose on the same clock, so an execution can be inspected after the run.</p>
   <div class="experience-player">
     <iframe id="experience-recorder" data-src="recorder/" title="Synchronized real G1 camera, joint-state and body replay" loading="lazy" allow="fullscreen" height="650"></iframe>
     <noscript><p><a href="recorder/">Open the synchronized G1 recording ↗</a></p></noscript>
   </div>
   <p class="caption">One recorded 10-second window: the camera, joint trace and body replay share the same clock. The rendered G1 follows measured robot states. The camera was recorded at approximately 2 Hz; repeated frames preserve its original timing.</p>
 
+  <details id="asena-recording-details" class="supporting-detail recorded-detail">
+    <summary><strong>Inspect the saved events and measured motion</strong><span>Agent requests · operator feedback · a two-second motion example</span></summary>
+    <div class="supporting-content">
   <div class="section-heading"><h3>Keep the decisions and feedback, too.</h3><span>Additional event channels</span></div>
   <div class="experience-events">
     <article><span class="micro">Agent proposal · recorded example</span><h4>What did the agent request?</h4><pre><code>upper_body(motion="yes_circle")</code></pre><p>A motion request from the snack mission, linked to its task context and execution record.</p></article>
@@ -91,15 +215,16 @@ user_content: "…"</code></pre><p>Accepted ASR text enters the agent event stre
   <p class="caption">The proposal and task verdict are recorded examples from a separate snack mission. Approval and speech fields show the interface structure; these cards are not synchronized events from the clip above.</p>
 
   <div class="experience-pair">
-    <div><span class="micro">A concrete candidate training pair</span><h4>Observation → executed motion</h4><p>Take the preceding camera observation and robot state, then measure the motion over the next two seconds.</p><small>Recorded interval: 582.5–584.5 s</small></div>
+    <div><span class="micro">A measured motion example</span><h4>What happened over two seconds</h4><p>Take the preceding camera observation and robot state, then measure the motion over the next two seconds.</p><small>Recorded interval: 582.5–584.5 s</small></div>
     <div class="experience-target" aria-label="Measured two-second local motion: 0.466 metres forward, 0.191 metres lateral, 0.369 radians yaw"><span class="micro">Measured local motion</span><dl><div><dt>Forward</dt><dd>0.466 <small>m</small></dd></div><div><dt>Lateral</dt><dd>0.191 <small>m</small></dd></div><div><dt>Yaw</dt><dd>0.369 <small>rad</small></dd></div></dl></div>
   </div>
-  <p class="caption">These values come from recorded odometry, rather than the requested command. Instruction, behavior version, human interventions and outcome evidence still need to be joined and validated before this becomes a training example.</p>
+  <p class="caption">These values come from recorded odometry and describe the motion that actually followed the observation.</p>
 
-  <details class="technical"><summary>Recorded signals, provenance and the next training step</summary><div><p>The camera and measured-body replay come from <code>deck-20260908-175129.mcap</code>, bag time 579–589 s. The two-second motion example is a subset of that same recording. The separate snack-mission examples come from September 9; they are not labels for the walking clip.</p><p>The recorded channels include camera observations, robot state, control telemetry and agent events. Accepted voice text is logged in the event stream. The synchronized replay is implemented; validated dataset exports and demonstrated agent or policy weight improvements from these records remain future work. The parallel simulation rollout pipeline is separate from this physical-robot recorder.</p><p><a href="https://arxiv.org/html/2609.39207v1#S3.SS2" target="_blank" rel="noopener">Paper §3.2 and Fig. 2 ↗</a> · <a href="https://anjiecheng.me/talks/asena/#real-feedback" target="_blank" rel="noopener">Recorded-data walkthrough ↗</a> · <a href="recorder/" target="_blank" rel="noopener">Open the replay ↗</a></p></div></details>
+  <details class="technical"><summary>Recorded signals and provenance</summary><div><p>The camera and measured-body replay come from <code>deck-20260908-175129.mcap</code>, bag time 579–589 s. The two-second motion example is a subset of that same recording. The separate snack-mission examples come from September 9; they are not labels for the walking clip.</p><p>The recorded channels include camera observations, robot state, control telemetry and agent events. Accepted voice text is logged in the event stream. The parallel simulation rollout pipeline is separate from this physical-robot recorder.</p><p><a href="https://arxiv.org/html/2609.39207v1#S3.SS2" target="_blank" rel="noopener">Paper §3.2 and Fig. 2 ↗</a> · <a href="https://anjiecheng.me/talks/asena/#real-feedback" target="_blank" rel="noopener">Recorded-data walkthrough ↗</a> · <a href="recorder/" target="_blank" rel="noopener">Open the replay ↗</a></p></div></details>
     </div>
   </details>
-  <div class="insight-row"><span class="arrow-glyph" aria-hidden="true">→</span><p><strong>From recorded experience to learned policies.</strong> Recova puts this idea into practice for manipulation: task and recovery experience train policies that return to deployment. <a href="recova-slides/">Explore the Recova tutorial ↗</a></p></div>
+  <p class="caption"><strong>Possible reuse:</strong> curated real-robot recordings could later support SFT; an RL extension would use the simulation environment.</p>
+  <div class="insight-row"><span class="arrow-glyph" aria-hidden="true">→</span><p><strong>Next: Recova.</strong> Recova uses task and recovery experience to train manipulation policies that return to deployment. <a href="recova-slides/">Explore the Recova tutorial ↗</a></p></div>
 </section>
 
 <section id="recova" class="chapter recova" data-chapter="Recova · real–sim–real">
@@ -143,6 +268,6 @@ user_content: "…"</code></pre><p>Accepted ASR text enters the agent event stre
     <div class="retained"><span class="micro">State carried forward</span><p id="turn-memory"></p></div>
   </div>
   <details class="technical"><summary>Replay sources and timing</summary><div><p id="demo-provenance"></p><p><a id="original-replay" href="media/a-silent-errand.mp4" target="_blank" rel="noopener">Open the complete demo clip ↗</a></p><p>The adjacent programs and decision summaries explain the control flow; they are not verbatim private reasoning or raw execution logs. Each turn plays its selected footage and holds briefly for reading. Step controls let you inspect it without speeding up the recording.</p></div></details>
-  <div class="closing"><div><span class="micro">ASENA</span><p>Build the interface that lets a model learn from embodied interaction.</p></div><div><span class="micro">Recova</span><p>Build the recovery loop that keeps embodied experience coming.</p></div></div>
+  <div class="closing"><div><span class="micro">ASENA</span><p>Execute programs, inspect outcomes and retain useful skills.</p></div><div><span class="micro">Recova</span><p>Build the recovery loop that keeps embodied experience coming.</p></div></div>
 </section>
-</main><footer><div><b>Methods &amp; sources</b><p>Diagrams are explanatory redraws of the manuscripts and project replays. Training extensions are marked as proposals.</p></div><div class="source-links"><a href="https://arxiv.org/abs/2609.39207" target="_blank" rel="noopener">ASENA paper ↗</a><a href="https://asena-bot.github.io/" target="_blank" rel="noopener">ASENA project ↗</a><a href="https://recova-bot.github.io/" target="_blank" rel="noopener">Recova project ↗</a></div><p class="source-note">ASENA: Methods §§3.1–3.2 and experiments §§4.4–4.5. Recova: Method §3 and real-robot experiments. Platform deployments and evaluation protocols differ; only simulation worker campaigns use the stated 16-worker configuration.</p></footer><script src="app.js?v=0368bd4afd"></script></body></html>
+</main><footer><div><b>Methods &amp; sources</b><p>Diagrams explain the published methods and recorded demonstrations.</p></div><div class="source-links"><a href="https://arxiv.org/abs/2609.39207" target="_blank" rel="noopener">ASENA paper ↗</a><a href="https://asena-bot.github.io/" target="_blank" rel="noopener">ASENA project ↗</a><a href="https://recova-bot.github.io/" target="_blank" rel="noopener">Recova project ↗</a></div><p class="source-note">ASENA: Methods §§3.1–3.2 and experiments §§4.4–4.5. Recova: Method §3 and real-robot experiments. Platform deployments and evaluation protocols differ; only simulation worker campaigns use the stated 16-worker configuration.</p></footer><script src="app.js?v=bfcd4bb2b2"></script></body></html>

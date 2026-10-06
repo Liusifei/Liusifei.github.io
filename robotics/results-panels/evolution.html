@@ -1,0 +1,64 @@
+<section id="asena-evolution-results" class="asena-results" aria-labelledby="evolution-results-heading">
+  <div class="section-heading"><h3 id="evolution-results-heading" class="results-heading">The workspace improved across repeated tasks.</h3><span>Recorded experiment · 10 passes</span></div>
+  <p class="results-intro">Workers retained code, notes and tested skills between passes. Navigation success increased while the coding model, improver and policy weights stayed fixed.</p>
+  <figure class="evolution-figure">
+    <div class="evolution-meta"><strong>Success rate (%)</strong><span>16 workers · 100 tasks per benchmark</span></div>
+    <svg class="evolution-chart" viewBox="0 0 600 300" role="img" aria-labelledby="evolution-chart-title evolution-chart-desc">
+<title id="evolution-chart-title">Navigation success over ten passes with fixed model weights</title>
+<desc id="evolution-chart-desc">On the same recurring tasks, R2R success changes from 72 to 98 percent with the policy and from 60 to 97 percent for the agent alone. RxR changes from 65 to 89 percent with the policy and from 48 to 80 percent for the agent alone. Solid lines denote agent plus policy; dashed lines denote agent only. The vertical axis spans 40 to 100 percent. Exact values follow in the data table.</desc>
+<line class="chart-grid" x1="48" y1="256" x2="570" y2="256"/><text x="37" y="262" text-anchor="end">40</text>
+<line class="chart-grid" x1="48" y1="180" x2="570" y2="180"/><text x="37" y="186" text-anchor="end">60</text>
+<line class="chart-grid" x1="48" y1="104" x2="570" y2="104"/><text x="37" y="110" text-anchor="end">80</text>
+<line class="chart-grid" x1="48" y1="28" x2="570" y2="28"/><text x="37" y="34" text-anchor="end">100</text>
+<text x="48" y="287" text-anchor="middle">1</text>
+<text x="164" y="287" text-anchor="middle">3</text>
+<text x="280" y="287" text-anchor="middle">5</text>
+<text x="396" y="287" text-anchor="middle">7</text>
+<text x="570" y="287" text-anchor="middle">10</text>
+<polyline class="chart-series r2r-series agent-line" points="48,180 106,142 164,111.6 222,69.8 280,54.6 338,50.8 396,54.6 454,47 512,43.2 570,39.4"/>
+<polyline class="chart-series rxr-series agent-line" points="48,225.6 106,191.4 164,176.2 222,149.6 280,142 338,126.8 396,115.4 454,107.8 512,104 570,104"/>
+<polyline class="chart-series r2r-series" points="48,134.4 106,107.8 164,81.2 222,62.2 280,66 338,54.6 396,47 454,35.6 512,35.6 570,35.6"/>
+<circle cx="48" cy="134.4" r="3.3" fill="#166f73"/>
+<circle cx="106" cy="107.8" r="3.3" fill="#166f73"/>
+<circle cx="164" cy="81.2" r="3.3" fill="#166f73"/>
+<circle cx="222" cy="62.2" r="3.3" fill="#166f73"/>
+<circle cx="280" cy="66" r="3.3" fill="#166f73"/>
+<circle cx="338" cy="54.6" r="3.3" fill="#166f73"/>
+<circle cx="396" cy="47" r="3.3" fill="#166f73"/>
+<circle cx="454" cy="35.6" r="3.3" fill="#166f73"/>
+<circle cx="512" cy="35.6" r="3.3" fill="#166f73"/>
+<circle cx="570" cy="35.6" r="3.3" fill="#166f73"/>
+<polyline class="chart-series rxr-series" points="48,161 106,142 164,149.6 222,142 280,142 338,111.6 396,104 454,92.6 512,81.2 570,69.8"/>
+<circle cx="48" cy="161" r="3.3" fill="#a96239"/>
+<circle cx="106" cy="142" r="3.3" fill="#a96239"/>
+<circle cx="164" cy="149.6" r="3.3" fill="#a96239"/>
+<circle cx="222" cy="142" r="3.3" fill="#a96239"/>
+<circle cx="280" cy="142" r="3.3" fill="#a96239"/>
+<circle cx="338" cy="111.6" r="3.3" fill="#a96239"/>
+<circle cx="396" cy="104" r="3.3" fill="#a96239"/>
+<circle cx="454" cy="92.6" r="3.3" fill="#a96239"/>
+<circle cx="512" cy="81.2" r="3.3" fill="#a96239"/>
+<circle cx="570" cy="69.8" r="3.3" fill="#a96239"/>
+</svg>
+    <div class="evolution-axis-label">Pass over recurring task set</div>
+    <ul class="evolution-legend" aria-label="Series and first-to-last pass success"><li style="--series:#166f73"><span class="series-key" aria-hidden="true"></span>R2R + policy<b>72 → 98<span>%</span></b></li>
+<li style="--series:#166f73"><span class="series-key agent-key" aria-hidden="true"></span>R2R agent only<b>60 → 97<span>%</span></b></li>
+<li style="--series:#a96239"><span class="series-key" aria-hidden="true"></span>RxR + policy<b>65 → 89<span>%</span></b></li>
+<li style="--series:#a96239"><span class="series-key agent-key" aria-hidden="true"></span>RxR agent only<b>48 → 80<span>%</span></b></li></ul>
+    <figcaption class="evolution-protocol"><strong>Protocol:</strong> 16 Claude Sonnet 5 workers at high effort; each pass repeats the same scenes, instructions and starting states. Traces are retained and replay is allowed, so these gains can include route and scene memory. The first pass belongs to this evolution campaign; it is separate from the fresh-workspace agent comparison above.</figcaption>
+  </figure>
+  <p class="results-source">Source: <a href="https://arxiv.org/html/2609.39207v1" target="_blank" rel="noopener">ASENA, Fig. 4 and §4.4 ↗</a>; recorded navigation series reproduced from An-Chieh Cheng’s slide 12. <a href="results-panels/navigation-evolution.csv" download>Download plotted values (CSV)</a>.</p>
+  <details class="evolution-values">
+    <summary>Inspect all ten passes</summary>
+    <table><caption>Success rate (%) · identical values to the plotted curves</caption><thead><tr><th scope="col">Pass</th><th scope="col">R2R<br>+ policy</th><th scope="col">R2R<br>agent only</th><th scope="col">RxR<br>+ policy</th><th scope="col">RxR<br>agent only</th></tr></thead><tbody><tr><th scope="row">1</th><td>72</td><td>60</td><td>65</td><td>48</td></tr>
+<tr><th scope="row">2</th><td>79</td><td>70</td><td>70</td><td>57</td></tr>
+<tr><th scope="row">3</th><td>86</td><td>78</td><td>68</td><td>61</td></tr>
+<tr><th scope="row">4</th><td>91</td><td>89</td><td>70</td><td>68</td></tr>
+<tr><th scope="row">5</th><td>90</td><td>93</td><td>70</td><td>70</td></tr>
+<tr><th scope="row">6</th><td>93</td><td>94</td><td>78</td><td>74</td></tr>
+<tr><th scope="row">7</th><td>95</td><td>93</td><td>80</td><td>77</td></tr>
+<tr><th scope="row">8</th><td>98</td><td>95</td><td>83</td><td>79</td></tr>
+<tr><th scope="row">9</th><td>98</td><td>96</td><td>86</td><td>80</td></tr>
+<tr><th scope="row">10</th><td>98</td><td>97</td><td>89</td><td>80</td></tr></tbody></table>
+  </details>
+</section>

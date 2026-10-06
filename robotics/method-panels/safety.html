@@ -1,0 +1,20 @@
+<section id="asena-safety" class="asena-method-panel" aria-labelledby="asena-safety-title">
+  <div class="amp-heading"><span>ASENA / EXECUTION AUTHORITY</span><h3 id="asena-safety-title">Safety is enforced outside the coding agent</h3></div>
+  <p class="amp-intro">The deployment bounds the agent and its subprocesses. Motion passes through checks outside the agent, operator approval, and a controller that maintains balance.</p>
+  <figure class="amp-safety" aria-label="The coding agent and all child processes operate within scoped resources. Raw control paths, operator credentials, and platform writes are blocked. Motion proposals pass through external validation and operator approval before SONIC executes on G1.">
+    <div class="amp-safety-grid">
+      <div class="amp-process">
+        <div class="amp-process-roof"><span aria-hidden="true">⌑</span><h4>Restricted process<br><small>+ every child process</small></h4></div>
+        <div class="amp-process-body">
+          <div class="amp-contained-agent"><span class="amp-cap">Within the boundary</span><strong>Coding agent</strong><span>+ scripts / subprocesses</span></div>
+          <div class="amp-resources"><span class="amp-cap">Scoped resources</span><ul><li>Python · NumPy · MuJoCo</li><li>Scratch files + reusable skills</li><li>Robot device API</li><li>Model API proxy</li></ul></div>
+        </div>
+        <div class="amp-foundations"><div><b>Unix identity</b><span>Protected files + credentials</span></div><div><b>Network allowlist</b><span>Device + model proxy only</span></div><div><b>Inherited seccomp</b><span>Blocks direct kernel/device paths</span></div></div>
+      </div>
+      <div class="amp-denied"><span class="amp-cap">No direct path</span><ul><li><span aria-hidden="true">⊘</span><b>Raw CAN /<br>packet sockets</b></li><li><span aria-hidden="true">⊘</span><b>Operator<br>credentials</b></li><li><span aria-hidden="true">⊘</span><b>Platform writes /<br>privilege escape</b></li></ul></div>
+      <div class="amp-checked-path"><span class="amp-cap">Checked execution path</span><ol><li><b>Motion proposal</b><span>Waypoints / joint trajectory</span></li><li><b>External validation</b><span>Bounds · joint limits<br>Robot self-collision checks</span></li><li class="amp-approval"><b>Operator approval</b><span>Approve or return a reason</span></li><li class="amp-safe-hardware"><b>SONIC → G1</b><span>Balance + locomotion<br>Independent stop</span></li></ol></div>
+    </div>
+    <div class="amp-safety-baseline"><b>Launch preflight verified the boundary.</b><span>Reflection disabled motion.</span></div>
+    <figcaption>MuJoCo gesture checks used the robot’s self model, not full environment physics. Supervision remained necessary. <a href="https://anjiecheng.me/talks/asena/#jail" target="_blank" rel="noopener">Slide 6</a>.</figcaption>
+  </figure>
+</section>

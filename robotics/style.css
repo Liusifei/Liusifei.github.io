@@ -50,3 +50,27 @@
 .experience-learning article{border-top:2px solid #8aafa1;padding:20px 6px 0 0}
 @media(max-width:900px){.experience-events{grid-template-columns:1fr}.experience-pair{gap:24px}.experience-target{padding-left:20px}.experience-target dl{gap:10px}.experience-target dd{font-size:21px}}
 @media(max-width:650px){.experience-learning,.experience-pair{grid-template-columns:1fr}.experience-learning{gap:24px}.experience-pair{padding:22px}.experience-target{padding:20px 0 0;border-left:0;border-top:1px solid #b8cec7}.experience-events article{padding:20px}.experience .section-heading h3{font-size:21px}.experience-target dd{font-size:24px}}
+
+/* Keep the method and training path visible; details stay available on demand. */
+.supporting-detail{margin:28px 0 0;border:1px solid var(--line);border-radius:9px;background:var(--paper);overflow:hidden;scroll-margin-top:105px}
+.supporting-detail>summary{position:relative;cursor:pointer;list-style:none;padding:19px 52px 19px 22px}
+.supporting-detail>summary::-webkit-details-marker{display:none}
+.supporting-detail>summary:after{content:'+';position:absolute;right:22px;top:20px;color:var(--teal);font-size:24px;line-height:1}
+.supporting-detail[open]>summary:after{content:'−'}
+.supporting-detail>summary strong{display:block;font-size:16px;font-weight:600;line-height:1.5}
+.supporting-detail>summary span{display:block;font-size:13px;color:var(--muted);margin-top:5px;line-height:1.6}
+.supporting-detail[open]>summary{border-bottom:1px solid var(--line)}
+.supporting-content{padding:24px}
+.supporting-content>h3{font-size:22px;margin:0 0 22px;line-height:1.4}
+.supporting-content>p:not(.caption){font-size:14px;color:var(--muted)}
+.training-extension{margin-top:36px;padding-top:8px;border-top:1px solid var(--line);scroll-margin-top:110px}
+.training-intro{max-width:900px;font-size:16px;color:var(--muted);line-height:1.75;margin:0 0 22px}
+.training-intro strong{color:var(--ink)}
+.learning-targets{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:28px 0}
+.learning-targets article{border-top:2px solid var(--teal);padding:21px 24px;background:var(--teal-wash);border-radius:0 0 8px 8px}
+.learning-targets .micro{font-size:10px;color:var(--teal);letter-spacing:.07em}
+.learning-targets h4{font-size:22px;margin:12px 0}
+.learning-targets p{font-size:15px;line-height:1.7;color:var(--muted);margin:12px 0}
+.learning-target{font-size:14px;border-top:1px solid #ccddd6;padding-top:14px;margin-top:16px}
+.recorded-detail .experience-player{margin-top:0}
+@media(max-width:650px){.learning-targets{grid-template-columns:1fr;gap:18px}.supporting-content{padding:16px}.supporting-detail>summary{padding:17px 42px 17px 18px}.supporting-detail>summary:after{right:16px}.learning-targets article{padding:20px}.training-intro{font-size:15px}.supporting-content .delegation-card{padding:16px}.supporting-content .delegation-card table{font-size:12px}}

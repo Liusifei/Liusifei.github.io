@@ -8,8 +8,8 @@ const highlight = s => s.split('\n').map(line => {
 }).join('\n');
 
 const architectures = {
- rsi: {type:'Fixed coding model',model:'Coding model serves independent worker contexts',detail:'Each worker has its own task context.',dispatch:'Task allocation · private workspace per worker',workspace:'Private code + skills',gather:'Gather traces, local edits and task outcomes between passes',updater:'Fixed improver model',label:'Revise the canonical workspace',update:'Distribute the updated notes and skills to the next pass.',equation:'Wₖ₊₁ = Improve(Wₖ, traces, feedback)',note:'16 workers in the reported simulation campaigns. This shows the logical worker–environment relationship; the paper does not specify one GPU or one simulator process per worker.'},
- rl: {type:'Proposed trainable backend',model:'Hosted VLM + rollout sampler',detail:'Serving pool across GPUs / machines as needed.',dispatch:'Sample programs · preserve per-episode context',workspace:'Episode execution workspace',gather:'Collect multimodal trajectories, tool results, rewards and termination',updater:'Proposed training adapter',label:'Learner updates model parameters',update:'Publish a versioned checkpoint and refresh the rollout samplers.',equation:'rollouts → rewards → learner → θₖ₊₁',note:'Proposed integration, not an RL result in the paper. The environment-facing interaction layer is reusable; the sampler, training records, reset contract and weight synchronization require implementation.'}
+ rsi: {type:'Fixed coding agent',model:'Coding model serves independent worker contexts',detail:'Each worker has its own task context.',dispatch:'Task allocation · private workspace per worker',workspace:'Private code + skills',gather:'Gather traces, local edits and task outcomes between passes',updater:'Fixed improver model',label:'Merge, test and prune code and skills',update:'Distribute the updated notes and skills to the next pass.',equation:'Wₖ₊₁ = Improve(Wₖ, traces, feedback)',note:'16 workers in the reported simulation campaigns. This shows the logical worker–environment relationship; the paper does not specify one GPU or one simulator process per worker.'},
+ rl: {type:'Proposed trainable backend',model:'Trainable coding agent + rollout sampler',detail:'Serving pool across GPUs / machines as needed.',dispatch:'Sample programs · preserve per-episode context',workspace:'Episode execution workspace',gather:'Collect multimodal trajectories, tool results, rewards and termination',updater:'Proposed training adapter',label:'Learner updates the coding agent’s weights',update:'Publish a versioned checkpoint and refresh the rollout samplers.',equation:'rollouts → rewards → learner → θₖ₊₁',note:'Proposed integration, not an RL result in the paper. The environment-facing interaction layer is reusable; the sampler, training records, reset contract and weight synchronization require implementation.'}
 };
 $$('[data-mode]').forEach(b=>b.addEventListener('click',()=>{
  const mode=b.dataset.mode,x=architectures[mode];
@@ -19,6 +19,8 @@ $$('[data-mode]').forEach(b=>b.addEventListener('click',()=>{
  Object.entries(fields).forEach(([id,key])=>$('#'+id).textContent=x[key]);
  $$('.workspace-name').forEach(n=>n.textContent=x.workspace);
  $$('.worker-num').at(-1).textContent=mode==='rsi'?'…16':'…N';
+ const rsiResults = $('[data-rsi-results]');
+ if (rsiResults) rsiResults.hidden = mode !== 'rsi';
 }));
 const loopStages=[
  ['01 / Physical grounding','A twin tied to the real workstation.','Reconstruct the scene so task attempts and failure recovery can be explored before returning to hardware.','a reconstructed environment for task and recovery exploration.'],
@@ -153,3 +155,15 @@ if (experienceRecorder) {
  }).observe(experienceRecorder);
  document.addEventListener('visibilitychange', () => {if (document.hidden) pauseRecorder();});
 }
+
+// Preserve direct links to supporting material without expanding it by default.
+function revealTutorialDetail() {
+ let id;
+ try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+ const target = document.getElementById(id);
+ if (!target) return;
+ const detail = target.matches('details') ? target : target.closest('details');
+ if (detail) { detail.open = true; requestAnimationFrame(() => target.scrollIntoView({block:'start'})); }
+}
+addEventListener('hashchange', revealTutorialDetail);
+revealTutorialDetail();

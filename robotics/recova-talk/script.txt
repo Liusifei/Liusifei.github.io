@@ -1,7 +1,7 @@
 Recova — Sifei Liu
 7:30 including video pauses
 
-1. Recova (48 sec)
+1. Recova (52 sec)
 
 ASENA leaves us with useful execution records. In Recova, we take the next step and use experience to improve learned manipulation policies. [Pause for the mahjong video.]
 
@@ -9,9 +9,9 @@ The motivation is broader than getting a robot to complete one carefully prepare
 
 But a small mistake can interrupt that entire process. A tile tips over, a grasp misses, or the scene no longer matches what the policy expects. Somebody has to restore it.
 
-Recova connects recovery to the learning loop. We develop corrections in a digital twin, transfer them into learned policies, and use physical experience to improve task execution and recovery together.
+[Reveal the thesis.] Recova connects recovery to the learning loop. We develop corrections in a digital twin, transfer them into learned policies, and use physical experience to improve task execution and recovery together.
 
-2. Recovery keeps collection moving (57 sec)
+2. Recovery keeps collection moving (56 sec)
 
 Think about scaling data collection to several workstations. Even with a strong task policy, somebody still has to deal with all the unexpected states. Recovery becomes part of the infrastructure for collecting data.
 
@@ -21,7 +21,7 @@ Successful trajectories train two policies: a task policy and a recovery policy.
 
 [Reveal the return arrow.] Physical experience then feeds the next training round. Our experiments use separate collection and DAgger fine-tuning rounds; they do not update policy weights continuously during execution.
 
-3. Develop corrections in a digital twin (66 sec)
+3. Develop corrections in a digital twin (62 sec)
 
 Here are the two sides of simulation development. On the left, we replay a recorded robot trajectory and compare the simulated view with the real camera. Object poses and contact parameters are refined to make the twin useful for the task.
 
@@ -29,7 +29,7 @@ Here are the two sides of simulation development. On the left, we replay a recor
 
 [Reveal the products.] We retain two things: a reusable program that captures the strategy, and successful trajectories that provide policy supervision. Task and recovery trajectories stay separate. The program shown here is explanatory pseudocode.
 
-4. Learned policies act; a monitor coordinates (65 sec)
+4. Learned policies act; a monitor coordinates (61 sec)
 
 On the physical robot, execution is different from the code exploration we just saw in simulation.
 
@@ -41,15 +41,15 @@ A learned task policy generates the motor actions. The VLM monitor observes exec
 
 5. One operator. Four workstations. (56 sec)
 
-This is the complete recorded dashboard, with one operator supporting four workstations. [Let the panel play.]
+[Reveal the dashboard.] This is the complete recorded dashboard, with one operator supporting four workstations. [Let the panel play.]
 
 The large view shows the shared workspace, and the four camera views below show what is happening at each robot. The routing panel tracks whether each station is running its task policy, invoking recovery, or requesting human assistance.
 
-The useful distinction is that the operator does not have to perform every correction. Autonomous recovery can restore a workable state and let the task continue. When a human correction is needed, that intervention also becomes useful experience.
+[Reveal the takeaway.] The useful distinction is that the operator does not have to perform every correction. Autonomous recovery can restore a workable state and let the task continue. When a human correction is needed, that intervention also becomes useful experience.
 
 The recording is shown at its original ten-times playback. The decisions and camera views share the recording clock; this is the actual multi-station collection panel.
 
-6. Less intervention over collection rounds (55 sec)
+6. Less intervention over collection rounds (56 sec)
 
 Here is what happened over four collection rounds on mahjong draw. The green curve is task-policy completion, which rises from one out of eight episodes to six out of seven.
 
@@ -59,7 +59,7 @@ Here is what happened over four collection rounds on mahjong draw. The green cur
 
 The point is the measured direction of the loop. After collecting experience and fine-tuning between rounds, the system finishes more tasks with the task policy and needs fewer human takeovers.
 
-7. Collected experience improves the policy (63 sec)
+7. Collected experience improves the policy (59 sec)
 
 The videos show learned physical corrections, from a caught ring to a disrupted tile row. [Pause on the videos.]
 
@@ -71,11 +71,11 @@ The plot compares three configurations on the same four tasks. The base task pol
 
 [Reveal simulation.] Separate simulation evaluations reach sixty-four point nine percent on MolmoSpaces and seventy-eight point eight on LIBERO-Pro, using a task policy with programmatic recovery.
 
-8. A twin turns failures into reusable corrections (40 sec)
+8. A twin turns failures into reusable corrections (48 sec)
 
 The way I think about Recova is that the twin is a development tool. It gives the agent a place to investigate failures and test corrections before transferring useful behavior to the robot.
 
-The reusable products are both programs and learned policies. Physical deployment then generates experience for the next collection and training round.
+[Reveal the reusable products.] The reusable products are both programs and learned policies. [Reveal the measured loop.] Physical deployment then generates experience for the next collection and training round.
 
 [Reveal the future direction.] One direction we want to explore is a limited Code-as-Policy fallback on the real robot, with validation and operator oversight. That is a proposed extension, not what the current results establish.
 

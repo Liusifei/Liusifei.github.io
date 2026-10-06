@@ -7,8 +7,8 @@
     {
       "slide": 1,
       "title": "Recova",
-      "seconds": 48,
-      "notes": "ASENA leaves us with useful execution records. In Recova, we take the next step and use experience to improve learned manipulation policies. [Pause for the mahjong video.]\n\nThe motivation is broader than getting a robot to complete one carefully prepared demonstration. We want robots to keep operating around people, collect useful experience, and improve from it.\n\nBut a small mistake can interrupt that entire process. A tile tips over, a grasp misses, or the scene no longer matches what the policy expects. Somebody has to restore it.\n\nRecova connects recovery to the learning loop. We develop corrections in a digital twin, transfer them into learned policies, and use physical experience to improve task execution and recovery together.",
+      "seconds": 52,
+      "notes": "ASENA leaves us with useful execution records. In Recova, we take the next step and use experience to improve learned manipulation policies. [Pause for the mahjong video.]\n\nThe motivation is broader than getting a robot to complete one carefully prepared demonstration. We want robots to keep operating around people, collect useful experience, and improve from it.\n\nBut a small mistake can interrupt that entire process. A tile tips over, a grasp misses, or the scene no longer matches what the policy expects. Somebody has to restore it.\n\n[Reveal the thesis.] Recova connects recovery to the learning loop. We develop corrections in a digital twin, transfer them into learned policies, and use physical experience to improve task execution and recovery together.",
       "words": 112,
       "sources": [
         {
@@ -24,7 +24,7 @@
     {
       "slide": 2,
       "title": "Recovery keeps collection moving",
-      "seconds": 57,
+      "seconds": 56,
       "notes": "Think about scaling data collection to several workstations. Even with a strong task policy, somebody still has to deal with all the unexpected states. Recovery becomes part of the infrastructure for collecting data.\n\n[Reveal the lower row.] The loop starts with the real workstation. Images and robot trajectories help ground a digital twin. Inside that twin, a coding agent explores task execution and recovery, using execution feedback to revise its programs.\n\nSuccessful trajectories train two policies: a task policy and a recovery policy. These run on the real robot, with monitoring and operator assistance when needed.\n\n[Reveal the return arrow.] Physical experience then feeds the next training round. Our experiments use separate collection and DAgger fine-tuning rounds; they do not update policy weights continuously during execution.",
       "words": 118,
       "sources": [
@@ -45,7 +45,7 @@
     {
       "slide": 3,
       "title": "Develop corrections in a digital twin",
-      "seconds": 66,
+      "seconds": 62,
       "notes": "Here are the two sides of simulation development. On the left, we replay a recorded robot trajectory and compare the simulated view with the real camera. Object poses and contact parameters are refined to make the twin useful for the task.\n\n[Reveal Code as Policy.] On the right, this is where code actually acts as a policy. The agent writes and executes a correction in simulation, inspects what happened, and revises it. In this example, a neighboring ring blocks the grasp, so the correction clears the corridor before stacking resumes.\n\n[Reveal the products.] We retain two things: a reusable program that captures the strategy, and successful trajectories that provide policy supervision. Task and recovery trajectories stay separate. The program shown here is explanatory pseudocode.",
       "words": 117,
       "sources": [
@@ -66,7 +66,7 @@
     {
       "slide": 4,
       "title": "Learned policies act; a monitor coordinates",
-      "seconds": 65,
+      "seconds": 61,
       "notes": "On the physical robot, execution is different from the code exploration we just saw in simulation.\n\nA learned task policy generates the motor actions. The VLM monitor observes execution and decides whether the task can continue.\n\n[Reveal recovery and operator.] When a recoverable failure occurs, it invokes a learned recovery policy with an instruction. If assistance is needed, the system can fall back to an operator. For a new failure, a human can demonstrate a correction; after training, that instruction is added to the recovery skills available to the monitor.\n\n[Reveal verification.] After the correction, the monitor checks the state before restarting the task. We save task experience and recovery experience into their respective datasets. These can improve the corresponding policies in later rounds. Within one collection round, the policy weights are fixed. [Pause for the physical recovery.]",
       "words": 127,
       "sources": [
@@ -88,7 +88,7 @@
       "slide": 5,
       "title": "One operator. Four workstations.",
       "seconds": 56,
-      "notes": "This is the complete recorded dashboard, with one operator supporting four workstations. [Let the panel play.]\n\nThe large view shows the shared workspace, and the four camera views below show what is happening at each robot. The routing panel tracks whether each station is running its task policy, invoking recovery, or requesting human assistance.\n\nThe useful distinction is that the operator does not have to perform every correction. Autonomous recovery can restore a workable state and let the task continue. When a human correction is needed, that intervention also becomes useful experience.\n\nThe recording is shown at its original ten-times playback. The decisions and camera views share the recording clock; this is the actual multi-station collection panel.",
+      "notes": "[Reveal the dashboard.] This is the complete recorded dashboard, with one operator supporting four workstations. [Let the panel play.]\n\nThe large view shows the shared workspace, and the four camera views below show what is happening at each robot. The routing panel tracks whether each station is running its task policy, invoking recovery, or requesting human assistance.\n\n[Reveal the takeaway.] The useful distinction is that the operator does not have to perform every correction. Autonomous recovery can restore a workable state and let the task continue. When a human correction is needed, that intervention also becomes useful experience.\n\nThe recording is shown at its original ten-times playback. The decisions and camera views share the recording clock; this is the actual multi-station collection panel.",
       "words": 113,
       "sources": [
         {
@@ -100,7 +100,7 @@
     {
       "slide": 6,
       "title": "Less intervention over collection rounds",
-      "seconds": 55,
+      "seconds": 56,
       "notes": "Here is what happened over four collection rounds on mahjong draw. The green curve is task-policy completion, which rises from one out of eight episodes to six out of seven.\n\n[Reveal the brown curve.] Human takeover falls from seven out of eight episodes to zero out of seven.\n\n[Reveal the endpoint counts.] I am showing the denominators because these are small, concrete collection rounds, not a large-scale reliability estimate. The two curves are also not complements: a verified autonomous recovery counts as its own episode, and resumed task execution starts a new attempt.\n\nThe point is the measured direction of the loop. After collecting experience and fine-tuning between rounds, the system finishes more tasks with the task policy and needs fewer human takeovers.",
       "words": 115,
       "sources": [
@@ -113,7 +113,7 @@
     {
       "slide": 7,
       "title": "Collected experience improves the policy",
-      "seconds": 63,
+      "seconds": 59,
       "notes": "The videos show learned physical corrections, from a caught ring to a disrupted tile row. [Pause on the videos.]\n\nThe plot compares three configurations on the same four tasks. The base task policy is initialized from pi zero point five. [Point to the first bars.]\n\n[Reveal DAgger.] With real-world DAgger fine-tuning, mean success rises from twenty-three point eight to seventy-seven point five percent.\n\n[Reveal recovery.] Adding recovery takes that to eighty-seven point five percent, improving all four tasks. Each task and configuration has twenty trials.\n\n[Reveal simulation.] Separate simulation evaluations reach sixty-four point nine percent on MolmoSpaces and seventy-eight point eight on LIBERO-Pro, using a task policy with programmatic recovery.",
       "words": 95,
       "sources": [
@@ -134,8 +134,8 @@
     {
       "slide": 8,
       "title": "A twin turns failures into reusable corrections",
-      "seconds": 40,
-      "notes": "The way I think about Recova is that the twin is a development tool. It gives the agent a place to investigate failures and test corrections before transferring useful behavior to the robot.\n\nThe reusable products are both programs and learned policies. Physical deployment then generates experience for the next collection and training round.\n\n[Reveal the future direction.] One direction we want to explore is a limited Code-as-Policy fallback on the real robot, with validation and operator oversight. That is a proposed extension, not what the current results establish.\n\nThe demonstrated idea is simple: task execution and recovery should improve together, so robots can keep operating and keep collecting.",
+      "seconds": 48,
+      "notes": "The way I think about Recova is that the twin is a development tool. It gives the agent a place to investigate failures and test corrections before transferring useful behavior to the robot.\n\n[Reveal the reusable products.] The reusable products are both programs and learned policies. [Reveal the measured loop.] Physical deployment then generates experience for the next collection and training round.\n\n[Reveal the future direction.] One direction we want to explore is a limited Code-as-Policy fallback on the real robot, with validation and operator oversight. That is a proposed extension, not what the current results establish.\n\nThe demonstrated idea is simple: task execution and recovery should improve together, so robots can keep operating and keep collecting.",
       "words": 105,
       "sources": [
         {

@@ -31,7 +31,7 @@
       slide.querySelectorAll('video').forEach(video => setVideo(video, active && !video.closest('.hidden-build')));
       slide.querySelectorAll('iframe').forEach(frame => {
         if (i === index && !frame.src) frame.src = frame.dataset.src;
-        frame.contentWindow?.postMessage({type:'recova-playback',active}, location.origin);
+        frame.contentWindow?.postMessage({type:'recova-playback',active:active && !frame.closest('.hidden-build')}, location.origin);
       });
     });
     document.querySelector('#play-button').textContent = manualPause ? 'Play videos' : 'Pause videos';
@@ -105,7 +105,7 @@
   if (paired.length===2) paired[0].addEventListener('timeupdate',()=>{
     if (!paired[0].paused && paired[1].readyState>1 && Math.abs(paired[0].currentTime-paired[1].currentTime)>.18) paired[1].currentTime=paired[0].currentTime;
   });
-  fetch('script.json').then(r=>r.json()).then(data=>{script=data.slides;updateNotes();}).catch(()=>{});
+  fetch('script.json?v=20261006-builds3').then(r=>r.json()).then(data=>{script=data.slides;updateNotes();}).catch(()=>{});
   window.RECOVA_TALK = {show,next,previous,state:()=>({index,step,paused:manualPause}),reveal:()=>show(index,maxStep(slides[index])),pause:()=>{manualPause=true;updateMedia();}};
   fit(); show(index,query.has('all')?maxStep(slides[index]):0);
 })();

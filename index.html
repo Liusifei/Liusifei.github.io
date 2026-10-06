@@ -263,6 +263,12 @@ layout: null
                 <span>arXiv</span>
               </a>
               {% endif %}
+              {% if publication.tutorial and publication.tutorial != empty %}
+              <a class="external-link button is-small is-ghost" href="{{ publication.tutorial | relative_url }}">
+                <span class="icon"><i class="fas fa-book-open"></i></span>
+                <span>Tutorial</span>
+              </a>
+              {% endif %}
               {% for pending_link in publication.pending_links %}
               <button type="button" class="button is-small is-ghost publication-link-pending" disabled title="Coming soon">
                 <span class="icon"><i class="{% if pending_link == 'arXiv' %}ai ai-arxiv{% else %}fas fa-file-pdf{% endif %}"></i></span>

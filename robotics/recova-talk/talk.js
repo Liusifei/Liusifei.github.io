@@ -4,11 +4,12 @@
   const stage = document.querySelector('#stage');
   const notes = document.querySelector('#notes');
   const query = new URLSearchParams(location.search);
+  const previewMode = query.has('presenterPreview');
   let index = Math.max(0, Math.min(slides.length - 1, (parseInt(location.hash.slice(1), 10) || 1) - 1));
-  let step = 0, manualPause = query.has('preview'), script = [];
+  let step = 0, manualPause = previewMode || query.has('preview'), script = [];
   const maxStep = slide => Math.max(0, ...[...slide.querySelectorAll('[data-step]')].map(e => +e.dataset.step));
   function fit() {
-    const box = document.querySelector('.stage-wrap').getBoundingClientRect();
+    const box = previewMode ? {width:innerWidth,height:innerHeight} : document.querySelector('.stage-wrap').getBoundingClientRect();
     stage.style.transform = `scale(${Math.min(box.width / 1280, box.height / 720)})`;
   }
   function updateNotes() {
@@ -27,10 +28,10 @@
   }
   function updateMedia() {
     slides.forEach((slide, i) => {
-      const active = i === index && !manualPause && !document.hidden;
+      const active = !previewMode && i === index && !manualPause && !document.hidden;
       slide.querySelectorAll('video').forEach(video => setVideo(video, active && !video.closest('.hidden-build')));
       slide.querySelectorAll('iframe').forEach(frame => {
-        if (i === index && !frame.src) frame.src = frame.dataset.src;
+        if (!previewMode && i === index && !frame.src) frame.src = frame.dataset.src;
         frame.contentWindow?.postMessage({type:'recova-playback',active:active && !frame.closest('.hidden-build')}, location.origin);
       });
     });
@@ -50,14 +51,15 @@
         build.classList.toggle('hidden-build', !visible);
       });
     });
-    history.replaceState(null, '', `#${index + 1}`);
+    history.replaceState(null, '', `#${index + 1}${step ? '/' + (step + 1) : ''}`);
     document.querySelector('#position').textContent = `${String(index+1).padStart(2,'0')} / 08`;
     document.querySelector('#build-count').textContent = maxStep(slides[index]) ? `${step + 1} / ${maxStep(slides[index]) + 1} builds` : '';
     updateNotes(); updateMedia();
+    dispatchEvent(new CustomEvent('recova-statechange',{detail:{index,step}}));
   }
   function next() { if (step < maxStep(slides[index])) show(index, step + 1); else show(index + 1); }
   function previous() { if (step > 0) show(index, step - 1); else if (index > 0) show(index - 1, maxStep(slides[index - 1])); }
-  function toggleNotes() { notes.hidden = !notes.hidden; }
+  function toggleNotes() { if(window.TALK_PRESENTER){window.TALK_PRESENTER.open();return;} notes.hidden = !notes.hidden; }
   function togglePlayback() { manualPause = !manualPause; updateMedia(); }
   function fullscreen() { if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen?.(); }
   document.querySelector('#prev').addEventListener('click',previous);
@@ -99,7 +101,7 @@
     if(event.origin!==location.origin || event.source!==frame?.contentWindow || event.data?.type!=='recova-key') return;
     document.dispatchEvent(new KeyboardEvent('keydown',{key:event.data.key,shiftKey:!!event.data.shiftKey}));
   });
-  window.addEventListener('hashchange',()=>show((parseInt(location.hash.slice(1),10)||1)-1));
+  window.addEventListener('hashchange',()=>{const [i,s]=location.hash.slice(1).split('/');show((parseInt(i,10)||1)-1,Math.max(0,(Number(s)||1)-1));});
   // Matched real and MuJoCo views share one playback clock.
   const paired = [...document.querySelectorAll('video[data-sync="twin"]')];
   if (paired.length===2) paired[0].addEventListener('timeupdate',()=>{
@@ -107,5 +109,6 @@
   });
   fetch('script.json?v=20261006-builds3').then(r=>r.json()).then(data=>{script=data.slides;updateNotes();}).catch(()=>{});
   window.RECOVA_TALK = {show,next,previous,state:()=>({index,step,paused:manualPause}),reveal:()=>show(index,maxStep(slides[index])),pause:()=>{manualPause=true;updateMedia();}};
-  fit(); show(index,query.has('all')?maxStep(slides[index]):0);
+  window.TALK_DECK={key:'recova-talk',name:'Recova',state:()=>({index,step,maxStep:maxStep(slides[index]),slideCount:slides.length,title:slides[index].dataset.title,paused:manualPause}),slides:()=>slides.map(slide=>({title:slide.dataset.title,maxStep:maxStep(slide),seconds:+slide.dataset.duration})),show,next,previous,hideNotes:()=>{notes.hidden=true;},pause:()=>{manualPause=true;updateMedia();},togglePlayback};
+  fit(); show(index,query.has('all')?maxStep(slides[index]):Math.max(0,(Number(location.hash.split('/')[1])||1)-1));
 })();

@@ -1,0 +1,16 @@
+/* Presenter notes belong in the separate window, never on the audience display. */
+body.presenter-enabled #presenter-panel,body.presenter-enabled #notes{display:none!important}
+body.presenter-enabled #timer-button{display:none}
+body.presenter-preview .deck-controls,body.presenter-preview .controls,
+body.presenter-preview .deck-footer,body.presenter-preview .navigation,
+body.presenter-preview footer,body.presenter-preview #presenter-panel,
+body.presenter-preview #notes,body.presenter-preview dialog{display:none!important}
+body.presenter-preview .stage-wrap{height:100vh!important;width:100vw!important;padding:0!important;overflow:hidden!important}
+body.presenter-preview .stage{box-shadow:none!important}
+body.presenter-preview{background:#f6f5ee;pointer-events:none}
+body.presenter-preview .slide *,body.presenter-preview .slide *::before,body.presenter-preview .slide *::after{animation:none!important;transition:none!important}
+body.presenter-preview .build-visible{opacity:1}
+:fullscreen .deck-controls,:fullscreen .controls,:fullscreen .deck-navigation,:fullscreen .navigation{display:none!important}
+:fullscreen .stage-wrap{height:100dvh!important}
+.presenter-help{max-width:520px;border:1px solid #cbd6ce;border-radius:12px;padding:28px;color:#193b32;background:#f6f5ee;font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;box-shadow:0 16px 70px #142e3430}
+.presenter-help::backdrop{background:#142e3455}.presenter-help h2{font-size:23px;margin:0 0 14px}.presenter-help p{margin:12px 0}.presenter-help a{display:inline-block;background:#224f43;color:white;border-radius:6px;padding:10px 16px;text-decoration:none}.presenter-help button{float:right;font:inherit;border:0;background:transparent;cursor:pointer}.presenter-help small{display:block;color:#62736b;margin-top:16px}

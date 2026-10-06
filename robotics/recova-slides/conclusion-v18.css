@@ -1,0 +1,11 @@
+/* Website-style physical recovery gallery: genuine videos, one action per caption. */
+.slide.conclusion-v18 .body{justify-content:center;margin-top:19px}
+.slide.conclusion-v18 .cv18-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 24px;width:100%;max-width:1344px;margin:0 auto}
+.slide.conclusion-v18 .cv18-example{min-width:0}
+.slide.conclusion-v18 .cv18-film{position:relative;isolation:isolate;width:100%;height:auto;aspect-ratio:16/9;overflow:hidden;border-radius:5px;background:#17271e;box-shadow:0 0 0 1px #c6d2bc21}
+.slide.conclusion-v18 .cv18-film video,.slide.conclusion-v18 .cv18-film .video-still{position:absolute;max-width:none!important;width:var(--cv18-w)!important;height:var(--cv18-h)!important;left:var(--cv18-x)!important;top:var(--cv18-y)!important;object-fit:fill;transform:none}
+.slide.conclusion-v18 .cv18-example figcaption{font-size:28px;line-height:1.25;text-align:left;margin-top:11px;padding-left:2px;letter-spacing:-.25px;color:var(--paper)}
+.slide.conclusion-v18 .cv18-film .play-overlay{z-index:4;opacity:0;pointer-events:none}
+.slide.conclusion-v18 .cv18-film:hover .play-overlay,.slide.conclusion-v18 .cv18-film:focus-within .play-overlay{opacity:1;pointer-events:auto}
+.slide.conclusion-v18 .cv18-film .play-overlay:before{content:none}
+@media print{.slide.conclusion-v18 .cv18-film .video-still{opacity:1!important;visibility:visible!important}}

@@ -1,0 +1,16 @@
+/* Open research questions use the paper's line symbols, without experimental media. */
+.slide.future-refs-v23 .body{justify-content:center}
+.fr23-directions{display:grid;grid-template-columns:1fr 1fr;gap:66px;align-items:start}
+.fr23-directions figure{margin:0;min-width:0}
+.slide.future-refs-v23 .fr23-directions h3{font:500 36px/1.2 var(--font);letter-spacing:-.65px;margin:0 0 22px;color:#34472a}
+.fr23-illustration{display:block;width:100%;height:auto;aspect-ratio:690/340;overflow:visible}
+.fr23-svg-label{font:400 28px var(--font);letter-spacing:-.2px}
+.slide.future-refs-v23 .fr23-directions figcaption{font:400 36px/1.24 var(--font);letter-spacing:-.65px;margin:28px 0 0;color:#26391f}
+/* Preserve the four cited works as a readable two-column bibliography. */
+.fr23-references{display:grid;grid-template-columns:1fr 1fr;gap:62px 85px;align-items:start;padding:0 8px}
+.fr23-references article{min-width:0;border-top:1px solid #cbd2c2;padding-top:23px}
+.slide.future-refs-v23 .fr23-references h3{font:500 36px/1.15 var(--font);letter-spacing:-.7px;margin:0 0 16px;color:#37542b}
+.fr23-references a{text-decoration:none;text-underline-offset:6px}
+.fr23-references a:hover{text-decoration:underline}
+.slide.future-refs-v23 .fr23-references p{font:400 29px/1.3 var(--font);letter-spacing:-.25px;margin:0;color:#303b2a}
+.fr23-citation{font:400 26px/1.3 var(--font);color:#7a8371;margin-top:18px}

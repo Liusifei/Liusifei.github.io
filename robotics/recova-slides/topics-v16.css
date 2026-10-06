@@ -1,0 +1,6 @@
+/* The primary heading names the topic; its explanation sits directly below. */
+.slide.topic-title-v16:not(.cover){padding-top:48px}
+.slide.topic-title-v16:not(.cover)>h2{font-size:60px;line-height:1.08;letter-spacing:-1.6px}
+.slide.topic-title-v16 .simple-kicker{display:none}
+.slide.topic-title-v16:not(.cover)>.slide-subtitle{margin-top:18px;max-width:1430px}
+.slide.topic-title-v16:not(.cover)>.body{margin-top:30px}

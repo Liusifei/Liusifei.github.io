@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASENA · one recorded moment, many learning signals</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="recorder.css">
+<script src="recorder.js" defer></script>
+</head>
+<body>
+<main class="recorder" aria-label="Interactive ASENA flight recorder">
+  <header class="recorder-head">
+    <div><span class="eyebrow">ASENA FLIGHT RECORDER</span><h1>One recording. Synchronized signals.</h1></div>
+    <span class="record-badge"><i></i>Real robot data</span>
+  </header>
+  <div class="session"><span><strong>MCAP</strong><code>deck-20260908-175129.mcap</code></span><span>Bag time <b id="bag-time">579.00</b> s · 579–589 s excerpt</span></div>
+  <div class="panels">
+    <section class="camera-panel" aria-labelledby="camera-title">
+      <div class="panel-head"><h2 id="camera-title">What the robot saw</h2><span>360° camera · ≈ 2 Hz</span></div>
+      <div class="camera-view"><video id="camera" muted playsinline preload="none" poster="assets/panorama-walk.jpg" aria-label="Recorded full 360-degree camera, synchronized with measured robot state"></video><span class="camera-topic">/camera/rgb360</span></div>
+      <div class="trace-title"><span>Measured left knee</span><span><b id="knee">0.139</b> rad</span></div>
+      <svg class="knee-chart" viewBox="0 0 620 154" role="img" aria-labelledby="trace-title trace-desc">
+        <title id="trace-title">Measured left knee angle over 10 seconds</title><desc id="trace-desc">Recorded joint data at 20 Hz. The cursor follows the shared playback time.</desc>
+        <g class="grid"><path d="M36 16V124H584 M36 47H584 M36 85H584"/></g>
+        <g class="axis-label"><text x="0" y="21">1.4</text><text x="13" y="128">0</text><text x="36" y="150">0 s</text><text x="566" y="150">10 s</text></g>
+        <path id="trace" class="trace" d="M36.00,113.31 L38.74,113.30 L41.48,113.30 L44.22,113.30 L46.96,113.30 L49.70,113.30 L52.44,113.30 L55.18,113.30 L57.92,113.29 L60.66,113.31 L63.40,113.12 L66.14,112.76 L68.88,112.45 L71.62,112.29 L74.36,112.20 L77.10,112.09 L79.84,112.02 L82.58,111.12 L85.32,109.07 L88.06,107.29 L90.80,106.54 L93.54,106.56 L96.28,106.58 L99.02,106.88 L101.76,106.83 L104.50,106.95 L107.24,106.98 L109.98,108.93 L112.72,113.58 L115.46,113.65 L118.20,109.43 L120.94,103.68 L123.68,98.54 L126.42,89.08 L129.16,73.94 L131.90,59.79 L134.64,45.68 L137.38,36.99 L140.12,37.56 L142.86,43.64 L145.60,53.71 L148.34,71.65 L151.08,87.52 L153.82,92.57 L156.56,88.38 L159.30,87.97 L162.04,88.73 L164.78,89.07 L167.52,88.87 L170.26,88.90 L173.00,89.34 L175.74,90.92 L178.48,93.48 L181.22,95.11 L183.96,96.24 L186.70,98.32 L189.44,99.74 L192.18,101.46 L194.92,103.05 L197.66,104.34 L200.40,104.92 L203.14,105.94 L205.88,109.36 L208.62,111.30 L211.36,110.20 L214.10,108.23 L216.84,102.95 L219.58,98.06 L222.32,90.20 L225.06,80.57 L227.80,65.77 L230.54,55.86 L233.28,46.69 L236.02,38.83 L238.76,41.05 L241.50,49.21 L244.24,59.17 L246.98,70.04 L249.72,82.98 L252.46,92.68 L255.20,95.38 L257.94,94.42 L260.68,89.02 L263.42,87.43 L266.16,87.86 L268.90,88.48 L271.64,88.56 L274.38,89.53 L277.12,90.64 L279.86,91.93 L282.60,93.63 L285.34,94.88 L288.08,97.54 L290.82,99.64 L293.56,102.22 L296.30,104.60 L299.04,106.58 L301.78,107.59 L304.52,109.03 L307.26,111.66 L310.00,111.84 L312.74,110.19 L315.48,108.30 L318.22,102.85 L320.96,97.77 L323.70,89.87 L326.44,80.89 L329.18,66.22 L331.92,54.23 L334.66,45.09 L337.40,35.95 L340.14,32.41 L342.88,36.30 L345.62,46.43 L348.36,60.45 L351.10,76.13 L353.84,91.19 L356.58,95.07 L359.32,94.55 L362.06,94.06 L364.80,94.08 L367.54,92.53 L370.28,90.78 L373.02,90.59 L375.76,91.06 L378.50,92.86 L381.24,94.40 L383.98,95.80 L386.72,97.51 L389.46,99.95 L392.20,102.99 L394.94,104.90 L397.68,106.91 L400.42,109.62 L403.16,110.98 L405.90,111.61 L408.64,112.48 L411.38,112.87 L414.12,112.85 L416.86,110.36 L419.60,106.15 L422.34,95.78 L425.08,83.66 L427.82,71.48 L430.56,63.79 L433.30,62.32 L436.04,64.99 L438.78,70.94 L441.52,80.24 L444.26,90.56 L447.00,92.51 L449.74,94.61 L452.48,96.58 L455.22,96.58 L457.96,97.24 L460.70,98.07 L463.44,99.61 L466.18,100.72 L468.92,101.26 L471.66,101.59 L474.40,101.98 L477.14,102.68 L479.88,103.18 L482.62,104.07 L485.36,104.74 L488.10,105.12 L490.84,105.48 L493.58,105.88 L496.32,106.26 L499.06,106.70 L501.80,106.84 L504.54,107.16 L507.28,107.51 L510.02,107.99 L512.76,108.21 L515.50,108.58 L518.24,108.67 L520.98,108.83 L523.72,108.95 L526.46,108.97 L529.20,108.96 L531.94,108.94 L534.68,108.93 L537.42,109.05 L540.16,109.46 L542.90,109.51 L545.64,109.53 L548.38,109.61 L551.12,110.06 L553.86,110.43 L556.60,110.65 L559.34,110.79 L562.08,110.81 L564.82,110.87 L567.56,110.99 L570.30,111.21 L573.04,111.49 L575.78,111.75 L578.52,112.03 L581.26,112.12 L584.00,112.16"/>
+        <line id="cursor" x1="36" x2="36" y1="16" y2="125"/>
+        <circle id="trace-dot" cx="36" cy="113.305" r="4.5"/>
+      </svg>
+    </section>
+    <section class="body-panel" aria-labelledby="body-title">
+      <div class="panel-head"><h2 id="body-title">How its body moved</h2><span>29 joints + base pose · 20 Hz</span></div>
+      <div id="robot-view" class="robot-view"><img id="robot-poster" src="assets/g1-body.png" alt="Static G1 model preview; press Play to load the recorded body replay"><canvas id="robot-canvas" aria-label="G1 model animated by the recorded joint angles and base pose"></canvas><span id="body-status" class="body-status">Static preview · load replay with Play</span></div>
+      <div class="state-strip"><div><span>Base displacement</span><b id="distance">0.000 <small>m</small></b></div><div><span>Relative yaw</span><b id="yaw">0.0<small>°</small></b></div><div><span>State sample</span><b id="sample">000<small> / 200</small></b></div></div>
+    </section>
+  </div>
+  <div class="transport">
+    <button id="play" type="button" aria-label="Play synchronized recording"><span id="play-icon" aria-hidden="true">▶</span><span id="play-label">Play</span></button>
+    <label class="sr-only" for="scrub">Scrub the synchronized recording, in seconds</label><input id="scrub" type="range" min="0" max="10" step="0.05" value="0" aria-valuetext="0.00 seconds of 10 seconds">
+    <output id="clock" for="scrub">00:00.00 <span>/ 00:10</span></output>
+  </div>
+  <p class="play-note" id="play-note" role="status">Press Play or scrub to load the 3D model. Camera and body share the recorded clock.</p>
+  <details id="sample-details" class="sample-details"><summary>Inspect this recorded state sample <span>29 joint angles, pose, timestamp</span></summary><div class="sample-content"><p>The replay interpolates between measured states. This is the nearest exported 20 Hz sample; positions use the recording’s coordinates, before the display’s axis conversion.</p><pre id="sample-json" tabindex="0" aria-label="Recorded state sample as JSON">{
+  "bag_time_s": 579.0,
+  "clip_time_s": 0.0,
+  "sample_index": 0,
+  "q29_rad": [
+    0.122071,
+    0.100229,
+    0.265475,
+    0.138638,
+    -0.219354,
+    -0.028817,
+    -0.025865,
+    -0.007926,
+    -0.157328,
+    0.194483,
+    -0.16011,
+    -0.014144,
+    0.007794,
+    0.024403,
+    0.139196,
+    -0.027935,
+    0.27354,
+    -0.606054,
+    1.044976,
+    -0.083686,
+    -0.170763,
+    0.117661,
+    -0.025347,
+    -0.296166,
+    0.583212,
+    0.979483,
+    0.129609,
+    -0.065086,
+    -0.27662
+  ],
+  "root_position_m": [
+    0,
+    0,
+    0.732141
+  ],
+  "root_quaternion_wxyz": [
+    0.999956,
+    -0.008018,
+    -0.004899,
+    -3.9e-05
+  ],
+  "odometry_position_m": [
+    1.186216,
+    -0.250574,
+    0.732141
+  ],
+  "odometry_yaw_rad": -0.372653
+}</pre></div></details>
+  <footer><p>Camera frames are held at their recorded rate; the 10 fps video does not add new observations. Body motion is measured state, rendered on a G1 model.</p><div><a href="https://anjiecheng.me/talks/asena/#real-feedback" target="_blank" rel="noopener">ASENA · slide 16 ↗</a><a href="motion.json" download>Exported motion JSON ↓</a><a href="NOTICE.txt" target="_blank" rel="noopener">Sources &amp; credits ↗</a></div></footer>
+</main>
+</body>
+</html>

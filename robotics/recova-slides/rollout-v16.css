@@ -1,0 +1,50 @@
+/* The paper's Figure 2(B), enlarged into a staged explanatory animation. */
+.slide.rollout-v16 .body{justify-content:center;margin-top:14px}
+.slide.rollout-v16 .rl16-stage{width:1472px;max-width:100%;position:relative;cursor:pointer;outline:none}
+.slide.rollout-v16 .rl16-stage:focus-visible{outline:2px solid #a0b781;outline-offset:7px;border-radius:10px}
+.slide.rollout-v16 .rl16-diagram{width:100%;height:auto;display:block;overflow:visible}
+.slide.rollout-v16 .rl16-diagram text{font-family:var(--sans);fill:var(--ink);letter-spacing:-.45px}
+.slide.rollout-v16 .rl16-symbol{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.slide.rollout-v16 .rl16-surface{fill:#fffef9;stroke:currentColor;stroke-width:1.8;transition:fill .55s,stroke-width .55s,filter .55s}
+.slide.rollout-v16 .rl16-task-node,.slide.rollout-v16 .rl16-task-update{color:#758b54}
+.slide.rollout-v16 .rl16-recovery-node,.slide.rollout-v16 .rl16-recovery-update{color:#a4604f}
+.slide.rollout-v16 .rl16-human-node{color:#c08b33}
+.slide.rollout-v16 .rl16-new-twin-node{color:#527b9c}
+.slide.rollout-v16 .rl16-node-title{font-size:30px;font-weight:550}
+.slide.rollout-v16 .rl16-instruction{font-size:25px;fill:#68705f;letter-spacing:-.65px}
+.slide.rollout-v16 .rl16-photo-arrow{font-size:24px;fill:currentColor}
+.slide.rollout-v16 .rl16-update-copy{font-size:28px;fill:#68705f}
+.slide.rollout-v16 .rl16-between-rounds{font-size:29px;fill:#7f8775}
+.slide.rollout-v16 .rl16-z{font-size:39px;font-style:italic}
+.slide.rollout-v16 .rl16-hub-jobs{font-size:27px;fill:#596b43;letter-spacing:-.6px}
+.slide.rollout-v16 .rl16-route-label{font-size:24px;fill:#76816a;letter-spacing:-.35px}
+.slide.rollout-v16 .rl16-edge{fill:none;stroke-linecap:round;stroke-linejoin:round;transition:opacity .55s;opacity:.33}
+.slide.rollout-v16 .rl16-edge.task{color:#758b54}.slide.rollout-v16 .rl16-edge.recovery{color:#a4604f}.slide.rollout-v16 .rl16-edge.human{color:#c08b33}.slide.rollout-v16 .rl16-edge.twin{color:#527b9c}
+.slide.rollout-v16 .rl16-edge-base{stroke:currentColor;stroke-width:2.6}
+.slide.rollout-v16 .rl16-data-edge .rl16-edge-base{stroke-dasharray:8 7}
+.slide.rollout-v16 .rl16-edge-motion{stroke:currentColor;stroke-width:5;stroke-dasharray:10 90;stroke-dashoffset:100;opacity:0}
+.slide.rollout-v16 .rl16-learning-layer,.slide.rollout-v16 .rl16-expansion-layer{transition:opacity .65s}
+.slide.rollout-v16 .rl16-expansion-layer{opacity:0;pointer-events:none}
+.slide.rollout-v16 .rl16-learning-layer{opacity:.58}
+.slide.rollout-v16 [data-rollout-step="overview"] .rl16-learning-layer{opacity:1}
+.slide.rollout-v16 [data-rollout-step="overview"] .rl16-edge{opacity:.85}
+.slide.rollout-v16 .rl16-caption{height:42px;position:absolute;left:0;right:0;bottom:0;text-align:center}
+.slide.rollout-v16 .rl16-caption p{position:absolute;inset:0;font-size:31px;line-height:1.2;font-weight:400;letter-spacing:-.45px;color:#4e6436;opacity:0;transition:opacity .45s}
+.slide.rollout-v16 [data-rollout-step="execute"] [data-caption="execute"],.slide.rollout-v16 [data-rollout-step="human"] [data-caption="human"],.slide.rollout-v16 [data-rollout-step="learn"] [data-caption="learn"],.slide.rollout-v16 [data-rollout-step="expand"] [data-caption="expand"]{opacity:1}
+.slide.rollout-v16 [data-rollout-step="execute"] .rl16-attempt,.slide.rollout-v16 [data-rollout-step="execute"] .rl16-invoke,.slide.rollout-v16 [data-rollout-step="execute"] .rl16-verify,.slide.rollout-v16 [data-rollout-step="execute"] .rl16-resume,.slide.rollout-v16 [data-rollout-step="human"] .rl16-escalate,.slide.rollout-v16 [data-rollout-step="human"] .rl16-stalled,.slide.rollout-v16 [data-rollout-step="learn"] .rl16-data-edge,.slide.rollout-v16 [data-rollout-step="expand"] .rl16-expansion-layer .rl16-edge{opacity:1}
+.slide.rollout-v16.active [data-rollout-step="execute"] .rl16-attempt .rl16-edge-motion,.slide.rollout-v16.active [data-rollout-step="execute"] .rl16-invoke .rl16-edge-motion,.slide.rollout-v16.active [data-rollout-step="execute"] .rl16-verify .rl16-edge-motion,.slide.rollout-v16.active [data-rollout-step="execute"] .rl16-resume .rl16-edge-motion,.slide.rollout-v16.active [data-rollout-step="human"] .rl16-escalate .rl16-edge-motion,.slide.rollout-v16.active [data-rollout-step="human"] .rl16-stalled .rl16-edge-motion,.slide.rollout-v16.active [data-rollout-step="learn"] .rl16-data-edge .rl16-edge-motion,.slide.rollout-v16.active [data-rollout-step="expand"] .rl16-expansion-layer .rl16-edge-motion{opacity:1;animation:rl16-flow 2.8s linear infinite}
+.slide.rollout-v16 [data-rollout-step="execute"] .rl16-task-node>.rl16-surface,.slide.rollout-v16 [data-rollout-step="execute"] .rl16-recovery-node>.rl16-surface{fill:#f8faef;stroke-width:3.2}
+.slide.rollout-v16 [data-rollout-step="human"] .rl16-human-node>.rl16-surface{fill:#fff3d9;stroke-width:3.2}
+.slide.rollout-v16 [data-rollout-step="learn"] .rl16-learning-layer{opacity:1}
+.slide.rollout-v16 [data-rollout-step="learn"] .rl16-update>.rl16-surface{fill:#f8faef;stroke-width:3.2}
+.slide.rollout-v16 [data-rollout-step="expand"] .rl16-learning-layer{opacity:0;pointer-events:none}
+.slide.rollout-v16 [data-rollout-step="expand"] .rl16-expansion-layer{opacity:1;pointer-events:auto}
+.slide.rollout-v16 [data-rollout-step="expand"] .rl16-expansion-layer .rl16-surface{stroke-width:3.2}
+.slide.rollout-v16 [data-rollout-step="expand"] .rl16-recovery-node>.rl16-surface{fill:#fff4ed}
+.slide.rollout-v16 .rl16-paused .rl16-edge-motion{animation-play-state:paused!important}
+.slide.rollout-v16.active [data-rollout-step="execute"] .rl16-invoke .rl16-edge-motion{animation-delay:.7s}
+.slide.rollout-v16.active [data-rollout-step="execute"] .rl16-verify .rl16-edge-motion{animation-delay:1.4s}
+.slide.rollout-v16.active [data-rollout-step="execute"] .rl16-resume .rl16-edge-motion{animation-delay:2.1s}
+@keyframes rl16-flow{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){.slide.rollout-v16 .rl16-edge-motion{animation:none!important;display:none}.slide.rollout-v16 .rl16-surface,.slide.rollout-v16 .rl16-edge,.slide.rollout-v16 .rl16-caption p,.slide.rollout-v16 .rl16-learning-layer,.slide.rollout-v16 .rl16-expansion-layer{transition:none}}
+@media print{.slide.rollout-v16 .rl16-edge-motion{display:none}.slide.rollout-v16 .rl16-edge{opacity:1}.slide.rollout-v16 .rl16-learning-layer{opacity:1!important}.slide.rollout-v16 .rl16-expansion-layer{display:none}.slide.rollout-v16 .rl16-caption p{opacity:0!important}.slide.rollout-v16 .rl16-caption p[data-caption="learn"]{opacity:1!important}}

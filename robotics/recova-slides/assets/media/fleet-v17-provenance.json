@@ -1,0 +1,132 @@
+{
+  "external_recording_start_utc": "2026-09-10T12:26:21.000000Z",
+  "source_in_seconds": 0,
+  "source_out_seconds_exclusive": 750.0,
+  "duration_seconds": 750.0,
+  "web_duration_seconds": 75.0,
+  "recording_time_per_media_second": 10,
+  "browser_playback_rate": 1.0,
+  "alignment": "Original phone creation time and bag UNIX timestamps; no stretching. Phone metadata has one-second precision.",
+  "idle_gaps": "Last available frame held; before recording begins, first frame held. Coverage spans expose these gaps in the player.",
+  "source_frame_rate": 5,
+  "export_resolution": [
+    480,
+    360
+  ],
+  "status_source": "actor and round_end events; recover and policy_recovered restore the scene and are not task success.",
+  "intervention_source": "actor=human, mode=takeover until the next actor change or round_end; autonomous recovery excluded.",
+  "orchestration_source": "Discrete vlm failure detections, actor changes, and round_end results; saved-rollout counts require saved_ok=true. No inferred actions between events.",
+  "scene_annotations": "Station marker positions and scene variations manually identified in the external and top-camera recordings. Station 1\u20134 correspond to source stations 41\u201344, front-left to back-right.",
+  "stations": [
+    {
+      "station": 41,
+      "bag": "website-source-media/autorun/station41/2026-09-10-12-25-37/bag",
+      "source_frames": 2587,
+      "events_sha256": "5b2adcd76ae70f93d47f969951ad2d27c08da8d4e43b25a0f0bb57648db0ca68",
+      "spans_sha256": "321d3522ea0743096e576936bd185b59f20687504b4092d8af61529eba864ac9",
+      "top_segments_sha256": {
+        "top_000.mp4": "995b8aa53e7a75ab10862f46c5582ebc703d9f8c2b41ba32a379580b96c8243e",
+        "top_001.mp4": "b2d57c94f1e6d3e2404651306332edaad552e1065fa9cd823f3b528598b645df",
+        "top_002.mp4": "b8c799e5d99a40df9314a9bbb7453beb5c04a2d71b8d1a0a069819b380a614bb",
+        "top_003.mp4": "7ed322a32aa808f48504ec879d5e2c7d311d51799e43b7e81a766cd28797668a",
+        "top_004.mp4": "c5bf19a26ec32445cdb051be246ad06a306163209b3bcccf20a9734cbe8cf4a9",
+        "top_005.mp4": "19f94ec6d0b2c248128402ac1942b240b13bb0040e187ce89a51b1846dc0c6cd",
+        "top_006.mp4": "cb3abc18a2c4d0e6da2ed153cfc4f4fd462c5fe8452b6fdf0dd1b95a83028e54",
+        "top_007.mp4": "1fb5a274dc5f0f1f0a7c6dfd2222e856e467b5da03046c8a6ea4ec4ec4d1ebb0",
+        "top_008.mp4": "5ec26ca1f07b8aa7a50df48cf296aa32a835354826fffeadcb6543aaa27c8eb4"
+      },
+      "interventions": 1
+    },
+    {
+      "station": 42,
+      "bag": "website-source-media/autorun/station42/2026-09-10-12-25-20/bag",
+      "source_frames": 2468,
+      "events_sha256": "71950564fa3eaebd94cf515b5626effc51e340d5569e2eed4aca7b8ecabc26c5",
+      "spans_sha256": "959ccf301b844445bcec54d84c9f6052a396a7046208c76d0575e24226536f84",
+      "top_segments_sha256": {
+        "top_000.mp4": "e3b008d5bb8484201dbdcdb9a1d5dc3c5d1ee2b9903d980c4606d4afad4f6d8d",
+        "top_001.mp4": "cb8f3432512a9c35a4006eadc16a0173b0c2cb7b08a65c72dcd80eb40389939a",
+        "top_002.mp4": "b8465fe6e5eec5cfc5af078fb9ac530c96bb0d7651d518fe0da1e3f22b3c9843",
+        "top_003.mp4": "cb22bc29f5b0c9c5448a36560138161a3dacf02aa6feac5c304dc1351cbc2690",
+        "top_004.mp4": "beb94e5adb878541b7b17b2f2ca4b18f597dd5702e8fce434131f8843d05f862",
+        "top_005.mp4": "efff5e20e28b0f389b7584e94a09db611c806be6cb170df1b32faee7b4fd95c5",
+        "top_006.mp4": "dba84b862df0c62922719d42741718300fc739703b070244f4df9c11015e183f",
+        "top_007.mp4": "016a92010db39d46d0d09a8a228f05e00151a70ecdcfa50182f0822196d8a0c4",
+        "top_008.mp4": "6f66b2f93e85fcd78c7376346f7a3258f6370848e6e548a4b0fe6d62a408a1b7"
+      },
+      "interventions": 1
+    },
+    {
+      "station": 43,
+      "bag": "website-source-media/autorun/station43/2026-09-10-12-25-10/bag",
+      "source_frames": 3389,
+      "events_sha256": "b955093527ff60f34de6cbfab6412f85b0a6327ebd7a03b3946404d88ef85dcd",
+      "spans_sha256": "57a1b73b1acc980b04228d21762606f31d38e5bcbce8ed80c420ec7325157e7f",
+      "top_segments_sha256": {
+        "top_000.mp4": "c843e774203b655f4fd1beaa0b4d69ab23a98f9490a54cd47ff341c149c92748",
+        "top_001.mp4": "a15dacf654e0b639c43c187ac28006694c3594dfa91cfc95138d30b0edfff023",
+        "top_002.mp4": "e6408fd2c4a4c592efaf4caec3ece9285c77d5c47abcb1c15c7da906fd5cbb1e",
+        "top_003.mp4": "2c3570d829be4c90bdbc7cdc85d7dc25aa45d769649b35e23fa799685c2db58c",
+        "top_004.mp4": "76547bb79b3cc6c9e58858f977e71be746abe2c59904e4068d6efba07a27ca6f",
+        "top_005.mp4": "ff873697ded57fc792a10e2c9eb1ce94e70d2348b579d42c4cc0c3e74a9fdbeb",
+        "top_006.mp4": "9a5c7d2fc7db8127a761ca389299c3576f4069ba2610878bb9a3f67709b942f8",
+        "top_007.mp4": "fe6a7be1304f0f969e2dd9d25f47f2504cb39a036c0956c34448733aa2141f58",
+        "top_008.mp4": "8f52b0dd96443b7ac134e5d40af7eb86078104c19f1fd89e147ac53b76c76fed",
+        "top_009.mp4": "f3d2e5b0f17e41ffdcb7d80538726ff67f9109bca5a060e0c717d3f84e188f89",
+        "top_010.mp4": "4097cd907c32e4d1540c0240e0539e8fb2d6f890d19ea1f5164cd969d35b1c80",
+        "top_011.mp4": "44d5e1434d9f53a61abcfb54de31a1a9467c2692ff64ffd85ec308aeaea2325d"
+      },
+      "interventions": 2
+    },
+    {
+      "station": 44,
+      "bag": "website-source-media/autorun/station44/2026-09-10-12-25-01/bag",
+      "source_frames": 3250,
+      "events_sha256": "db486a00f3e2a79cf8b204ac0e457e31852f883812ed826ba2e463d30c841740",
+      "spans_sha256": "8cfb60e51487f6bbad1f9fef9c3fc1f9891e2448d079adda1ac0390c67bb1100",
+      "top_segments_sha256": {
+        "top_000.mp4": "838b34377047a12cb2f8e217df0cab378ef484675d056eb5c9007c5973497822",
+        "top_001.mp4": "709ec7c6e4206d3196105eab04f21d4dabffc7aadc51677502cada938d35dea2",
+        "top_002.mp4": "8cf7c3f24ed76288a2d454b74fc1d03ae1ebb8041236f49bd796ea4250ca1fe9",
+        "top_003.mp4": "b3c59f2371158b350b6eca059721870b8f7fcec4a658a57aa1295719ec153ea5",
+        "top_004.mp4": "c0cddf0e7e4e3b4b6d820189044963d7343e3d3fd2d1a9c8531d0c7406787011",
+        "top_005.mp4": "3920910133ee18d44cb35f45481ebe5a48a1e2e6b47169d37d7bcd9cb4feba16",
+        "top_006.mp4": "9c1a3c4998f537c3ddb28e3ae63bc49ac7c928a4fe56f249f0b3a360ebab8463",
+        "top_007.mp4": "aa1805782ce4e0b027945237e1be42970190989ef7d3e202b6d51b8296511773",
+        "top_008.mp4": "0249d5c935282ed311f3de09fe7c80fad3f3ab058def2b3a2393c3c5ccb5d28e",
+        "top_009.mp4": "f0189b09b27638470708991532e3fe79d4dfcfd982dc86bc91eeac700f940281",
+        "top_010.mp4": "e73f2dc5629c89dcafb5f96b8458f307db70161a676c96511e493db080c1d782"
+      },
+      "interventions": 1
+    }
+  ],
+  "bundled_files": [
+    {
+      "station": 41,
+      "video": "assets/media/station-41.mp4",
+      "poster": "assets/images/station-41.webp",
+      "sha256": "263ddc5bbd908f8f3740bc0feb07036a1eb2c029ba9a6eb1ad7fd82a8f3e8ebb"
+    },
+    {
+      "station": 42,
+      "video": "assets/media/station-42.mp4",
+      "poster": "assets/images/station-42.webp",
+      "sha256": "cddb9deae1976e4d7450dae495c72f34a1d5e6956606f9569cd4271f45321df8"
+    },
+    {
+      "station": 43,
+      "video": "assets/media/station-43.mp4",
+      "poster": "assets/images/station-43.webp",
+      "sha256": "aa3ba2799f4f4dbe96a48206ada07df9981ca65cd069ad674699fb7228265963"
+    },
+    {
+      "station": 44,
+      "video": "assets/media/station-44.mp4",
+      "poster": "assets/images/station-44.webp",
+      "sha256": "3d4ef76b0aba6b71cbdd8745fe103c61dd7c5b8757e19321eef45d19f7479337"
+    }
+  ],
+  "bundled_external_recording": "assets/media/collection-v16.mp4",
+  "bundled_event_manifest": "assets/media/collection-v16-events.json",
+  "processing": "All four top-camera videos are existing bundled assets verified byte-identical to the latest project website. Native 4:3 frames are displayed without cropping; no synthetic frames added."
+}

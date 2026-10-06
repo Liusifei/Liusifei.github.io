@@ -1,0 +1,52 @@
+/* Original, editable conceptual drawings for the motivation section. */
+.feedback-diagram-slide{--fd-dark:#36492b;--fd-mid:#798969;--fd-light:#e3e8d9;--fd-ring:#b2d86d;--fd-warn:#b77550;--fd-surface:#f2f2e9}
+.feedback-diagram-slide.dark{--fd-dark:#c6ef97;--fd-mid:#82976c;--fd-light:#394530;--fd-ring:#b7df81;--fd-warn:#cd9877;--fd-surface:#1c2518}
+.feedback-diagram-slide:not(.cover) .body{margin-top:20px;justify-content:center}
+.feedback-diagram-slide .fd-failure-scenes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:42px;align-items:start}
+.feedback-diagram-slide .fd-failure-scenes figure+figure{border-left:1px solid var(--line);padding-left:30px}
+.feedback-diagram-slide .fd-ring-scene{display:block;width:100%;height:300px;overflow:visible}
+.feedback-diagram-slide .fd-failure-scenes figcaption{margin-top:26px}
+.feedback-diagram-slide .fd-failure-scenes h3,.feedback-diagram-slide .fd-requirements-copy h3{font-size:31px;line-height:1.2;color:inherit;font-weight:400;margin:0 0 14px}
+.feedback-diagram-slide .fd-failure-scenes p,.feedback-diagram-slide .fd-requirements-copy p{font-size:25px;line-height:1.38;color:var(--muted)}
+.feedback-diagram-slide .fd-failure-scenes figcaption{color:var(--ink)}
+.feedback-diagram-slide svg{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.feedback-diagram-slide .fd-floor{stroke:var(--line);stroke-width:2}
+.feedback-diagram-slide .fd-shadow{fill:var(--fd-light);opacity:.65}
+.feedback-diagram-slide .fd-base{fill:var(--fd-light);stroke:var(--fd-mid);stroke-width:2}
+.feedback-diagram-slide .fd-base-edge{stroke:var(--fd-mid);stroke-width:2}
+.feedback-diagram-slide .fd-peg{fill:var(--fd-light);stroke:var(--fd-dark);stroke-width:6}
+.feedback-diagram-slide .fd-peg-front{fill:var(--fd-light);stroke:var(--fd-dark);stroke-width:3}
+.feedback-diagram-slide .fd-ring{fill:var(--fd-ring);stroke:var(--fd-dark);stroke-width:3}
+.feedback-diagram-slide .fd-hole{fill:var(--paper);stroke:var(--fd-dark);stroke-width:2}
+.feedback-diagram-slide .fd-ring-muted{fill:#a7b2c3;stroke:#7e8ca1;stroke-width:2}
+.feedback-diagram-slide .fd-ring-secondary{fill:#9cbea9;stroke:#628773;stroke-width:2}
+.feedback-diagram-slide .fd-action,.feedback-diagram-slide .fd-stage-connection{stroke:var(--fd-dark);stroke-width:3.5}
+.feedback-diagram-slide .fd-arrowhead{fill:none;stroke:var(--fd-dark);stroke-width:1.6}
+.feedback-diagram-slide .fd-gripper{stroke:var(--fd-dark);stroke-width:8}
+.feedback-diagram-slide .fd-contact-halo{stroke:var(--fd-warn);stroke-width:2;stroke-dasharray:5 7;fill:none}
+.feedback-diagram-slide .fd-alert,.feedback-diagram-slide .fd-touch{stroke:var(--fd-warn);stroke-width:4}
+.feedback-diagram-slide .fd-requirement-visual{width:100%;height:334px;display:block}
+.feedback-diagram-slide .fd-requirements-copy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:50px;margin-top:25px}
+.feedback-diagram-slide .fd-requirements-copy>div:nth-child(2){padding-left:26px}
+.feedback-diagram-slide .fd-requirements-copy>div:nth-child(3){padding-left:26px}
+.feedback-diagram-slide .fd-screen{fill:var(--fd-surface);stroke:var(--fd-mid);stroke-width:2}
+.feedback-diagram-slide .fd-divider,.feedback-diagram-slide .fd-device-base{stroke:var(--fd-mid);stroke-width:2}
+.feedback-diagram-slide .fd-indicator{fill:var(--fd-dark)}
+.feedback-diagram-slide .fd-dim-indicator{fill:var(--fd-mid);opacity:.45}
+.feedback-diagram-slide .fd-svg-mono{font-family:var(--mono);font-size:24px;fill:var(--fd-dark);stroke:none;letter-spacing:.04em}
+.feedback-diagram-slide .fd-svg-label{font-family:var(--font);font-size:28px;fill:var(--paper);stroke:none}
+.feedback-diagram-slide .fd-policy-label{font-family:var(--font);font-size:41px;font-style:italic;fill:var(--fd-dark);stroke:none}
+.feedback-diagram-slide .fd-wire{stroke:var(--fd-mid);stroke-width:2}
+.feedback-diagram-slide .fd-trial-ring{stroke:var(--fd-dark);stroke-width:3;fill:var(--fd-light);fill-opacity:.6}
+.feedback-diagram-slide .fd-candidate{stroke:var(--fd-mid);stroke-width:2;stroke-dasharray:5 7}
+.feedback-diagram-slide .fd-robot-fill{fill:var(--fd-light);stroke:var(--fd-mid);stroke-width:2}
+.feedback-diagram-slide .fd-arm-under{stroke:var(--fd-mid);stroke-width:27}
+.feedback-diagram-slide .fd-arm{stroke:var(--fd-light);stroke-width:19}
+.feedback-diagram-slide .fd-joint{fill:var(--fd-surface);stroke:var(--fd-dark);stroke-width:3}
+.feedback-diagram-slide .fd-observation{stroke:var(--fd-mid);stroke-width:2;stroke-dasharray:6 5}
+.feedback-diagram-slide .fd-check-circle{fill:var(--fd-light);stroke:var(--fd-mid);stroke-width:2}
+.feedback-diagram-slide .fd-check{stroke:var(--fd-dark);stroke-width:3}
+.feedback-diagram-slide .fd-physical-hole{fill:var(--fd-surface);stroke:var(--fd-mid);stroke-width:2}
+.feedback-diagram-slide .fd-dataset{fill:var(--fd-light);stroke:var(--fd-mid);stroke-width:2}
+.feedback-diagram-slide .fd-dataset-recovery{fill:#2c3d20;stroke:var(--fd-dark)}
+.feedback-diagram-slide .fd-return{stroke:var(--fd-mid);stroke-width:2;stroke-dasharray:6 6}

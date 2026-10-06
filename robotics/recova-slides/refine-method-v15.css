@@ -1,0 +1,80 @@
+/* Large evidence, one logical purpose per page; paper-native icon artwork. */
+.slide.refine-method-v15{--rm15-recovery:#a66547;--rm15-twin:#597f95}
+.slide.refine-method-v15.dark{--rm15-recovery:#e2ac8f;--rm15-twin:#a3c5d5}
+.slide.refine-method-v15 .body{justify-content:center}
+.slide.refine-method-v15 h3{font-size:34px;line-height:1.15;letter-spacing:-.7px}
+.slide.refine-method-v15 p{font-size:30px;line-height:1.35}
+.slide.refine-method-v15 figcaption{font-size:31px;line-height:1.2;margin-top:20px;color:inherit}
+.slide.refine-method-v15 .rm15-icon{width:48px;height:48px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none;color:var(--accent);vertical-align:middle}
+.slide.refine-method-v15 sub{font-size:.67em}
+.slide.refine-method-v15 .media-tag{font-size:22px!important;top:18px;left:18px;padding:8px 14px}
+.slide.refine-method-v15 .rm15-products{display:grid;grid-template-columns:.92fr 1.15fr;gap:70px;align-items:center}
+.slide.refine-method-v15 .rm15-products h3{display:flex;align-items:center;gap:17px;margin-bottom:31px}
+.slide.refine-method-v15 .rm15-program pre{font:29px/1.85 var(--mono);letter-spacing:-.9px;padding:30px 32px;margin:0;background:#f0e8df;border-left:3px solid #ad795c;color:#494b40;border-radius:0 4px 4px 0}
+.slide.refine-method-v15 .rm15-program pre span{color:#945c3f}
+.slide.refine-method-v15 .rm15-products p{margin-top:24px;color:var(--muted)}
+.slide.refine-method-v15 .rm15-endpoints{display:grid;grid-template-columns:1fr 34px 1fr;gap:15px;align-items:center}
+.slide.refine-method-v15 .rm15-endpoints img{width:100%;height:294px;object-fit:cover;border-radius:4px}
+.slide.refine-method-v15 .rm15-endpoints b{font-size:34px;font-weight:400;color:var(--accent)}
+.slide.refine-method-v15 .rm15-experience>p{color:var(--accent)}
+.slide.refine-method-v15 .rm15-skills{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.slide.refine-method-v15 .rm15-skills .media{height:330px;aspect-ratio:auto}
+.slide.refine-method-v15 .rm15-skills video,.slide.refine-method-v15 .rm15-skills .video-still{object-fit:contain}
+.slide.refine-method-v15 .rm15-skills h3{font-size:39px;color:var(--accent);margin-bottom:15px}
+.slide.refine-method-v15 .rm15-skills p{font-size:29px;color:var(--muted)}
+.slide.refine-method-v15 .rm15-transfer{display:grid;grid-template-columns:1fr 64px 1fr;gap:19px;align-items:center}
+.slide.refine-method-v15 .rm15-transfer .media{height:430px;aspect-ratio:auto}
+.slide.refine-method-v15 .rm15-transfer video,.slide.refine-method-v15 .rm15-transfer .video-still{object-fit:contain}
+.slide.refine-method-v15 .rm15-transfer figcaption{display:flex;align-items:center;gap:17px}
+.slide.refine-method-v15 .rm15-transfer-link{font-size:58px;font-weight:300;text-align:center;color:#c6ef97;padding-bottom:68px}
+.slide.refine-method-v15 .rm15-monitor{display:grid;grid-template-columns:1.18fr 1fr;gap:64px;align-items:center}
+.slide.refine-method-v15 .rm15-monitor img{width:100%;height:522px;object-fit:contain;border-radius:4px}
+.slide.refine-method-v15 .rm15-queries{display:flex;flex-direction:column;gap:28px}
+.slide.refine-method-v15 .rm15-queries>div{display:grid;grid-template-columns:55px 1fr;gap:24px;align-items:center}
+.slide.refine-method-v15 .rm15-queries h3{font-size:31px;margin-bottom:9px}
+.slide.refine-method-v15 .rm15-queries p{font-size:28px;color:var(--muted)}
+.slide.refine-method-v15 .rm15-recovery{display:grid;grid-template-columns:960px 1fr;gap:54px;align-items:center}
+.slide.refine-method-v15 .rm15-recovery .media{width:960px;height:540px;aspect-ratio:16/9}
+.slide.refine-method-v15 .rm15-recovery video,.slide.refine-method-v15 .rm15-recovery .video-still{object-fit:contain}
+.slide.refine-method-v15 .rm15-instruction>.rm15-icon{width:79px;height:79px;color:var(--rm15-recovery);margin-bottom:29px}
+.slide.refine-method-v15 .rm15-instruction p{font-size:49px;line-height:1.17;letter-spacing:-1.35px}
+.slide.refine-method-v15 .rm15-instruction span{display:block;font-size:28px;color:var(--rm15-recovery);margin-top:29px}
+.slide.refine-method-v15 .rm15-restoration{display:grid;grid-template-columns:1fr 56px 1fr;gap:25px;align-items:center}
+.slide.refine-method-v15 .rm15-restoration img{width:100%;height:472px;object-fit:contain;border-radius:4px}
+.slide.refine-method-v15 .rm15-restoration figcaption{display:flex;align-items:center;justify-content:center;gap:9px}
+.slide.refine-method-v15 .rm15-restoration figcaption .rm15-icon{width:40px;height:40px}
+.slide.refine-method-v15 .rm15-arrow{font-size:50px;font-weight:400;color:var(--accent);padding-bottom:58px}
+.slide.refine-method-v15 .rm15-handoff{display:grid;grid-template-columns:.98fr 1.13fr;gap:55px;align-items:center}
+.slide.refine-method-v15 .rm15-handoff>figure>img{width:100%;height:470px;object-fit:contain}
+.slide.refine-method-v15 .rm15-human-routes>.rm15-human{width:77px;height:77px;color:#ad8140;margin-bottom:27px}
+.slide.refine-method-v15 .rm15-human-routes>div{display:grid;grid-template-columns:205px 33px 1fr;gap:15px;align-items:center;padding:25px 0;border-top:1px solid var(--line)}
+.slide.refine-method-v15 .rm15-human-routes p{font-size:30px;color:var(--muted)}
+.slide.refine-method-v15 .rm15-human-routes b{font-size:30px;font-weight:400;color:#ad8140}
+.slide.refine-method-v15 .rm15-human-routes h3{font-size:32px;line-height:1.2}
+.slide.refine-method-v15 .rm15-human-routes h3 span{display:block;margin-top:14px;font-size:26px;font-weight:400;color:#94703d}
+.slide.refine-method-v15 .rm15-learning{display:grid;grid-template-columns:1fr 1fr;gap:55px}
+.slide.refine-method-v15 .rm15-learning-frames{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.slide.refine-method-v15 .rm15-learning-frames img{height:237px;width:100%;object-fit:cover;border-radius:4px}
+.slide.refine-method-v15 .rm15-learn-label{display:flex;gap:17px;align-items:center;margin-top:24px}
+.slide.refine-method-v15 .rm15-learn-label h3{font-size:37px}
+.slide.refine-method-v15 .rm15-learning section+section .rm15-icon{color:var(--rm15-recovery)}
+.slide.refine-method-v15 .rm15-learning section>p{margin-top:19px;color:var(--muted);font-size:29px;line-height:1.4}
+.slide.refine-method-v15 .rm15-round{display:flex;align-items:center;justify-content:center;gap:23px;border-top:1px solid var(--line);margin-top:31px;padding-top:25px;font-size:29px}
+.slide.refine-method-v15 .rm15-round .rm15-icon{width:39px;height:39px}
+.slide.refine-method-v15 .rm15-round b{font-size:29px;font-weight:400;color:var(--accent);margin:0 23px}
+.slide.refine-method-v15 .rm15-expansion{display:grid;grid-template-columns:1.03fr 1fr;gap:77px;align-items:center}
+.slide.refine-method-v15 .rm15-expansion>figure>img{height:424px;width:100%;object-fit:contain;border-radius:4px}
+.slide.refine-method-v15 .rm15-expansion figcaption{display:flex;align-items:center;gap:16px}
+.slide.refine-method-v15 .rm15-expansion figcaption .rm15-icon{color:#ad8140}
+.slide.refine-method-v15 .rm15-expansion-branches{display:flex;flex-direction:column;gap:63px;border-left:2px solid var(--line);padding:19px 0 19px 49px;position:relative}
+.slide.refine-method-v15 .rm15-expansion-branches:before{content:"";position:absolute;width:51px;border-top:2px solid var(--line);top:50%;left:-51px}
+.slide.refine-method-v15 .rm15-expansion-branches section{display:flex;gap:23px;align-items:center}
+.slide.refine-method-v15 .rm15-expansion-branches .rm15-icon{width:64px;height:64px;color:var(--rm15-recovery)}
+.slide.refine-method-v15 .rm15-expansion-branches section+section .rm15-icon{color:var(--rm15-twin)}
+.slide.refine-method-v15 .rm15-expansion-branches h3{font-size:35px;margin-bottom:18px}
+.slide.refine-method-v15 .rm15-expansion-branches p{font-size:29px;color:var(--muted);white-space:nowrap}
+.slide.refine-method-v15[data-slide-id="fleet"] .fleet-composition{grid-template-columns:1.52fr 1fr;gap:25px}
+.slide.refine-method-v15[data-slide-id="fleet"] .fleet-main .media{height:548px}
+.slide.refine-method-v15[data-slide-id="fleet"] .fleet-quad{gap:16px}
+.slide.refine-method-v15[data-slide-id="fleet"] .fleet-quad .media{height:266px}
+@media print{.slide.refine-method-v15 .media video{display:none}.slide.refine-method-v15 .video-still{display:block}}

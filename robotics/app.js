@@ -133,3 +133,23 @@ let scheduled=false;
 function updateScroll(){scheduled=false;const max=document.documentElement.scrollHeight-innerHeight;$('#reading-progress').style.width=(max>0?100*scrollY/max:0)+'%';let active=chapters[0]?.id;for(const s of chapters){if(s.getBoundingClientRect().top<170)active=s.id;}$$('.topbar nav a').forEach(a=>a.classList.toggle('active',a.hash==='#'+active));}
 addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(updateScroll)}},{passive:true});addEventListener('resize',updateScroll);updateScroll();
 $('#focus').addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen()}catch{}});
+
+// Load the richer recorded-data view only when the reader approaches it.
+const experienceRecorder = document.querySelector('#experience-recorder');
+if (experienceRecorder) {
+ const pauseRecorder = () => experienceRecorder.contentWindow?.postMessage({type:'asena-recorder-pause'}, location.origin);
+ addEventListener('message', event => {
+  if (event.origin !== location.origin || event.source !== experienceRecorder.contentWindow) return;
+  if (event.data?.type === 'asena-recorder-height') {
+   const height = Number(event.data.height);
+   if (Number.isFinite(height) && height >= 250 && height <= 3000) experienceRecorder.height = String(Math.ceil(height));
+  }
+ });
+ new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting && !experienceRecorder.hasAttribute('src')) experienceRecorder.src = experienceRecorder.dataset.src;
+ }, {rootMargin:'250px'}).observe(experienceRecorder);
+ new IntersectionObserver(entries => {
+  if (!entries[0].isIntersecting) pauseRecorder();
+ }).observe(experienceRecorder);
+ document.addEventListener('visibilitychange', () => {if (document.hidden) pauseRecorder();});
+}

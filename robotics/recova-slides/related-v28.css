@@ -1,0 +1,16 @@
+/* Original-author visuals with a concise method comparison below each. */
+.slide.related-v28 .body{justify-content:center}
+.rv28-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:66px;align-items:start}
+.rv28-work{display:grid;grid-template-rows:44px 78px 300px auto;gap:18px;min-width:0}
+.rv28-work header{display:flex;gap:20px;align-items:baseline;min-width:0}
+.slide.related-v28 h3{font:500 36px/1.18 var(--font);letter-spacing:-.7px;margin:0;white-space:nowrap}
+.rv28-work h3 a{text-decoration:none;text-underline-offset:6px}
+.rv28-work h3 a:hover{text-decoration:underline}
+.rv28-work header>span{font:400 20px/1.3 var(--mono);color:var(--muted);white-space:nowrap}
+.slide.related-v28 .rv28-prior{font:400 30px/1.26 var(--font);letter-spacing:-.3px;color:#707a64;margin:0;max-width:none}
+.rv28-media{display:flex;align-items:center;justify-content:center;min-width:0;height:300px;margin:0;padding:0}
+.rv28-media>img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.rv28-media>.media{height:100%;width:100%;background:transparent;aspect-ratio:auto}
+.rv28-media video,.rv28-media .video-still{object-fit:contain;background:transparent}
+.slide.related-v28 .rv28-difference{margin:8px 0 0;padding-top:19px;border-top:1px solid #bac7ab;display:flex;flex-direction:column;gap:9px;max-width:none;font:400 31px/1.24 var(--font);letter-spacing:-.4px;color:#253b1d}
+.rv28-difference strong{font-weight:600;color:#5d853f}

@@ -1,0 +1,44 @@
+/* Figure 2(A)'s grounding branch, rebuilt at presentation scale. */
+.feedback-twin-slide .ft-grounding{display:grid;grid-template-columns:306px 80px minmax(0,1fr);align-items:center;padding:24px;background:#eaf1f4;border:1px solid #cddce4;border-radius:12px;color:#244752}
+.feedback-twin-slide .ft-inputs{display:grid;gap:16px}
+.feedback-twin-slide .ft-input{display:flex;align-items:center;gap:20px;padding:18px;background:#fffefa;border:1px solid #bfd1dc;border-radius:8px;height:112px}
+.feedback-twin-slide .ft-input h3{font:500 27px/1.18 var(--font);letter-spacing:-.5px;margin:0;color:#183c47}
+.feedback-twin-slide .ft-input small{display:block;margin-top:5px;font-size:20px;font-weight:400;color:#72838a;letter-spacing:0}
+.feedback-twin-slide .ft-icon{width:57px;height:57px;flex:none;fill:none;stroke:#567e90;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.feedback-twin-slide .ft-merge{width:80px;height:370px;color:#567e90;overflow:visible}
+.feedback-twin-slide .ft-merge-base,.feedback-twin-slide .ft-merge-end{fill:none;stroke:#a3bdca;stroke-width:2}
+.feedback-twin-slide .ft-merge-pulses{fill:none;stroke:#49788c;stroke-width:3;stroke-dasharray:12 88;stroke-linecap:round}
+.feedback-twin-slide .ft-twin{background:#fffefa;border:1.5px solid #7fa0b0;border-radius:8px;padding:20px}
+.feedback-twin-slide .ft-twin header{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.feedback-twin-slide .ft-twin header .ft-icon{width:32px;height:32px}
+.feedback-twin-slide .ft-twin header h3{font-size:30px;margin:0;color:#244752;letter-spacing:-.5px}
+.feedback-twin-slide .ft-twin header>span{font-size:22px;color:#72838a;margin-left:auto}
+.feedback-twin-slide .ft-video-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.feedback-twin-slide .ft-video-pair figure{margin:0;min-width:0}
+.feedback-twin-slide .ft-matched-media{height:302px;aspect-ratio:auto;background:#e2e8e5}
+.feedback-twin-slide .ft-matched-media video,.feedback-twin-slide .ft-matched-media .video-still{object-fit:contain}
+.feedback-twin-slide .ft-video-pair figcaption{display:flex;align-items:baseline;justify-content:space-between;color:#244752;font-size:27px;margin-top:10px}
+.feedback-twin-slide .ft-video-pair figcaption span{font-size:20px;color:#72838a}
+.feedback-twin-slide .ft-fit-loop{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:20px;padding:26px 12px 18px;border-bottom:1px solid #b8c9ce}
+.feedback-twin-slide .ft-fit-step{display:flex;align-items:center;gap:14px}
+.feedback-twin-slide .ft-fit-step>span{font:22px var(--mono);color:#9eabb0}
+.feedback-twin-slide .ft-fit-step h3{font:500 29px/1.2 var(--font);letter-spacing:-.5px;margin:0;color:#416671}
+.feedback-twin-slide .ft-fit-loop>b{font-size:32px;font-weight:400;color:#8aa4af}
+.feedback-twin-slide .ft-return{font-size:42px!important;line-height:1}
+.feedback-twin-slide .ft-moving-point{fill:#385f72;stroke:#fff;stroke-width:1;offset-path:path('M3.5 18.5 C7 18.5 7.5 7.5 12 7.5 S17 14.5 20.5 14.5');offset-distance:0%}
+.feedback-twin-slide .ft-lens,.feedback-twin-slide .ft-origin{transform-box:fill-box;transform-origin:center;fill:#567e90;fill-opacity:.09}
+.feedback-twin-slide.active .ft-moving-point{animation:ft-trace 4s ease-in-out infinite}
+.feedback-twin-slide.active .ft-lens{animation:ft-capture 4s ease-in-out infinite}
+.feedback-twin-slide.active .ft-origin{animation:ft-capture 4s ease-in-out -1.3s infinite}
+.feedback-twin-slide.active .ft-merge-pulses path{animation:ft-flow 4s linear infinite}
+.feedback-twin-slide.active .ft-merge-pulses path:nth-child(2){animation-delay:-1.3s}
+.feedback-twin-slide.active .ft-merge-pulses path:nth-child(3){animation-delay:-2.6s}
+.feedback-twin-slide.active .ft-fit-step{animation:ft-fit 9s ease-in-out infinite}
+.feedback-twin-slide.active .ft-fit-step:nth-of-type(2){animation-delay:-6s}
+.feedback-twin-slide.active .ft-fit-step:nth-of-type(3){animation-delay:-3s}
+@keyframes ft-trace{0%,12%{offset-distance:0%}75%,100%{offset-distance:100%}}
+@keyframes ft-capture{0%,25%,100%{fill-opacity:.08;transform:scale(1)}12%{fill-opacity:.55;transform:scale(1.12)}}
+@keyframes ft-flow{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}
+@keyframes ft-fit{0%,30%{opacity:1}38%,92%{opacity:.55}100%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.feedback-twin-slide *{animation:none!important}}
+@media print{.feedback-twin-slide *{animation:none!important}.feedback-twin-slide .ft-fit-step{opacity:1!important}}

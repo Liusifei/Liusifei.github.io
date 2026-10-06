@@ -1,0 +1,65 @@
+{
+  "version": 20,
+  "purpose": "Independent Apple Pencil recovery examples illustrating the sim-to-real learning path",
+  "relationship": "Shared corrective objective, not paired or time-aligned trajectories. No assertion that this exact sim recording trained the shown physical policy checkpoint.",
+  "spatial_processing": "CSS crops from the paper recovery-skills figure; original pixel geometry preserved. Videos are unchanged copies, with no temporal edits.",
+  "simulation": {
+    "source": "website-source-media/twin_galleries/put_apple_pen/funnel_rim/inspection.mp4",
+    "deck": "assets/media/transfer-v20/pencil-sim.mp4",
+    "environment": "simulation",
+    "kind": "recovery",
+    "skill": "funnel_rim",
+    "case_id": "cached_pose_100",
+    "source_dimensions": [
+      1280,
+      720
+    ],
+    "crop_xywh": [
+      440,
+      90,
+      640,
+      480
+    ],
+    "duration_seconds": 29.3,
+    "playback_rate": 2,
+    "sha256": "7dc48c99daf62736a61f5fcd29b21978ff7ce6cfa946e6cd1fad0fff8bb41620",
+    "poster": "assets/media/transfer-v20/pencil-sim.webp",
+    "poster_source_time_seconds": 0.6,
+    "poster_sha256": "5de9d5f6029a5050c53c0f9133779f165342efe9597923e16fb3b85d90c95382",
+    "rendered_from": "Original states.npz; direct native16:9 MuJoCo render targets; mj_forward only",
+    "source_gallery_metadata": "website-source-media/twin_galleries/put_apple_pen/videos.json"
+  },
+  "hardware": {
+    "source": "website-iclr/assets/media/recovery/put_apple_pen/reinsert_the_apple_pen.mp4",
+    "deck": "assets/media/real-gallery-v18/pencil-reinsert.mp4",
+    "environment": "real",
+    "kind": "recovery",
+    "skill": "reinsert_the_apple_pen",
+    "source_dimensions": [
+      1280,
+      720
+    ],
+    "crop_xywh": [
+      300,
+      150,
+      700,
+      525
+    ],
+    "duration_seconds": 32.365667,
+    "playback_rate": 2,
+    "sha256": "a63a91abc4c61f143b235b9d2b35240ad35b0095a1d6d65cc7f814622eb9674b",
+    "poster": "assets/media/real-gallery-v18/pencil-reinsert.webp",
+    "original_recording": "website-source-media/failrecover/put_apple_pen/reinsert_the_apple_pen.mp4",
+    "original_dimensions": [
+      3840,
+      2160
+    ],
+    "original_paper_crop_xywh": [
+      900,
+      450,
+      2100,
+      1575
+    ]
+  },
+  "paper_source": "paper/-ICLR-2027-ManipAgent/Figures/make_results_figure.py"
+}

@@ -1,0 +1,12 @@
+/* The same clear three-panel rhythm, with authentic task and recovery recordings. */
+.slide.failure-v20 .body{justify-content:center}
+.ff20-sequence{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;width:100%;align-items:start}
+.ff20-sequence figure{margin:0;min-width:0}
+.slide.failure-v20 .ff20-panel{display:block;position:relative;width:100%;height:400px;aspect-ratio:auto;border-radius:6px;background:#e5e3d9;overflow:hidden}
+.slide.failure-v20 .ff20-panel video,.slide.failure-v20 .ff20-panel img{width:100%;height:100%;object-fit:cover;object-position:center;border-radius:6px}
+.slide.failure-v20 .ff20-still img{display:block}
+.slide.failure-v20 .ff20-sequence figcaption{margin:20px 0 0;padding:0;color:#34472a;font:400 32px/1.2 var(--font);letter-spacing:-.4px}
+.slide.failure-v20 .ff20-panel .media-tag{display:none}
+.slide.failure-v20 .ff20-panel .play-overlay{opacity:0;transition:opacity .15s}
+.slide.failure-v20 .ff20-panel:hover .play-overlay,.slide.failure-v20 .ff20-panel:focus-within .play-overlay{opacity:1}
+@media(prefers-reduced-motion:reduce){.slide.failure-v20 .ff20-panel .play-overlay{transition:none}}

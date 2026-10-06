@@ -1,0 +1,128 @@
+{
+  "edit_revision": 15,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 60,
+  "duration_seconds": 16.35,
+  "audio": false,
+  "speed_changes_encoded": true,
+  "browser_playback_rate": 1,
+  "close_up": {
+    "source": "assets/media/teaser/recova-v6-full-1080p60.mp4",
+    "source_in": 2.0,
+    "source_out": 19.1,
+    "speed": 2,
+    "duration_seconds": 8.55,
+    "speed_label": false,
+    "source_sha256": "434f4dde294c1b59d09f4b2aad4f1566adb6f478cfb3bb8d2b8858bbe77ea194"
+  },
+  "library": {
+    "duration_seconds": 8.2,
+    "start_seconds": 8.15,
+    "title": "Recovery Skills",
+    "visible_labels": "Concise recovery action types only",
+    "action_type_source": "Editorial summaries of the original recovery instructions",
+    "trim_policy": "Recovery approach through release only; setup raise and final lift/return-home omitted",
+    "minimum_speed": 1,
+    "clips": [
+      {
+        "title": "Tile Return",
+        "action_type": "Tile Return",
+        "source": "yam_videos/autorun-data/station21/failrecover/2026-09-09-07-17-35/recover/20260909T002552549760/top_camera-images-rgb.mp4",
+        "annotation_source": "yam_videos/autorun-data/station21/failrecover/2026-09-09-07-17-35/recover/20260909T002552549760/metadata.json",
+        "language_annotation": "Place the drawn tile back onto the tile wall",
+        "source_duration_seconds": 23.666667,
+        "source_in": 3.3,
+        "source_out": 14.0,
+        "action_duration_seconds": 10.7,
+        "speed": 1.3048780487804879,
+        "end_hold_seconds": 0.0
+      },
+      {
+        "title": "Wall Restoration",
+        "action_type": "Wall Restoration",
+        "source": "yam_videos/autorun-data/station21/failrecover/mahjong_draw_r3-2026-09-09-06-38-47/recover/20260908T234728331086/top_camera-images-rgb.mp4",
+        "annotation_source": "yam_videos/autorun-data/station21/failrecover/mahjong_draw_r3-2026-09-09-06-38-47/recover/20260908T234728331086/metadata.json",
+        "language_annotation": "Restore the knocked tile back into the wall.",
+        "source_duration_seconds": 24.666667,
+        "source_in": 4.1,
+        "source_out": 15.0,
+        "action_duration_seconds": 10.9,
+        "speed": 1.329268292682927,
+        "end_hold_seconds": 0.0
+      },
+      {
+        "title": "Stand & Reinsert",
+        "action_type": "Stand & Reinsert",
+        "source": "yam_videos/autorun-data/station21/failrecover_old/2026-09-05-07-42-53/recover/20260905T021740367473/top_camera-images-rgb.mp4",
+        "annotation_source": "yam_videos/autorun-data/station21/failrecover_old/2026-09-05-07-42-53/recover/20260905T021740367473/metadata.json",
+        "language_annotation": "Stand the fallen tile upright and insert it to the row.",
+        "source_duration_seconds": 25.433333,
+        "source_in": 4.6,
+        "source_out": 13.1,
+        "action_duration_seconds": 8.5,
+        "speed": 1.0365853658536586,
+        "end_hold_seconds": 0.0
+      },
+      {
+        "title": "Hand Alignment",
+        "action_type": "Hand Alignment",
+        "source": "yam_videos/autorun-data/station21/failrecover_old/2026-09-07-01-41-31/recover/20260906T194137797559/top_camera-images-rgb.mp4",
+        "annotation_source": "yam_videos/autorun-data/station21/failrecover_old/2026-09-07-01-41-31/recover/20260906T194137797559/metadata.json",
+        "language_annotation": "Organize the hand tiles into a straight line",
+        "source_duration_seconds": 21.433333,
+        "source_in": 3.0,
+        "source_out": 12.2,
+        "action_duration_seconds": 9.2,
+        "speed": 1.1219512195121952,
+        "end_hold_seconds": 0.0
+      },
+      {
+        "title": "Discard Recovery",
+        "action_type": "Discard Recovery",
+        "source": "yam_videos/autorun-data/station21/failrecover_old/2026-09-06-07-06-40/recover/20260906T004644208897/top_camera-images-rgb.mp4",
+        "annotation_source": "yam_videos/autorun-data/station21/failrecover_old/2026-09-06-07-06-40/recover/20260906T004644208897/metadata.json",
+        "language_annotation": "Return the displaced tile to the discard pool.",
+        "source_duration_seconds": 25.566667,
+        "source_in": 5.5,
+        "source_out": 15.6,
+        "action_duration_seconds": 10.1,
+        "speed": 1.2317073170731707,
+        "end_hold_seconds": 0.0
+      },
+      {
+        "title": "Wall Alignment",
+        "action_type": "Wall Alignment",
+        "source": "yam_videos/autorun-data/station21/failrecover_old/2026-09-07-01-41-31/recover/20260906T192322593307/top_camera-images-rgb.mp4",
+        "annotation_source": "yam_videos/autorun-data/station21/failrecover_old/2026-09-07-01-41-31/recover/20260906T192322593307/metadata.json",
+        "language_annotation": "Straighten the displaced tile on the wall.",
+        "source_duration_seconds": 22.733333,
+        "source_in": 4.1,
+        "source_out": 12.8,
+        "action_duration_seconds": 8.700000000000001,
+        "speed": 1.0609756097560978,
+        "end_hold_seconds": 0.0
+      }
+    ]
+  },
+  "transition": {
+    "type": "smooth dissolve",
+    "duration_seconds": 0.4
+  },
+  "panel": {
+    "type": "illustrative control visualization, synchronized to visible action",
+    "tile_images": "Hong Kong calligraphic SVG artwork by samoheen (CC0), tinted navy, vermilion and jade on ivory shells",
+    "tile_art_source": "https://github.com/samoheen/mahjong-tiles",
+    "tile_art_provenance": "tile-art/provenance.json",
+    "tile_transition": "Instant disappearance at pickup (4.62s), appearance on the table at release (7.125s); no movement, scaling, pulsing or tile fades",
+    "selected_tile": "West wind",
+    "telemetry": false
+  },
+  "branding": false,
+  "section_titles": {
+    "library": "Recovery Skills"
+  },
+  "video_sha256": "68a352507bd6cbe002aae9d8cce29a40a5d732b28ae0a4b412ed78580143b0bc"
+}

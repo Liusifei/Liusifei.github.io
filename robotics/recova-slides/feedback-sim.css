@@ -1,0 +1,18 @@
+/* A large native twin replay, with an illustrated development sequence. */
+.slide.feedback-sim .fs-composition{display:grid;grid-template-columns:960px 1fr;gap:44px;align-items:center}
+.slide.feedback-sim .fs-demo .media{height:540px;aspect-ratio:16/9;border-radius:5px;background:#111410;box-shadow:0 12px 28px #283b1d12}
+.slide.feedback-sim .fs-demo video,.slide.feedback-sim .fs-demo .video-still{object-fit:contain}
+.slide.feedback-sim .fs-demo figcaption{display:flex;align-items:center;gap:17px;font-size:27px;line-height:1.2;letter-spacing:-.4px;margin-top:20px}
+.slide.feedback-sim .fs-ring-symbol{width:27px;height:18px;display:inline-block;border:6px solid #b96848;border-radius:50%;flex:none;transform:rotate(-14deg)}
+.slide.feedback-sim .fs-process{display:flex;flex-direction:column;gap:31px;padding-bottom:26px;position:relative}
+.slide.feedback-sim .fs-process:before{content:"";position:absolute;left:34px;top:35px;bottom:67px;border-left:1px solid #c5cdbb}
+.slide.feedback-sim .fs-step{display:grid;grid-template-columns:70px 1fr;gap:19px;align-items:start;position:relative}
+.slide.feedback-sim .fs-symbol{width:70px;height:70px;display:grid;place-items:center;border:1px solid #c8d4bc;border-radius:50%;background:#ecf0e5;color:#547639}
+.slide.feedback-sim .fs-symbol svg{width:44px;height:44px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.slide.feedback-sim .fs-diagnose .fs-symbol{color:#ac7353;background:#f2eae0;border-color:#e3d0bd}
+.slide.feedback-sim .fs-correct .fs-symbol{color:#57748a;background:#e8edef;border-color:#ccd8df}
+.slide.feedback-sim .fs-step h3{font-size:31px;line-height:1.14;letter-spacing:-.6px;margin:0 0 10px}
+.slide.feedback-sim .fs-step p{font-size:26px;line-height:1.28;letter-spacing:-.2px;color:#697160}
+.slide.feedback-sim .fs-step sub{font-size:.7em}
+.slide.feedback-sim .fs-retain h3{color:#4c7300}
+.slide.feedback-sim .body{justify-content:center}

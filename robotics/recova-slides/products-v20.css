@@ -1,0 +1,13 @@
+/* A restrained stack of program sheets suggests the reusable skill repertoire. */
+.slide.products-v20 .pv20-library{position:relative;isolation:isolate;padding:37px 28px 0 0;margin:2px 0 8px}
+.slide.products-v20 .pv20-sheet{position:absolute;border:1.5px solid;border-radius:7px;transform-origin:15% 90%;pointer-events:none}
+.slide.products-v20 .pv20-sheet-far{inset:3px 1px 20px 35px;background:#e4eadf;border-color:#b8c8ac;transform:rotate(-3.4deg);box-shadow:0 5px 12px #3b4f2920}
+.slide.products-v20 .pv20-sheet-middle{inset:20px 14px 9px 17px;background:#eee4d8;border-color:#cfb89e;transform:rotate(-1.5deg);box-shadow:0 4px 10px #6b4a3020}
+.slide.products-v20 .pv20-sheet:before{content:"";position:absolute;left:23px;right:23px;top:23px;height:1px;background:currentColor;opacity:.13}
+.slide.products-v20 .pv20-sheet-far:after{content:"";position:absolute;top:10px;left:23px;width:65px;height:4px;border-radius:2px;background:#9caf87;opacity:.55}
+.slide.products-v20 .pv20-sheet-middle:after{content:"";position:absolute;top:10px;left:23px;width:91px;height:4px;border-radius:2px;background:#bc9975;opacity:.5}
+.slide.products-v20 .pv20-sheet-front{position:relative;z-index:1;overflow:hidden;border:1.5px solid #c29f85;border-left:4px solid #a96948;border-radius:5px;background:#faf6ef;box-shadow:0 15px 26px #5b40231a,0 3px 7px #5b402318}
+.slide.products-v20 .pv20-sheet-front pre{margin:0;padding:31px 27px;background:linear-gradient(135deg,#fcf9f3,#f2e9dd);border:0;border-radius:0;font-family:var(--mono);font-size:29px;line-height:1.85;letter-spacing:-.9px;color:#454a3e}
+.slide.products-v20 .pv20-sheet-front pre span{color:#915433}
+.slide.products-v20 .rm15-program>p{margin-top:28px}
+@media print{.slide.products-v20 .pv20-sheet-front{box-shadow:none}}

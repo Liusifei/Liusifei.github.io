@@ -1,0 +1,31 @@
+{
+  "source": "yam_videos/autorun_mahjong_yam/IMG_2264_2.mp4",
+  "video": "assets/media/data-collection/mahjong-autorun.mp4",
+  "poster": "assets/media/data-collection/mahjong-autorun.webp",
+  "duration_seconds": 75.0,
+  "source_in_seconds": 0,
+  "source_out_seconds_exclusive": 750,
+  "resolution": [
+    1280,
+    720
+  ],
+  "source_timing_preserved": false,
+  "browser_playback_rate": 1,
+  "audio": false,
+  "web_duration_seconds": 75.0,
+  "recording_time_per_media_second": 10,
+  "web_frame_rate": 30,
+  "optimization": "Playback speed encoded into web copies; timeline, events, and camera alignment remain in original recording seconds.",
+  "recording_duration_seconds": 750.0,
+  "recording_clock_preserved": true,
+  "bundled_video": "assets/media/collection-v16.mp4",
+  "bundled_events": "assets/media/collection-v16-events.json",
+  "bundled_poster": "assets/media/collection-v16.webp",
+  "website_source": "recova-bot.github.io/assets/media/data-collection",
+  "adapted_ui_sources": [
+    "recova-bot.github.io/index.html#data-collection",
+    "recova-bot.github.io/collection.js"
+  ],
+  "copy_processing": "Video, poster, and event manifest copied byte-for-byte from the latest local project website.",
+  "video_sha256": "e07ef4ffff3c79d39d2470bb92527210c9a8ad7f30236caf5ca2087ef929cf98"
+}

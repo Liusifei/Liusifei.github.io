@@ -1,0 +1,67 @@
+{
+  "purpose": "Front, close ring-stacking pair for slide 3, replacing the overhead videos at user request.",
+  "prior_view_source": "paper/-ICLR-2027-ManipAgent/Figures/pipeline_frames/manifest.json",
+  "camera": "bottom_camera (physical front view, despite the dataset camera name)",
+  "crop": {
+    "source_resolution": [
+      640,
+      480
+    ],
+    "xywh": [
+      0,
+      16,
+      520,
+      390
+    ],
+    "note": "Same 520\u00d7390 close framing as the prior manuscript images, shifted upward 14 pixels from y=30 to keep the peg tip visible. No perspective transformation or object retouching."
+  },
+  "twin": {
+    "asset": "assets/media/ring-front-twin.mp4",
+    "model": "gear_yam_mahjong/twin_runs/20260920T205552.70396_5199c2/round_001/model.xml",
+    "model_sha256": "8fa8453e04363536028e1ed1d8d1b06a9f3401b5a540b743ad3ce0249f1fbfed",
+    "states": "gear_yam_mahjong/twin_runs/20260920T205552.70396_5199c2/round_001/states.npz",
+    "states_sha256": "ad32e735a287f1e2804c8cc6327bb8da25b1a543b2e0dfcf7c25aac8f4eb3f98",
+    "render_engine": "MuJoCo 3.3.7",
+    "rendering": "For each physical action-sample timestamp, select the nearest saved state, assign qpos/qvel/time, call mj_forward and renderer.update_scene(camera=bottom_camera), then render and crop. No mj_step call, motion synthesis or new physics simulation.",
+    "saved_state_count": 294,
+    "maximum_state_sample_offset_seconds": 0.040731509526573006
+  },
+  "real": {
+    "asset": "assets/media/ring-front-real.mp4",
+    "source": "gear_yam_mahjong/twin_runs/20260920T205552.70396_5199c2/inputs/views/bottom/reference.mp4",
+    "source_sha256": "8ce9dac7dcc9aefa3bfe6f0e4c96289f05d9716275caa03d6b7747850e09fcff",
+    "processing": "Fixed spatial crop only; physical timing is unchanged."
+  },
+  "alignment": {
+    "physical_camera_metadata": "gear_yam_mahjong/twin_runs/20260920T205552.70396_5199c2/inputs/views/bottom/alignment.json",
+    "action_times": "gear_yam_mahjong/twin_runs/20260920T205552.70396_5199c2/inputs/video_alignment.json",
+    "source_interval_seconds": [
+      0,
+      24.4
+    ],
+    "fps": 30,
+    "frames": 732,
+    "duration_seconds": 24.4,
+    "note": "Camera frame i corresponds to action sample i; saved twin poses selected using that action timestamp. Existing shared-clock playback keeps the two video elements synchronized."
+  },
+  "encoding": {
+    "codec": "H.264",
+    "crf": 21,
+    "preset": "fast",
+    "pixel_format": "yuv420p",
+    "faststart": true,
+    "audio": false,
+    "output_resolution": [
+      520,
+      390
+    ]
+  },
+  "presentation": {
+    "speed": 2,
+    "muted": true,
+    "loop": true,
+    "autoplay_when_slide_active": true,
+    "poster_time_seconds": 9.7333333
+  },
+  "interpretation": "Recorded physical task trajectory and render of saved twin states illustrate physical grounding. Camera extrinsics remain reconstructed estimates. These clips do not show a newly measured recovery outcome and are not quantitative fidelity validation."
+}

@@ -1,0 +1,15 @@
+/* The full method belongs with the central contribution, before formulation. */
+.slide.contribution-pipeline .body{justify-content:center;margin-top:18px}
+.slide.contribution-pipeline .native-pipeline{width:1450px;max-width:100%;margin:auto;flex:none;cursor:pointer;outline:none}
+.slide.contribution-pipeline .native-pipeline:focus-visible{outline:2px solid #a0b781;outline-offset:7px;border-radius:10px}
+.slide.contribution-pipeline .pipeline-svg{display:block}
+.contribution-pipeline .pipeline-node .node-surface{transition:stroke .4s,stroke-width .4s,filter .4s}
+.contribution-pipeline .pipeline-node.node-active .node-surface{stroke:var(--node-ink);stroke-width:4;filter:drop-shadow(0 4px 6px #30452028)}
+.contribution-pipeline .flow-base{transition:stroke .4s,stroke-width .4s,opacity .4s}
+.contribution-pipeline .flow-pulse{display:none}
+.contribution-pipeline.pipeline-running .flow-base{opacity:.4}
+.contribution-pipeline .flow-active .flow-base{stroke:#4c7300;stroke-width:5;opacity:1}
+.contribution-pipeline .flow-traveler{fill:#76b900;stroke:#fffefa;stroke-width:2.5;opacity:0;filter:drop-shadow(0 0 5px #76b90088)}
+.contribution-pipeline.pipeline-motion-running .flow-active .flow-traveler{opacity:1}
+@media(prefers-reduced-motion:reduce){.contribution-pipeline .node-surface,.contribution-pipeline .flow-base{transition:none}.contribution-pipeline .flow-traveler{display:none}}
+@media print{.contribution-pipeline .flow-base{opacity:1!important}.contribution-pipeline .flow-traveler{display:none}}

@@ -1,0 +1,54 @@
+{
+  "source": "https://anjiecheng.me/talks/asena/#real-feedback",
+  "source_recording": "deck-20260908-175129.mcap",
+  "bag_time_s": [
+    579,
+    589
+  ],
+  "duration_s": 10,
+  "body_sample_rate_hz": 20,
+  "body_samples": 201,
+  "camera_source_rate_hz_approx": 2,
+  "camera_encoded_fps": 10,
+  "assets": [
+    {
+      "path": "assets/panorama-walk.mp4",
+      "source_url": "https://anjiecheng.me/talks/asena/assets/round2/panorama-walk.mp4",
+      "bytes": 916429,
+      "sha256": "41ceb4a76eda15dd375bf38251d51f401864679329269d5d2a116bdb742c9811",
+      "transformation": "none"
+    },
+    {
+      "path": "assets/panorama-walk.jpg",
+      "source_url": "https://anjiecheng.me/talks/asena/assets/round2/panorama-walk.jpg",
+      "bytes": 90329,
+      "sha256": "ef6e6eae2e6f5fc00e4127237fa055678e2bbdfd9d4f96d3b30b78e89bd60702",
+      "transformation": "none"
+    },
+    {
+      "path": "assets/g1-canonical.glb",
+      "source_url": "https://anjiecheng.me/talks/asena/assets/revision/g1-canonical.glb",
+      "bytes": 11515916,
+      "sha256": "2539bcc1e96bf2c5afe10db5cc72bfa947badd93d7273abef4f0f09853dea98c",
+      "transformation": "none"
+    },
+    {
+      "path": "assets/g1-body.png",
+      "source_url": "https://anjiecheng.me/talks/asena/assets/revision/g1-body.png",
+      "bytes": 754448,
+      "sha256": "5cf3bcc1445181e52daeac3fa353ff7637050350cda6cfb0d9ebf8f3cecd5d0b",
+      "transformation": "none"
+    },
+    {
+      "path": "assets/UNITREE-G1-LICENSE.txt",
+      "source_url": "https://anjiecheng.me/talks/asena/assets/revision/UNITREE-G1-LICENSE.txt",
+      "bytes": 1537,
+      "sha256": "98335465f43a20b5850e4651db6e74c4aa1e9fc8e8813d38f345178045c0da50",
+      "transformation": "none"
+    }
+  ],
+  "camera_video_dimensions_px": [
+    1024,
+    512
+  ]
+}

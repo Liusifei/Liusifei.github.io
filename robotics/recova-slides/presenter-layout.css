@@ -1,0 +1,19 @@
+/* Keep the spoken script near the top of the presenter display. */
+body.presenter{--notes-height:42vh;--notes-gutter:max(28px,calc((100vw - 1160px)/2))}
+body.presenter #notes{inset:0 0 auto;width:100%;height:var(--notes-height);padding:18px var(--notes-gutter) 26px;border-left:0;border-bottom:1px solid #63716b;overscroll-behavior:contain;scroll-padding-block:18px}
+body.presenter #stage{left:50%;top:calc((100vh + var(--notes-height))/2)}
+body.presenter #note-meta{position:absolute;top:18px;right:var(--notes-gutter);gap:16px}
+body.presenter #clock{font-size:22px}
+body.presenter #notes-body>.label{font-size:12px;line-height:1.4;margin:0;max-width:calc(100% - 220px)}
+body.presenter #notes h2{font-family:var(--font);font-size:27px;line-height:1.2;margin:6px 0 9px;max-width:calc(100% - 220px)}
+body.presenter #notes .note-script-timing{font-size:13px;margin:0 0 12px}
+body.presenter #notes .note-script p{font-size:22px;line-height:1.5;margin:0 0 17px}
+body.presenter #notes .note-step-controls{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;margin:0 0 12px;padding:7px 0}
+body.presenter #notes .note-step-status{margin:0;font-size:15px}
+body.presenter #notes .note-step-controls button{padding:5px 10px;font-size:15px}
+@media(max-width:600px){
+ body.presenter{--notes-height:48vh;--notes-gutter:18px}
+ body.presenter #note-meta{position:static;justify-content:flex-end;margin-bottom:9px}
+ body.presenter #notes-body>.label,body.presenter #notes h2{max-width:none}
+ body.presenter #notes .note-script p{font-size:20px}
+}

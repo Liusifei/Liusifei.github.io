@@ -1,0 +1,13 @@
+/* Three temporally ordered observations from the same physical recovery. */
+.slide.feedback-real-failure .body{margin-top:26px}
+.rf-sequence{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;width:100%}
+.rf-sequence figure{margin:0;min-width:0}
+.rf-sequence img{display:block;width:100%;height:416px;object-fit:cover;border-radius:5px;background:#e5e3d9}
+.rf-sequence figcaption{padding-top:20px;border-top:0}
+.rf-sequence h3{font-family:var(--font);font-size:30px;line-height:1.15;font-weight:500;letter-spacing:-.25px;margin:0 0 10px;color:#27351f}
+.rf-sequence p{font-family:var(--font);font-size:25px;line-height:1.28;letter-spacing:-.12px;margin:0;color:#68715e}
+
+.rf-photo{position:relative}
+.rf-state{position:absolute;left:18px;top:18px;display:grid;place-items:center;width:60px;height:60px;border-radius:50%;background:#fffefa;box-shadow:0 3px 14px #0002;border:2px solid currentColor}
+.rf-state svg{width:43px;height:43px;fill:none;stroke:currentColor;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
+.rf-caught{color:#b65041}.rf-contact{color:#b47a42}.rf-seated{color:#5c8134}

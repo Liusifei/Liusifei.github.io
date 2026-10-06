@@ -1,0 +1,170 @@
+{
+  "version": 18,
+  "classification_source": "website-iclr/data.js, recoveryTasks (all six explicitly recovery/real)",
+  "asset_processing": "New files are byte-identical copies; existing media reused after source-hash verification. Cropping is CSS only.",
+  "interpretation": "Selected successful learned physical recovery examples; not per-skill performance estimates.",
+  "examples": [
+    {
+      "id": "ring-push",
+      "title": "Push down a caught ring",
+      "task": "Ring stacking",
+      "environment": "real",
+      "kind": "recovery",
+      "source_video": "website-iclr/assets/media/recovery/insert_circle/push_the_stuck_green_circle_down.mp4",
+      "source_poster": "website-iclr/assets/media/recovery/insert_circle/push_the_stuck_green_circle_down.webp",
+      "deck_video": "assets/media/ring-recovery.mp4",
+      "deck_poster": "assets/media/ring-recovery.webp",
+      "video_sha256": "d949d486212b56b5fb190a1d125add8d141595fba80a72518dcdefaa1c3dde6a",
+      "poster_sha256": "8819673e9cfd7ece162d462c7883127ef48533a08e651f3e9383ccfffa0eff07",
+      "source_dimensions": [
+        1280,
+        720
+      ],
+      "source_duration_seconds": 11.077733,
+      "crop_xywh": [
+        430,
+        160,
+        640,
+        360
+      ],
+      "playback_rate": 2,
+      "temporal_edit": "None; entire source recording loops continuously",
+      "action": "Press the ring caught near the peg tip down onto the stack."
+    },
+    {
+      "id": "pencil-reinsert",
+      "title": "Reinsert the pencil",
+      "task": "Pencil-box packing",
+      "environment": "real",
+      "kind": "recovery",
+      "source_video": "website-iclr/assets/media/recovery/put_apple_pen/reinsert_the_apple_pen.mp4",
+      "source_poster": "website-iclr/assets/media/recovery/put_apple_pen/reinsert_the_apple_pen.webp",
+      "deck_video": "assets/media/real-gallery-v18/pencil-reinsert.mp4",
+      "deck_poster": "assets/media/real-gallery-v18/pencil-reinsert.webp",
+      "video_sha256": "a63a91abc4c61f143b235b9d2b35240ad35b0095a1d6d65cc7f814622eb9674b",
+      "poster_sha256": "028304bcd52c7b8a35bb3d6c7aa966090d7f9b189a02bda9f2bb70440b50d7fe",
+      "source_dimensions": [
+        1280,
+        720
+      ],
+      "source_duration_seconds": 32.365667,
+      "crop_xywh": [
+        280,
+        200,
+        896,
+        504
+      ],
+      "playback_rate": 2,
+      "temporal_edit": "None; entire source recording loops continuously",
+      "action": "Realign the pencil and place it back in its tray."
+    },
+    {
+      "id": "wall-restore",
+      "title": "Restore the tile wall",
+      "task": "Mahjong draw",
+      "environment": "real",
+      "kind": "recovery",
+      "source_video": "website-iclr/assets/media/recovery/mahjong_draw/real_Restore_the_knocked_tile_back_into_the_wall.mp4",
+      "source_poster": "website-iclr/assets/media/recovery/mahjong_draw/real_Restore_the_knocked_tile_back_into_the_wall.webp",
+      "deck_video": "assets/media/draw-recovery.mp4",
+      "deck_poster": "assets/media/draw-recovery.webp",
+      "video_sha256": "983effc6d2bc1573210ffab606373715f32ac5dc488d5c66e7ff3a0762afcf57",
+      "poster_sha256": "428b2f2b0ab3fe64c88bc3990dbc47e20b7c7f27b2470279b33ac0770f40e3d1",
+      "source_dimensions": [
+        640,
+        480
+      ],
+      "source_duration_seconds": 52.733333,
+      "crop_xywh": [
+        160,
+        176,
+        352,
+        198
+      ],
+      "playback_rate": 2,
+      "temporal_edit": "None; entire source recording loops continuously",
+      "action": "Return displaced tiles to the wall so drawing can resume."
+    },
+    {
+      "id": "ring-remove",
+      "title": "Remove a misplaced ring",
+      "task": "Ring stacking",
+      "environment": "real",
+      "kind": "recovery",
+      "source_video": "website-iclr/assets/media/recovery/insert_circle/take_the_top_circle_out.mp4",
+      "source_poster": "website-iclr/assets/media/recovery/insert_circle/take_the_top_circle_out.webp",
+      "deck_video": "assets/media/ring-remove.mp4",
+      "deck_poster": "assets/media/ring-remove.webp",
+      "video_sha256": "038dde5a7b2599d4f57dc65f73edf38477c1480daae2dbd782c62dc1a6e77b06",
+      "poster_sha256": "81ab5d4282c586182c17d4e8d59963bf94df787695db6c47acc5e5212a98f66b",
+      "source_dimensions": [
+        1280,
+        720
+      ],
+      "source_duration_seconds": 18.2182,
+      "crop_xywh": [
+        480,
+        160,
+        704,
+        396
+      ],
+      "playback_rate": 2,
+      "temporal_edit": "None; entire source recording loops continuously",
+      "action": "Remove a ring placed out of order and set it back on the table."
+    },
+    {
+      "id": "tray-reinsert",
+      "title": "Reinsert the tray",
+      "task": "Pencil-box packing",
+      "environment": "real",
+      "kind": "recovery",
+      "source_video": "website-iclr/assets/media/recovery/put_apple_pen/reinsert_the_tray.mp4",
+      "source_poster": "website-iclr/assets/media/recovery/put_apple_pen/reinsert_the_tray.webp",
+      "deck_video": "assets/media/pencil-recovery.mp4",
+      "deck_poster": "assets/media/pencil-recovery.webp",
+      "video_sha256": "46be2788a3342b4c66e5eb48b9b4258fb168df30c90acf4785e5b6c12b9790d1",
+      "poster_sha256": "a48196c10177bbcf7dbaf09cc4454a4cff60dbb695549e041d68a631c4062991",
+      "source_dimensions": [
+        1280,
+        720
+      ],
+      "source_duration_seconds": 35.6,
+      "crop_xywh": [
+        160,
+        144,
+        1024,
+        576
+      ],
+      "playback_rate": 2,
+      "temporal_edit": "None; entire source recording loops continuously",
+      "action": "Use both arms to align the detached tray and slide it into its sleeve."
+    },
+    {
+      "id": "hand-upright",
+      "title": "Stand the hand tiles",
+      "task": "Mahjong discard",
+      "environment": "real",
+      "kind": "recovery",
+      "source_video": "website-iclr/assets/media/recovery/mahjong_discard/real_Stand_all_hand_tiles_upright_facing_forward_in_a_single_row.mp4",
+      "source_poster": "website-iclr/assets/media/recovery/mahjong_discard/real_Stand_all_hand_tiles_upright_facing_forward_in_a_single_row.webp",
+      "deck_video": "assets/media/real-gallery-v18/hand-upright.mp4",
+      "deck_poster": "assets/media/real-gallery-v18/hand-upright.webp",
+      "video_sha256": "b339d306d3b969ece4d2fbdde79a2bd4aa826f36a5a35af3ee50f94a09daa98c",
+      "poster_sha256": "55f9ebf24019845a4b6956372213e4b9af27fc11cc6cc7cdc6232171b645072c",
+      "source_dimensions": [
+        640,
+        480
+      ],
+      "source_duration_seconds": 52.966667,
+      "crop_xywh": [
+        160,
+        215,
+        352,
+        198
+      ],
+      "playback_rate": 2,
+      "temporal_edit": "None; entire source recording loops continuously",
+      "action": "Stand the fallen hand tiles upright, facing forward in a row."
+    }
+  ]
+}

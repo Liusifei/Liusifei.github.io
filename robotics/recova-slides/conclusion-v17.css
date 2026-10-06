@@ -1,0 +1,12 @@
+/* Two physical examples keep the conclusion concrete and visually dominant. */
+.slide.conclusion-v17 .body{justify-content:center;margin-top:25px}
+.slide.conclusion-v17 .cv17-gallery{display:grid;grid-template-columns:1fr 1fr;gap:48px;width:100%;max-width:1380px;margin:0 auto}
+.slide.conclusion-v17 .cv17-film{position:relative;isolation:isolate;width:100%;height:auto;aspect-ratio:4/3;overflow:hidden;background:#18251d;border-radius:5px}
+.slide.conclusion-v17 .cv17-film video,.slide.conclusion-v17 .cv17-film .video-still{position:absolute;max-width:none!important;object-fit:fill;transform:none}
+/* x=160,y=0,w=960,h=720 of the 1280×720 tray recording. */
+.slide.conclusion-v17 .cv17-tray video,.slide.conclusion-v17 .cv17-tray .video-still{width:133.333333%!important;height:100%!important;left:-16.666667%!important;top:0!important}
+/* x=160,y=130,w=400,h=300 of the 640×480 wall recording. */
+.slide.conclusion-v17 .cv17-wall video,.slide.conclusion-v17 .cv17-wall .video-still{width:160%!important;height:160%!important;left:-40%!important;top:-43.333333%!important}
+.slide.conclusion-v17 .cv17-film .play-overlay{z-index:4}
+.slide.conclusion-v17 .cv17-gallery figcaption{font-size:33px;line-height:1.25;text-align:center;margin-top:25px;letter-spacing:-.45px;color:var(--paper)}
+@media print{.slide.conclusion-v17 .cv17-film .video-still{opacity:1!important;visibility:visible!important}}

@@ -1,0 +1,73 @@
+ASENA flight-recorder tutorial excerpt
+=====================================
+
+Source presentation and recording credits
+----------------------------------------
+Learning through robot experience / Project ASENA
+An-Chieh Cheng and the ASENA project contributors
+https://anjiecheng.me/talks/asena/#real-feedback
+
+The camera recording, G1 model and poster, and exported measured robot states
+are taken from the public ASENA presentation. Their original authors retain
+their rights. This tutorial adaptation does not grant an additional license
+for those assets. The original Unitree G1 notice linked by the source deck
+is retained verbatim in assets/UNITREE-G1-LICENSE.txt. The source GLB itself
+has no embedded copyright field; model attribution follows the source deck.
+
+Source assets (downloaded without re-encoding):
+https://anjiecheng.me/talks/asena/assets/round2/panorama-walk.mp4
+https://anjiecheng.me/talks/asena/assets/round2/panorama-walk.jpg
+https://anjiecheng.me/talks/asena/assets/revision/g1-canonical.glb
+https://anjiecheng.me/talks/asena/assets/revision/g1-body.png
+
+Original model license (retained without modification):
+https://anjiecheng.me/talks/asena/assets/revision/UNITREE-G1-LICENSE.txt
+Copyright (c) 2016-2023 HangZhou YuShu TECHNOLOGY CO.,LTD. ("Unitree Robotics")
+See assets/UNITREE-G1-LICENSE.txt for the complete terms and disclaimer.
+
+motion.json preserves the ROBOT_DATA motion and joint metadata from the
+presentation's public-data.js, with only the model URL changed to a local path.
+The cached source is public-data-current.js. It contains 201 exported states
+from 0 to 10 seconds, sampled at 20 Hz, for the September 8 recording
+ deck-20260908-175129.mcap, bag time 579-589 seconds.
+Camera source: approximately 2 Hz; the supplied 1024 x 512, 10 fps MP4 holds recorded
+images, preserving bag-clock alignment. No synthetic camera frames are added.
+The q29 arrays are measured joint angles (radians); the replay linearly
+interpolates joint angles and positions and spherically interpolates base
+quaternions. Display coordinates map [x,y,z] to [x,z,-y].
+rootPosition is the source replay's relative trajectory; odomPosition and
+odomYaw preserve the source's odometry coordinates. The state inspector shows
+nearest exported samples, not interpolated display states.
+
+This component contains only the synchronized camera/body/state excerpt.
+Operator events from other sessions and illustrative corrections are not
+silently mixed into this recording.
+
+Three.js and GLTFLoader
+----------------------
+three-replay.js isolates the first Three.js r186 + GLTFLoader bundle from
+https://anjiecheng.me/talks/asena/public-runtime.js and exposes the constructors
+needed by the standalone viewer. Its upstream license comment is retained.
+The original replay's coordinate mapping, joint mapping, and view are retained
+in the readable recorder.js adaptation.
+
+MIT License
+Copyright 2010-2026 Three.js Authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

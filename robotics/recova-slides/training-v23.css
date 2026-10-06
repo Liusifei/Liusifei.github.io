@@ -1,0 +1,16 @@
+/* One paper-native training motif, horizontal under rollouts and vertical at transfer. */
+.slide.training-v23{--tr23-color:#a4604f;--tr23-paper:#fffdf7;--tr23-line:#b5b8a8}
+.slide.training-v23.dark{--tr23-color:#bfd7a2;--tr23-paper:#1b291e;--tr23-line:#75816b}
+.slide.training-v23 .tr23-training-flow{display:block;width:100%;color:var(--tr23-color);overflow:visible}
+.slide.training-v23 .tr23-policy-surface{fill:var(--tr23-paper)}
+.slide.training-v23 .tr23-link{fill:none;stroke:var(--tr23-line);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;color:var(--tr23-line)}
+.slide.training-v23 .tr23-label{font-family:var(--font);font-size:28px;font-weight:400;letter-spacing:-.4px;fill:var(--muted)}
+.slide.training-v23 .tr23-rho{font-family:var(--font);font-size:42px;font-weight:500;fill:var(--tr23-color)}
+.slide.training-v23 .tr23-products-training{margin-top:17px;width:100%}
+.slide.training-v23 .tr23-products-training .tr23-training-flow{height:143px}
+.slide.training-v23 .rm15-experience .tr23-instruction{font-size:29px;line-height:1.2;margin-top:21px;margin-bottom:0;color:var(--accent)}
+.slide.transfer-v20.training-v23 .tv20-pair{grid-template-columns:1fr 194px 1fr;gap:23px;max-width:1450px}
+.slide.transfer-v20.training-v23 .tr23-transfer-training{display:block;align-self:center;transform:translateY(-27px);width:194px}
+.slide.transfer-v20.training-v23 .tr23-transfer-training .tr23-training-flow{height:376px}
+.slide.transfer-v20.training-v23 .tr23-label{fill:#bec8b1;font-size:27px}
+.slide.transfer-v20.training-v23 .tr23-rho{font-size:31px}

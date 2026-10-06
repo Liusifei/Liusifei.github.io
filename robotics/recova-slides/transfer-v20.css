@@ -1,0 +1,17 @@
+/* A concrete Apple Pencil sim-to-real pair, using the paper's source crops. */
+.slide.transfer-v20 .body{justify-content:center;margin-top:25px}
+.slide.transfer-v20 .tv20-pair{display:grid;grid-template-columns:1fr 98px 1fr;gap:23px;align-items:center;width:100%;max-width:1420px;margin:0 auto}
+.slide.transfer-v20 .tv20-film{position:relative;isolation:isolate;aspect-ratio:4/3;width:100%;height:auto;overflow:hidden;background:#18251d;border-radius:5px}
+.slide.transfer-v20 .tv20-film video,.slide.transfer-v20 .tv20-film .video-still{position:absolute;max-width:none!important;object-fit:fill;transform:none}
+/* Native pixel geometry is retained: 640×480 region of the 1280×720 sim. */
+.slide.transfer-v20 .tv20-sim video,.slide.transfer-v20 .tv20-sim .video-still{width:200%!important;height:150%!important;left:-68.75%!important;top:-18.75%!important}
+/* Paper's 2100×1575 crop of the 4K recording, at the deck's one-third scale. */
+.slide.transfer-v20 .tv20-real video,.slide.transfer-v20 .tv20-real .video-still{width:182.857143%!important;height:137.142857%!important;left:-42.857143%!important;top:-28.571429%!important}
+.slide.transfer-v20 .tv20-pair figcaption{font-size:31px;line-height:1.25;text-align:center;margin-top:24px;color:var(--paper);letter-spacing:-.35px}
+.slide.transfer-v20 .tv20-training{display:flex;flex-direction:column;align-items:center;gap:12px;color:#bdd79e;transform:translateY(-28px)}
+.slide.transfer-v20 .tv20-training span{font-size:27px;line-height:1.2;white-space:nowrap}
+.slide.transfer-v20 .tv20-training b{font-size:62px;line-height:1;font-weight:400}
+.slide.transfer-v20 .tv20-film .play-overlay{z-index:4;opacity:0;pointer-events:none}
+.slide.transfer-v20 .tv20-film:hover .play-overlay,.slide.transfer-v20 .tv20-film:focus-within .play-overlay{opacity:1;pointer-events:auto}
+.slide.transfer-v20 .tv20-film .play-overlay:before{content:none}
+@media print{.slide.transfer-v20 .tv20-film .video-still{opacity:1!important;visibility:visible!important}}

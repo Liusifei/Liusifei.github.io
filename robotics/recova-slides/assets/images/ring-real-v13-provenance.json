@@ -1,0 +1,24 @@
+{
+  "source": "assets/media/ring-recovery.mp4",
+  "operation": "Faithful frame extraction and identical crop only; no generated pixels or compositing.",
+  "crop": {
+    "x": 430,
+    "y": 25,
+    "width": 640,
+    "height": 570
+  },
+  "frames": [
+    {
+      "asset": "assets/images/ring-real-caught-v13.jpg",
+      "timestamp_seconds": 0.3
+    },
+    {
+      "asset": "assets/images/ring-real-contact-v13.jpg",
+      "timestamp_seconds": 5.8
+    },
+    {
+      "asset": "assets/images/ring-real-seated-v13.jpg",
+      "timestamp_seconds": 10.6
+    }
+  ]
+}

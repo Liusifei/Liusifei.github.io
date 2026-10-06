@@ -1,0 +1,23 @@
+/* Matched recorded real/twin replay videos anchor the exploration / verification / learning loop. */
+.feedback-grounding-slide:not(.cover) .body{margin-top:28px;justify-content:center}
+.feedback-grounding-slide .fg-loop{display:grid;grid-template-columns:minmax(0,1fr) 26px minmax(0,1fr) 26px minmax(0,1fr);column-gap:19px;align-items:start;width:100%}
+.feedback-grounding-slide .fg-stage{min-width:0;margin:0}
+.feedback-grounding-slide .fg-stage h3{font-size:30px;line-height:1.22;font-weight:400;margin:0 0 23px;white-space:nowrap;color:#e3ead8}
+.feedback-grounding-slide .fg-stage h3 span{font-family:var(--mono);font-size:21px;color:#a6c385;margin-right:14px;vertical-align:2px}
+.feedback-grounding-slide .fg-visual{width:100%;aspect-ratio:4/3;border-radius:3px;overflow:hidden;background:#202a1b;border:1px solid #5e705148}
+.feedback-grounding-slide .fg-visual img:not(.video-still){display:block;width:100%;height:100%;object-fit:contain;border-radius:0;max-height:none}
+.feedback-grounding-slide .fg-data-visual{background:transparent;border-color:transparent;overflow:visible}
+.feedback-grounding-slide .fg-stage figcaption{font-size:26px;line-height:1.35;color:#becaaf;margin-top:23px;letter-spacing:-.12px}
+.feedback-grounding-slide .fg-connector{font-family:var(--font);font-size:36px;line-height:1;color:#8da574;align-self:start;margin-top:207px}
+.feedback-grounding-slide .fg-experience{display:block;width:100%;height:100%;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.feedback-grounding-slide .fg-experience marker path{stroke:#b9da96;stroke-width:1.5;fill:none}
+.feedback-grounding-slide .fg-store{stroke:#88a26d;stroke-width:2;fill:#2a3622}
+.feedback-grounding-slide .fg-recovery-store{stroke:#b9da96;fill:#354929}
+.feedback-grounding-slide .fg-trace{stroke:#7f9865;stroke-width:2;fill:none;opacity:.85}
+.feedback-grounding-slide .fg-policy-arrow{stroke:#b9da96;stroke-width:2.5}
+.feedback-grounding-slide .fg-data-label{fill:#d5e1c4;stroke:none;font:28px var(--font)}
+.feedback-grounding-slide .fg-policy{fill:#c6ef97;stroke:none;font:italic 43px var(--font)}
+
+.feedback-grounding-slide .fg-visual.media{height:auto;aspect-ratio:4/3}
+.feedback-grounding-slide .fg-visual.media video{width:100%;height:100%;object-fit:contain}
+.feedback-grounding-slide .fg-visual.media .media-tag{font-size:18px!important;padding:7px 10px;background:#10170cd9;color:#edf4e3}

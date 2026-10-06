@@ -1,0 +1,15 @@
+/* The instruction carries the motivation; paper symbols make the sequence explicit. */
+.slide.failure-v24>.body{justify-content:flex-start;padding-top:22px}
+.ff24-motivation{width:100%}
+.ff24-instruction{margin-bottom:30px}
+.ff24-instruction>span{display:block;font:400 26px/1.2 var(--font);letter-spacing:-.2px;color:#748364;margin-bottom:8px}
+.slide.failure-v24 .ff24-instruction p{font:400 44px/1.15 var(--font);letter-spacing:-.6px;color:#2c4322;margin:0;white-space:nowrap}
+.ff24-sequence{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;width:100%;align-items:start}
+.ff24-sequence figure{margin:0;min-width:0}
+.slide.failure-v24 .ff24-stage{position:relative;display:flex;justify-content:center;align-items:center;gap:15px;height:66px;margin:0 0 16px;padding:0;color:#49663a;font:400 36px/1.2 var(--font);letter-spacing:-.65px;white-space:nowrap}
+.slide.failure-v24 .ff24-stage.ff24-failure{color:#aa6248}
+.ff24-icon{display:block;width:59px;height:59px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ff24-flow-arrow{position:absolute;right:-50px;top:18px;width:72px;height:30px;fill:none;stroke:#9bab8b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+/* Reuse the exact v20 media geometry and framing. */
+.slide.failure-v24 .ff20-panel{height:400px;aspect-ratio:auto}
+.slide.failure-v24 .ff20-panel video,.slide.failure-v24 .ff20-panel img{object-fit:cover;object-position:center}

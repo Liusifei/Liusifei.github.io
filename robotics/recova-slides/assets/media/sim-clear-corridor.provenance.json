@@ -1,0 +1,13 @@
+{
+  "source": "website-source-media/twin_galleries/insert_circle/clear_neighbor_ring/inspection.mp4",
+  "source_metadata": "website-source-media/twin_galleries/insert_circle/videos.json",
+  "skill": "clear_neighbor_ring",
+  "title": "Move a neighboring ring out of the grasp corridor",
+  "rendering": "Original recorded states, native 1280\u00d7720 MuJoCo inspection render; copied without cropping or modification",
+  "duration_seconds": 79.3,
+  "playback_rate": 4,
+  "playback_note": "4\u00d7 browser playback of source video; source end state includes a one-second display hold.",
+  "video_sha256": "2406caeff69cd7f4368764c32bc11c134d1f10238929c5985a013c78bba006ab",
+  "poster_frame_seconds": 0.5,
+  "interpretation": "Qualitative twin recovery example. Process diagram is schematic, not a live trace. Not evidence of per-skill or physical success rate."
+}

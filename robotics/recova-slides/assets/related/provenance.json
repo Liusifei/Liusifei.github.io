@@ -1,0 +1,22 @@
+[
+  {
+    "asset": "assets/related/recovery-teaser.png",
+    "source": "https://arxiv.org/html/2410.13979v2/figs/teaser.png",
+    "project": "https://arxiv.org/abs/2410.13979",
+    "credit": "Vats et al., RecoveryChaining, IROS 2025",
+    "figure": "Paper teaser: simulated failure and learned physical recovery",
+    "content_changes": "None; original image reproduced in full.",
+    "sha256": "83ce0665cc12f46d1f2b79f13d33327a676a4afe5c60e48f942c0f2c6c8f7749",
+    "retrieved": "2026-09-29"
+  },
+  {
+    "asset": "assets/related/racer-framework.png",
+    "source": "https://rich-language-failure-recovery.github.io/static/images/model_framework.png",
+    "project": "https://rich-language-failure-recovery.github.io/",
+    "credit": "Dai et al., RACER, ICRA 2025",
+    "figure": "Original project model architecture figure",
+    "content_changes": "None; reproduced in full.",
+    "retrieved": "2026-09-30",
+    "sha256": "e9c2776c5c42ac334dcc2d2c6187badff236620c6aa148b0e9ed75e33b674cc8"
+  }
+]

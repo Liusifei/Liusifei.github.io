@@ -1,0 +1,12 @@
+/* Three concise takeaways, in the same order as the oral conclusion. */
+.slide.closing-v30 .cl30-shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(5,15,11,.66) 0%,rgba(5,15,11,.3) 30%,rgba(5,15,11,.18) 45%,rgba(5,15,11,.78) 73%,rgba(5,15,11,.93) 100%),linear-gradient(90deg,rgba(5,15,11,.72),rgba(5,15,11,.08) 86%)}
+.slide.closing-v30 .cl30-masthead{position:absolute;top:56px;left:72px;right:72px;z-index:3;display:flex;align-items:center;justify-content:space-between;color:#fff}
+.slide.closing-v30 .cl30-masthead>span:last-child{font-family:var(--font);font-size:26px;border-bottom:1px solid #ffffff80;padding-bottom:8px}
+.slide.closing-v30 .cl30-copy{position:absolute;top:236px;left:72px;right:72px;z-index:3;color:#fff}
+.slide.closing-v30 .cl30-copy h2{font-family:var(--font);font-size:76px;font-weight:400;line-height:1.1;letter-spacing:-1.6px;max-width:1260px;margin:0}
+.slide.closing-v30 .cl30-takeaways{position:absolute;left:72px;right:72px;bottom:109px;display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:38px;z-index:3;color:#fff}
+.slide.closing-v30 .cl30-takeaway{position:relative;padding-top:22px;border-top:1px solid #e5eddc88}
+.slide.closing-v30 .cl30-step{display:block;font-family:"JetBrains Mono",monospace;font-size:20px;color:#d1de8e;line-height:1.2;margin-bottom:18px}
+.slide.closing-v30 .cl30-takeaway h3{font-family:var(--font);font-size:34px;font-weight:500;letter-spacing:-.45px;line-height:1.18;margin:0 0 17px}
+.slide.closing-v30 .cl30-takeaway p{font-family:var(--font);font-size:29px;font-weight:400;line-height:1.32;letter-spacing:-.2px;color:#e6eddf;margin:0}
+.slide.closing-v30 .closing-film .play-overlay{bottom:34px}

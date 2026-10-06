@@ -1,0 +1,29 @@
+/* An illustrative agent console showing decisions and delegated execution. */
+.slide.monitor-control-v23 .body{justify-content:center;margin-top:23px}
+.slide.monitor-control-v23 .mc23-composition{display:grid;grid-template-columns:618px 1fr;gap:54px;align-items:center;max-width:1440px;width:100%;margin:0 auto}
+.slide.monitor-control-v23 .mc23-film{position:relative;isolation:isolate;width:618px;height:550px;aspect-ratio:640/570;overflow:hidden;border-radius:5px;background:#e8e5db}
+.slide.monitor-control-v23 .mc23-film video,.slide.monitor-control-v23 .mc23-film .video-still{position:absolute;max-width:none!important;width:200%!important;height:126.315789%!important;left:-67.1875%!important;top:-4.385965%!important;object-fit:fill;transform:none}
+.slide.monitor-control-v23 .mc23-film .play-overlay{z-index:4}
+.slide.monitor-control-v23 .mc23-film .play-overlay:before{content:none}
+.slide.monitor-control-v23 .mc23-console{padding:23px 27px 22px;background:#eef1e9;border:1px solid #bac8ad;border-radius:7px;box-shadow:0 12px 28px #203b1712;color:#20311a}
+.slide.monitor-control-v23 .mc23-header{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding-bottom:17px;border-bottom:1px solid #c8d1bf}
+.slide.monitor-control-v23 .mc23-header strong{font-size:32px;line-height:1.15;font-weight:500;letter-spacing:-.6px}
+.slide.monitor-control-v23 .mc23-header>span{font-size:23px;line-height:1.2;color:#76826d}
+.slide.monitor-control-v23 .mc23-context{display:grid;grid-template-columns:165px 1fr;gap:10px 18px;align-items:baseline;margin:19px 0 22px}
+.slide.monitor-control-v23 .mc23-context dt{font-size:25px;line-height:1.25;color:#64715a}
+.slide.monitor-control-v23 .mc23-context dd{margin:0;font-size:29px;line-height:1.2;letter-spacing:-.3px}
+.slide.monitor-control-v23 .mc23-query-strip{display:flex;gap:34px;align-items:center;border-bottom:1px solid #c8d1bf;margin:0 0 20px}
+.slide.monitor-control-v23 .mc23-query-strip>span{font-size:25px;line-height:1.2;color:#8a9381;padding:0 0 10px;border-bottom:3px solid transparent;margin-bottom:-1px;transition:color .25s,border-color .25s}
+.slide.monitor-control-v23 .mc23-query-strip>.is-current{color:#477030;border-bottom-color:#658744}
+.slide.monitor-control-v23 .mc23-decision h3{font-size:36px;font-weight:400;line-height:1.16;color:#2d451f;margin:0;letter-spacing:-.7px}
+.slide.monitor-control-v23 .mc23-decision>p{font-size:29px;line-height:1.25;color:#69775e;margin-top:10px}
+.slide.monitor-control-v23 .mc23-command{border-left:4px solid #70924c;background:#e1ead6;padding:17px 22px 18px;margin-top:21px;transition:background .3s,border-color .3s}
+.slide.monitor-control-v23 .mc23-command-label{display:block;font-size:24px;line-height:1.15;color:#627653;margin-bottom:11px}
+.slide.monitor-control-v23 .mc23-command strong{display:block;font-size:33px;line-height:1.18;font-weight:500;letter-spacing:-.5px;color:#29491b}
+.slide.monitor-control-v23 .mc23-command>p{font-size:29px;line-height:1.22;color:#3d562c;margin-top:11px}
+.slide.monitor-control-v23 .mc23-executor{font-size:25px;line-height:1.25;color:#6f7d65;margin-top:17px}
+.slide.monitor-control-v23 [data-control-phase="execute"] .mc23-command{background:#eae1d5;border-left-color:#a78257}
+.slide.monitor-control-v23 [data-control-phase="execute"] .mc23-command strong{color:#76522e}
+.slide.monitor-control-v23 [data-control-phase="verify"] .mc23-command{background:#dce9ce;border-left-color:#527a36}
+@media(prefers-reduced-motion:reduce){.slide.monitor-control-v23 .mc23-query-strip>span,.slide.monitor-control-v23 .mc23-command{transition:none}}
+@media print{.slide.monitor-control-v23 .mc23-film .video-still{opacity:1!important;visibility:visible!important}}

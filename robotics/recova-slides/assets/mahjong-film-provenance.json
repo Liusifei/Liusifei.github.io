@@ -1,0 +1,20 @@
+{
+  "source": "website-source-media/teaser/IMG_2280.MOV",
+  "source_sha256": "ffdf5a1b60dcfdf4ac923cdcff89d261d8476b14809b59902161fcf92926615e",
+  "source_in_seconds": 302,
+  "source_out_seconds_exclusive": 872,
+  "source_segment_duration_seconds": 570,
+  "speed": 5,
+  "edit_revision": 4,
+  "duration_seconds": 114.0,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "browser_playback_rate": 1,
+  "speed_changes_encoded": true,
+  "captions": false,
+  "audio": false,
+  "video_sha256": "01c1ac93a870c9510f82dc0bf4706a6ccf8a227d4a1c03382d172aa60d41e0ce"
+}

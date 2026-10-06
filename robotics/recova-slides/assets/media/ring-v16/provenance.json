@@ -1,0 +1,113 @@
+{
+  "scope": "Selected ring-stacking recoveries from the same digital twin; qualitative examples, not hardware validation.",
+  "clips": [
+    {
+      "skill": "reacquire_ring",
+      "title": "Recover an unsuccessful ring pickup",
+      "source": "website-source-media/twin_galleries/insert_circle/reacquire_ring/inspection.mp4",
+      "source_manifest": "website-source-media/twin_galleries/insert_circle/videos.json",
+      "source_sha256": "d4882bc1c0c413cc96ccd53bde01251cd26e18675c644838245b9ea04f86c957",
+      "video": "reacquire_ring.mp4",
+      "poster": "reacquire_ring.webp",
+      "processing": "Video copied byte-for-byte; poster extracted at 0.1 s and uniformly resized to 640x360.",
+      "duration_s": 50.55,
+      "case_id": "cached_pick_100",
+      "rendered_from": "Original states.npz; direct native16:9 MuJoCo render targets; mj_forward only",
+      "native_frame": [
+        1280,
+        720
+      ],
+      "browser_playback_rate": 4
+    },
+    {
+      "skill": "recenter_ring",
+      "title": "Withdraw from the peg rim and realign the bore",
+      "source": "website-source-media/twin_galleries/insert_circle/recenter_ring/inspection.mp4",
+      "source_manifest": "website-source-media/twin_galleries/insert_circle/videos.json",
+      "source_sha256": "521b8989b3191a0130e90eb39a93b9a8148bc369655e6b5cb8a52aabf6ec4a10",
+      "video": "recenter_ring.mp4",
+      "poster": "recenter_ring.webp",
+      "processing": "Video copied byte-for-byte; poster extracted at 0.1 s and uniformly resized to 640x360.",
+      "duration_s": 25.5,
+      "case_id": "cached_peg_200",
+      "rendered_from": "Original states.npz; direct native16:9 MuJoCo render targets; mj_forward only",
+      "native_frame": [
+        1280,
+        720
+      ],
+      "browser_playback_rate": 4
+    },
+    {
+      "skill": "yield_workspace",
+      "title": "Move the obstructing idle arm clear",
+      "source": "website-source-media/twin_galleries/insert_circle/yield_workspace/inspection.mp4",
+      "source_manifest": "website-source-media/twin_galleries/insert_circle/videos.json",
+      "source_sha256": "ff5b467e45b69d6f57c2d00d26318f3115dd48251dc9cdeff4dd1189830a63ae",
+      "video": "yield_workspace.mp4",
+      "poster": "yield_workspace.webp",
+      "processing": "Video copied byte-for-byte; poster extracted at 0.1 s and uniformly resized to 640x360.",
+      "duration_s": 24.6,
+      "case_id": "idle_blockage_300",
+      "rendered_from": "Original states.npz; direct native16:9 MuJoCo render targets; mj_forward only",
+      "native_frame": [
+        1280,
+        720
+      ],
+      "browser_playback_rate": 4
+    },
+    {
+      "skill": "level_released_ring",
+      "title": "Level a released ring stuck on the peg tip",
+      "source": "website-source-media/twin_galleries/insert_circle/level_released_ring/inspection.mp4",
+      "source_manifest": "website-source-media/twin_galleries/insert_circle/videos.json",
+      "source_sha256": "f27502e0d2a3f4e6c8c66936a4b0c09cbef7d89c16eba426c9b07cdc33eefad4",
+      "video": "level_released_ring.mp4",
+      "poster": "level_released_ring.webp",
+      "processing": "Video copied byte-for-byte; poster extracted at 0.1 s and uniformly resized to 640x360.",
+      "duration_s": 26.5,
+      "case_id": "level_released_ring_1000",
+      "rendered_from": "Original states.npz; direct native16:9 MuJoCo render targets; mj_forward only",
+      "native_frame": [
+        1280,
+        720
+      ],
+      "browser_playback_rate": 4
+    },
+    {
+      "skill": "relay_unreachable_ring",
+      "title": "Use the other arm to retrieve an unreachable ring",
+      "source": "website-source-media/twin_galleries/insert_circle/relay_unreachable_ring/inspection.mp4",
+      "source_manifest": "website-source-media/twin_galleries/insert_circle/videos.json",
+      "source_sha256": "c9e512d0cf4ad3560e39f80994730a9cee6dbcc80c978de1b9c887ef8323d1c2",
+      "video": "relay_unreachable_ring.mp4",
+      "poster": "relay_unreachable_ring.webp",
+      "processing": "Video copied byte-for-byte; poster extracted at 0.1 s and uniformly resized to 640x360.",
+      "duration_s": 128.7,
+      "case_id": "relay_unreachable_ring_1000",
+      "rendered_from": "Original states.npz; direct native16:9 MuJoCo render targets; mj_forward only",
+      "native_frame": [
+        1280,
+        720
+      ],
+      "browser_playback_rate": 4
+    },
+    {
+      "skill": "clear_neighbor_ring",
+      "title": "Move a neighboring ring out of the grasp corridor",
+      "source": "website-source-media/twin_galleries/insert_circle/clear_neighbor_ring/inspection.mp4",
+      "source_manifest": "website-source-media/twin_galleries/insert_circle/videos.json",
+      "source_sha256": "2406caeff69cd7f4368764c32bc11c134d1f10238929c5985a013c78bba006ab",
+      "video": "clear_neighbor_ring.mp4",
+      "poster": "clear_neighbor_ring.webp",
+      "processing": "Video copied byte-for-byte; poster extracted at 0.1 s and uniformly resized to 640x360.",
+      "duration_s": 79.3,
+      "case_id": "clear_neighbor_ring_1000",
+      "rendered_from": "Original states.npz; direct native16:9 MuJoCo render targets; mj_forward only",
+      "native_frame": [
+        1280,
+        720
+      ],
+      "browser_playback_rate": 4
+    }
+  ]
+}

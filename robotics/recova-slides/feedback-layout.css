@@ -1,0 +1,50 @@
+/* The explanation belongs with the claim, before its visual evidence. */
+.slide.explanation-first:not(.cover){padding-top:40px;padding-bottom:48px}
+.slide.explanation-first h2{font-size:54px;line-height:1.1;max-width:1472px}
+.slide.explanation-first .simple-kicker{font-size:22px;margin-bottom:14px}
+.slide .slide-subtitle{font:400 27px/1.32 var(--font);color:#67715e;margin:18px 0 0;max-width:1450px;letter-spacing:-.15px}
+.slide.dark .slide-subtitle{color:#bbc8ac}
+.slide.explanation-first .body{margin-top:24px}
+.slide.explanation-first .md-restoration-rule{display:block;border:0;margin-top:29px;padding:0}
+.slide.explanation-first .md-resume-route{justify-content:center;gap:32px;font-size:30px}
+.slide.explanation-first .md-resume-route span{max-width:none}
+.slide.explanation-first .md-recovery .media{height:395px}
+.slide.explanation-first .md-query-list{gap:16px}
+.slide.explanation-first .md-query-list .md-step{padding-top:14px}
+.slide.explanation-first .md-monitor figure img{height:370px}
+.slide.explanation-first .md-new-skill{padding-bottom:20px}
+.slide.explanation-first .md-branches{padding-top:23px}
+.slide.explanation-first .md-dataset-photos img{height:190px}
+.slide.explanation-first .md-transfer-pair .media{height:330px}
+.slide.explanation-first .md-policy-pair .media{height:310px}
+.slide.explanation-first .md-skill-gallery .media{height:305px}
+.slide.explanation-first .md-skill-gallery figcaption{margin-top:25px}
+.slide.explanation-first[data-slide-id="twin"] .twin-pair .media,
+.slide.explanation-first[data-slide-id="twin"] .live-twin{height:470px}
+.slide.explanation-first[data-slide-id="fleet"] .fleet-main .media{height:455px}
+.slide.explanation-first[data-slide-id="fleet"] .fleet-quad .media{height:215px}
+.slide.explanation-first[data-slide-id="architecture"] .native-pipeline{width:1180px}
+.slide.explanation-first[data-slide-id="architecture"] .overview-photos img{height:74px}
+.slide.explanation-first .ev-protocol-grid{margin-top:25px;padding-top:22px}
+.slide.explanation-first .task-strip img{height:190px}
+.slide.explanation-first[data-slide-id="hardware"] .chart{height:350px;max-height:350px}
+.slide.explanation-first[data-slide-id="hardware"] .ev-result-strip{margin-top:13px;padding-top:20px}
+.slide.explanation-first .ev-conclusion img{height:340px}
+.slide.explanation-first .ev-conclusion .ev-point-stack{gap:20px}
+.slide.explanation-first .ev-conclusion .ev-point h3{font-size:29px;margin-bottom:8px}
+.slide.explanation-first .ev-conclusion .ev-point p{font-size:26px;line-height:1.3}
+.slide.explanation-first .ev-conclusion+.ev-result-strip{margin-top:23px;padding-top:18px}
+.slide.explanation-first .ev-conclusion+.ev-result-strip strong{font-size:32px}
+.slide.explanation-first .ev-admission-flow{gap:22px}
+.slide.explanation-first .ev-validation-frames img{height:330px}
+.slide.explanation-first .ev-ablation-grid{margin-top:31px;padding-top:26px;border-top:1px solid var(--line)}
+.slide.explanation-first .ablation-top img{height:190px}
+.slide.explanation-first[data-slide-id="libero"] .big-table td,
+.slide.explanation-first[data-slide-id="libero"] .big-table th{padding:12px 10px}
+.slide.explanation-first .timing-table td,
+.slide.explanation-first .timing-table th{padding:10px}
+.slide.explanation-first .latency-chart{gap:15px;margin:18px 0 22px}
+.slide.explanation-first .ev-reference-grid{gap:34px}
+.slide.explanation-first .ev-ref-image{height:105px;margin-bottom:22px}
+.slide.explanation-first .ev-reference-grid h3{padding-bottom:17px;margin-bottom:18px}
+.slide.explanation-first .ev-reference-grid p{margin-bottom:20px}

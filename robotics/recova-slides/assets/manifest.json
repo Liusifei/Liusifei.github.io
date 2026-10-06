@@ -1,0 +1,175 @@
+[
+  {
+    "asset": "assets/media/ring-recovery.mp4",
+    "source": "website-iclr/assets/media/recovery/insert_circle/push_the_stuck_green_circle_down.mp4"
+  },
+  {
+    "asset": "assets/media/ring-recovery.webp",
+    "source": "website-iclr/assets/media/recovery/insert_circle/push_the_stuck_green_circle_down.webp"
+  },
+  {
+    "asset": "assets/media/ring-remove.mp4",
+    "source": "website-iclr/assets/media/recovery/insert_circle/take_the_top_circle_out.mp4"
+  },
+  {
+    "asset": "assets/media/ring-remove.webp",
+    "source": "website-iclr/assets/media/recovery/insert_circle/take_the_top_circle_out.webp"
+  },
+  {
+    "asset": "assets/media/ring-task.mp4",
+    "source": "website-iclr/assets/media/recovery/insert_circle/original_policy_insert_the_circle_in_size_order.mp4"
+  },
+  {
+    "asset": "assets/media/ring-task.webp",
+    "source": "website-iclr/assets/media/recovery/insert_circle/original_policy_insert_the_circle_in_size_order.webp"
+  },
+  {
+    "asset": "assets/media/pencil-recovery.mp4",
+    "source": "website-iclr/assets/media/recovery/put_apple_pen/reinsert_the_tray.mp4"
+  },
+  {
+    "asset": "assets/media/pencil-recovery.webp",
+    "source": "website-iclr/assets/media/recovery/put_apple_pen/reinsert_the_tray.webp"
+  },
+  {
+    "asset": "assets/media/draw-recovery.mp4",
+    "source": "website-iclr/assets/media/recovery/mahjong_draw/real_Restore_the_knocked_tile_back_into_the_wall.mp4"
+  },
+  {
+    "asset": "assets/media/draw-recovery.webp",
+    "source": "website-iclr/assets/media/recovery/mahjong_draw/real_Restore_the_knocked_tile_back_into_the_wall.webp"
+  },
+  {
+    "asset": "assets/media/sim-ring.mp4",
+    "source": "website-source-media/twin_galleries/insert_circle/level_released_ring/inspection.mp4"
+  },
+  {
+    "asset": "assets/media/sim-ring.webp",
+    "source": "website-source-media/twin_galleries/insert_circle/level_released_ring/inspection.mp4",
+    "frame_seconds": 0.5
+  },
+  {
+    "asset": "assets/media/hero.mp4",
+    "source": "recova-bot.github.io/assets/media/teaser/recova-agent-teaser.mp4"
+  },
+  {
+    "asset": "assets/media/hero.jpg",
+    "source": "recova-bot.github.io/assets/media/teaser/recova-agent-teaser-poster.jpg"
+  },
+  {
+    "asset": "assets/hero-provenance.json",
+    "source": "recova-bot.github.io/assets/media/teaser/recova-agent-teaser.json"
+  },
+  {
+    "asset": "assets/media/mahjong-film.mp4",
+    "source": "recova-bot.github.io/assets/media/teaser/recova-teaser.mp4"
+  },
+  {
+    "asset": "assets/media/mahjong-film.webp",
+    "source": "recova-bot.github.io/assets/media/teaser/recova-teaser.webp"
+  },
+  {
+    "asset": "assets/mahjong-film-provenance.json",
+    "source": "recova-bot.github.io/assets/media/teaser/recova-teaser.json"
+  },
+  {
+    "asset": "viewer.js",
+    "source": "recova-bot.github.io/viewer.js"
+  },
+  {
+    "asset": "replay.js",
+    "source": "recova-bot.github.io/replay.js"
+  },
+  {
+    "asset": "twin-assets.js",
+    "source": "recova-bot.github.io/twin-assets.js"
+  },
+  {
+    "asset": "assets/images/station-41.webp",
+    "source": "recova-bot.github.io/assets/media/data-collection/station-41-top.webp"
+  },
+  {
+    "asset": "assets/media/station-41.mp4",
+    "source": "recova-bot.github.io/assets/media/data-collection/station-41-top.mp4"
+  },
+  {
+    "asset": "assets/images/station-42.webp",
+    "source": "recova-bot.github.io/assets/media/data-collection/station-42-top.webp"
+  },
+  {
+    "asset": "assets/media/station-42.mp4",
+    "source": "recova-bot.github.io/assets/media/data-collection/station-42-top.mp4"
+  },
+  {
+    "asset": "assets/images/station-43.webp",
+    "source": "recova-bot.github.io/assets/media/data-collection/station-43-top.webp"
+  },
+  {
+    "asset": "assets/media/station-43.mp4",
+    "source": "recova-bot.github.io/assets/media/data-collection/station-43-top.mp4"
+  },
+  {
+    "asset": "assets/images/station-44.webp",
+    "source": "recova-bot.github.io/assets/media/data-collection/station-44-top.webp"
+  },
+  {
+    "asset": "assets/media/station-44.mp4",
+    "source": "recova-bot.github.io/assets/media/data-collection/station-44-top.mp4"
+  },
+  {
+    "asset": "assets/stations.json",
+    "source": "recova-bot.github.io/assets/media/data-collection/stations.json"
+  },
+  {
+    "asset": "assets/images/oven_failure_main.jpg",
+    "source": "paper/-ICLR-2027-ManipAgent/Figures/simrec_frames/oven_failure_main.jpg"
+  },
+  {
+    "asset": "assets/images/oven_recovery_main.jpg",
+    "source": "paper/-ICLR-2027-ManipAgent/Figures/simrec_frames/oven_recovery_main.jpg"
+  },
+  {
+    "asset": "assets/images/mug_failure_main.jpg",
+    "source": "paper/-ICLR-2027-ManipAgent/Figures/simrec_frames/mug_failure_main.jpg"
+  },
+  {
+    "asset": "assets/images/mug_recovery_main.jpg",
+    "source": "paper/-ICLR-2027-ManipAgent/Figures/simrec_frames/mug_recovery_main.jpg"
+  },
+  {
+    "asset": "assets/images/butter_failure_main.jpg",
+    "source": "paper/-ICLR-2027-ManipAgent/Figures/simrec_frames/butter_failure_main.jpg"
+  },
+  {
+    "asset": "assets/images/butter_recovery_main.jpg",
+    "source": "paper/-ICLR-2027-ManipAgent/Figures/simrec_frames/butter_recovery_main.jpg"
+  },
+  {
+    "asset": "assets/images/bowl_failure_main.jpg",
+    "source": "paper/-ICLR-2027-ManipAgent/Figures/simrec_frames/bowl_failure_main.jpg"
+  },
+  {
+    "asset": "assets/images/bowl_recovery_main.jpg",
+    "source": "paper/-ICLR-2027-ManipAgent/Figures/simrec_frames/bowl_recovery_main.jpg"
+  },
+  {
+    "asset": "assets/images/sim-ring-0.jpg",
+    "source": "assets/media/sim-ring.mp4",
+    "frame_seconds": 0.5
+  },
+  {
+    "asset": "assets/images/sim-ring-3.jpg",
+    "source": "assets/media/sim-ring.mp4",
+    "frame_seconds": 26
+  },
+  {
+    "asset": "assets/related/recovery-teaser.png",
+    "source": "https://arxiv.org/html/2410.13979v2/figs/teaser.png",
+    "project": "https://arxiv.org/abs/2410.13979",
+    "credit": "Vats et al., RecoveryChaining, IROS 2025",
+    "figure": "Paper teaser: simulated failure and learned physical recovery",
+    "content_changes": "None; original image reproduced in full.",
+    "sha256": "83ce0665cc12f46d1f2b79f13d33327a676a4afe5c60e48f942c0f2c6c8f7749",
+    "retrieved": "2026-09-29"
+  }
+]

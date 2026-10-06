@@ -1,0 +1,104 @@
+{
+  "sourcePage": "https://anjiecheng.me/talks/asena/",
+  "retrievedDate": "2026-10-05",
+  "modifications": "None. Original video and poster bytes retained. No playback speed alteration applied.",
+  "provenanceNotesSource": "Public source talk slide notes (opening, mission, interface).",
+  "visualReview": "Sampled the cover at 1, 4 and 8 seconds, search at 4 seconds and wave at 4 seconds. Robot is clearly visible in the external clips.",
+  "assets": [
+    {
+      "stem": "hero",
+      "durationSeconds": 12.1,
+      "width": 950,
+      "height": 900,
+      "fps": 30,
+      "suggestedSlide": 1,
+      "description": "Edited external-camera teaser: G1 departs, returns and waves.",
+      "caveats": [
+        "The original source combines departure and return from one supervised mission with a wave from a separate session.",
+        "This is an illustration of capabilities, not one continuous task or a reliability measurement."
+      ],
+      "decodedWithoutErrors": true,
+      "codec": "H.264",
+      "pixelFormat": "yuv420p",
+      "audioStream": false,
+      "localFiles": [
+        {
+          "file": "hero.mp4",
+          "sourceUrl": "https://anjiecheng.me/talks/asena/assets/ember/hero.mp4",
+          "bytes": 2775824,
+          "sha256": "85cacaae0d7d1e3f9e152a52ab4dc9aeaefada87eb91c0c8e391f615e3214c4f"
+        },
+        {
+          "file": "hero.jpg",
+          "sourceUrl": "https://anjiecheng.me/talks/asena/assets/ember/hero.jpg",
+          "bytes": 131146,
+          "sha256": "db6ba10cb697eb9aa341a50f178b4a1a49cd6731b93eb8ae1c12b7c827759b4f"
+        }
+      ]
+    },
+    {
+      "stem": "mission-search",
+      "durationSeconds": 10.25,
+      "width": 1280,
+      "height": 640,
+      "fps": 24,
+      "suggestedSlide": 2,
+      "description": "Robot panoramic camera recording during the vending-machine search mission.",
+      "caveats": [
+        "Qualitative mission example; it does not isolate ASENA-VLN from other components or establish reliability.",
+        "This is a panoramic camera view rather than an external view of the robot."
+      ],
+      "decodedWithoutErrors": true,
+      "codec": "H.264",
+      "pixelFormat": "yuv420p",
+      "audioStream": false,
+      "localFiles": [
+        {
+          "file": "mission-search.mp4",
+          "sourceUrl": "https://anjiecheng.me/talks/asena/assets/round2/mission-search.mp4",
+          "bytes": 1108751,
+          "sha256": "e43229517059769a5f4676d8ed30bdab246eeb5457719df5dbf8573c5bc138df"
+        },
+        {
+          "file": "mission-search.jpg",
+          "sourceUrl": "https://anjiecheng.me/talks/asena/assets/round2/mission-search.jpg",
+          "bytes": 94980,
+          "sha256": "73f2ba7139f2070a8f8d9d4177b3e61b7f690b716207b07e91a92cc82544ea5e"
+        }
+      ]
+    },
+    {
+      "stem": "real-wave",
+      "durationSeconds": 6.6,
+      "width": 950,
+      "height": 900,
+      "fps": 30,
+      "suggestedSlide": 4,
+      "description": "External recording of the physical G1 performing an upper-body wave; can also support the programmed-motion branch on slide 2.",
+      "caveats": [
+        "The source identifies the accompanying authored-gesture rendering as commanded targets, not measured tracking or physics rollout.",
+        "Its measured-joint inset comes from a separate session and is not synchronized to this video.",
+        "This clip alone is not proof of validation coverage or safety; use as a qualitative execution example."
+      ],
+      "decodedWithoutErrors": true,
+      "codec": "H.264",
+      "pixelFormat": "yuv420p",
+      "audioStream": false,
+      "localFiles": [
+        {
+          "file": "real-wave.mp4",
+          "sourceUrl": "https://anjiecheng.me/talks/asena/assets/gesture/real-wave.mp4",
+          "bytes": 1840514,
+          "sha256": "cf0f4221d4ae7fe776a5da4cfa40323a0804426ec3082e25979e8ef0f4abf820"
+        },
+        {
+          "file": "real-wave.jpg",
+          "sourceUrl": "https://anjiecheng.me/talks/asena/assets/gesture/real-wave.jpg",
+          "bytes": 127614,
+          "sha256": "52f2a13d139ec85d71e0f4289ecb4b37de65c354dc983090eb52093cd5a1a75e"
+        }
+      ]
+    }
+  ],
+  "totalBytes": 6078829
+}

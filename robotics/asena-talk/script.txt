@@ -25,7 +25,7 @@ SPOKEN SCRIPT
 I’ll present ASENA: Self-Evolving Agents for Embodied Navigation. We built a system that lets a coding agent turn a request into programs, execute them through robot interfaces, and inspect what happened. The persistent workspace is central: useful code, skills and experience survive beyond one attempt. During the workspace evolution I’ll show today, all model weights stay fixed. The improvements come from what the system retains and reuses.
 
 PRESENTER CUE — not spoken
-Hold the real G1 visual for 4 seconds after the opening sentence. Start directly with the system; do not add an agenda.
+Let the real G1 cover video play while introducing ASENA. Pause for 4 seconds after the opening sentence, then point to the workspace/fixed-weights distinction. The 12-second edited montage combines departure and return from one mission with a wave from a separate supervised recording.
 
 SOURCES — not spoken
 https://arxiv.org/html/2609.39207v1
@@ -44,7 +44,7 @@ The proposal then crosses an execution boundary. Independent checks and operator
 That return path matters: the agent can inspect a failed assumption, revise its program, and retain the useful procedure in its workspace.
 
 PRESENTER CUE — not spoken
-Use the diagram in order: observations and task → coding agent and workspace → alternative motion tools → checked execution → feedback. Pause 6 seconds after explaining the return path so the loop is visible.
+Advance twice: first reveal the learned-policy and programmed-motion routes with the recorded robot view, then reveal validation, approval, execution and returning feedback. Pause for 6 seconds on the complete loop. “Expand” opens the recorded navigation view without leaving this slide.
 
 SOURCES — not spoken
 https://arxiv.org/html/2609.39207v1#S3.SS1
@@ -64,7 +64,7 @@ The important step is consolidation. Between passes, we gather the traces, task 
 What changes is the code and retained experience. The coding model, improver and navigation policy keep their weights fixed. This gives us a concrete way to study whether accumulated experience improves subsequent attempts.
 
 PRESENTER CUE — not spoken
-Trace the diagram from the canonical workspace to 16 private copies, then point to gather, merge/test/prune, and redistribution. Reserve 6 seconds for the consolidation path. Model-weight labels remain fixed throughout.
+Advance from the canonical workspace to the private workers, then to gathering, merge/test/prune and reseeding. Spend the 6-second pause on the consolidation loop. Emphasize 16 workers and fixed model weights. The flow animation is a schematic of the process.
 
 SOURCES — not spoken
 https://arxiv.org/html/2609.39207v1#S3.SS2
@@ -83,7 +83,7 @@ That isolates code execution. Motion checking is a separate layer. A program pro
 For generated gestures, our MuJoCo checks use the robot’s self model. They check properties such as joint limits and self-collision, without simulating the complete surrounding world. Supervision therefore remains part of deployment. During reflection, motion is disabled while the agent inspects records and revises its skills.
 
 PRESENTER CUE — not spoken
-Highlight the process boundary first, then the external motion-validation and operator-approval path. Pause 4 seconds with both layers visible. Do not visually imply MuJoCo contains a complete world model.
+First explain the code boundary; advance to the separate physical execution path. Point to operator approval during the 4-second pause. “Watch a supervised gesture” opens a short G1 recording. MuJoCo checks the robot self model; this does not imply a complete environment simulation.
 
 SOURCES — not spoken
 https://arxiv.org/html/2609.39207v1#S3.SS1
@@ -101,7 +101,7 @@ A proposed training loop would reuse the interaction layer, but would need a tra
 That comparison is a proposed extension. The ASENA results here come from fixed-weight workspace evolution.
 
 PRESENTER CUE — not spoken
-Point to the implemented W update and proposed theta update separately. Pause 4 seconds on the comparison, then move on. The trainable path is Proposed; no claim of evaluated RL.
+Show the implemented workspace update W, then advance to the proposed parameter update theta. Pause for 4 seconds with both visible and move on. The reusable interaction layer is implemented; agent training is a proposed extension.
 
 SOURCES — not spoken
 https://arxiv.org/html/2609.39207v1#S3.SS2
@@ -119,7 +119,7 @@ Evaluated alone, ASENA-VLN reaches 68.7 percent success on R2R and 70.2 percent 
 This gives us a concrete division of work: the coding agent composes the task, while the specialized model turns a navigation request into a short motion trajectory.
 
 PRESENTER CUE — not spoken
-Show the compact policy-only comparison. Pause 4 seconds on the RxR row. Exact figures remain visible: R2R Qwen/ASENA SR 66.9/68.7, NE 4.22/3.52, SPL 60.5/64.2; RxR SR 71.3/70.2, NE 4.15/3.90, nDTW 68.6/73.1, SPL 61.5/59.7. Source qualification: the published training recipes, data mixtures and evaluation filtering differ; this is a reported cross-model comparison.
+Explain the separate 4B navigation tool, then advance to both benchmark comparisons. Use the 4-second pause to highlight the mixed RxR outcome rather than reading every cell. Training recipes and evaluation filtering differ between the reported systems.
 
 SOURCES — not spoken
 https://arxiv.org/html/2609.39207v1
@@ -139,7 +139,7 @@ So both measured agents use fewer tool interactions: reductions of 62.5 and 51 p
 These counts measure agent–tool calls. They should not be read as robot steps or elapsed execution time.
 
 PRESENTER CUE — not spoken
-Present one backend at a time, then hold both rows for 6 seconds. The slide retains exact calls 103.83 → 38.91 and 40.80 → 19.98. Point to success changes separately from call reductions.
+Show the Sonnet row, then advance to Astra. During the 6-second pause, point out that both use fewer tool calls but their success rates move in different directions. These are agent–tool calls, not robot steps or elapsed time.
 
 SOURCES — not spoken
 https://arxiv.org/html/2609.39207v1#S4.SS3
@@ -156,7 +156,7 @@ The solid curves include the navigation policy; the dashed curves use the agent 
 Useful route and scene memory are part of what the workers can retain and replay. A repaired program or tested skill can also become part of the next workspace. Consolidation makes that feedback available to subsequent attempts. Across these recurring tasks, capability improved as the workspace accumulated experience, while the models themselves stayed fixed.
 
 PRESENTER CUE — not spoken
-Trace the four measured series over ten passes. Pause 6 seconds on the endpoints. R2R with policy ends at 98%, not 100%; no fitted scaling curve or extrapolation. Keep recurring-task protocol visible. Interpretation: this is a measured trend on recurring tasks, not a formal scaling law or held-out generalization result. The evolution campaign begins separately from the fresh-workspace comparison on the previous slide.
+Start at pass 1, advance through pass 5, then advance through pass 10. The animation retains every measured rise and dip in all four series. Pause for 6 seconds on the endpoints and recurring-task protocol. R2R with policy reaches 98%, not 100%; this is observed workspace evolution, not a fitted scaling law.
 
 SOURCES — not spoken
 https://arxiv.org/html/2609.39207v1#S4.SS4
@@ -176,7 +176,7 @@ We already use these records for safety inspection and skill revision. After cur
 This connects to Recova, where recovery experience is used to train manipulation policies. ASENA supplies inspectable programs, interactions and real robot experience for that broader learning loop.
 
 PRESENTER CUE — not spoken
-Let the synchronized MCAP replay run silently for 10 seconds after the first paragraph. Then point to the additional event channels with their provenance and deliver the short future-use statement. End on the real recording and Recova bridge, with no separate thank-you slide. Provenance: the synchronized clip shows camera, measured joints and body pose. Examples of programs, operator decisions and accepted voice text come from additional event channels and runs; do not imply all are synchronized events from this clip. Curated-data training is a possible later use, not a completed result.
+Let the synchronized MCAP replay run during the existing 10-second visual pause. Camera, measured joints and body pose advance together. Then advance to the additional record types, possible training uses and Recova bridge. The additional event channels come from other runs; inspection is implemented, while curated SFT or agent training is a future use.
 
 SOURCES — not spoken
 https://arxiv.org/html/2609.39207v1#S3.SS2

@@ -51,13 +51,13 @@
     {
       "id": "training",
       "title": "The interaction layer can support an agent-training loop",
-      "script": "For RSI, we keep the model fixed and improve the skills. For training, we could swap the API for a trainable model and use the same environments for rollouts. The goal is to make the coding agent faster.",
+      "script": "Here, we’re making a connection between RSI and agent training, which is our future work.\n\nFor RSI, we keep the model fixed and improve the skills. For training, we could swap the API for a trainable model and use the same environments for rollouts. The goal is to make the coding agent faster.",
       "stageDirection": "",
       "sources": [
         "https://arxiv.org/html/2609.39207v1#S3.SS2",
         "https://sifeiliu.net/robotics/"
       ],
-      "words": 38,
+      "words": 53,
       "combinedSlide": 5
     },
     {
@@ -110,6 +110,6 @@
       "combinedSlide": 9
     }
   ],
-  "spoken_words": 499,
+  "spoken_words": 514,
   "notesUpdated": "2026-10-06"
 }

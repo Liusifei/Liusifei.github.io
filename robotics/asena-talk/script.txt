@@ -31,8 +31,10 @@ On the real robot, we’re more strict. A motion proposal goes through validatio
 
 This sandbox can also support agent training.
 
-Slide 05 / 09 · Combined talk slide 5 · 38 words
+Slide 05 / 09 · Combined talk slide 5 · 53 words
 The interaction layer can support an agent-training loop
+
+Here, we’re making a connection between RSI and agent training, which is our future work.
 
 For RSI, we keep the model fixed and improve the skills. For training, we could swap the API for a trainable model and use the same environments for rollouts. The goal is to make the coding agent faster.
 

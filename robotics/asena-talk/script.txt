@@ -45,12 +45,10 @@ We also developed a navigation policy called ASENA-VLN. On its own, it achieves 
 
 What’s more interesting is what happens when a coding agent calls this policy.
 
-Slide 07 / 09 · Combined talk slide 7 · 76 words
+Slide 07 / 09 · Combined talk slide 7 · 35 words
 The navigation tool reduces coding-agent interaction
 
-On RxR, it improves Claude’s success rate by 11 percentage points, but lowers Astra’s by 7 points. So the effect on success depends on the model.
-The efficiency benefit is much more consistent: both agents need over 50% fewer tool calls.
-My takeaway is that coding agents and learned policies are complementary, especially for efficiency. The coding agent provides flexible reasoning, while the navigation policy handles movement without requiring the agent to work through every step.
+Adding VLN helps some models more than others. Claude goes up eleven points, while Astra goes down seven. But both use far fewer tool calls. So the learned policy still helps a lot with efficiency.
 
 Slide 08 / 09 · Combined talk slide 8 · 35 words
 Success grows as the workspace accumulates experience

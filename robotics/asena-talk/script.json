@@ -75,12 +75,12 @@
     {
       "id": "efficiency",
       "title": "The navigation tool reduces coding-agent interaction",
-      "script": "On RxR, it improves Claude’s success rate by 11 percentage points, but lowers Astra’s by 7 points. So the effect on success depends on the model.\nThe efficiency benefit is much more consistent: both agents need over 50% fewer tool calls.\nMy takeaway is that coding agents and learned policies are complementary, especially for efficiency. The coding agent provides flexible reasoning, while the navigation policy handles movement without requiring the agent to work through every step.",
+      "script": "Adding VLN helps some models more than others. Claude goes up eleven points, while Astra goes down seven. But both use far fewer tool calls. So the learned policy still helps a lot with efficiency.",
       "stageDirection": "",
       "sources": [
         "https://arxiv.org/html/2609.39207v1#S4.SS3"
       ],
-      "words": 76,
+      "words": 35,
       "combinedSlide": 7
     },
     {
@@ -110,6 +110,6 @@
       "combinedSlide": 9
     }
   ],
-  "spoken_words": 514,
+  "spoken_words": 473,
   "notesUpdated": "2026-10-06"
 }

@@ -54,10 +54,10 @@ As we collect more experience and retrain, the policy gets better. And what’s 
 
 Presenter cue: Each round collects experience with fixed policy weights, then fine-tunes the task and recovery policies for the next round. Point to the final measured round: 0 of 7 human takeovers.
 
-Slide 07 / 09 · Combined talk slide 16 · 14 words
+Slide 07 / 09 · Combined talk slide 16 · 29 words
 Collected experience improves the policy
 
-Even with real-world DAgger, adding a learned recovery policy gives us another ten points.
+We use this whole setup to collect data through autonomous DAgger. And when we add the learned recovery policy, success goes up another ten points—which is pretty exciting.
 
 Presenter cue: Let the real-robot recovery clips play.
 

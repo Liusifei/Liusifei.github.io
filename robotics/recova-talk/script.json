@@ -2,7 +2,7 @@
   "title": "Recova: Agent-Guided Failure Recovery for Autonomous Robotic Manipulation",
   "presenter": "Sifei Liu",
   "seconds": 450,
-  "spoken_words": 558,
+  "spoken_words": 573,
   "slides": [
     {
       "slide": 1,
@@ -126,8 +126,8 @@
       "slide": 7,
       "title": "Collected experience improves the policy",
       "seconds": 59,
-      "notes": "Even with real-world DAgger, adding a learned recovery policy gives us another ten points.",
-      "words": 14,
+      "notes": "We use this whole setup to collect data through autonomous DAgger. And when we add the learned recovery policy, success goes up another ten points—which is pretty exciting.",
+      "words": 29,
       "sources": [
         {
           "title": "Archived Recova source slide 15",

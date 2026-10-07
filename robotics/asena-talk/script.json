@@ -75,12 +75,12 @@
     {
       "id": "efficiency",
       "title": "The navigation tool reduces coding-agent interaction",
-      "script": "Adding VLN helps some models more than others. Claude goes up eleven points, while Astra goes down seven. But both use far fewer tool calls. So the learned policy still helps a lot with efficiency.\n\nMy personal view is that they complement each other, especially in terms of efficiency. One doesn’t have to replace the other.",
+      "script": "Adding VLN helps some models more than others. Claude goes up eleven points, while Astra goes down seven. But both use far fewer tool calls. So the learned policy still helps a lot with efficiency.\n\nRecently, there’s been a lot of debate about whether coding agents can replace learned policies. Personally, I think they complement each other, especially on efficiency. One doesn’t have to replace the other.",
       "stageDirection": "",
       "sources": [
         "https://arxiv.org/html/2609.39207v1#S4.SS3"
       ],
-      "words": 56,
+      "words": 67,
       "combinedSlide": 7
     },
     {
@@ -110,6 +110,6 @@
       "combinedSlide": 9
     }
   ],
-  "spoken_words": 494,
+  "spoken_words": 505,
   "notesUpdated": "2026-10-06"
 }

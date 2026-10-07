@@ -45,12 +45,12 @@ We also developed a navigation policy called ASENA-VLN. On its own, it achieves 
 
 What’s more interesting is what happens when a coding agent calls this policy.
 
-Slide 07 / 09 · Combined talk slide 7 · 56 words
+Slide 07 / 09 · Combined talk slide 7 · 67 words
 The navigation tool reduces coding-agent interaction
 
 Adding VLN helps some models more than others. Claude goes up eleven points, while Astra goes down seven. But both use far fewer tool calls. So the learned policy still helps a lot with efficiency.
 
-My personal view is that they complement each other, especially in terms of efficiency. One doesn’t have to replace the other.
+Recently, there’s been a lot of debate about whether coding agents can replace learned policies. Personally, I think they complement each other, especially on efficiency. One doesn’t have to replace the other.
 
 Slide 08 / 09 · Combined talk slide 8 · 35 words
 Success grows as the workspace accumulates experience

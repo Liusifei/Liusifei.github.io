@@ -2,7 +2,7 @@
   "title": "Recova: Agent-Guided Failure Recovery for Autonomous Robotic Manipulation",
   "presenter": "Sifei Liu",
   "seconds": 450,
-  "spoken_words": 640,
+  "spoken_words": 558,
   "slides": [
     {
       "slide": 1,
@@ -126,8 +126,8 @@
       "slide": 7,
       "title": "Collected experience improves the policy",
       "seconds": 59,
-      "notes": "The videos show learned physical corrections, from a caught ring to a disrupted tile row. The plot compares three configurations on the same four tasks. The base task policy is initialized from pi zero point five. With real-world DAgger fine-tuning, mean success rises from twenty-three point eight to seventy-seven point five percent.\n\nAdding recovery takes that to eighty-seven point five percent, improving all four tasks. Each task and configuration has twenty trials.\n\nSeparate simulation evaluations reach sixty-four point nine percent on MolmoSpaces and seventy-eight point eight on LIBERO-Pro, using a task policy with programmatic recovery.",
-      "words": 95,
+      "notes": "Even with real-world DAgger, adding a learned recovery policy gives us another ten points.",
+      "words": 14,
       "sources": [
         {
           "title": "Archived Recova source slide 15",
@@ -142,15 +142,15 @@
           "url": "../recova-slides/archive.html#17"
         }
       ],
-      "stageDirection": "Pause on the videos. Point to the first bars. Reveal DAgger. Reveal recovery. Reveal simulation.",
+      "stageDirection": "Let the real-robot recovery clips play.",
       "combinedSlide": 16
     },
     {
       "slide": 8,
       "title": "A twin turns failures into reusable corrections",
       "seconds": 48,
-      "notes": "Across these two projects, we use robot experience to improve either the agent’s skills or the learned policies.\n\nLooking ahead, we want to make coding agents faster through training, and make the data collection and policy improvement loop more autonomous.",
-      "words": 40,
+      "notes": "Across these two projects, we use robot experience to improve either the agent’s skills or the learned policies.\n\nWe want to train the coding agent to make it faster. And we want to make this whole loop more autonomous.",
+      "words": 39,
       "sources": [
         {
           "title": "Archived Recova source slide 19",

@@ -54,23 +54,19 @@ As we collect more experience and retrain, the policy gets better. And what’s 
 
 Presenter cue: Each round collects experience with fixed policy weights, then fine-tunes the task and recovery policies for the next round. Point to the final measured round: 0 of 7 human takeovers.
 
-Slide 07 / 09 · Combined talk slide 16 · 95 words
+Slide 07 / 09 · Combined talk slide 16 · 14 words
 Collected experience improves the policy
 
-The videos show learned physical corrections, from a caught ring to a disrupted tile row. The plot compares three configurations on the same four tasks. The base task policy is initialized from pi zero point five. With real-world DAgger fine-tuning, mean success rises from twenty-three point eight to seventy-seven point five percent.
+Even with real-world DAgger, adding a learned recovery policy gives us another ten points.
 
-Adding recovery takes that to eighty-seven point five percent, improving all four tasks. Each task and configuration has twenty trials.
+Presenter cue: Let the real-robot recovery clips play.
 
-Separate simulation evaluations reach sixty-four point nine percent on MolmoSpaces and seventy-eight point eight on LIBERO-Pro, using a task policy with programmatic recovery.
-
-Presenter cue: Pause on the videos. Point to the first bars. Reveal DAgger. Reveal recovery. Reveal simulation.
-
-Slide 08 / 09 · Combined talk slide 17 · 40 words
+Slide 08 / 09 · Combined talk slide 17 · 39 words
 A twin turns failures into reusable corrections
 
 Across these two projects, we use robot experience to improve either the agent’s skills or the learned policies.
 
-Looking ahead, we want to make coding agents faster through training, and make the data collection and policy improvement loop more autonomous.
+We want to train the coding agent to make it faster. And we want to make this whole loop more autonomous.
 
 Presenter cue: Discuss the future direction briefly, then advance to Q&A.
 

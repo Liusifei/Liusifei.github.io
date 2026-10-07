@@ -39,13 +39,13 @@
     {
       "id": "safety",
       "title": "The sandbox limits what generated code can do",
-      "script": "Let me briefly explain the workspace and its safety boundaries – this is also the logic to build the robot sandbox.\nThe agent can write Python code, use MuJoCo, call approved model and device APIs, and reuse existing skills. It can also keep temporary files and notes.\nBut it cannot access raw robot controls, operator credentials, or hidden evaluation data, and it cannot modify the trusted platform.\nOn the real robot, the agent first proposes an action. For navigation, we check the route and obstacle clearance using LiDAR, and enforce motion limits. For generated gestures, we also validate the trajectory in MuJoCo.\nThe proposal then goes to an operator, who can approve or reject it and optionally give a reason. Only an approved action is passed to SONIC for execution.",
+      "script": "The workspace is a sandbox. The agent can write code and notes, but it can’t change the platform or access operator credentials.\n\nOn the real robot, we’re more strict. A motion proposal goes through validation, then operator approval, before we send it to SONIC.\n\nThis sandbox can also support agent training.",
       "stageDirection": "",
       "sources": [
         "https://arxiv.org/html/2609.39207v1#S3.SS1",
         "https://anjiecheng.me/talks/asena/#jail"
       ],
-      "words": 129,
+      "words": 51,
       "combinedSlide": 4
     },
     {
@@ -110,6 +110,6 @@
       "combinedSlide": 9
     }
   ],
-  "spoken_words": 650,
+  "spoken_words": 572,
   "notesUpdated": "2026-10-06"
 }

@@ -22,14 +22,14 @@ To scale this up, we need to collect those rollouts efficiently. So we use 16 pa
 We distribute the tasks across the workers. After each pass, an improver agent merges, tests, and prunes their updates. That improved workspace becomes the starting point for the next pass.
 This is also ready to use as a rollout environment for code-as-policy training.
 
-Slide 04 / 09 · Combined talk slide 4 · 129 words
+Slide 04 / 09 · Combined talk slide 4 · 51 words
 The sandbox limits what generated code can do
 
-Let me briefly explain the workspace and its safety boundaries – this is also the logic to build the robot sandbox.
-The agent can write Python code, use MuJoCo, call approved model and device APIs, and reuse existing skills. It can also keep temporary files and notes.
-But it cannot access raw robot controls, operator credentials, or hidden evaluation data, and it cannot modify the trusted platform.
-On the real robot, the agent first proposes an action. For navigation, we check the route and obstacle clearance using LiDAR, and enforce motion limits. For generated gestures, we also validate the trajectory in MuJoCo.
-The proposal then goes to an operator, who can approve or reject it and optionally give a reason. Only an approved action is passed to SONIC for execution.
+The workspace is a sandbox. The agent can write code and notes, but it can’t change the platform or access operator credentials.
+
+On the real robot, we’re more strict. A motion proposal goes through validation, then operator approval, before we send it to SONIC.
+
+This sandbox can also support agent training.
 
 Slide 05 / 09 · Combined talk slide 5 · 111 words
 The interaction layer can support an agent-training loop

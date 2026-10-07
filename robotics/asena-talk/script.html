@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ASENA — Speaking Script</title><style>*{box-sizing:border-box}body{margin:0;background:#f6f5ef;color:#263e2c;font:18px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}main{max-width:880px;margin:auto;padding:44px 32px 80px}nav{display:flex;gap:24px;flex-wrap:wrap;font-size:14px;margin-bottom:36px}a,button{color:#166f73}a{text-underline-offset:4px}button{font:inherit;border:0;background:none;padding:0;text-decoration:underline;cursor:pointer}h1{font-size:42px;line-height:1.15;letter-spacing:-.04em;margin:0 0 16px}.intro{color:#6a7665;font-size:15px}.contents{display:grid;gap:7px;padding:24px 0 12px;font-size:15px}section{border-top:1px solid #d0d8c9;padding-top:30px;margin-top:40px;scroll-margin-top:22px}.slide-label{font-size:12px;color:#6a7665}h2{font-size:28px;line-height:1.3;letter-spacing:-.025em;margin:12px 0 25px}.spoken p{margin:0 0 18px}aside{background:#e8eddf;padding:16px 20px;margin:24px 0;font-size:14px;border-left:3px solid #166f73}aside p{margin:5px 0 0}details{font-size:12px;color:#6a7665}details a{overflow-wrap:anywhere}summary{cursor:pointer}@media print{body{font-size:12pt;background:#fff}main{padding:10px}nav,.contents,details{display:none}h1{font-size:28px}h2{font-size:22px}section{break-inside:avoid}}</style></head><body><main>
-<nav><a href="./">Open presentation</a><a href="script.txt" download>Download script</a><button onclick="window.print()">Print / Save PDF</button></nav><h1>ASENA Speaking Script</h1><p class="intro">Sifei Liu · 9 slides · 650 spoken words · Updated October 6, 2026</p><div class="contents">
+<nav><a href="./">Open presentation</a><a href="script.txt" download>Download script</a><button onclick="window.print()">Print / Save PDF</button></nav><h1>ASENA Speaking Script</h1><p class="intro">Sifei Liu · 9 slides · 572 spoken words · Updated October 6, 2026</p><div class="contents">
 <a href="#asena">01. ASENA</a>
 <a href="#composition">02. The agent composes, the robot executes</a>
 <a href="#workspace">03. Parallel workers evolve a shared workspace</a>
@@ -40,12 +40,10 @@
 <li><a href="https://anjiecheng.me/talks/asena/">https://anjiecheng.me/talks/asena/</a></li>
 </ul></details>
 </section>
-<section id="safety"><span class="slide-label">Slide 04 / 09 · Combined talk slide 4 · 129 words</span><h2>The sandbox limits what generated code can do</h2><div class="spoken">
-<p>Let me briefly explain the workspace and its safety boundaries – this is also the logic to build the robot sandbox.</p>
-<p>The agent can write Python code, use MuJoCo, call approved model and device APIs, and reuse existing skills. It can also keep temporary files and notes.</p>
-<p>But it cannot access raw robot controls, operator credentials, or hidden evaluation data, and it cannot modify the trusted platform.</p>
-<p>On the real robot, the agent first proposes an action. For navigation, we check the route and obstacle clearance using LiDAR, and enforce motion limits. For generated gestures, we also validate the trajectory in MuJoCo.</p>
-<p>The proposal then goes to an operator, who can approve or reject it and optionally give a reason. Only an approved action is passed to SONIC for execution.</p>
+<section id="safety"><span class="slide-label">Slide 04 / 09 · Combined talk slide 4 · 51 words</span><h2>The sandbox limits what generated code can do</h2><div class="spoken">
+<p>The workspace is a sandbox. The agent can write code and notes, but it can’t change the platform or access operator credentials.</p>
+<p>On the real robot, we’re more strict. A motion proposal goes through validation, then operator approval, before we send it to SONIC.</p>
+<p>This sandbox can also support agent training.</p>
 </div>
 <details><summary>Sources and supporting context</summary><ul>
 <li><a href="https://arxiv.org/html/2609.39207v1#S3.SS1">https://arxiv.org/html/2609.39207v1#S3.SS1</a></li>

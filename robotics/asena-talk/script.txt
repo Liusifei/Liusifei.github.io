@@ -31,13 +31,10 @@ On the real robot, we’re more strict. A motion proposal goes through validatio
 
 This sandbox can also support agent training.
 
-Slide 05 / 09 · Combined talk slide 5 · 111 words
+Slide 05 / 09 · Combined talk slide 5 · 38 words
 The interaction layer can support an agent-training loop
 
-Our distributed workers also give us a starting point for coding-agent training, by collecting rollouts efficiently in simulation.
-For RSI, we keep the model fixed and improve the code and skills in its workspace. For training, we would use a trainable model as the sampler, then connect those rollouts and simulator-based rewards to a standard training pipeline—for example, GRPO.
-So the learning mechanism is different, but much of the rollout infrastructure can be reused.
-This is an important next step for us because coding policies are still slow. We’d like training to help the agent solve tasks with fewer code revisions, more effective tool calls, and better reuse of skills.
+For RSI, we keep the model fixed and improve the skills. For training, we could swap the API for a trainable model and use the same environments for rollouts. The goal is to make the coding agent faster.
 
 Slide 06 / 09 · Combined talk slide 6 · 38 words
 ASENA-VLN provides reusable navigation

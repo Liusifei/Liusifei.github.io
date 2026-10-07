@@ -51,13 +51,13 @@
     {
       "id": "training",
       "title": "The interaction layer can support an agent-training loop",
-      "script": "Our distributed workers also give us a starting point for coding-agent training, by collecting rollouts efficiently in simulation.\nFor RSI, we keep the model fixed and improve the code and skills in its workspace. For training, we would use a trainable model as the sampler, then connect those rollouts and simulator-based rewards to a standard training pipeline—for example, GRPO.\nSo the learning mechanism is different, but much of the rollout infrastructure can be reused.\nThis is an important next step for us because coding policies are still slow. We’d like training to help the agent solve tasks with fewer code revisions, more effective tool calls, and better reuse of skills.",
+      "script": "For RSI, we keep the model fixed and improve the skills. For training, we could swap the API for a trainable model and use the same environments for rollouts. The goal is to make the coding agent faster.",
       "stageDirection": "",
       "sources": [
         "https://arxiv.org/html/2609.39207v1#S3.SS2",
         "https://sifeiliu.net/robotics/"
       ],
-      "words": 111,
+      "words": 38,
       "combinedSlide": 5
     },
     {
@@ -110,6 +110,6 @@
       "combinedSlide": 9
     }
   ],
-  "spoken_words": 572,
+  "spoken_words": 499,
   "notesUpdated": "2026-10-06"
 }

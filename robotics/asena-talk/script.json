@@ -3,102 +3,113 @@
     {
       "id": "asena",
       "title": "ASENA",
-      "script": "I’ll present ASENA: Self-Evolving Agents for Embodied Navigation. We built a system that lets a coding agent turn a request into programs, execute them through robot interfaces, and inspect what happened. The persistent workspace is central: useful code, skills and experience survive beyond one attempt. During the workspace evolution I’ll show today, all model weights stay fixed. The improvements come from what the system retains and reuses.",
-      "stageDirection": "Let the real G1 cover video play while introducing ASENA. Pause for 4 seconds after the opening sentence, then point to the workspace/fixed-weights distinction. The 12-second edited montage combines departure and return from one mission with a wave from a separate supervised recording.",
-      "pauseSeconds": 4,
+      "script": "I’ll talk about two recent projects on code as policy for robotics.\nThe first is ASENA, which focuses on navigation. We connect a coding agent to a robot environment and explore recursive self-improvement, or RSI.\nThe second is Recova, which focuses on manipulation with recovery skills. Here, we use code as policy to improve learned robot policies. The goal is to make the whole loop of data collection, training, and deployment as autonomous as possible.",
+      "stageDirection": "",
       "sources": [
         "https://arxiv.org/html/2609.39207v1"
-      ]
+      ],
+      "words": 75,
+      "combinedSlide": 1
     },
     {
       "id": "composition",
       "title": "The agent composes, the robot executes",
-      "script": "Let’s start with what the system actually does. A task and current observations enter the coding agent. The agent reads its workspace, decides what information it needs, and writes a program that combines the available tools. The task program can change as new evidence arrives.\n\nThere are two ways to produce motion here. The program can call our learned navigation policy with a goal and recent camera observations. Or it can compute geometric waypoints and construct other motion proposals, such as an upper-body gesture. These tools can be combined within one task.\n\nThe proposal then crosses an execution boundary. Independent checks and operator approval control what reaches the robot. SONIC handles whole-body execution on G1. New observations, outcomes and feedback return to the agent.\n\nThat return path matters: the agent can inspect a failed assumption, revise its program, and retain the useful procedure in its workspace.",
-      "stageDirection": "Advance twice: first reveal the learned-policy and programmed-motion routes with the recorded robot view, then reveal validation, approval, execution and returning feedback. Pause for 6 seconds on the complete loop. “Expand” opens the recorded navigation view without leaving this slide.",
-      "pauseSeconds": 6,
+      "script": "Here’s how it works. We give the agent a task and observations from either a real robot or a simulator.\nIt’s basically a standard coding agent connected to a robot environment. It works in a restricted workspace, where it can write code, skills, and notes.\nWe give the agent two kinds of tools.\nOne is learned models and policies, which can include VLA, VLN, or world models.\nThe other is interfaces to the environment, like cameras and LiDAR for sensing, Habitat for simulation, and SONIC for the real robot.\nThe agent writes code to combine these tools as skills, executes them, and uses the feedback to decide what to do next.",
+      "stageDirection": "",
       "sources": [
         "https://arxiv.org/html/2609.39207v1#S3.SS1",
         "https://anjiecheng.me/talks/asena/#architecture"
-      ]
+      ],
+      "words": 111,
+      "combinedSlide": 2
     },
     {
       "id": "workspace",
       "title": "Parallel workers evolve a shared workspace",
-      "script": "We used the same workspace idea to run repeated tasks in simulation. At the beginning of a pass, a canonical workspace seeds sixteen private worker copies. Each worker receives its own task context and executes independently, using code, skills and the available simulator tools.\n\nAs workers encounter problems, they inspect feedback and revise their local programs. They can also inspect peer work and exchange tips through a shared bulletin. So parallelism gives us several streams of experience, with some sharing during execution.\n\nThe important step is consolidation. Between passes, we gather the traces, task outcomes, notes and local edits. A fixed improver merges useful changes, tests them and prunes the workspace. The next pass starts from that consolidated version. We keep this shared revision as the next reproducible starting point.\n\nWhat changes is the code and retained experience. The coding model, improver and navigation policy keep their weights fixed. This gives us a concrete way to study whether accumulated experience improves subsequent attempts.",
-      "stageDirection": "Advance from the canonical workspace to the private workers, then to gathering, merge/test/prune and reseeding. Spend the 6-second pause on the consolidation loop. Emphasize 16 workers and fixed model weights. The flow animation is a schematic of the process.",
-      "pauseSeconds": 6,
+      "script": "Here, RSI means improving the workspace over repeated passes through a set of tasks. In each pass, the agent writes and runs code to solve the tasks and develops reusable skills. We keep the useful ones for the next pass, while the model weights stay fixed.\nTo scale this up, we need to collect those rollouts efficiently. So we use 16 parallel workers, each with its own simulation environment and private workspace, plus access to the navigation policy.\nWe distribute the tasks across the workers. After each pass, an improver agent merges, tests, and prunes their updates. That improved workspace becomes the starting point for the next pass.\nThis also gives us a strong starting point for future coding-agent training: the parallel environments and rollout interfaces are already in place.",
+      "stageDirection": "",
       "sources": [
         "https://arxiv.org/html/2609.39207v1#S3.SS2",
         "https://arxiv.org/html/2609.39207v1#S4.SS4",
         "https://anjiecheng.me/talks/asena/"
-      ]
+      ],
+      "words": 130,
+      "combinedSlide": 3
     },
     {
       "id": "safety",
       "title": "The sandbox limits what generated code can do",
-      "script": "The workspace contains generated code, so we also need to define its authority. The restricted process boundary covers the agent and its child processes. It exposes scoped resources and APIs while blocking direct control paths, protected credentials and unauthorized platform writes.\n\nThat isolates code execution. Motion checking is a separate layer. A program proposes a movement; external validation checks the applicable bounds, and an operator approves physical execution before SONIC carries it out. These controls remain outside the generated program.\n\nFor generated gestures, our MuJoCo checks use the robot’s self model. They check properties such as joint limits and self-collision, without simulating the complete surrounding world. Supervision therefore remains part of deployment. During reflection, motion is disabled while the agent inspects records and revises its skills.",
-      "stageDirection": "First explain the code boundary; advance to the separate physical execution path. Point to operator approval during the 4-second pause. “Watch a supervised gesture” opens a short G1 recording. MuJoCo checks the robot self model; this does not imply a complete environment simulation.",
-      "pauseSeconds": 4,
+      "script": "Let me briefly explain the workspace and its safety boundaries – this is also the logic to build the robot sandbox.\nThe agent can write Python code, use MuJoCo, call approved model and device APIs, and reuse existing skills. It can also keep temporary files and notes.\nBut it cannot access raw robot controls, operator credentials, or hidden evaluation data, and it cannot modify the trusted platform.\nOn the real robot, the agent first proposes an action. For navigation, we check the route and obstacle clearance using LiDAR, and enforce motion limits. For generated gestures, we also validate the trajectory in MuJoCo.\nThe proposal then goes to an operator, who can approve or reject it and optionally give a reason. Only an approved action is passed to SONIC for execution.",
+      "stageDirection": "",
       "sources": [
         "https://arxiv.org/html/2609.39207v1#S3.SS1",
         "https://anjiecheng.me/talks/asena/#jail"
-      ]
+      ],
+      "words": 129,
+      "combinedSlide": 4
     },
     {
       "id": "training",
       "title": "The interaction layer can support an agent-training loop",
-      "script": "This structure also gives us a specific connection to agent training. The implemented loop updates the workspace: execute, collect feedback, consolidate code and skills.\n\nA proposed training loop would reuse the interaction layer, but would need a trainable sampler, explicit rollout, reward and termination records, and a learner that publishes updated checkpoints. Its update target would be the coding agent’s weights.\n\nThat comparison is a proposed extension. The ASENA results here come from fixed-weight workspace evolution.",
-      "stageDirection": "Show the implemented workspace update W, then advance to the proposed parameter update theta. Pause for 4 seconds with both visible and move on. The reusable interaction layer is implemented; agent training is a proposed extension.",
-      "pauseSeconds": 4,
+      "script": "Our distributed workers also give us a starting point for coding-agent training, by collecting rollouts efficiently in simulation.\nFor RSI, we keep the model fixed and improve the code and skills in its workspace. For training, we would use a trainable model as the sampler, then connect those rollouts and simulator-based rewards to a standard training pipeline—for example, GRPO.\nSo the learning mechanism is different, but much of the rollout infrastructure can be reused.\nThis is an important next step for us because coding policies are still slow. We’d like training to help the agent solve tasks with fewer code revisions, more effective tool calls, and better reuse of skills.",
+      "stageDirection": "",
       "sources": [
         "https://arxiv.org/html/2609.39207v1#S3.SS2",
         "https://sifeiliu.net/robotics/"
-      ]
+      ],
+      "words": 111,
+      "combinedSlide": 5
     },
     {
       "id": "policy",
       "title": "ASENA-VLN provides reusable navigation",
-      "script": "ASENA-VLN gives this system a reusable navigation tool. It is a four-billion-parameter model, separate from the coding agent. The agent sends an instruction and recent RGB history; the tool returns body-frame waypoints, and the agent checks progress.\n\nEvaluated alone, ASENA-VLN reaches 68.7 percent success on R2R and 70.2 percent on RxR. Compared with the reported monocular Qwen-RobotNav results, navigation error falls on both datasets. R2R also gains success and path efficiency; RxR gains trajectory fidelity, with slightly lower success and efficiency.\n\nThis gives us a concrete division of work: the coding agent composes the task, while the specialized model turns a navigation request into a short motion trajectory.",
-      "stageDirection": "Explain the separate 4B navigation tool, then advance to both benchmark comparisons. Use the 4-second pause to highlight the mixed RxR outcome rather than reading every cell. Training recipes and evaluation filtering differ between the reported systems.",
-      "pauseSeconds": 4,
+      "script": "We also developed a navigation policy called ASENA-VLN. On its own, it achieves state-of-the-art success on R2R. I won’t go into the policy details here.\n\nWhat’s more interesting is what happens when a coding agent calls this policy.",
+      "stageDirection": "",
       "sources": [
         "https://arxiv.org/html/2609.39207v1",
         "https://arxiv.org/html/2606.18112v3"
-      ]
+      ],
+      "words": 38,
+      "combinedSlide": 6
     },
     {
       "id": "efficiency",
       "title": "The navigation tool reduces coding-agent interaction",
-      "script": "Next, we asked what happens when a coding agent can call that navigation tool. These are fresh-workspace comparisons on the same one hundred RxR tasks.\n\nFor Claude Sonnet 5, average tool calls fall from about 104 to 39 per episode, while success rises from 50 to 61 percent. For GPT-6 Astra, calls fall from about 41 to 20, while success decreases from 93 to 86 percent.\n\nSo both measured agents use fewer tool interactions: reductions of 62.5 and 51 percent. Only Sonnet gains success in this comparison. A policy call can absorb several navigation decisions, but the combined result depends on the agent and how it uses the tool.\n\nThese counts measure agent–tool calls. They should not be read as robot steps or elapsed execution time.",
-      "stageDirection": "Show the Sonnet row, then advance to Astra. During the 6-second pause, point out that both use fewer tool calls but their success rates move in different directions. These are agent–tool calls, not robot steps or elapsed time.",
-      "pauseSeconds": 6,
+      "script": "On RxR, it improves Claude’s success rate by 11 percentage points, but lowers Astra’s by 7 points. So the effect on success depends on the model.\nThe efficiency benefit is much more consistent: both agents need over 50% fewer tool calls.\nMy takeaway is that coding agents and learned policies are complementary, especially for efficiency. The coding agent provides flexible reasoning, while the navigation policy handles movement without requiring the agent to work through every step.",
+      "stageDirection": "",
       "sources": [
         "https://arxiv.org/html/2609.39207v1#S4.SS3"
-      ]
+      ],
+      "words": 76,
+      "combinedSlide": 7
     },
     {
       "id": "rsi",
       "title": "Success grows as the workspace accumulates experience",
-      "script": "Now we can look at what changed over repeated passes. Sixteen Claude Sonnet 5 workers ran at high effort, with one hundred tasks per benchmark. Each pass reused the same scenes, instructions and starting states, with all model weights fixed.\n\nThe solid curves include the navigation policy; the dashed curves use the agent alone. On R2R, success with the policy rises from 72 to 98 percent, and the agent-only curve reaches 97 percent. On RxR, the corresponding results rise from 65 to 89 percent, and from 48 to 80 percent.\n\nUseful route and scene memory are part of what the workers can retain and replay. A repaired program or tested skill can also become part of the next workspace. Consolidation makes that feedback available to subsequent attempts. Across these recurring tasks, capability improved as the workspace accumulated experience, while the models themselves stayed fixed.",
-      "stageDirection": "Start at pass 1, advance through pass 5, then advance through pass 10. The animation retains every measured rise and dip in all four series. Pause for 6 seconds on the endpoints and recurring-task protocol. R2R with policy reaches 98%, not 100%; this is observed workspace evolution, not a fitted scaling law.",
-      "pauseSeconds": 6,
+      "script": "This is one of the most exciting results we saw from RSI. As we run more passes and improve the workspace, success on these recurring R2R tasks reaches 98%—with the model weights completely fixed.",
+      "stageDirection": "",
       "sources": [
         "https://arxiv.org/html/2609.39207v1#S4.SS4",
         "https://anjiecheng.me/talks/asena/#workspace"
-      ]
+      ],
+      "words": 35,
+      "combinedSlide": 8
     },
     {
       "id": "records",
       "title": "Real runs leave records we can inspect and reuse",
-      "script": "Finally, here is the physical evidence the system leaves behind. This MCAP replay aligns a real camera stream, twenty-nine measured joint channels and the robot’s body pose on one clock. We can inspect what the robot saw and how it actually moved.\n\nBeyond these synchronized sensor streams, execution records also contain agent programs, tool results, operator decisions and accepted voice text. That lets us connect a proposed action to permission, execution and its observed outcome.\n\nWe already use these records for safety inspection and skill revision. After curation, they could also support policy supervised fine-tuning or coding-agent training. A reinforcement-learning extension would use simulation.\n\nThis connects to Recova, where recovery experience is used to train manipulation policies. ASENA supplies inspectable programs, interactions and real robot experience for that broader learning loop.",
-      "stageDirection": "Let the synchronized MCAP replay run during the existing 10-second visual pause. Camera, measured joints and body pose advance together. Then advance to the additional record types, possible training uses and Recova bridge. The additional event channels come from other runs; inspection is implemented, while curated SFT or agent training is a future use.",
-      "pauseSeconds": 10,
+      "script": "Finally, we record observations, robot states, actions, code, and feedback from real-world runs, giving model teams rich multimodal data that could support future training of both robot policies and frontier models.",
+      "stageDirection": "",
       "sources": [
         "https://arxiv.org/html/2609.39207v1#S3.SS2",
         "https://anjiecheng.me/talks/asena/#real-feedback",
         "https://sifeiliu.net/robotics/recorder/",
         "https://recova-bot.github.io/"
-      ]
+      ],
+      "words": 31,
+      "combinedSlide": 9
     }
-  ]
+  ],
+  "spoken_words": 736,
+  "notesUpdated": "2026-10-06"
 }

@@ -52,7 +52,7 @@
       });
     });
     history.replaceState(null, '', `#${index + 1}${step ? '/' + (step + 1) : ''}`);
-    document.querySelector('#position').textContent = `${String(index+1).padStart(2,'0')} / 08`;
+    document.querySelector('#position').textContent = `${String(index+1).padStart(2,'0')} / ${String(slides.length).padStart(2,'0')}`;
     document.querySelector('#build-count').textContent = maxStep(slides[index]) ? `${step + 1} / ${maxStep(slides[index]) + 1} builds` : '';
     updateNotes(); updateMedia();
     dispatchEvent(new CustomEvent('recova-statechange',{detail:{index,step}}));
@@ -107,7 +107,7 @@
   if (paired.length===2) paired[0].addEventListener('timeupdate',()=>{
     if (!paired[0].paused && paired[1].readyState>1 && Math.abs(paired[0].currentTime-paired[1].currentTime)>.18) paired[1].currentTime=paired[0].currentTime;
   });
-  fetch('script.json?v=20261006-builds3').then(r=>r.json()).then(data=>{script=data.slides;updateNotes();}).catch(()=>{});
+  fetch('script.json?v=oral-notes-20261006', {cache:'no-cache'}).then(r=>r.json()).then(data=>{script=data.slides;updateNotes();}).catch(()=>{});
   window.RECOVA_TALK = {show,next,previous,state:()=>({index,step,paused:manualPause}),reveal:()=>show(index,maxStep(slides[index])),pause:()=>{manualPause=true;updateMedia();}};
   window.TALK_DECK={key:'recova-talk',name:'Recova',state:()=>({index,step,maxStep:maxStep(slides[index]),slideCount:slides.length,title:slides[index].dataset.title,paused:manualPause}),slides:()=>slides.map(slide=>({title:slide.dataset.title,maxStep:maxStep(slide),seconds:+slide.dataset.duration})),show,next,previous,hideNotes:()=>{notes.hidden=true;},pause:()=>{manualPause=true;updateMedia();},togglePlayback};
   fit(); show(index,query.has('all')?maxStep(slides[index]):Math.max(0,(Number(location.hash.split('/')[1])||1)-1));

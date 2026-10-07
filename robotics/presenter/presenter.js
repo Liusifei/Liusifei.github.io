@@ -33,7 +33,7 @@
     const item=notes[state.index];
     const text=Array.isArray(item?.script)?item.script.join('\n\n'):item?.script||item?.notes||'Loading speaking notes…';
     $('#notes').replaceChildren();
-    String(text).split(/\n\n+/).forEach(line=>{const p=document.createElement('p');addText(p,line);$('#notes').append(p);});
+    String(text).split(/\n+/).forEach(line=>{const p=document.createElement('p');addText(p,line);$('#notes').append(p);});
     const cue=item?.stageDirection||item?.cue||'';
     $('#cue').textContent=cue;$('#cue').hidden=!cue;
     $('#notes').scrollTop=0;
@@ -107,7 +107,7 @@
     else if(event.key==='End'&&state){event.preventDefault();command('show',{index:state.slideCount-1,step:state.slides.at(-1).maxStep});}
     else if(event.key.toLowerCase()==='t')command('toggle-timer');
   });
-  fetch('../'+deck+'/script.json').then(r=>{if(!r.ok)throw Error();return r.json();}).then(data=>{notes=Array.isArray(data)?data:data.slides||[];renderNotes();}).catch(()=>{$('#notes').textContent='The speaking script could not load. Reload this presenter window.';});
+  fetch('../'+deck+'/script.json?v=oral-notes-20261006', {cache:'no-cache'}).then(r=>{if(!r.ok)throw Error();return r.json();}).then(data=>{notes=Array.isArray(data)?data:data.slides||[];renderNotes();}).catch(()=>{$('#notes').textContent='The speaking script could not load. Reload this presenter window.';});
   const cached=bus.read();if(cached?.deck===deck){state=cached;render();}
   bus.send('hello');setInterval(()=>bus.send('hello'),2000);setInterval(updateClock,250);
 })();

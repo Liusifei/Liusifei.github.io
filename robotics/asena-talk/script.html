@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ASENA — Speaking Script</title><style>*{box-sizing:border-box}body{margin:0;background:#f6f5ef;color:#263e2c;font:18px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}main{max-width:880px;margin:auto;padding:44px 32px 80px}nav{display:flex;gap:24px;flex-wrap:wrap;font-size:14px;margin-bottom:36px}a,button{color:#166f73}a{text-underline-offset:4px}button{font:inherit;border:0;background:none;padding:0;text-decoration:underline;cursor:pointer}h1{font-size:42px;line-height:1.15;letter-spacing:-.04em;margin:0 0 16px}.intro{color:#6a7665;font-size:15px}.contents{display:grid;gap:7px;padding:24px 0 12px;font-size:15px}section{border-top:1px solid #d0d8c9;padding-top:30px;margin-top:40px;scroll-margin-top:22px}.slide-label{font-size:12px;color:#6a7665}h2{font-size:28px;line-height:1.3;letter-spacing:-.025em;margin:12px 0 25px}.spoken p{margin:0 0 18px}aside{background:#e8eddf;padding:16px 20px;margin:24px 0;font-size:14px;border-left:3px solid #166f73}aside p{margin:5px 0 0}details{font-size:12px;color:#6a7665}details a{overflow-wrap:anywhere}summary{cursor:pointer}@media print{body{font-size:12pt;background:#fff}main{padding:10px}nav,.contents,details{display:none}h1{font-size:28px}h2{font-size:22px}section{break-inside:avoid}}</style></head><body><main>
-<nav><a href="./">Open presentation</a><a href="script.txt" download>Download script</a><button onclick="window.print()">Print / Save PDF</button></nav><h1>ASENA Speaking Script</h1><p class="intro">Sifei Liu · 9 slides · 659 spoken words · Updated October 6, 2026</p><div class="contents">
+<nav><a href="./">Open presentation</a><a href="script.txt" download>Download script</a><button onclick="window.print()">Print / Save PDF</button></nav><h1>ASENA Speaking Script</h1><p class="intro">Sifei Liu · 9 slides · 650 spoken words · Updated October 6, 2026</p><div class="contents">
 <a href="#asena">01. ASENA</a>
 <a href="#composition">02. The agent composes, the robot executes</a>
 <a href="#workspace">03. Parallel workers evolve a shared workspace</a>
@@ -28,11 +28,11 @@
 <li><a href="https://anjiecheng.me/talks/asena/#architecture">https://anjiecheng.me/talks/asena/#architecture</a></li>
 </ul></details>
 </section>
-<section id="workspace"><span class="slide-label">Slide 03 / 09 · Combined talk slide 3 · 111 words</span><h2>Parallel workers evolve a shared workspace</h2><div class="spoken">
+<section id="workspace"><span class="slide-label">Slide 03 / 09 · Combined talk slide 3 · 102 words</span><h2>Parallel workers evolve a shared workspace</h2><div class="spoken">
 <p>In each pass, the agent writes code to solve the tasks. We keep the useful code as skills for the next round. The model weights stay fixed.</p>
 <p>To scale this up, we need to collect those rollouts efficiently. So we use 16 parallel workers, each with its own simulation environment and private workspace, plus access to the navigation policy.</p>
 <p>We distribute the tasks across the workers. After each pass, an improver agent merges, tests, and prunes their updates. That improved workspace becomes the starting point for the next pass.</p>
-<p>This also gives us a strong starting point for future coding-agent training: the parallel environments and rollout interfaces are already in place.</p>
+<p>This is also ready to use as a rollout environment for code-as-policy training.</p>
 </div>
 <details><summary>Sources and supporting context</summary><ul>
 <li><a href="https://arxiv.org/html/2609.39207v1#S3.SS2">https://arxiv.org/html/2609.39207v1#S3.SS2</a></li>

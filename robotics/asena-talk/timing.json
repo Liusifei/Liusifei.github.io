@@ -1,6 +1,6 @@
 {
   "method": "Retained presentation time allocations; not a measured rehearsal of the updated script.",
-  "words": 659,
+  "words": 650,
   "totalSeconds": 530.251,
   "slides": [
     {
@@ -22,7 +22,7 @@
     {
       "id": "workspace",
       "title": "Parallel workers evolve a shared workspace",
-      "wordCount": 111,
+      "wordCount": 102,
       "targetSeconds": 76.496,
       "startSeconds": 99.37,
       "endSeconds": 175.866

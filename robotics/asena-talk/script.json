@@ -26,14 +26,14 @@
     {
       "id": "workspace",
       "title": "Parallel workers evolve a shared workspace",
-      "script": "In each pass, the agent writes code to solve the tasks. We keep the useful code as skills for the next round. The model weights stay fixed.\nTo scale this up, we need to collect those rollouts efficiently. So we use 16 parallel workers, each with its own simulation environment and private workspace, plus access to the navigation policy.\nWe distribute the tasks across the workers. After each pass, an improver agent merges, tests, and prunes their updates. That improved workspace becomes the starting point for the next pass.\nThis also gives us a strong starting point for future coding-agent training: the parallel environments and rollout interfaces are already in place.",
+      "script": "In each pass, the agent writes code to solve the tasks. We keep the useful code as skills for the next round. The model weights stay fixed.\nTo scale this up, we need to collect those rollouts efficiently. So we use 16 parallel workers, each with its own simulation environment and private workspace, plus access to the navigation policy.\nWe distribute the tasks across the workers. After each pass, an improver agent merges, tests, and prunes their updates. That improved workspace becomes the starting point for the next pass.\nThis is also ready to use as a rollout environment for code-as-policy training.",
       "stageDirection": "",
       "sources": [
         "https://arxiv.org/html/2609.39207v1#S3.SS2",
         "https://arxiv.org/html/2609.39207v1#S4.SS4",
         "https://anjiecheng.me/talks/asena/"
       ],
-      "words": 111,
+      "words": 102,
       "combinedSlide": 3
     },
     {
@@ -110,6 +110,6 @@
       "combinedSlide": 9
     }
   ],
-  "spoken_words": 659,
+  "spoken_words": 650,
   "notesUpdated": "2026-10-06"
 }

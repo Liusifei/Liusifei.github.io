@@ -14,13 +14,13 @@ The agent composes, the robot executes
 
 Basically, we give a coding agent a task and observations, from either a real robot or a simulator. It writes code to control the robot, using two kinds of tools: learned policies, like VLN, and interfaces to cameras, LiDAR, and robot control. Then it looks at what happened and tries the next step.
 
-Slide 03 / 09 · Combined talk slide 3 · 111 words
+Slide 03 / 09 · Combined talk slide 3 · 102 words
 Parallel workers evolve a shared workspace
 
 In each pass, the agent writes code to solve the tasks. We keep the useful code as skills for the next round. The model weights stay fixed.
 To scale this up, we need to collect those rollouts efficiently. So we use 16 parallel workers, each with its own simulation environment and private workspace, plus access to the navigation policy.
 We distribute the tasks across the workers. After each pass, an improver agent merges, tests, and prunes their updates. That improved workspace becomes the starting point for the next pass.
-This also gives us a strong starting point for future coding-agent training: the parallel environments and rollout interfaces are already in place.
+This is also ready to use as a rollout environment for code-as-policy training.
 
 Slide 04 / 09 · Combined talk slide 4 · 129 words
 The sandbox limits what generated code can do

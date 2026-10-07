@@ -61,16 +61,16 @@ We use our autonomous DAgger to collect the data, and then we add the learned re
 
 Presenter cue: Let the real-robot recovery clips play.
 
-Slide 08 / 09 · Combined talk slide 17 · 39 words
+Slide 08 / 09 · Combined talk slide 17 · 38 words
 A twin turns failures into reusable corrections
 
 Across these two projects, we use robot experience to improve either the agent’s skills or the learned policies.
 
-We want to train the coding agent to make it faster. And we want to make this whole loop more autonomous.
+Once we’ve trained the coding agent, we want to deploy it on real robots and scale up robot data collection.
 
 Presenter cue: Discuss the future direction briefly, then advance to Q&A.
 
-Slide 09 / 09 · Combined talk slide 18 · 4 words
+Slide 09 / 09 · Combined talk slide 18 · 7 words
 Any Questions?
 
-Thank you. Any questions?
+And I’m happy to take any questions.

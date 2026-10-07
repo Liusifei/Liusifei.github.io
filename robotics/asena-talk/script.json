@@ -14,26 +14,26 @@
     {
       "id": "composition",
       "title": "The agent composes, the robot executes",
-      "script": "Here’s how it works. We give the agent a task and observations from either a real robot or a simulator.\nIt’s basically a standard coding agent connected to a robot environment. It works in a restricted workspace, where it can write code, skills, and notes.\nWe give the agent two kinds of tools.\nOne is learned models and policies, which can include VLA, VLN, or world models.\nThe other is interfaces to the environment, like cameras and LiDAR for sensing, Habitat for simulation, and SONIC for the real robot.\nThe agent writes code to combine these tools as skills, executes them, and uses the feedback to decide what to do next.",
+      "script": "Basically, we give a coding agent a task and observations, from either a real robot or a simulator. It writes code to control the robot, using two kinds of tools: learned policies, like VLN, and interfaces to cameras, LiDAR, and robot control. Then it looks at what happened and tries the next step.",
       "stageDirection": "",
       "sources": [
         "https://arxiv.org/html/2609.39207v1#S3.SS1",
         "https://anjiecheng.me/talks/asena/#architecture"
       ],
-      "words": 111,
+      "words": 53,
       "combinedSlide": 2
     },
     {
       "id": "workspace",
       "title": "Parallel workers evolve a shared workspace",
-      "script": "Here, RSI means improving the workspace over repeated passes through a set of tasks. In each pass, the agent writes and runs code to solve the tasks and develops reusable skills. We keep the useful ones for the next pass, while the model weights stay fixed.\nTo scale this up, we need to collect those rollouts efficiently. So we use 16 parallel workers, each with its own simulation environment and private workspace, plus access to the navigation policy.\nWe distribute the tasks across the workers. After each pass, an improver agent merges, tests, and prunes their updates. That improved workspace becomes the starting point for the next pass.\nThis also gives us a strong starting point for future coding-agent training: the parallel environments and rollout interfaces are already in place.",
+      "script": "In each pass, the agent writes code to solve the tasks. We keep the useful code as skills for the next round. The model weights stay fixed.\nTo scale this up, we need to collect those rollouts efficiently. So we use 16 parallel workers, each with its own simulation environment and private workspace, plus access to the navigation policy.\nWe distribute the tasks across the workers. After each pass, an improver agent merges, tests, and prunes their updates. That improved workspace becomes the starting point for the next pass.\nThis also gives us a strong starting point for future coding-agent training: the parallel environments and rollout interfaces are already in place.",
       "stageDirection": "",
       "sources": [
         "https://arxiv.org/html/2609.39207v1#S3.SS2",
         "https://arxiv.org/html/2609.39207v1#S4.SS4",
         "https://anjiecheng.me/talks/asena/"
       ],
-      "words": 130,
+      "words": 111,
       "combinedSlide": 3
     },
     {
@@ -110,6 +110,6 @@
       "combinedSlide": 9
     }
   ],
-  "spoken_words": 736,
+  "spoken_words": 659,
   "notesUpdated": "2026-10-06"
 }

@@ -2,7 +2,7 @@
   "title": "Recova: Agent-Guided Failure Recovery for Autonomous Robotic Manipulation",
   "presenter": "Sifei Liu",
   "seconds": 450,
-  "spoken_words": 570,
+  "spoken_words": 572,
   "slides": [
     {
       "slide": 1,
@@ -149,8 +149,8 @@
       "slide": 8,
       "title": "A twin turns failures into reusable corrections",
       "seconds": 48,
-      "notes": "Across these two projects, we use robot experience to improve either the agent’s skills or the learned policies.\n\nWe want to train the coding agent to make it faster. And we want to make this whole loop more autonomous.",
-      "words": 39,
+      "notes": "Across these two projects, we use robot experience to improve either the agent’s skills or the learned policies.\n\nOnce we’ve trained the coding agent, we want to deploy it on real robots and scale up robot data collection.",
+      "words": 38,
       "sources": [
         {
           "title": "Archived Recova source slide 19",
@@ -166,9 +166,9 @@
       "title": "Any Questions?",
       "seconds": 0,
       "sources": [],
-      "notes": "Thank you. Any questions?",
+      "notes": "And I’m happy to take any questions.",
       "stageDirection": "",
-      "words": 4,
+      "words": 7,
       "combinedSlide": 18
     }
   ],

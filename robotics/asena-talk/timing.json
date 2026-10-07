@@ -1,6 +1,6 @@
 {
   "method": "Retained presentation time allocations; not a measured rehearsal of the updated script.",
-  "words": 736,
+  "words": 659,
   "totalSeconds": 530.251,
   "slides": [
     {
@@ -14,7 +14,7 @@
     {
       "id": "composition",
       "title": "The agent composes, the robot executes",
-      "wordCount": 111,
+      "wordCount": 53,
       "targetSeconds": 66.397,
       "startSeconds": 32.973,
       "endSeconds": 99.37
@@ -22,7 +22,7 @@
     {
       "id": "workspace",
       "title": "Parallel workers evolve a shared workspace",
-      "wordCount": 130,
+      "wordCount": 111,
       "targetSeconds": 76.496,
       "startSeconds": 99.37,
       "endSeconds": 175.866

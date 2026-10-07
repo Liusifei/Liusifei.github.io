@@ -9,20 +9,15 @@ I’ll talk about two recent projects on code as policy for robotics.
 The first is ASENA, which focuses on navigation. We connect a coding agent to a robot environment and explore recursive self-improvement, or RSI.
 The second is Recova, which focuses on manipulation with recovery skills. Here, we use code as policy to improve learned robot policies. The goal is to make the whole loop of data collection, training, and deployment as autonomous as possible.
 
-Slide 02 / 09 · Combined talk slide 2 · 111 words
+Slide 02 / 09 · Combined talk slide 2 · 53 words
 The agent composes, the robot executes
 
-Here’s how it works. We give the agent a task and observations from either a real robot or a simulator.
-It’s basically a standard coding agent connected to a robot environment. It works in a restricted workspace, where it can write code, skills, and notes.
-We give the agent two kinds of tools.
-One is learned models and policies, which can include VLA, VLN, or world models.
-The other is interfaces to the environment, like cameras and LiDAR for sensing, Habitat for simulation, and SONIC for the real robot.
-The agent writes code to combine these tools as skills, executes them, and uses the feedback to decide what to do next.
+Basically, we give a coding agent a task and observations, from either a real robot or a simulator. It writes code to control the robot, using two kinds of tools: learned policies, like VLN, and interfaces to cameras, LiDAR, and robot control. Then it looks at what happened and tries the next step.
 
-Slide 03 / 09 · Combined talk slide 3 · 130 words
+Slide 03 / 09 · Combined talk slide 3 · 111 words
 Parallel workers evolve a shared workspace
 
-Here, RSI means improving the workspace over repeated passes through a set of tasks. In each pass, the agent writes and runs code to solve the tasks and develops reusable skills. We keep the useful ones for the next pass, while the model weights stay fixed.
+In each pass, the agent writes code to solve the tasks. We keep the useful code as skills for the next round. The model weights stay fixed.
 To scale this up, we need to collect those rollouts efficiently. So we use 16 parallel workers, each with its own simulation environment and private workspace, plus access to the navigation policy.
 We distribute the tasks across the workers. After each pass, an improver agent merges, tests, and prunes their updates. That improved workspace becomes the starting point for the next pass.
 This also gives us a strong starting point for future coding-agent training: the parallel environments and rollout interfaces are already in place.
